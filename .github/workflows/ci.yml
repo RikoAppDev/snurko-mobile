@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - id: gradlew
+        run: |
+          if [ -f gradlew ]; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::gradlew not found, skipping Gradle steps until the project is scaffolded"
+          fi
+      - if: steps.gradlew.outputs.exists == 'true'
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - if: steps.gradlew.outputs.exists == 'true'
+        uses: gradle/actions/setup-gradle@v4
+      - if: steps.gradlew.outputs.exists == 'true'
+        run: ./gradlew test
