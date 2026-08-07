@@ -1,7 +1,9 @@
 package app.snurko
 
 import android.app.Application
-import app.snurko.di.appModule
+import app.snurko.di.challengeDataModule
+import app.snurko.di.databaseModule
+import app.snurko.di.platformModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -11,7 +13,11 @@ class SnurkoApp : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@SnurkoApp)
-            modules(appModule)
+            modules(
+                platformModule,
+                databaseModule,
+                challengeDataModule,
+            )
         }
     }
 }
