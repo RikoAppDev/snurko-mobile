@@ -22,6 +22,8 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.material3)
             implementation(compose.ui)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
             implementation(libs.kotlinx.coroutines.core)
             implementation(libs.kotlinx.datetime)
             implementation(libs.androidx.lifecycle.viewmodel)
@@ -51,8 +53,13 @@ room3 {
     schemaDirectory("$projectDir/schemas")
 }
 
+compose.resources {
+    packageOfResClass = "app.snurko.resources"
+}
+
 dependencies {
     add("kspAndroid", libs.room.compiler)
+    debugImplementation(compose.uiTooling)
 }
 
 android {
