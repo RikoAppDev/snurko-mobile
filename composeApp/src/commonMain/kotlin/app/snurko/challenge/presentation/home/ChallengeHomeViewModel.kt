@@ -8,6 +8,7 @@ import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.dayIndexOn
 import app.snurko.challenge.domain.evaluate
 import app.snurko.challenge.domain.uncheckedHabitsOn
+import app.snurko.challenge.presentation.sticker.toDayStickerState
 import app.snurko.core.domain.DateProvider
 import app.snurko.core.domain.onFailure
 import app.snurko.core.domain.onSuccess
@@ -45,7 +46,16 @@ class ChallengeHomeViewModel(
             is ChallengeHomeAction.HabitToggled -> toggleHabit(action.habitId)
             ChallengeHomeAction.ScreenResumed -> resumeTicks.update { it + 1 }
             ChallengeHomeAction.RestartAcknowledged -> updateState { it.copy(restart = null) }
+            ChallengeHomeAction.ShareRequested -> shareSticker()
         }
+    }
+
+    private fun shareSticker() {
+        val active = activeChallenge ?: return
+        val current = state.value
+        if (current.isLoading || current.restart != null) return
+
+        sendEvent(ChallengeHomeEvent.ShareSticker(active.toDayStickerState(dateProvider.today())))
     }
 
     private suspend fun evaluateAttempt(active: ActiveChallenge) {

@@ -7,6 +7,10 @@ sealed interface DataError : Error {
         UNKNOWN,
     }
 
+    enum class Share : DataError {
+        UNAVAILABLE,
+    }
+
     enum class Backup : DataError {
         NOTHING_TO_EXPORT,
         CANCELLED,

@@ -30,8 +30,10 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -46,8 +48,13 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.challenge.presentation.sticker.DayStickerRenderer
+import app.snurko.challenge.presentation.sticker.DayStickerSharer
+import app.snurko.challenge.presentation.sticker.DayStickerState
+import app.snurko.challenge.presentation.sticker.stickerFileName
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.domain.onFailure
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.core.presentation.OnResume
 import app.snurko.resources.Res
@@ -63,11 +70,14 @@ import app.snurko.resources.home_restart_explanation
 import app.snurko.resources.home_restart_missed
 import app.snurko.resources.home_restart_separator
 import app.snurko.resources.home_restart_title
+import app.snurko.resources.home_share_failed
+import app.snurko.resources.home_share_link
 import app.snurko.resources.home_streak
 import app.snurko.resources.home_today
 import app.snurko.resources.home_update_failed
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.stringResource
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 private const val GRID_COLUMNS = 10
@@ -80,17 +90,22 @@ fun ChallengeHomeRoot(
     onOpenHistory: () -> Unit,
     onOpenReminders: () -> Unit,
     viewModel: ChallengeHomeViewModel = koinViewModel(),
+    stickerSharer: DayStickerSharer = koinInject(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     val updateFailedMessage = stringResource(Res.string.home_update_failed)
+    val shareFailedMessage = stringResource(Res.string.home_share_failed)
+    var pendingSticker by remember { mutableStateOf<DayStickerState?>(null) }
 
     ObserveAsEvents(viewModel.events) { event ->
         when (event) {
             ChallengeHomeEvent.UpdateFailed -> scope.launch {
                 snackbarHostState.showSnackbar(updateFailedMessage)
             }
+
+            is ChallengeHomeEvent.ShareSticker -> pendingSticker = event.sticker
         }
     }
 
@@ -100,13 +115,23 @@ fun ChallengeHomeRoot(
         containerColor = SnurkoColors.paper,
         snackbarHost = { SnackbarHost(snackbarHostState) },
     ) { innerPadding ->
-        ChallengeHomeScreen(
-            state = state,
-            onAction = viewModel::onAction,
-            onOpenHistory = onOpenHistory,
-            onOpenReminders = onOpenReminders,
-            modifier = Modifier.padding(innerPadding),
-        )
+        Box(modifier = Modifier.padding(innerPadding)) {
+            ChallengeHomeScreen(
+                state = state,
+                onAction = viewModel::onAction,
+                onOpenHistory = onOpenHistory,
+                onOpenReminders = onOpenReminders,
+            )
+            pendingSticker?.let { sticker ->
+                DayStickerRenderer(sticker = sticker) { image ->
+                    pendingSticker = null
+                    scope.launch {
+                        stickerSharer.share(image, sticker.stickerFileName())
+                            .onFailure { snackbarHostState.showSnackbar(shareFailedMessage) }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -151,17 +176,27 @@ fun ChallengeHomeScreen(
             )
         }
         Spacer(Modifier.height(20.dp))
-        FooterMarginNotes(onOpenReminders = onOpenReminders, onOpenHistory = onOpenHistory)
+        FooterMarginNotes(
+            onShare = { onAction(ChallengeHomeAction.ShareRequested) },
+            onOpenReminders = onOpenReminders,
+            onOpenHistory = onOpenHistory,
+        )
     }
 }
 
 @Composable
-private fun FooterMarginNotes(onOpenReminders: () -> Unit, onOpenHistory: () -> Unit) {
+private fun FooterMarginNotes(
+    onShare: () -> Unit,
+    onOpenReminders: () -> Unit,
+    onOpenHistory: () -> Unit,
+) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
         verticalAlignment = Alignment.CenterVertically,
     ) {
+        MarginNote(text = stringResource(Res.string.home_share_link), onClick = onShare)
+        Spacer(Modifier.width(18.dp))
         MarginNote(text = stringResource(Res.string.home_reminders_link), onClick = onOpenReminders)
         Spacer(Modifier.width(18.dp))
         MarginNote(text = stringResource(Res.string.home_history_link), onClick = onOpenHistory)
@@ -411,7 +446,7 @@ private fun CheckMarkBox(isChecked: Boolean, markSeed: Int) {
 }
 
 @Composable
-private fun PencilMark(
+internal fun PencilMark(
     rotation: Float,
     fontSize: TextUnit,
     color: Color,
