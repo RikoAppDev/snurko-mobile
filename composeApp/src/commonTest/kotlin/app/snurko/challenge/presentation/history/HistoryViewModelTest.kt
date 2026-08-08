@@ -25,6 +25,7 @@ import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.atTime
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -239,6 +240,6 @@ class HistoryViewModelTest {
     private fun viewModel(today: LocalDate) = HistoryViewModel(
         challengeRepository = repository,
         notebookBackup = backup,
-        dateProvider = { today },
+        dateProvider = { today.atTime(9, 0) },
     )
 }

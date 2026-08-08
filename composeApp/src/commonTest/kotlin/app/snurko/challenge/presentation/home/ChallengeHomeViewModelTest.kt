@@ -25,6 +25,7 @@ import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.atTime
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -239,7 +240,7 @@ class ChallengeHomeViewModelTest {
             activeChallenge(checks = completeDaysThrough(2) + partialDay(3)),
         )
         var today = day(3)
-        val viewModel = ChallengeHomeViewModel(repository, dateProvider = { today })
+        val viewModel = ChallengeHomeViewModel(repository, dateProvider = { today.atTime(9, 0) })
         assertThat(repository.failCalls).isEmpty()
 
         today = day(4)
@@ -326,6 +327,6 @@ class ChallengeHomeViewModelTest {
 
     private fun viewModel(today: LocalDate) = ChallengeHomeViewModel(
         challengeRepository = repository,
-        dateProvider = { today },
+        dateProvider = { today.atTime(9, 0) },
     )
 }

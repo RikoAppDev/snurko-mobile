@@ -16,6 +16,8 @@ import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.presentation.AppUiState
 import app.snurko.presentation.AppViewModel
+import app.snurko.reminders.presentation.RemindersRoute
+import app.snurko.reminders.presentation.remindersGraph
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
@@ -45,6 +47,10 @@ private fun ChallengeNavHost() {
         startDestination = ChallengeHomeRoute,
         modifier = Modifier.fillMaxSize().background(SnurkoColors.paper),
     ) {
-        challengeGraph(navController)
+        challengeGraph(
+            navController = navController,
+            onOpenReminders = { navController.navigate(RemindersRoute) },
+        )
+        remindersGraph(navController)
     }
 }

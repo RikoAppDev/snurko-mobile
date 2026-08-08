@@ -57,6 +57,7 @@ import app.snurko.resources.home_day
 import app.snurko.resources.home_day_mark
 import app.snurko.resources.home_grid
 import app.snurko.resources.home_history_link
+import app.snurko.resources.home_reminders_link
 import app.snurko.resources.home_restart_acknowledge
 import app.snurko.resources.home_restart_explanation
 import app.snurko.resources.home_restart_missed
@@ -77,6 +78,7 @@ private val PAGE_PADDING = 20.dp
 @Composable
 fun ChallengeHomeRoot(
     onOpenHistory: () -> Unit,
+    onOpenReminders: () -> Unit,
     viewModel: ChallengeHomeViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -102,6 +104,7 @@ fun ChallengeHomeRoot(
             state = state,
             onAction = viewModel::onAction,
             onOpenHistory = onOpenHistory,
+            onOpenReminders = onOpenReminders,
             modifier = Modifier.padding(innerPadding),
         )
     }
@@ -112,6 +115,7 @@ fun ChallengeHomeScreen(
     state: ChallengeHomeState,
     onAction: (ChallengeHomeAction) -> Unit,
     onOpenHistory: () -> Unit,
+    onOpenReminders: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val restart = state.restart
@@ -147,29 +151,37 @@ fun ChallengeHomeScreen(
             )
         }
         Spacer(Modifier.height(20.dp))
-        HistoryMarginNote(onClick = onOpenHistory)
+        FooterMarginNotes(onOpenReminders = onOpenReminders, onOpenHistory = onOpenHistory)
     }
 }
 
 @Composable
-private fun HistoryMarginNote(onClick: () -> Unit) {
+private fun FooterMarginNotes(onOpenReminders: () -> Unit, onOpenHistory: () -> Unit) {
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.End,
+        verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(
-            modifier = Modifier
-                .heightIn(min = 48.dp)
-                .clickable(role = Role.Button, onClick = onClick)
-                .padding(horizontal = 6.dp),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(Res.string.home_history_link),
-                style = MaterialTheme.typography.headlineSmall,
-                color = SnurkoColors.textSecondary,
-            )
-        }
+        MarginNote(text = stringResource(Res.string.home_reminders_link), onClick = onOpenReminders)
+        Spacer(Modifier.width(18.dp))
+        MarginNote(text = stringResource(Res.string.home_history_link), onClick = onOpenHistory)
+    }
+}
+
+@Composable
+private fun MarginNote(text: String, onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .heightIn(min = 48.dp)
+            .clickable(role = Role.Button, onClick = onClick)
+            .padding(horizontal = 6.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text = text,
+            style = MaterialTheme.typography.headlineSmall,
+            color = SnurkoColors.textSecondary,
+        )
     }
 }
 
@@ -422,7 +434,7 @@ private fun PencilMark(
 @Composable
 private fun ChallengeHomeScreenPreview() {
     SnurkoTheme {
-        ChallengeHomeScreen(state = previewState, onAction = {}, onOpenHistory = {})
+        ChallengeHomeScreen(state = previewState, onAction = {}, onOpenHistory = {}, onOpenReminders = {})
     }
 }
 
@@ -440,6 +452,7 @@ private fun ChallengeHomeCompletedPreview() {
             ),
             onAction = {},
             onOpenHistory = {},
+            onOpenReminders = {},
         )
     }
 }
@@ -454,6 +467,7 @@ private fun ChallengeHomeRestartMomentPreview() {
             ),
             onAction = {},
             onOpenHistory = {},
+            onOpenReminders = {},
         )
     }
 }

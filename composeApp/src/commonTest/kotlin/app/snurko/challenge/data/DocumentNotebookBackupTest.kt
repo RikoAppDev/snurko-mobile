@@ -21,6 +21,7 @@ import assertk.assertions.isNull
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.test.runTest
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.atTime
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -56,7 +57,7 @@ class DocumentNotebookBackupTest {
             notebookRepository = notebookRepository,
             documentGateway = documents,
             codec = NotebookJsonCodec(),
-            dateProvider = DateProvider { today },
+            dateProvider = DateProvider { today.atTime(9, 0) },
         )
     }
 

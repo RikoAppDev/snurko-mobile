@@ -10,6 +10,11 @@ import app.snurko.challenge.presentation.setup.ChallengeSetupViewModel
 import app.snurko.core.domain.DateProvider
 import app.snurko.core.domain.SystemDateProvider
 import app.snurko.presentation.AppViewModel
+import app.snurko.reminders.domain.FakeNotificationPermissionGateway
+import app.snurko.reminders.domain.FakeReminderRepository
+import app.snurko.reminders.domain.NotificationPermissionGateway
+import app.snurko.reminders.domain.ReminderRepository
+import app.snurko.reminders.presentation.RemindersViewModel
 import assertk.assertThat
 import assertk.assertions.isInstanceOf
 import assertk.assertions.isNotNull
@@ -24,6 +29,8 @@ class PresentationModuleTest {
             module {
                 single<ChallengeRepository> { FakeChallengeRepository() }
                 single<NotebookBackup> { FakeNotebookBackup() }
+                single<ReminderRepository> { FakeReminderRepository() }
+                single<NotificationPermissionGateway> { FakeNotificationPermissionGateway() }
             },
             coreModule,
             presentationModule,
@@ -48,6 +55,11 @@ class PresentationModuleTest {
     @Test
     fun theHistoryViewModelIsResolvable() {
         assertThat(koin.get<HistoryViewModel>()).isNotNull()
+    }
+
+    @Test
+    fun theRemindersViewModelIsResolvable() {
+        assertThat(koin.get<RemindersViewModel>()).isNotNull()
     }
 
     @Test

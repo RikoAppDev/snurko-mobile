@@ -28,6 +28,7 @@ abstract class ChallengeDao {
         attempts: List<AttemptEntity>,
         checks: List<DayCheckEntity>,
     ) {
+        deleteAllReminders()
         deleteAllDayChecks()
         deleteAllAttempts()
         deleteAllHabits()
@@ -60,6 +61,9 @@ abstract class ChallengeDao {
 
     @Insert
     abstract suspend fun insertDayChecks(checks: List<DayCheckEntity>)
+
+    @Query("DELETE FROM reminders")
+    abstract suspend fun deleteAllReminders()
 
     @Query("DELETE FROM day_checks")
     abstract suspend fun deleteAllDayChecks()
