@@ -64,6 +64,10 @@
     <string name="reminder_notification_text">Day %1$d — not marked yet.</string>
     <string name="reminder_notification_done">Done</string>
 
+    <string name="widget_invite">Start your 90 days.</string>
+    <string name="widget_progress">%1$d of %2$d</string>
+    <string name="widget_open">Open Snurko</string>
+
     <string name="history_title">Back pages</string>
     <string name="history_back">Back</string>
     <string name="history_back_mark">←</string>

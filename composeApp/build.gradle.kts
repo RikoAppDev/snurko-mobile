@@ -45,6 +45,7 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.core.ktx)
+            implementation(libs.glance.appwidget)
             implementation(libs.koin.android)
         }
         androidUnitTest.dependencies {

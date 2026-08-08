@@ -4,6 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import app.snurko.core.android.receiveAsync
+import app.snurko.core.domain.DayRolloverScheduler
 import app.snurko.reminders.domain.ReminderPlanner
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
@@ -15,10 +16,14 @@ import org.koin.core.component.inject
 class ReminderRescheduleReceiver : BroadcastReceiver(), KoinComponent {
 
     private val planner: ReminderPlanner by inject()
+    private val rolloverScheduler: DayRolloverScheduler by inject()
 
     override fun onReceive(context: Context, intent: Intent) {
         if (intent.action !in RESCHEDULE_ACTIONS) return
-        receiveAsync { planner.rescheduleAll() }
+        receiveAsync {
+            planner.rescheduleAll()
+            rolloverScheduler.scheduleNextRollover()
+        }
     }
 
     private companion object {
