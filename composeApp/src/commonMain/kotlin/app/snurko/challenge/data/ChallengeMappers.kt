@@ -1,16 +1,26 @@
 package app.snurko.challenge.data
 
+import app.snurko.challenge.domain.ActiveChallenge
 import app.snurko.challenge.domain.Attempt
 import app.snurko.challenge.domain.Challenge
 import app.snurko.challenge.domain.DayCheck
 import app.snurko.challenge.domain.Habit
 import app.snurko.core.database.AttemptEntity
-import app.snurko.core.database.ChallengeWithHabits
+import app.snurko.core.database.ChallengeNotebook
 import app.snurko.core.database.DayCheckEntity
 import app.snurko.core.database.HabitEntity
 import kotlinx.datetime.LocalDate
 
-fun ChallengeWithHabits.toChallenge(): Challenge = Challenge(
+fun ChallengeNotebook.toActiveChallenge(): ActiveChallenge? {
+    val latest = attempts.maxByOrNull { it.attempt.number } ?: return null
+    return ActiveChallenge(
+        challenge = toChallenge(),
+        attempt = latest.attempt.toAttempt(),
+        checks = latest.checks.toDayChecks(),
+    )
+}
+
+fun ChallengeNotebook.toChallenge(): Challenge = Challenge(
     id = challenge.id,
     name = challenge.name,
     habits = habits.sortedBy { it.position }.map { it.toHabit() },

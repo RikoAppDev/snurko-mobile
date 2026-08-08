@@ -23,7 +23,7 @@ abstract class ChallengeDao {
 
     @Transaction
     @Query("SELECT * FROM challenges ORDER BY id DESC LIMIT 1")
-    abstract fun observeLatestChallenge(): Flow<ChallengeWithHabits?>
+    abstract fun observeNotebook(): Flow<ChallengeNotebook?>
 
     @Insert
     abstract suspend fun insertChallenge(challenge: ChallengeEntity): Long

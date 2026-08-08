@@ -6,7 +6,6 @@ import androidx.room3.Query
 import androidx.room3.Transaction
 import androidx.room3.Update
 import app.snurko.challenge.domain.AttemptStatus
-import kotlinx.coroutines.flow.Flow
 
 @Dao
 abstract class AttemptDao {
@@ -16,9 +15,6 @@ abstract class AttemptDao {
         update(failed)
         insert(next)
     }
-
-    @Query("SELECT * FROM attempts WHERE challengeId = :challengeId ORDER BY number DESC LIMIT 1")
-    abstract fun observeLatest(challengeId: Long): Flow<AttemptEntity?>
 
     @Query("SELECT * FROM attempts WHERE id = :id")
     abstract suspend fun getById(id: Long): AttemptEntity?
