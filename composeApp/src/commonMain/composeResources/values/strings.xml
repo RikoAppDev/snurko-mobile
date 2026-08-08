@@ -35,6 +35,12 @@
     <string name="home_today">Today</string>
     <string name="home_update_failed">That did not save. Try again.</string>
 
+    <string name="home_restart_title">Day %1$d was not finished.</string>
+    <string name="home_restart_missed">Left unchecked: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">That day cannot come back. The 90 days start again from day 1 today.</string>
+    <string name="home_restart_acknowledge">Start again</string>
+
     <plurals name="challenge_habit_count">
         <item quantity="one">%1$d habit</item>
         <item quantity="other">%1$d habits</item>

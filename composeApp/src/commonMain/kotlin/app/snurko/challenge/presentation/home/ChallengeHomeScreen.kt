@@ -19,6 +19,8 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -46,11 +48,17 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.presentation.ObserveAsEvents
+import app.snurko.core.presentation.OnResume
 import app.snurko.resources.Res
 import app.snurko.resources.challenge_fail_condition_summary
 import app.snurko.resources.home_day
 import app.snurko.resources.home_day_mark
 import app.snurko.resources.home_grid
+import app.snurko.resources.home_restart_acknowledge
+import app.snurko.resources.home_restart_explanation
+import app.snurko.resources.home_restart_missed
+import app.snurko.resources.home_restart_separator
+import app.snurko.resources.home_restart_title
 import app.snurko.resources.home_streak
 import app.snurko.resources.home_today
 import app.snurko.resources.home_update_failed
@@ -78,6 +86,8 @@ fun ChallengeHomeRoot(viewModel: ChallengeHomeViewModel = koinViewModel()) {
         }
     }
 
+    OnResume { viewModel.onAction(ChallengeHomeAction.ScreenResumed) }
+
     Scaffold(
         containerColor = SnurkoColors.paper,
         snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -96,6 +106,16 @@ fun ChallengeHomeScreen(
     onAction: (ChallengeHomeAction) -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val restart = state.restart
+    if (restart != null) {
+        RestartMoment(
+            restart = restart,
+            onAcknowledge = { onAction(ChallengeHomeAction.RestartAcknowledged) },
+            modifier = modifier,
+        )
+        return
+    }
+
     Column(
         modifier = modifier
             .fillMaxSize()
@@ -114,6 +134,61 @@ fun ChallengeHomeScreen(
             habits = state.habits,
             onToggle = { onAction(ChallengeHomeAction.HabitToggled(it)) },
         )
+    }
+}
+
+@Composable
+private fun RestartMoment(
+    restart: RestartMomentUi,
+    onAcknowledge: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    Column(
+        modifier = modifier
+            .fillMaxSize()
+            .background(SnurkoColors.paper)
+            .padding(horizontal = 28.dp, vertical = 32.dp),
+        verticalArrangement = Arrangement.Center,
+    ) {
+        Text(
+            text = stringResource(Res.string.home_restart_title, restart.failedOnDay),
+            style = MaterialTheme.typography.displaySmall,
+            color = SnurkoColors.text,
+        )
+        if (restart.missedHabits.isNotEmpty()) {
+            Spacer(Modifier.height(20.dp))
+            Text(
+                text = stringResource(
+                    Res.string.home_restart_missed,
+                    restart.missedHabits.joinToString(stringResource(Res.string.home_restart_separator)),
+                ),
+                style = MaterialTheme.typography.bodyLarge,
+                color = SnurkoColors.textSecondary,
+            )
+        }
+        Spacer(Modifier.height(12.dp))
+        Text(
+            text = stringResource(Res.string.home_restart_explanation),
+            style = MaterialTheme.typography.bodyMedium,
+            color = SnurkoColors.textSecondary,
+        )
+        Spacer(Modifier.height(36.dp))
+        Button(
+            onClick = onAcknowledge,
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = 56.dp),
+            shape = RoundedCornerShape(12.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = SnurkoColors.accentInk,
+                contentColor = SnurkoColors.surface,
+            ),
+        ) {
+            Text(
+                text = stringResource(Res.string.home_restart_acknowledge),
+                style = MaterialTheme.typography.titleMedium,
+            )
+        }
     }
 }
 
@@ -302,6 +377,19 @@ private fun PencilMark(
 private fun ChallengeHomeScreenPreview() {
     SnurkoTheme {
         ChallengeHomeScreen(state = previewState, onAction = {})
+    }
+}
+
+@Preview
+@Composable
+private fun ChallengeHomeRestartMomentPreview() {
+    SnurkoTheme {
+        ChallengeHomeScreen(
+            state = previewState.copy(
+                restart = RestartMomentUi(failedOnDay = 12, missedHabits = listOf("Read", "No alcohol")),
+            ),
+            onAction = {},
+        )
     }
 }
 

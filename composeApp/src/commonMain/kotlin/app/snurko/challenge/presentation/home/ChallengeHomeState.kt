@@ -19,6 +19,11 @@ data class HabitRowUi(
     val isChecked: Boolean,
 )
 
+data class RestartMomentUi(
+    val failedOnDay: Int,
+    val missedHabits: List<String>,
+)
+
 @Stable
 data class ChallengeHomeState(
     val challengeName: String = "",
@@ -27,6 +32,7 @@ data class ChallengeHomeState(
     val streak: Int = 0,
     val cells: List<GridCellUi> = emptyList(),
     val habits: List<HabitRowUi> = emptyList(),
+    val restart: RestartMomentUi? = null,
     val isLoading: Boolean = true,
     val isCompleted: Boolean = false,
 ) : UiState {
