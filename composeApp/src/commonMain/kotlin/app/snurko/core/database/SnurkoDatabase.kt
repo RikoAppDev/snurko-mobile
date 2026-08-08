@@ -13,6 +13,7 @@ const val SNURKO_DATABASE_NAME = "snurko.db"
         HabitEntity::class,
         AttemptEntity::class,
         DayCheckEntity::class,
+        ReminderEntity::class,
     ],
     version = 1,
 )
@@ -21,6 +22,7 @@ abstract class SnurkoDatabase : RoomDatabase() {
     abstract fun challengeDao(): ChallengeDao
     abstract fun attemptDao(): AttemptDao
     abstract fun dayCheckDao(): DayCheckDao
+    abstract fun reminderDao(): ReminderDao
 }
 
 @Suppress("KotlinNoActualForExpect")

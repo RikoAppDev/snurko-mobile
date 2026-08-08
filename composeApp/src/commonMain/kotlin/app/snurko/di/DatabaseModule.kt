@@ -8,4 +8,5 @@ val databaseModule: Module = module {
     single { get<SnurkoDatabase>().challengeDao() }
     single { get<SnurkoDatabase>().attemptDao() }
     single { get<SnurkoDatabase>().dayCheckDao() }
+    single { get<SnurkoDatabase>().reminderDao() }
 }

@@ -20,6 +20,7 @@ import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.test.setMain
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.atTime
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
@@ -37,7 +38,7 @@ class ChallengeSetupViewModelTest {
         repository = FakeChallengeRepository()
         viewModel = ChallengeSetupViewModel(
             challengeRepository = repository,
-            dateProvider = { today },
+            dateProvider = { today.atTime(9, 0) },
         )
     }
 

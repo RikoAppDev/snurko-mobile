@@ -6,6 +6,8 @@ import app.snurko.challenge.data.SafNotebookDocumentGateway
 import app.snurko.challenge.domain.NotebookDocumentGateway
 import app.snurko.core.database.SNURKO_DATABASE_NAME
 import app.snurko.core.database.SnurkoDatabase
+import app.snurko.reminders.data.AlarmManagerReminderScheduler
+import app.snurko.reminders.domain.ReminderScheduler
 import kotlinx.coroutines.Dispatchers
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.module.Module
@@ -24,4 +26,5 @@ actual val platformModule: Module = module {
     }
     single { SafNotebookDocumentGateway(androidContext().contentResolver) }
     single<NotebookDocumentGateway> { get<SafNotebookDocumentGateway>() }
+    single<ReminderScheduler> { AlarmManagerReminderScheduler(androidContext()) }
 }

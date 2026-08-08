@@ -1,14 +1,18 @@
 package app.snurko.core.domain
 
 import kotlinx.datetime.LocalDate
+import kotlinx.datetime.LocalDateTime
 import kotlinx.datetime.TimeZone
-import kotlinx.datetime.todayIn
+import kotlinx.datetime.toLocalDateTime
 import kotlin.time.Clock
 
 fun interface DateProvider {
-    fun today(): LocalDate
+    fun now(): LocalDateTime
+
+    fun today(): LocalDate = now().date
 }
 
 class SystemDateProvider : DateProvider {
-    override fun today(): LocalDate = Clock.System.todayIn(TimeZone.currentSystemDefault())
+    override fun now(): LocalDateTime =
+        Clock.System.now().toLocalDateTime(TimeZone.currentSystemDefault())
 }
