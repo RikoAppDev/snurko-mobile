@@ -325,6 +325,59 @@ class ChallengeHomeViewModelTest {
         assertThat(repository.checkCalls).isEmpty()
     }
 
+    @Test
+    fun sharingHandsOutTheStickerForTheAttemptOnGoing() = runTest {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(11)))
+        val viewModel = viewModel(today = day(12))
+
+        viewModel.events.test {
+            viewModel.onAction(ChallengeHomeAction.ShareRequested)
+
+            val sticker = (awaitItem() as ChallengeHomeEvent.ShareSticker).sticker
+            assertThat(sticker.dayIndex).isEqualTo(12)
+            assertThat(sticker.streak).isEqualTo(11)
+            assertThat(sticker.cells[11]).isEqualTo(GridCellUi.TODAY)
+            assertThat(sticker.isCompleted).isFalse()
+        }
+    }
+
+    @Test
+    fun sharingAFinishedChallengeHandsOutTheCompletedSticker() = runTest {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(90)))
+        val viewModel = viewModel(today = day(93))
+
+        viewModel.events.test {
+            viewModel.onAction(ChallengeHomeAction.ShareRequested)
+
+            val sticker = (awaitItem() as ChallengeHomeEvent.ShareSticker).sticker
+            assertThat(sticker.isCompleted).isTrue()
+            assertThat(sticker.cells.all { it == GridCellUi.COMPLETE }).isTrue()
+        }
+    }
+
+    @Test
+    fun nothingIsSharedBeforeTheChallengeArrives() = runTest {
+        val viewModel = viewModel(today = day(1))
+
+        viewModel.events.test {
+            viewModel.onAction(ChallengeHomeAction.ShareRequested)
+
+            expectNoEvents()
+        }
+    }
+
+    @Test
+    fun nothingIsSharedWhileTheRestartMomentIsUp() = runTest {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(2)))
+        val viewModel = viewModel(today = day(4))
+
+        viewModel.events.test {
+            viewModel.onAction(ChallengeHomeAction.ShareRequested)
+
+            expectNoEvents()
+        }
+    }
+
     private fun viewModel(today: LocalDate) = ChallengeHomeViewModel(
         challengeRepository = repository,
         dateProvider = { today.atTime(9, 0) },
