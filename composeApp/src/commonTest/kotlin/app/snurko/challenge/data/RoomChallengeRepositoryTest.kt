@@ -15,8 +15,10 @@ import app.snurko.core.domain.DataError
 import app.snurko.core.domain.Result
 import assertk.assertThat
 import assertk.assertions.containsExactly
+import assertk.assertions.hasSize
 import assertk.assertions.isEmpty
 import assertk.assertions.isEqualTo
+import assertk.assertions.isLessThan
 import assertk.assertions.isNotNull
 import assertk.assertions.isNull
 import kotlinx.coroutines.flow.first
@@ -25,6 +27,8 @@ import kotlinx.datetime.LocalDate
 import kotlin.test.AfterTest
 import kotlin.test.BeforeTest
 import kotlin.test.Test
+import kotlin.time.Duration.Companion.milliseconds
+import kotlin.time.TimeSource
 
 class RoomChallengeRepositoryTest {
 
@@ -155,6 +159,34 @@ class RoomChallengeRepositoryTest {
     }
 
     @Test
+    fun aCreatedChallengeReachesTheFlowWithoutAPerceptibleDelay() = runTest {
+        repository.observeActiveChallenge().test {
+            assertThat(awaitItem()).isNull()
+
+            repository.createChallenge(name = "90 days", startDate = startDate, habits = habits)
+            val afterWrite = TimeSource.Monotonic.markNow()
+            assertThat(awaitItem()).isNotNull()
+
+            assertThat(afterWrite.elapsedNow()).isLessThan(MAX_EMISSION_DELAY)
+            cancelAndIgnoreRemainingEvents()
+        }
+    }
+
+    @Test
+    fun aCreatedChallengeIsEmittedAsASingleConsistentState() = runTest {
+        repository.observeActiveChallenge().test {
+            assertThat(awaitItem()).isNull()
+
+            repository.createChallenge(name = "90 days", startDate = startDate, habits = habits)
+
+            val active = awaitItem()
+            assertThat(active).isNotNull()
+            assertThat(active!!.challenge.habits).hasSize(habits.size)
+            expectNoEvents()
+        }
+    }
+
+    @Test
     fun checkingAHabitForAnUnknownAttemptFails() = runTest {
         val active = createChallenge()
 
@@ -264,4 +296,8 @@ class RoomChallengeRepositoryTest {
     private suspend fun createChallenge() = repository
         .createChallenge(name = "90 days", startDate = startDate, habits = habits)
         .let { repository.observeActiveChallenge().first()!! }
+
+    private companion object {
+        val MAX_EMISSION_DELAY = 500.milliseconds
+    }
 }

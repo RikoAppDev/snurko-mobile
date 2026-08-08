@@ -3,6 +3,9 @@
 
     <application
         android:name=".SnurkoApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
         android:label="Snurko"
         android:theme="@android:style/Theme.Material.Light.NoActionBar">
         <activity

@@ -6,4 +6,13 @@ sealed interface DataError : Error {
         NOT_FOUND,
         UNKNOWN,
     }
+
+    enum class Backup : DataError {
+        NOTHING_TO_EXPORT,
+        CANCELLED,
+        DOCUMENT_UNAVAILABLE,
+        MALFORMED_NOTEBOOK,
+        UNSUPPORTED_SCHEMA_VERSION,
+        UNKNOWN,
+    }
 }

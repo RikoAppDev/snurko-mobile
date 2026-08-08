@@ -2,6 +2,9 @@ package app.snurko.di
 
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
+import app.snurko.challenge.domain.FakeNotebookBackup
+import app.snurko.challenge.domain.NotebookBackup
+import app.snurko.challenge.presentation.history.HistoryViewModel
 import app.snurko.challenge.presentation.home.ChallengeHomeViewModel
 import app.snurko.challenge.presentation.setup.ChallengeSetupViewModel
 import app.snurko.core.domain.DateProvider
@@ -18,7 +21,10 @@ class PresentationModuleTest {
 
     private val koin = koinApplication {
         modules(
-            module { single<ChallengeRepository> { FakeChallengeRepository() } },
+            module {
+                single<ChallengeRepository> { FakeChallengeRepository() }
+                single<NotebookBackup> { FakeNotebookBackup() }
+            },
             coreModule,
             presentationModule,
         )
@@ -37,6 +43,11 @@ class PresentationModuleTest {
     @Test
     fun theChallengeHomeViewModelIsResolvable() {
         assertThat(koin.get<ChallengeHomeViewModel>()).isNotNull()
+    }
+
+    @Test
+    fun theHistoryViewModelIsResolvable() {
+        assertThat(koin.get<HistoryViewModel>()).isNotNull()
     }
 
     @Test

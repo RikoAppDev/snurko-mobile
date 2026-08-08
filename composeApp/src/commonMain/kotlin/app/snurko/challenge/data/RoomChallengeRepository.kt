@@ -5,25 +5,23 @@ import app.snurko.challenge.domain.AttemptStatus
 import app.snurko.challenge.domain.CHALLENGE_LENGTH_DAYS
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.Habit
+import app.snurko.challenge.domain.Notebook
 import app.snurko.challenge.domain.completed
 import app.snurko.challenge.domain.failedOn
 import app.snurko.challenge.domain.nextAttempt
+import app.snurko.challenge.domain.toActiveChallenge
 import app.snurko.core.data.localCall
 import app.snurko.core.database.AttemptDao
 import app.snurko.core.database.AttemptEntity
 import app.snurko.core.database.ChallengeDao
 import app.snurko.core.database.ChallengeEntity
-import app.snurko.core.database.ChallengeWithHabits
 import app.snurko.core.database.DayCheckDao
 import app.snurko.core.database.DayCheckEntity
 import app.snurko.core.domain.DataError
 import app.snurko.core.domain.EmptyResult
 import app.snurko.core.domain.Result
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
-import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.flow.map
 import kotlinx.datetime.LocalDate
 
@@ -33,10 +31,13 @@ class RoomChallengeRepository(
     private val dayCheckDao: DayCheckDao,
 ) : ChallengeRepository {
 
-    @OptIn(ExperimentalCoroutinesApi::class)
-    override fun observeActiveChallenge(): Flow<ActiveChallenge?> = challengeDao
-        .observeLatestChallenge()
-        .flatMapLatest { challenge -> challenge?.let(::observeActiveAttemptOf) ?: flowOf(null) }
+    override fun observeNotebook(): Flow<Notebook?> = challengeDao
+        .observeNotebook()
+        .map { notebook -> notebook?.toNotebook() }
+        .distinctUntilChanged()
+
+    override fun observeActiveChallenge(): Flow<ActiveChallenge?> = observeNotebook()
+        .map { notebook -> notebook?.toActiveChallenge() }
         .distinctUntilChanged()
 
     override suspend fun createChallenge(
@@ -98,21 +99,4 @@ class RoomChallengeRepository(
         attemptDao.update(entity.toAttempt().completed().toEntity(entity.challengeId))
         Result.Success(Unit)
     }
-
-    @OptIn(ExperimentalCoroutinesApi::class)
-    private fun observeActiveAttemptOf(challenge: ChallengeWithHabits): Flow<ActiveChallenge?> = attemptDao
-        .observeLatest(challengeId = challenge.challenge.id)
-        .flatMapLatest { attempt ->
-            if (attempt == null) {
-                flowOf(null)
-            } else {
-                dayCheckDao.observeForAttempt(attempt.id).map { checks ->
-                    ActiveChallenge(
-                        challenge = challenge.toChallenge(),
-                        attempt = attempt.toAttempt(),
-                        checks = checks.toDayChecks(),
-                    )
-                }
-            }
-        }
 }

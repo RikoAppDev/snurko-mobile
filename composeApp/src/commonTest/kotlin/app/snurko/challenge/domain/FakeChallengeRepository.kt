@@ -30,6 +30,7 @@ class FakeChallengeRepository : ChallengeRepository {
     )
 
     private val activeChallenge = MutableStateFlow<ActiveChallenge?>(null)
+    private val notebook = MutableStateFlow<Notebook?>(null)
 
     val createCalls = mutableListOf<CreateCall>()
     val checkCalls = mutableListOf<CheckCall>()
@@ -46,6 +47,13 @@ class FakeChallengeRepository : ChallengeRepository {
     fun setActiveChallenge(active: ActiveChallenge?) {
         activeChallenge.value = active
     }
+
+    fun setNotebook(value: Notebook?) {
+        notebook.value = value
+        activeChallenge.value = value?.toActiveChallenge()
+    }
+
+    override fun observeNotebook(): Flow<Notebook?> = notebook
 
     override fun observeActiveChallenge(): Flow<ActiveChallenge?> = activeChallenge
 

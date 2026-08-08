@@ -41,6 +41,37 @@
     <string name="home_restart_separator">, </string>
     <string name="home_restart_explanation">That day cannot come back. The 90 days start again from day 1 today.</string>
     <string name="home_restart_acknowledge">Start again</string>
+    <string name="home_history_link">the back pages</string>
+
+    <string name="history_title">Back pages</string>
+    <string name="history_back">Back</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Attempt %1$d</string>
+    <string name="history_in_progress">in progress — day %1$d</string>
+    <string name="history_failed">failed day %1$d</string>
+    <string name="history_failed_missed">failed day %1$d — missed: %2$s</string>
+    <string name="history_completed">completed</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">since %1$s</string>
+    <string name="history_past_empty">Nothing on the back pages yet — this is the first attempt.</string>
+
+    <string name="history_export">Export notebook</string>
+    <string name="history_import">Import notebook</string>
+    <string name="history_exported">Notebook written out.</string>
+    <string name="history_imported">Notebook replaced with the imported one.</string>
+
+    <string name="history_import_confirm_title">Replace this notebook?</string>
+    <string name="history_import_confirm_body">Importing overwrites everything written here — the attempt you are on and every past one. This cannot be undone.</string>
+    <string name="history_import_confirm_replace">Replace it</string>
+    <string name="history_import_confirm_cancel">Keep this one</string>
+
+    <string name="backup_error_nothing_to_export">There is nothing written down yet to export.</string>
+    <string name="backup_error_document_unavailable">That file could not be opened.</string>
+    <string name="backup_error_malformed">That file is not a Snurko notebook.</string>
+    <string name="backup_error_unsupported_version">That notebook comes from a newer version of Snurko.</string>
+    <string name="backup_error_unknown">That did not work. Try again.</string>
 
     <plurals name="challenge_habit_count">
         <item quantity="one">%1$d habit</item>

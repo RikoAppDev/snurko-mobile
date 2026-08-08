@@ -7,7 +7,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import app.snurko.challenge.presentation.home.ChallengeHomeRoot
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.rememberNavController
+import app.snurko.challenge.presentation.ChallengeHomeRoute
+import app.snurko.challenge.presentation.challengeGraph
 import app.snurko.challenge.presentation.setup.ChallengeSetupRoot
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
@@ -29,6 +32,19 @@ private fun AppRoot(viewModel: AppViewModel = koinViewModel()) {
     when (state) {
         AppUiState.Loading -> Box(Modifier.fillMaxSize().background(SnurkoColors.paper))
         AppUiState.Setup -> ChallengeSetupRoot()
-        AppUiState.Started -> ChallengeHomeRoot()
+        AppUiState.Started -> ChallengeNavHost()
+    }
+}
+
+@Composable
+private fun ChallengeNavHost() {
+    val navController = rememberNavController()
+
+    NavHost(
+        navController = navController,
+        startDestination = ChallengeHomeRoute,
+        modifier = Modifier.fillMaxSize().background(SnurkoColors.paper),
+    ) {
+        challengeGraph(navController)
     }
 }

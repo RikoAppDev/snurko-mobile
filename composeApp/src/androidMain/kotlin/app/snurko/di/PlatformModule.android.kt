@@ -2,6 +2,8 @@ package app.snurko.di
 
 import androidx.room3.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import app.snurko.challenge.data.SafNotebookDocumentGateway
+import app.snurko.challenge.domain.NotebookDocumentGateway
 import app.snurko.core.database.SNURKO_DATABASE_NAME
 import app.snurko.core.database.SnurkoDatabase
 import kotlinx.coroutines.Dispatchers
@@ -20,4 +22,6 @@ actual val platformModule: Module = module {
             .setQueryCoroutineContext(Dispatchers.IO)
             .build()
     }
+    single { SafNotebookDocumentGateway(androidContext().contentResolver) }
+    single<NotebookDocumentGateway> { get<SafNotebookDocumentGateway>() }
 }
