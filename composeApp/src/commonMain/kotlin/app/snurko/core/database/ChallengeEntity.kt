@@ -9,4 +9,5 @@ data class ChallengeEntity(
     val id: Long = 0,
     val name: String,
     val startDateEpochDay: Long,
+    val lengthDays: Int,
 )

@@ -1,0 +1,51 @@
+package app.snurko.challenge.presentation.setup
+
+import androidx.compose.runtime.Stable
+import app.snurko.core.presentation.UiState
+
+data class HabitDraftUi(
+    val id: Long,
+    val name: String,
+    val failCondition: String?,
+)
+
+enum class HabitInputHint {
+    NONE,
+    NAME_REQUIRED,
+    DUPLICATE_NAME,
+}
+
+@Stable
+data class ChallengeSetupState(
+    val habits: List<HabitDraftUi> = emptyList(),
+    val habitNameInput: String = "",
+    val failConditionInput: String = "",
+    val editedHabitId: Long? = null,
+    val isConfirmingStart: Boolean = false,
+    val isStarting: Boolean = false,
+) : UiState {
+
+    val habitName: String get() = habitNameInput.trim()
+
+    val failCondition: String? get() = failConditionInput.trim().ifEmpty { null }
+
+    val isEditing: Boolean get() = editedHabitId != null
+
+    val habitCount: Int get() = habits.size
+
+    val isNameBlank: Boolean get() = habitName.isEmpty()
+
+    val isNameDuplicate: Boolean
+        get() = habits.any { it.id != editedHabitId && it.name.equals(habitName, ignoreCase = true) }
+
+    val canSubmitHabit: Boolean get() = !isNameBlank && !isNameDuplicate
+
+    val canStart: Boolean get() = habits.isNotEmpty() && !isStarting
+
+    val habitInputHint: HabitInputHint
+        get() = when {
+            isNameDuplicate -> HabitInputHint.DUPLICATE_NAME
+            isNameBlank && (isEditing || failConditionInput.isNotBlank()) -> HabitInputHint.NAME_REQUIRED
+            else -> HabitInputHint.NONE
+        }
+}

@@ -3,17 +3,34 @@ package app.snurko.core.database
 import androidx.room3.Dao
 import androidx.room3.Insert
 import androidx.room3.Query
+import androidx.room3.Transaction
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface ChallengeDao {
+abstract class ChallengeDao {
+
+    @Transaction
+    open suspend fun createChallenge(
+        challenge: ChallengeEntity,
+        habits: List<HabitEntity>,
+        firstAttempt: AttemptEntity,
+    ): Long {
+        val challengeId = insertChallenge(challenge)
+        insertHabits(habits.map { it.copy(challengeId = challengeId) })
+        insertAttempt(firstAttempt.copy(challengeId = challengeId))
+        return challengeId
+    }
+
+    @Transaction
+    @Query("SELECT * FROM challenges ORDER BY id DESC LIMIT 1")
+    abstract fun observeLatestChallenge(): Flow<ChallengeWithHabits?>
 
     @Insert
-    suspend fun insert(challenge: ChallengeEntity): Long
+    abstract suspend fun insertChallenge(challenge: ChallengeEntity): Long
 
-    @Query("SELECT * FROM challenges WHERE id = :id")
-    suspend fun getById(id: Long): ChallengeEntity?
+    @Insert
+    abstract suspend fun insertHabits(habits: List<HabitEntity>)
 
-    @Query("SELECT * FROM challenges ORDER BY id")
-    fun observeAll(): Flow<List<ChallengeEntity>>
+    @Insert
+    abstract suspend fun insertAttempt(attempt: AttemptEntity): Long
 }

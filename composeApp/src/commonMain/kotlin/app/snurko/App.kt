@@ -1,27 +1,37 @@
 package app.snurko
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.challenge.presentation.setup.ChallengeSetupRoot
+import app.snurko.challenge.presentation.started.ChallengeStartedScreen
+import app.snurko.core.designsystem.SnurkoColors
+import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.presentation.AppUiState
+import app.snurko.presentation.AppViewModel
+import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
 fun App() {
-    MaterialTheme {
-        Surface(modifier = Modifier.fillMaxSize()) {
-            Box(
-                modifier = Modifier.fillMaxSize(),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = "Snurko",
-                    style = MaterialTheme.typography.headlineLarge,
-                )
-            }
-        }
+    SnurkoTheme {
+        AppRoot()
+    }
+}
+
+@Composable
+private fun AppRoot(viewModel: AppViewModel = koinViewModel()) {
+    val state by viewModel.state.collectAsStateWithLifecycle()
+
+    when (val current = state) {
+        AppUiState.Loading -> Box(Modifier.fillMaxSize().background(SnurkoColors.paper))
+        AppUiState.Setup -> ChallengeSetupRoot()
+        is AppUiState.Started -> ChallengeStartedScreen(
+            day = current.day,
+            habitCount = current.habitCount,
+        )
     }
 }

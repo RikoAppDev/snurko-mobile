@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">My challenge</string>
+    <string name="challenge_setup_invitation">Write the habits you will keep every day for the next 90 days.</string>
+
+    <string name="challenge_setup_habit_name_label">Habit</string>
+    <string name="challenge_setup_habit_name_placeholder">Read 10 pages</string>
+    <string name="challenge_setup_fail_condition_label">What counts as failing (optional)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Fewer than 10 pages</string>
+    <string name="challenge_setup_fail_condition_summary">Fails if: %1$s</string>
+
+    <string name="challenge_setup_add_habit">Add habit</string>
+    <string name="challenge_setup_save_habit">Save habit</string>
+    <string name="challenge_setup_cancel_edit">Cancel</string>
+    <string name="challenge_setup_hint_name_required">A habit needs a name before you can add it.</string>
+    <string name="challenge_setup_hint_duplicate_name">This habit is already on the list.</string>
+    <string name="challenge_setup_edit_habit">Edit %1$s</string>
+    <string name="challenge_setup_remove_habit">Remove %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Start the 90 days</string>
+    <string name="challenge_setup_start_failed">The challenge could not be started. Try again.</string>
+
+    <string name="challenge_setup_confirm_title">Ready to start?</string>
+    <string name="challenge_setup_confirm_locked">Once you start, this habit set is locked. You cannot add, rename or remove a habit until the 90 days are over.</string>
+    <string name="challenge_setup_confirm_restart">Any day you do not finish every habit, the challenge restarts from day 1.</string>
+    <string name="challenge_setup_confirm_start">Start day 1</string>
+    <string name="challenge_setup_confirm_cancel">Not yet</string>
+
+    <string name="challenge_started_day">Day %1$d</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d habit</item>
+        <item quantity="other">%1$d habits</item>
+    </plurals>
+</resources>
