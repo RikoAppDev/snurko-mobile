@@ -2,6 +2,8 @@ package app.snurko.di
 
 import androidx.room3.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import app.snurko.billing.data.PlayBillingGateway
+import app.snurko.billing.domain.BillingGateway
 import app.snurko.challenge.data.SafNotebookDocumentGateway
 import app.snurko.challenge.domain.NotebookDocumentGateway
 import app.snurko.challenge.presentation.sticker.DayStickerSharer
@@ -36,6 +38,8 @@ actual val platformModule: Module = module {
     }
     single { SafNotebookDocumentGateway(androidContext().contentResolver) }
     single<NotebookDocumentGateway> { get<SafNotebookDocumentGateway>() }
+    single { PlayBillingGateway(androidContext()) }
+    single<BillingGateway> { get<PlayBillingGateway>() }
     single<DayStickerSharer> { SystemDayStickerSharer(androidContext()) }
     single<ReminderScheduler> { AlarmManagerReminderScheduler(androidContext()) }
     single<ReminderNotifier> { SystemReminderNotifier(androidContext()) }

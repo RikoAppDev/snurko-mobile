@@ -1,5 +1,6 @@
 package app.snurko.core.database
 
+import androidx.room3.AutoMigration
 import androidx.room3.ConstructedBy
 import androidx.room3.Database
 import androidx.room3.RoomDatabase
@@ -14,8 +15,10 @@ const val SNURKO_DATABASE_NAME = "snurko.db"
         AttemptEntity::class,
         DayCheckEntity::class,
         ReminderEntity::class,
+        EntitlementEntity::class,
     ],
-    version = 1,
+    version = 2,
+    autoMigrations = [AutoMigration(from = 1, to = 2)],
 )
 @ConstructedBy(SnurkoDatabaseConstructor::class)
 abstract class SnurkoDatabase : RoomDatabase() {
@@ -23,6 +26,7 @@ abstract class SnurkoDatabase : RoomDatabase() {
     abstract fun attemptDao(): AttemptDao
     abstract fun dayCheckDao(): DayCheckDao
     abstract fun reminderDao(): ReminderDao
+    abstract fun entitlementDao(): EntitlementDao
 }
 
 @Suppress("KotlinNoActualForExpect")

@@ -45,6 +45,8 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.androidx.activity.compose)
             implementation(libs.androidx.core.ktx)
+            implementation(libs.billing)
+            implementation(libs.billing.ktx)
             implementation(libs.glance.appwidget)
             implementation(libs.koin.android)
         }

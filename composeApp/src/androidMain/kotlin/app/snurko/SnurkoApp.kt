@@ -1,7 +1,10 @@
 package app.snurko
 
 import android.app.Application
+import app.snurko.billing.data.BillingEntitlementRepository
+import app.snurko.billing.data.PlayBillingGateway
 import app.snurko.core.domain.DayRolloverScheduler
+import app.snurko.di.billingModule
 import app.snurko.di.challengeDataModule
 import app.snurko.di.coreModule
 import app.snurko.di.databaseModule
@@ -14,6 +17,7 @@ import app.snurko.widget.WidgetSync
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.job
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.android.ext.koin.androidContext
@@ -26,6 +30,8 @@ class SnurkoApp : Application() {
     private val reminderSync: ReminderSync by inject()
     private val widgetSync: WidgetSync by inject()
     private val dayRolloverScheduler: DayRolloverScheduler by inject()
+    private val entitlements: BillingEntitlementRepository by inject()
+    private val billingGateway: PlayBillingGateway by inject()
 
     override fun onCreate() {
         super.onCreate()
@@ -36,6 +42,7 @@ class SnurkoApp : Application() {
                 coreModule,
                 databaseModule,
                 challengeDataModule,
+                billingModule,
                 remindersModule,
                 widgetModule,
                 presentationModule,
@@ -43,6 +50,8 @@ class SnurkoApp : Application() {
         }
         reminderSync.start(applicationScope)
         widgetSync.start(applicationScope)
+        entitlements.start(applicationScope)
+        applicationScope.coroutineContext.job.invokeOnCompletion { billingGateway.close() }
         applicationScope.launch { dayRolloverScheduler.scheduleNextRollover() }
     }
 }

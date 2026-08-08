@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import app.snurko.billing.data.PlayBillingGateway
 import app.snurko.challenge.data.SafNotebookDocumentGateway
 import app.snurko.challenge.domain.NOTEBOOK_MIME_TYPE
 import app.snurko.reminders.data.AndroidNotificationPermissionGateway
@@ -14,6 +15,7 @@ class MainActivity : ComponentActivity() {
 
     private val documentGateway: SafNotebookDocumentGateway by inject()
     private val notificationPermissions: AndroidNotificationPermissionGateway by inject()
+    private val billingGateway: PlayBillingGateway by inject()
 
     private val createDocument = registerForActivityResult(
         ActivityResultContracts.CreateDocument(NOTEBOOK_MIME_TYPE),
@@ -37,6 +39,7 @@ class MainActivity : ComponentActivity() {
             ),
         )
         notificationPermissions.attach(requestNotificationPermission)
+        billingGateway.attach(this)
         setContent {
             App()
         }
@@ -45,6 +48,7 @@ class MainActivity : ComponentActivity() {
     override fun onDestroy() {
         documentGateway.detach()
         notificationPermissions.detach()
+        billingGateway.detach()
         super.onDestroy()
     }
 }
