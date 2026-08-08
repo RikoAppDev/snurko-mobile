@@ -51,6 +51,7 @@ import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.core.presentation.OnResume
 import app.snurko.resources.Res
 import app.snurko.resources.challenge_fail_condition_summary
+import app.snurko.resources.home_completed
 import app.snurko.resources.home_day
 import app.snurko.resources.home_day_mark
 import app.snurko.resources.home_grid
@@ -130,10 +131,14 @@ fun ChallengeHomeScreen(
         Spacer(Modifier.height(20.dp))
         DayGrid(cells = state.cells, markedDays = state.markedDays, totalDays = state.totalDays)
         Spacer(Modifier.height(28.dp))
-        TodayChecklist(
-            habits = state.habits,
-            onToggle = { onAction(ChallengeHomeAction.HabitToggled(it)) },
-        )
+        if (state.isCompleted) {
+            CompletedNote(totalDays = state.totalDays)
+        } else {
+            TodayChecklist(
+                habits = state.habits,
+                onToggle = { onAction(ChallengeHomeAction.HabitToggled(it)) },
+            )
+        }
     }
 }
 
@@ -276,6 +281,16 @@ private fun DayCell(day: Int, cell: GridCellUi, modifier: Modifier = Modifier) {
 }
 
 @Composable
+private fun CompletedNote(totalDays: Int) {
+    Text(
+        text = stringResource(Res.string.home_completed, totalDays),
+        style = MaterialTheme.typography.displayMedium,
+        color = SnurkoColors.text,
+        modifier = Modifier.fillMaxWidth(),
+    )
+}
+
+@Composable
 private fun TodayChecklist(habits: List<HabitRowUi>, onToggle: (Long) -> Unit) {
     Column(modifier = Modifier.fillMaxWidth()) {
         Text(
@@ -377,6 +392,23 @@ private fun PencilMark(
 private fun ChallengeHomeScreenPreview() {
     SnurkoTheme {
         ChallengeHomeScreen(state = previewState, onAction = {})
+    }
+}
+
+@Preview
+@Composable
+private fun ChallengeHomeCompletedPreview() {
+    SnurkoTheme {
+        ChallengeHomeScreen(
+            state = previewState.copy(
+                dayIndex = 90,
+                streak = 90,
+                cells = List(90) { GridCellUi.COMPLETE },
+                habits = emptyList(),
+                isCompleted = true,
+            ),
+            onAction = {},
+        )
     }
 }
 

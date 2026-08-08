@@ -266,6 +266,64 @@ class ChallengeHomeViewModelTest {
         assertThat(viewModel.state.value.dayIndex).isEqualTo(1)
     }
 
+    @Test
+    fun checkingTheLastHabitOnDayNinetyFinishesTheChallenge() {
+        repository.setActiveChallenge(
+            activeChallenge(checks = completeDaysThrough(89) + partialDay(90)),
+        )
+        val viewModel = viewModel(today = day(90))
+        assertThat(viewModel.state.value.isCompleted).isFalse()
+
+        viewModel.onAction(ChallengeHomeAction.HabitToggled(READ_ID))
+
+        assertThat(repository.completeCalls).containsExactly(1L)
+        assertThat(viewModel.state.value.isCompleted).isTrue()
+    }
+
+    @Test
+    fun aFinishedChallengeIsArchivedWhenTheAppIsOpenedAfterTheLastDay() {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(90)))
+
+        val state = viewModel(today = day(93)).state.value
+
+        assertThat(repository.completeCalls).containsExactly(1L)
+        assertThat(state.isCompleted).isTrue()
+        assertThat(state.dayIndex).isEqualTo(90)
+    }
+
+    @Test
+    fun theFinishedGridStaysFullAndTheChecklistIsGone() {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(90)))
+
+        val state = viewModel(today = day(93)).state.value
+
+        assertThat(state.markedDays).isEqualTo(90)
+        assertThat(state.habits).isEmpty()
+        assertThat(state.restart).isNull()
+    }
+
+    @Test
+    fun aChallengeThatIsAlreadyArchivedIsNotCompletedAgain() {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(90)))
+        val viewModel = viewModel(today = day(93))
+
+        viewModel.onAction(ChallengeHomeAction.ScreenResumed)
+        viewModel.onAction(ChallengeHomeAction.ScreenResumed)
+
+        assertThat(repository.completeCalls).hasSize(1)
+        assertThat(viewModel.state.value.isCompleted).isTrue()
+    }
+
+    @Test
+    fun noHabitCanBeCheckedAfterTheChallengeIsFinished() {
+        repository.setActiveChallenge(activeChallenge(checks = completeDaysThrough(90)))
+        val viewModel = viewModel(today = day(90))
+
+        viewModel.onAction(ChallengeHomeAction.HabitToggled(WORKOUT_ID))
+
+        assertThat(repository.checkCalls).isEmpty()
+    }
+
     private fun viewModel(today: LocalDate) = ChallengeHomeViewModel(
         challengeRepository = repository,
         dateProvider = { today },

@@ -17,11 +17,8 @@ abstract class AttemptDao {
         insert(next)
     }
 
-    @Query(
-        "SELECT * FROM attempts WHERE challengeId = :challengeId AND status = :status " +
-            "ORDER BY number DESC LIMIT 1",
-    )
-    abstract fun observeLatestWithStatus(challengeId: Long, status: AttemptStatus): Flow<AttemptEntity?>
+    @Query("SELECT * FROM attempts WHERE challengeId = :challengeId ORDER BY number DESC LIMIT 1")
+    abstract fun observeLatest(challengeId: Long): Flow<AttemptEntity?>
 
     @Query("SELECT * FROM attempts WHERE id = :id")
     abstract suspend fun getById(id: Long): AttemptEntity?

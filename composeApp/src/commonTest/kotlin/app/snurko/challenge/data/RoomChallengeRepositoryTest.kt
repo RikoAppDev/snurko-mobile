@@ -232,7 +232,7 @@ class RoomChallengeRepositoryTest {
     }
 
     @Test
-    fun completingAnAttemptArchivesItAndLeavesNoActiveAttempt() = runTest {
+    fun completingAnAttemptArchivesIt() = runTest {
         val active = createChallenge()
 
         repository.completeAttempt(active.attempt.id)
@@ -240,7 +240,17 @@ class RoomChallengeRepositoryTest {
         val completed: Attempt? = attemptDao.getById(active.attempt.id)?.toAttempt()
         assertThat(completed!!.status).isEqualTo(AttemptStatus.COMPLETED)
         assertThat(completed.failedOnDay).isNull()
-        assertThat(repository.observeActiveChallenge().first()).isNull()
+    }
+
+    @Test
+    fun aCompletedChallengeStaysOnScreenWithItsFinishedAttempt() = runTest {
+        val active = createChallenge()
+
+        repository.completeAttempt(active.attempt.id)
+
+        val finished = repository.observeActiveChallenge().first()!!
+        assertThat(finished.attempt.id).isEqualTo(active.attempt.id)
+        assertThat(finished.attempt.status).isEqualTo(AttemptStatus.COMPLETED)
     }
 
     @Test

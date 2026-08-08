@@ -3,6 +3,7 @@ package app.snurko.challenge.presentation.home
 import androidx.lifecycle.viewModelScope
 import app.snurko.challenge.domain.ActiveChallenge
 import app.snurko.challenge.domain.AttemptOutcome
+import app.snurko.challenge.domain.AttemptStatus
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.dayIndexOn
 import app.snurko.challenge.domain.evaluate
@@ -52,8 +53,17 @@ class ChallengeHomeViewModel(
         val today = dateProvider.today()
         when (val outcome = active.evaluate(today)) {
             is AttemptOutcome.Failed -> restart(active, outcome.failedOnDay, today)
-            else -> render(active, today)
+            AttemptOutcome.Completed -> complete(active, today)
+            AttemptOutcome.Ongoing -> render(active, today)
         }
+    }
+
+    private suspend fun complete(active: ActiveChallenge, today: LocalDate) {
+        if (active.attempt.status == AttemptStatus.ACTIVE) {
+            challengeRepository.completeAttempt(active.attempt.id)
+                .onFailure { sendEvent(ChallengeHomeEvent.UpdateFailed) }
+        }
+        render(active, today)
     }
 
     private suspend fun restart(active: ActiveChallenge, failedOnDay: Int, today: LocalDate) {
@@ -89,7 +99,7 @@ class ChallengeHomeViewModel(
     private fun toggleHabit(habitId: Long) {
         val active = activeChallenge ?: return
         val current = state.value
-        if (current.restart != null) return
+        if (current.restart != null || current.isCompleted) return
         val habit = current.habits.firstOrNull { it.id == habitId } ?: return
 
         viewModelScope.launch {

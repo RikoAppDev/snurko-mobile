@@ -101,7 +101,7 @@ class RoomChallengeRepository(
 
     @OptIn(ExperimentalCoroutinesApi::class)
     private fun observeActiveAttemptOf(challenge: ChallengeWithHabits): Flow<ActiveChallenge?> = attemptDao
-        .observeLatestWithStatus(challengeId = challenge.challenge.id, status = AttemptStatus.ACTIVE)
+        .observeLatest(challengeId = challenge.challenge.id)
         .flatMapLatest { attempt ->
             if (attempt == null) {
                 flowOf(null)

@@ -33,6 +33,7 @@
     <string name="home_grid">%1$d of %2$d days marked</string>
     <string name="home_day_mark">×</string>
     <string name="home_today">Today</string>
+    <string name="home_completed">%1$d days.</string>
     <string name="home_update_failed">That did not save. Try again.</string>
 
     <string name="home_restart_title">Day %1$d was not finished.</string>
