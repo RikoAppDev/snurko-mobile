@@ -17,7 +17,7 @@ class RoomNotebookRepository(
     override suspend fun exportNotebook(): Result<NotebookExport, DataError.Backup> = backupCall {
         val notebook = challengeDao.getNotebook()
             ?: return@backupCall Result.Error(DataError.Backup.NOTHING_TO_EXPORT)
-        Result.Success(notebook.toNotebookExport())
+        Result.Success(notebook.toNotebook().toNotebookExport())
     }
 
     override suspend fun importNotebook(export: NotebookExport): EmptyResult<DataError.Backup> {

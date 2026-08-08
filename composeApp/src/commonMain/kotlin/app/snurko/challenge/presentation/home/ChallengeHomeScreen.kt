@@ -2,6 +2,7 @@ package app.snurko.challenge.presentation.home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -55,6 +56,7 @@ import app.snurko.resources.home_completed
 import app.snurko.resources.home_day
 import app.snurko.resources.home_day_mark
 import app.snurko.resources.home_grid
+import app.snurko.resources.home_history_link
 import app.snurko.resources.home_restart_acknowledge
 import app.snurko.resources.home_restart_explanation
 import app.snurko.resources.home_restart_missed
@@ -73,7 +75,10 @@ private val CELL_CORNER = RoundedCornerShape(3.dp)
 private val PAGE_PADDING = 20.dp
 
 @Composable
-fun ChallengeHomeRoot(viewModel: ChallengeHomeViewModel = koinViewModel()) {
+fun ChallengeHomeRoot(
+    onOpenHistory: () -> Unit,
+    viewModel: ChallengeHomeViewModel = koinViewModel(),
+) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
@@ -96,6 +101,7 @@ fun ChallengeHomeRoot(viewModel: ChallengeHomeViewModel = koinViewModel()) {
         ChallengeHomeScreen(
             state = state,
             onAction = viewModel::onAction,
+            onOpenHistory = onOpenHistory,
             modifier = Modifier.padding(innerPadding),
         )
     }
@@ -105,6 +111,7 @@ fun ChallengeHomeRoot(viewModel: ChallengeHomeViewModel = koinViewModel()) {
 fun ChallengeHomeScreen(
     state: ChallengeHomeState,
     onAction: (ChallengeHomeAction) -> Unit,
+    onOpenHistory: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val restart = state.restart
@@ -137,6 +144,30 @@ fun ChallengeHomeScreen(
             TodayChecklist(
                 habits = state.habits,
                 onToggle = { onAction(ChallengeHomeAction.HabitToggled(it)) },
+            )
+        }
+        Spacer(Modifier.height(20.dp))
+        HistoryMarginNote(onClick = onOpenHistory)
+    }
+}
+
+@Composable
+private fun HistoryMarginNote(onClick: () -> Unit) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.End,
+    ) {
+        Box(
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .clickable(role = Role.Button, onClick = onClick)
+                .padding(horizontal = 6.dp),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                text = stringResource(Res.string.home_history_link),
+                style = MaterialTheme.typography.headlineSmall,
+                color = SnurkoColors.textSecondary,
             )
         }
     }
@@ -391,7 +422,7 @@ private fun PencilMark(
 @Composable
 private fun ChallengeHomeScreenPreview() {
     SnurkoTheme {
-        ChallengeHomeScreen(state = previewState, onAction = {})
+        ChallengeHomeScreen(state = previewState, onAction = {}, onOpenHistory = {})
     }
 }
 
@@ -408,6 +439,7 @@ private fun ChallengeHomeCompletedPreview() {
                 isCompleted = true,
             ),
             onAction = {},
+            onOpenHistory = {},
         )
     }
 }
@@ -421,6 +453,7 @@ private fun ChallengeHomeRestartMomentPreview() {
                 restart = RestartMomentUi(failedOnDay = 12, missedHabits = listOf("Read", "No alcohol")),
             ),
             onAction = {},
+            onOpenHistory = {},
         )
     }
 }

@@ -5,9 +5,11 @@ import app.snurko.challenge.domain.AttemptStatus
 import app.snurko.challenge.domain.CHALLENGE_LENGTH_DAYS
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.Habit
+import app.snurko.challenge.domain.Notebook
 import app.snurko.challenge.domain.completed
 import app.snurko.challenge.domain.failedOn
 import app.snurko.challenge.domain.nextAttempt
+import app.snurko.challenge.domain.toActiveChallenge
 import app.snurko.core.data.localCall
 import app.snurko.core.database.AttemptDao
 import app.snurko.core.database.AttemptEntity
@@ -29,8 +31,12 @@ class RoomChallengeRepository(
     private val dayCheckDao: DayCheckDao,
 ) : ChallengeRepository {
 
-    override fun observeActiveChallenge(): Flow<ActiveChallenge?> = challengeDao
+    override fun observeNotebook(): Flow<Notebook?> = challengeDao
         .observeNotebook()
+        .map { notebook -> notebook?.toNotebook() }
+        .distinctUntilChanged()
+
+    override fun observeActiveChallenge(): Flow<ActiveChallenge?> = observeNotebook()
         .map { notebook -> notebook?.toActiveChallenge() }
         .distinctUntilChanged()
 

@@ -8,11 +8,6 @@ data class NotebookExport(
     val attempts: List<AttemptRecord>,
 )
 
-data class AttemptRecord(
-    val attempt: Attempt,
-    val checks: List<DayCheck>,
-)
-
 /**
  * True when every attempt is numbered uniquely and every check points at a habit of this challenge.
  * A document that fails this would corrupt the notebook even though it parses as JSON.

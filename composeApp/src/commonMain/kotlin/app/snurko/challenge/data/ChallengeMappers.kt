@@ -1,12 +1,12 @@
 package app.snurko.challenge.data
 
-import app.snurko.challenge.domain.ActiveChallenge
 import app.snurko.challenge.domain.Attempt
 import app.snurko.challenge.domain.AttemptRecord
 import app.snurko.challenge.domain.Challenge
 import app.snurko.challenge.domain.DayCheck
 import app.snurko.challenge.domain.Habit
 import app.snurko.challenge.domain.NOTEBOOK_SCHEMA_VERSION
+import app.snurko.challenge.domain.Notebook
 import app.snurko.challenge.domain.NotebookExport
 import app.snurko.core.database.AttemptEntity
 import app.snurko.core.database.ChallengeEntity
@@ -15,17 +15,7 @@ import app.snurko.core.database.DayCheckEntity
 import app.snurko.core.database.HabitEntity
 import kotlinx.datetime.LocalDate
 
-fun ChallengeNotebook.toActiveChallenge(): ActiveChallenge? {
-    val latest = attempts.maxByOrNull { it.attempt.number } ?: return null
-    return ActiveChallenge(
-        challenge = toChallenge(),
-        attempt = latest.attempt.toAttempt(),
-        checks = latest.checks.toDayChecks(),
-    )
-}
-
-fun ChallengeNotebook.toNotebookExport(): NotebookExport = NotebookExport(
-    schemaVersion = NOTEBOOK_SCHEMA_VERSION,
+fun ChallengeNotebook.toNotebook(): Notebook = Notebook(
     challenge = toChallenge(),
     attempts = attempts.sortedBy { it.attempt.number }.map { record ->
         AttemptRecord(
@@ -33,6 +23,12 @@ fun ChallengeNotebook.toNotebookExport(): NotebookExport = NotebookExport(
             checks = record.checks.toDayChecks(),
         )
     },
+)
+
+fun Notebook.toNotebookExport(): NotebookExport = NotebookExport(
+    schemaVersion = NOTEBOOK_SCHEMA_VERSION,
+    challenge = challenge,
+    attempts = attempts,
 )
 
 fun NotebookExport.toChallengeEntity(): ChallengeEntity = ChallengeEntity(

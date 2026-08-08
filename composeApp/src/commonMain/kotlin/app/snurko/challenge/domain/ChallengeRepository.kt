@@ -8,6 +8,8 @@ import kotlinx.datetime.LocalDate
 
 interface ChallengeRepository {
 
+    fun observeNotebook(): Flow<Notebook?>
+
     fun observeActiveChallenge(): Flow<ActiveChallenge?>
 
     suspend fun createChallenge(
