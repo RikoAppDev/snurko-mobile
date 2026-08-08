@@ -2,6 +2,7 @@ package app.snurko.di
 
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
+import app.snurko.challenge.presentation.home.ChallengeHomeViewModel
 import app.snurko.challenge.presentation.setup.ChallengeSetupViewModel
 import app.snurko.core.domain.DateProvider
 import app.snurko.core.domain.SystemDateProvider
@@ -31,6 +32,11 @@ class PresentationModuleTest {
     @Test
     fun theChallengeSetupViewModelIsResolvable() {
         assertThat(koin.get<ChallengeSetupViewModel>()).isNotNull()
+    }
+
+    @Test
+    fun theChallengeHomeViewModelIsResolvable() {
+        assertThat(koin.get<ChallengeHomeViewModel>()).isNotNull()
     }
 
     @Test

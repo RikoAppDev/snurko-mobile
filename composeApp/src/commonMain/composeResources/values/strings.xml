@@ -7,7 +7,6 @@
     <string name="challenge_setup_habit_name_placeholder">Read 10 pages</string>
     <string name="challenge_setup_fail_condition_label">What counts as failing (optional)</string>
     <string name="challenge_setup_fail_condition_placeholder">Fewer than 10 pages</string>
-    <string name="challenge_setup_fail_condition_summary">Fails if: %1$s</string>
 
     <string name="challenge_setup_add_habit">Add habit</string>
     <string name="challenge_setup_save_habit">Save habit</string>
@@ -27,7 +26,21 @@
     <string name="challenge_setup_confirm_start">Start day 1</string>
     <string name="challenge_setup_confirm_cancel">Not yet</string>
 
-    <string name="challenge_started_day">Day %1$d</string>
+    <string name="challenge_fail_condition_summary">Fails if: %1$s</string>
+
+    <string name="home_day">Day %1$d</string>
+    <string name="home_streak">streak %1$d</string>
+    <string name="home_grid">%1$d of %2$d days marked</string>
+    <string name="home_day_mark">×</string>
+    <string name="home_today">Today</string>
+    <string name="home_completed">%1$d days.</string>
+    <string name="home_update_failed">That did not save. Try again.</string>
+
+    <string name="home_restart_title">Day %1$d was not finished.</string>
+    <string name="home_restart_missed">Left unchecked: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">That day cannot come back. The 90 days start again from day 1 today.</string>
+    <string name="home_restart_acknowledge">Start again</string>
 
     <plurals name="challenge_habit_count">
         <item quantity="one">%1$d habit</item>

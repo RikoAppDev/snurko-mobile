@@ -67,4 +67,24 @@ class DayStateTest {
 
         assertThat(challenge.dayState(day = 7, today = day(1))).isEqualTo(DayState.PENDING)
     }
+
+    @Test
+    fun aDayWithNoChecksLeavesEveryHabitUnchecked() {
+        assertThat(activeChallenge().uncheckedHabitsOn(day = 1).map { it.name })
+            .isEqualTo(listOf("Workout", "Read"))
+    }
+
+    @Test
+    fun onlyTheHabitsThatWereNotTickedAreReportedUnchecked() {
+        val challenge = activeChallenge(checks = listOf(partialDay(1)))
+
+        assertThat(challenge.uncheckedHabitsOn(day = 1).map { it.name }).isEqualTo(listOf("Read"))
+    }
+
+    @Test
+    fun aFinishedDayHasNoUncheckedHabits() {
+        val challenge = activeChallenge(checks = completeDaysThrough(1))
+
+        assertThat(challenge.uncheckedHabitsOn(day = 1)).isEqualTo(emptyList())
+    }
 }
