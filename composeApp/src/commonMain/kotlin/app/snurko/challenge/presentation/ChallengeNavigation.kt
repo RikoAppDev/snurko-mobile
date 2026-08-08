@@ -13,9 +13,15 @@ data object ChallengeHomeRoute
 @Serializable
 data object HistoryRoute
 
-fun NavGraphBuilder.challengeGraph(navController: NavController) {
+fun NavGraphBuilder.challengeGraph(
+    navController: NavController,
+    onOpenReminders: () -> Unit,
+) {
     composable<ChallengeHomeRoute> {
-        ChallengeHomeRoot(onOpenHistory = { navController.navigate(HistoryRoute) })
+        ChallengeHomeRoot(
+            onOpenHistory = { navController.navigate(HistoryRoute) },
+            onOpenReminders = onOpenReminders,
+        )
     }
     composable<HistoryRoute> {
         HistoryRoot(onNavigateBack = { navController.popBackStack() })

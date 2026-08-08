@@ -7,11 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import app.snurko.challenge.data.SafNotebookDocumentGateway
 import app.snurko.challenge.domain.NOTEBOOK_MIME_TYPE
+import app.snurko.reminders.data.AndroidNotificationPermissionGateway
 import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
 
     private val documentGateway: SafNotebookDocumentGateway by inject()
+    private val notificationPermissions: AndroidNotificationPermissionGateway by inject()
 
     private val createDocument = registerForActivityResult(
         ActivityResultContracts.CreateDocument(NOTEBOOK_MIME_TYPE),
@@ -20,6 +22,10 @@ class MainActivity : ComponentActivity() {
     private val openDocument = registerForActivityResult(
         ActivityResultContracts.OpenDocument(),
     ) { uri -> documentGateway.onDocumentPicked(uri) }
+
+    private val requestNotificationPermission = registerForActivityResult(
+        ActivityResultContracts.RequestPermission(),
+    ) { isGranted -> notificationPermissions.onPermissionResult(isGranted) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
@@ -30,6 +36,7 @@ class MainActivity : ComponentActivity() {
                 openDocument = openDocument,
             ),
         )
+        notificationPermissions.attach(requestNotificationPermission)
         setContent {
             App()
         }
@@ -37,6 +44,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onDestroy() {
         documentGateway.detach()
+        notificationPermissions.detach()
         super.onDestroy()
     }
 }

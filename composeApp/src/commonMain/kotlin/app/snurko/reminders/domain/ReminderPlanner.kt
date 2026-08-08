@@ -4,6 +4,7 @@ import app.snurko.challenge.domain.ActiveChallenge
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.dayIndexOn
 import app.snurko.core.domain.DateProvider
+import app.snurko.core.domain.Result
 import kotlinx.coroutines.flow.first
 
 class ReminderPlanner(
@@ -33,6 +34,18 @@ class ReminderPlanner(
             attemptId = active.attempt.id,
             day = active.dayIndexOn(today),
         )
+    }
+
+    /** Marks the habit done straight from the notification, without opening the app. */
+    suspend fun checkOff(habitId: Long): Boolean {
+        val firing = firingFor(habitId) ?: return false
+        val result = challengeRepository.setHabitChecked(
+            attemptId = firing.attemptId,
+            day = firing.day,
+            habitId = habitId,
+            checked = true,
+        )
+        return result is Result.Success
     }
 
     private suspend fun activeChallenge(): ActiveChallenge? =

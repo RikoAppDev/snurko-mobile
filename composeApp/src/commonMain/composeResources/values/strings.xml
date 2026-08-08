@@ -42,6 +42,27 @@
     <string name="home_restart_explanation">That day cannot come back. The 90 days start again from day 1 today.</string>
     <string name="home_restart_acknowledge">Start again</string>
     <string name="home_history_link">the back pages</string>
+    <string name="home_reminders_link">reminders</string>
+
+    <string name="reminders_title">Reminders</string>
+    <string name="reminders_back">Back</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Nothing is on until you set a time. Each habit gets one nudge, and only on a day it is still unmarked.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Set a reminder for %1$s</string>
+    <string name="reminders_change">Change the reminder for %1$s</string>
+    <string name="reminders_switch_off">Switch off the reminder for %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">That did not save. Try again.</string>
+
+    <string name="reminders_blocked_title">Notifications are switched off for Snurko.</string>
+    <string name="reminders_blocked_body">A time can still be set here, but Android holds the reminder back until notifications are allowed in the system settings.</string>
+    <string name="reminders_blocked_settings">Open system settings</string>
+
+    <string name="reminder_channel_name">Habit reminders</string>
+    <string name="reminder_channel_description">One nudge per habit, at the time you set.</string>
+    <string name="reminder_notification_text">Day %1$d — not marked yet.</string>
+    <string name="reminder_notification_done">Done</string>
 
     <string name="history_title">Back pages</string>
     <string name="history_back">Back</string>
