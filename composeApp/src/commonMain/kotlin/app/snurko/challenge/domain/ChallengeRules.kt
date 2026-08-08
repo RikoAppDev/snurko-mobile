@@ -23,12 +23,15 @@ fun Attempt.nextAttempt(startDate: LocalDate): Attempt = Attempt(
 
 fun ActiveChallenge.dayIndexOn(date: LocalDate): Int = attempt.dayIndexOn(date)
 
+fun ActiveChallenge.checkedHabitIdsOn(day: Int): Set<Long> =
+    checks.firstOrNull { it.day == day }?.checkedHabitIds.orEmpty()
+
 /**
  * A day is lost only once it has passed: an incomplete day is still PENDING for as
  * long as it is today, so the user can finish it before local midnight.
  */
 fun ActiveChallenge.dayState(day: Int, today: LocalDate): DayState {
-    val checkedHabitIds = checks.firstOrNull { it.day == day }?.checkedHabitIds.orEmpty()
+    val checkedHabitIds = checkedHabitIdsOn(day)
     return when {
         challenge.habits.all { it.id in checkedHabitIds } -> DayState.COMPLETE
         day < dayIndexOn(today) -> DayState.FAILED

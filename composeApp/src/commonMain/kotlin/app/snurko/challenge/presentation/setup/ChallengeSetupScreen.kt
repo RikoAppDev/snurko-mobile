@@ -53,6 +53,7 @@ import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.resources.Res
+import app.snurko.resources.challenge_fail_condition_summary
 import app.snurko.resources.challenge_habit_count
 import app.snurko.resources.challenge_setup_add_habit
 import app.snurko.resources.challenge_setup_cancel_edit
@@ -64,7 +65,6 @@ import app.snurko.resources.challenge_setup_confirm_title
 import app.snurko.resources.challenge_setup_edit_habit
 import app.snurko.resources.challenge_setup_fail_condition_label
 import app.snurko.resources.challenge_setup_fail_condition_placeholder
-import app.snurko.resources.challenge_setup_fail_condition_summary
 import app.snurko.resources.challenge_setup_habit_name_label
 import app.snurko.resources.challenge_setup_habit_name_placeholder
 import app.snurko.resources.challenge_setup_hint_duplicate_name
@@ -211,11 +211,11 @@ private fun HabitLine(
             habit.failCondition?.let { failCondition ->
                 Text(
                     text = stringResource(
-                        Res.string.challenge_setup_fail_condition_summary,
+                        Res.string.challenge_fail_condition_summary,
                         failCondition,
                     ),
                     style = MaterialTheme.typography.bodySmall,
-                    color = SnurkoColors.textMuted,
+                    color = SnurkoColors.textSecondary,
                 )
             }
         }

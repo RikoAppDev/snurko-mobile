@@ -7,8 +7,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.challenge.presentation.home.ChallengeHomeRoot
 import app.snurko.challenge.presentation.setup.ChallengeSetupRoot
-import app.snurko.challenge.presentation.started.ChallengeStartedScreen
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.presentation.AppUiState
@@ -26,12 +26,9 @@ fun App() {
 private fun AppRoot(viewModel: AppViewModel = koinViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
-    when (val current = state) {
+    when (state) {
         AppUiState.Loading -> Box(Modifier.fillMaxSize().background(SnurkoColors.paper))
         AppUiState.Setup -> ChallengeSetupRoot()
-        is AppUiState.Started -> ChallengeStartedScreen(
-            day = current.day,
-            habitCount = current.habitCount,
-        )
+        AppUiState.Started -> ChallengeHomeRoot()
     }
 }
