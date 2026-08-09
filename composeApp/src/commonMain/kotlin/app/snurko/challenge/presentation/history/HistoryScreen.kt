@@ -79,6 +79,7 @@ import app.snurko.resources.history_stats_marks
 import app.snurko.resources.history_stats_percent
 import app.snurko.resources.history_stats_streak
 import app.snurko.resources.history_stats_title
+import app.snurko.resources.history_support
 import app.snurko.resources.history_title
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
@@ -95,6 +96,7 @@ private val PAGE_PADDING = 20.dp
 @Composable
 fun HistoryRoot(
     onNavigateBack: () -> Unit,
+    onOpenTipJar: () -> Unit,
     viewModel: HistoryViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -123,6 +125,7 @@ fun HistoryRoot(
             state = state,
             onAction = viewModel::onAction,
             onNavigateBack = onNavigateBack,
+            onOpenTipJar = onOpenTipJar,
             modifier = Modifier.padding(innerPadding),
         )
     }
@@ -133,6 +136,7 @@ fun HistoryScreen(
     state: HistoryState,
     onAction: (HistoryAction) -> Unit,
     onNavigateBack: () -> Unit,
+    onOpenTipJar: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -175,6 +179,9 @@ fun HistoryScreen(
                     onExport = { onAction(HistoryAction.ExportClicked) },
                     onImport = { onAction(HistoryAction.ImportClicked) },
                 )
+            }
+            item(key = "support") {
+                SupportRow(onClick = onOpenTipJar)
             }
         }
     }
@@ -361,14 +368,14 @@ private fun MiniGrid(markedDays: List<Boolean>) {
 
 @Composable
 private fun BackupRows(isEnabled: Boolean, onExport: () -> Unit, onImport: () -> Unit) {
-    Column(modifier = Modifier.fillMaxWidth().padding(top = 28.dp, bottom = 24.dp)) {
-        BackupRow(
+    Column(modifier = Modifier.fillMaxWidth().padding(top = 28.dp)) {
+        QuietRow(
             label = stringResource(Res.string.history_export),
             isEnabled = isEnabled,
             onClick = onExport,
         )
         HorizontalDivider(color = SnurkoColors.line)
-        BackupRow(
+        QuietRow(
             label = stringResource(Res.string.history_import),
             isEnabled = isEnabled,
             onClick = onImport,
@@ -378,7 +385,15 @@ private fun BackupRows(isEnabled: Boolean, onExport: () -> Unit, onImport: () ->
 }
 
 @Composable
-private fun BackupRow(label: String, isEnabled: Boolean, onClick: () -> Unit) {
+private fun SupportRow(onClick: () -> Unit) {
+    Column(modifier = Modifier.fillMaxWidth().padding(top = 20.dp, bottom = 28.dp)) {
+        QuietRow(label = stringResource(Res.string.history_support), onClick = onClick)
+        HorizontalDivider(color = SnurkoColors.line)
+    }
+}
+
+@Composable
+private fun QuietRow(label: String, onClick: () -> Unit, isEnabled: Boolean = true) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -447,7 +462,12 @@ private fun backupErrorMessages(): Map<DataError.Backup, String> = mapOf(
 @Composable
 private fun HistoryScreenPreview() {
     SnurkoTheme {
-        HistoryScreen(state = previewState, onAction = {}, onNavigateBack = {})
+        HistoryScreen(
+            state = previewState,
+            onAction = {},
+            onNavigateBack = {},
+            onOpenTipJar = {},
+        )
     }
 }
 
@@ -459,6 +479,7 @@ private fun HistoryImportConfirmationPreview() {
             state = previewState.copy(isImportConfirmationVisible = true),
             onAction = {},
             onNavigateBack = {},
+            onOpenTipJar = {},
         )
     }
 }
@@ -475,6 +496,7 @@ private fun HistoryFirstAttemptPreview() {
             ),
             onAction = {},
             onNavigateBack = {},
+            onOpenTipJar = {},
         )
     }
 }

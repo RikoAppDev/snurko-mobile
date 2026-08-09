@@ -1,5 +1,8 @@
 package app.snurko.di
 
+import app.snurko.billing.domain.BillingGateway
+import app.snurko.billing.domain.FakeBillingGateway
+import app.snurko.billing.presentation.TipJarViewModel
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
 import app.snurko.challenge.domain.FakeNotebookBackup
@@ -31,6 +34,7 @@ class PresentationModuleTest {
                 single<NotebookBackup> { FakeNotebookBackup() }
                 single<ReminderRepository> { FakeReminderRepository() }
                 single<NotificationPermissionGateway> { FakeNotificationPermissionGateway() }
+                single<BillingGateway> { FakeBillingGateway() }
             },
             coreModule,
             presentationModule,
@@ -65,5 +69,10 @@ class PresentationModuleTest {
     @Test
     fun theAppViewModelIsResolvable() {
         assertThat(koin.get<AppViewModel>()).isNotNull()
+    }
+
+    @Test
+    fun theTipJarViewModelIsResolvable() {
+        assertThat(koin.get<TipJarViewModel>()).isNotNull()
     }
 }
