@@ -1,13 +1,18 @@
 package app.snurko.widget
 
 import android.content.Context
+import android.graphics.Bitmap
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.glance.GlanceId
 import androidx.glance.GlanceModifier
+import androidx.glance.Image
+import androidx.glance.ImageProvider
+import androidx.glance.LocalContext
 import androidx.glance.LocalSize
 import androidx.glance.action.actionStartActivity
 import androidx.glance.action.clickable
@@ -35,6 +40,7 @@ import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 import app.snurko.MainActivity
 import app.snurko.challenge.domain.ChallengeRepository
+import app.snurko.challenge.presentation.home.markRotationDegrees
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.domain.DateProvider
 import app.snurko.resources.Res
@@ -167,37 +173,59 @@ private fun Header(labels: WidgetLabels) {
 @Composable
 private fun DayGrid(state: WidgetState.Challenge, available: DpSize) {
     val slot = cellSlotFor(available)
+    val face = slot - CELL_GAP
+    val density = LocalContext.current.resources.displayMetrics.density
+    val markPx = (face.value * density).toInt()
+    val marks = remember(markPx) { pencilCheckBitmaps(markPx, SnurkoColors.text) }
 
     Column(
         modifier = GlanceModifier.fillMaxWidth(),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        state.cellRows().forEach { row ->
+        state.cellRows().forEachIndexed { rowIndex, row ->
             Row {
-                row.forEach { cell -> DayCell(cell = cell, slot = slot) }
+                row.forEachIndexed { columnIndex, cell ->
+                    DayCell(
+                        cell = cell,
+                        day = rowIndex * WIDGET_GRID_COLUMNS + columnIndex + 1,
+                        slot = slot,
+                        marks = marks,
+                    )
+                }
             }
         }
     }
 }
 
 @Composable
-private fun DayCell(cell: WidgetCell, slot: Dp) {
+private fun DayCell(cell: WidgetCell, day: Int, slot: Dp, marks: Map<Float, Bitmap>) {
+    val face = slot - CELL_GAP
+    val mark = marks[markRotationDegrees(day)].takeIf { cell == WidgetCell.MARKED }
+
     Box(
         modifier = GlanceModifier.size(slot),
         contentAlignment = Alignment.Center,
     ) {
         Box(
             modifier = GlanceModifier
-                .size(slot - CELL_GAP)
+                .size(face)
                 .cornerRadius(CELL_CORNER)
                 .background(ColorProvider(cell.fill())),
-            content = {},
-        )
+            contentAlignment = Alignment.Center,
+        ) {
+            if (mark != null) {
+                Image(
+                    provider = ImageProvider(mark),
+                    contentDescription = null,
+                    modifier = GlanceModifier.size(face),
+                )
+            }
+        }
     }
 }
 
 private fun WidgetCell.fill() = when (this) {
-    WidgetCell.MARKED -> SnurkoColors.text
+    WidgetCell.MARKED -> SnurkoColors.surface
     WidgetCell.TODAY -> SnurkoColors.accent
     WidgetCell.MISSED -> SnurkoColors.line
     WidgetCell.FUTURE -> SnurkoColors.surface

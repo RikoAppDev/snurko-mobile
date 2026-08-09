@@ -1,5 +1,6 @@
 package app.snurko.challenge.presentation.home
 
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -38,15 +39,17 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.StrokeCap
+import androidx.compose.ui.graphics.StrokeJoin
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.snurko.challenge.presentation.sticker.DayStickerRenderer
 import app.snurko.challenge.presentation.sticker.DayStickerSharer
@@ -61,7 +64,6 @@ import app.snurko.resources.Res
 import app.snurko.resources.challenge_fail_condition_summary
 import app.snurko.resources.home_completed
 import app.snurko.resources.home_day
-import app.snurko.resources.home_day_mark
 import app.snurko.resources.home_grid
 import app.snurko.resources.home_history_link
 import app.snurko.resources.home_reminders_link
@@ -84,6 +86,10 @@ private const val GRID_COLUMNS = 10
 private val CELL_GAP = 4.dp
 private val CELL_CORNER = RoundedCornerShape(3.dp)
 private val PAGE_PADDING = 20.dp
+private const val MARK_STROKE_RATIO = 0.09f
+private val MARK_MIN_STROKE = 1.6.dp
+private val GRID_MARK_SIZE = 22.dp
+private val CHECKLIST_MARK_SIZE = 24.dp
 
 @Composable
 fun ChallengeHomeRoot(
@@ -351,7 +357,7 @@ private fun DayCell(day: Int, cell: GridCellUi, modifier: Modifier = Modifier) {
         if (isMarked) {
             PencilMark(
                 rotation = markRotationDegrees(day),
-                fontSize = 22.sp,
+                size = GRID_MARK_SIZE,
                 color = SnurkoColors.text,
             )
         }
@@ -438,7 +444,7 @@ private fun CheckMarkBox(isChecked: Boolean, markSeed: Int) {
         if (isChecked) {
             PencilMark(
                 rotation = markRotationDegrees(markSeed),
-                fontSize = 24.sp,
+                size = CHECKLIST_MARK_SIZE,
                 color = SnurkoColors.text,
             )
         }
@@ -448,21 +454,28 @@ private fun CheckMarkBox(isChecked: Boolean, markSeed: Int) {
 @Composable
 internal fun PencilMark(
     rotation: Float,
-    fontSize: TextUnit,
+    size: Dp,
     color: Color,
 ) {
-    Text(
-        text = stringResource(Res.string.home_day_mark),
-        style = MaterialTheme.typography.headlineSmall.copy(
-            fontSize = fontSize,
-            lineHeight = fontSize,
-        ),
-        color = color,
-        textAlign = TextAlign.Center,
+    Canvas(
         modifier = Modifier
+            .size(size)
             .graphicsLayer { rotationZ = rotation }
             .clearAndSetSemantics { },
-    )
+    ) {
+        val side = this.size.minDimension
+        val stroke = maxOf(side * MARK_STROKE_RATIO, MARK_MIN_STROKE.toPx())
+        val mark = Path().apply {
+            moveTo(side * 0.20f, side * 0.55f)
+            lineTo(side * 0.42f, side * 0.78f)
+            lineTo(side * 0.82f, side * 0.24f)
+        }
+        drawPath(
+            path = mark,
+            color = color,
+            style = Stroke(width = stroke, cap = StrokeCap.Round, join = StrokeJoin.Round),
+        )
+    }
 }
 
 @Preview
