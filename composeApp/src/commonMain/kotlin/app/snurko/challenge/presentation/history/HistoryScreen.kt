@@ -1,6 +1,7 @@
 package app.snurko.challenge.presentation.history
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -40,6 +41,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.challenge.domain.NotebookStats
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.domain.DataError
@@ -54,6 +56,7 @@ import app.snurko.resources.history_attempt
 import app.snurko.resources.history_back
 import app.snurko.resources.history_back_mark
 import app.snurko.resources.history_completed
+import app.snurko.resources.history_completion
 import app.snurko.resources.history_date
 import app.snurko.resources.history_date_range
 import app.snurko.resources.history_date_since
@@ -68,8 +71,17 @@ import app.snurko.resources.history_import_confirm_replace
 import app.snurko.resources.history_import_confirm_title
 import app.snurko.resources.history_imported
 import app.snurko.resources.history_in_progress
+import app.snurko.resources.history_locked_action
+import app.snurko.resources.history_locked_body
+import app.snurko.resources.history_locked_title
 import app.snurko.resources.history_missed_separator
 import app.snurko.resources.history_past_empty
+import app.snurko.resources.history_stats_best
+import app.snurko.resources.history_stats_count
+import app.snurko.resources.history_stats_marks
+import app.snurko.resources.history_stats_percent
+import app.snurko.resources.history_stats_streak
+import app.snurko.resources.history_stats_title
 import app.snurko.resources.history_title
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDate
@@ -80,11 +92,13 @@ private const val MINI_GRID_COLUMNS = 30
 private val MINI_CELL_SIZE = 4.dp
 private val MINI_CELL_GAP = 2.dp
 private val MINI_CELL_CORNER = RoundedCornerShape(1.dp)
+private val PANEL_CORNER = RoundedCornerShape(12.dp)
 private val PAGE_PADDING = 20.dp
 
 @Composable
 fun HistoryRoot(
     onNavigateBack: () -> Unit,
+    onOpenUnlock: () -> Unit,
     viewModel: HistoryViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -113,6 +127,7 @@ fun HistoryRoot(
             state = state,
             onAction = viewModel::onAction,
             onNavigateBack = onNavigateBack,
+            onOpenUnlock = onOpenUnlock,
             modifier = Modifier.padding(innerPadding),
         )
     }
@@ -123,6 +138,7 @@ fun HistoryScreen(
     state: HistoryState,
     onAction: (HistoryAction) -> Unit,
     onNavigateBack: () -> Unit,
+    onOpenUnlock: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -138,13 +154,18 @@ fun HistoryScreen(
         ) {
             state.current?.let { current ->
                 item(key = "current-${current.number}") {
-                    AttemptEntry(row = current)
+                    AttemptEntry(row = current, isCompletionVisible = false)
+                }
+            }
+            state.stats?.let { stats ->
+                item(key = "stats") {
+                    StatsPanel(stats = stats)
                 }
             }
             items(state.past, key = { it.number }) { row ->
-                AttemptEntry(row = row)
+                AttemptEntry(row = row, isCompletionVisible = true)
             }
-            if (!state.isLoading && state.past.isEmpty()) {
+            if (state.isUnlocked && !state.isLoading && state.past.isEmpty()) {
                 item(key = "past-empty") {
                     Text(
                         text = stringResource(Res.string.history_past_empty),
@@ -152,6 +173,11 @@ fun HistoryScreen(
                         color = SnurkoColors.textSecondary,
                         modifier = Modifier.padding(vertical = 20.dp),
                     )
+                }
+            }
+            if (state.isArchiveLocked) {
+                item(key = "archive-locked") {
+                    LockedArchiveCard(onOpenUnlock = onOpenUnlock)
                 }
             }
             item(key = "backup") {
@@ -206,7 +232,7 @@ private fun HistoryHeader(onNavigateBack: () -> Unit) {
 }
 
 @Composable
-private fun AttemptEntry(row: AttemptRowUi) {
+private fun AttemptEntry(row: AttemptRowUi, isCompletionVisible: Boolean) {
     Column(modifier = Modifier.fillMaxWidth().padding(vertical = 14.dp)) {
         Text(
             text = stringResource(Res.string.history_attempt, row.number),
@@ -225,10 +251,106 @@ private fun AttemptEntry(row: AttemptRowUi) {
             style = MaterialTheme.typography.bodySmall,
             color = SnurkoColors.textSecondary,
         )
+        if (isCompletionVisible) {
+            Spacer(Modifier.height(2.dp))
+            Text(
+                text = stringResource(Res.string.history_completion, row.completionPercent),
+                style = MaterialTheme.typography.bodySmall,
+                color = SnurkoColors.textSecondary,
+            )
+        }
         Spacer(Modifier.height(10.dp))
         MiniGrid(markedDays = row.markedDays)
     }
     HorizontalDivider(color = SnurkoColors.line)
+}
+
+@Composable
+private fun StatsPanel(stats: NotebookStats) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 18.dp)
+            .border(1.dp, SnurkoColors.line, PANEL_CORNER)
+            .background(SnurkoColors.surface, PANEL_CORNER)
+            .padding(horizontal = 16.dp, vertical = 16.dp),
+    ) {
+        Text(
+            text = stringResource(Res.string.history_stats_title),
+            style = MaterialTheme.typography.titleMedium,
+            color = SnurkoColors.text,
+        )
+        Spacer(Modifier.height(14.dp))
+        Row(modifier = Modifier.fillMaxWidth()) {
+            StatFigure(
+                value = stringResource(Res.string.history_stats_percent, stats.bestCompletionPercent),
+                label = stringResource(Res.string.history_stats_best),
+                modifier = Modifier.weight(1f),
+            )
+            StatFigure(
+                value = stringResource(Res.string.history_stats_count, stats.longestStreak),
+                label = stringResource(Res.string.history_stats_streak),
+                modifier = Modifier.weight(1f),
+            )
+            StatFigure(
+                value = stringResource(Res.string.history_stats_count, stats.totalMarks),
+                label = stringResource(Res.string.history_stats_marks),
+                modifier = Modifier.weight(1f),
+            )
+        }
+    }
+}
+
+@Composable
+private fun StatFigure(value: String, label: String, modifier: Modifier = Modifier) {
+    Column(modifier = modifier) {
+        Text(
+            text = value,
+            style = MaterialTheme.typography.headlineSmall,
+            color = SnurkoColors.text,
+        )
+        Text(
+            text = label,
+            style = MaterialTheme.typography.bodySmall,
+            color = SnurkoColors.textSecondary,
+        )
+    }
+}
+
+@Composable
+private fun LockedArchiveCard(onOpenUnlock: () -> Unit) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(vertical = 18.dp)
+            .border(1.dp, SnurkoColors.line, PANEL_CORNER)
+            .background(SnurkoColors.surface, PANEL_CORNER)
+            .padding(horizontal = 16.dp, vertical = 16.dp),
+    ) {
+        Text(
+            text = stringResource(Res.string.history_locked_title),
+            style = MaterialTheme.typography.titleMedium,
+            color = SnurkoColors.text,
+        )
+        Spacer(Modifier.height(8.dp))
+        Text(
+            text = stringResource(Res.string.history_locked_body),
+            style = MaterialTheme.typography.bodyMedium,
+            color = SnurkoColors.textSecondary,
+        )
+        Box(
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .clickable(role = Role.Button, onClick = onOpenUnlock),
+            contentAlignment = Alignment.CenterStart,
+        ) {
+            Text(
+                text = stringResource(Res.string.history_locked_action),
+                style = MaterialTheme.typography.bodyMedium,
+                color = SnurkoColors.accentInk,
+            )
+        }
+    }
 }
 
 @Composable
@@ -370,9 +492,27 @@ private fun backupErrorMessages(): Map<DataError.Backup, String> = mapOf(
 
 @Preview
 @Composable
-private fun HistoryScreenPreview() {
+private fun HistoryUnlockedPreview() {
     SnurkoTheme {
-        HistoryScreen(state = previewState, onAction = {}, onNavigateBack = {})
+        HistoryScreen(
+            state = previewState,
+            onAction = {},
+            onNavigateBack = {},
+            onOpenUnlock = {},
+        )
+    }
+}
+
+@Preview
+@Composable
+private fun HistoryLockedPreview() {
+    SnurkoTheme {
+        HistoryScreen(
+            state = previewState.copy(isUnlocked = false),
+            onAction = {},
+            onNavigateBack = {},
+            onOpenUnlock = {},
+        )
     }
 }
 
@@ -384,6 +524,7 @@ private fun HistoryImportConfirmationPreview() {
             state = previewState.copy(isImportConfirmationVisible = true),
             onAction = {},
             onNavigateBack = {},
+            onOpenUnlock = {},
         )
     }
 }
@@ -393,14 +534,26 @@ private fun HistoryImportConfirmationPreview() {
 private fun HistoryFirstAttemptPreview() {
     SnurkoTheme {
         HistoryScreen(
-            state = HistoryState(rows = listOf(previewState.rows.first()), isLoading = false),
+            state = HistoryState(
+                rows = listOf(previewState.rows.first()),
+                notebookStats = previewStats,
+                isUnlocked = true,
+                isLoading = false,
+            ),
             onAction = {},
             onNavigateBack = {},
+            onOpenUnlock = {},
         )
     }
 }
 
 private fun previewMarkedDays(completeDays: Int): List<Boolean> = List(90) { it < completeDays }
+
+private val previewStats = NotebookStats(
+    bestCompletionPercent = 100,
+    longestStreak = 90,
+    totalMarks = 123,
+)
 
 private val previewState = HistoryState(
     rows = listOf(
@@ -410,6 +563,7 @@ private val previewState = HistoryState(
             endDate = null,
             outcome = AttemptOutcomeUi.InProgress(day = 12),
             markedDays = previewMarkedDays(11),
+            completionPercent = 12,
         ),
         AttemptRowUi(
             number = 2,
@@ -420,6 +574,7 @@ private val previewState = HistoryState(
                 missedHabits = listOf("Reading", "No alcohol"),
             ),
             markedDays = previewMarkedDays(22),
+            completionPercent = 24,
         ),
         AttemptRowUi(
             number = 1,
@@ -427,7 +582,10 @@ private val previewState = HistoryState(
             endDate = LocalDate(2026, 3, 9),
             outcome = AttemptOutcomeUi.Completed,
             markedDays = previewMarkedDays(90),
+            completionPercent = 100,
         ),
     ),
+    notebookStats = previewStats,
+    isUnlocked = true,
     isLoading = false,
 )

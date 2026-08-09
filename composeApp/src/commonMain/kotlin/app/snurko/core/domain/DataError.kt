@@ -19,4 +19,13 @@ sealed interface DataError : Error {
         UNSUPPORTED_SCHEMA_VERSION,
         UNKNOWN,
     }
+
+    enum class Billing : DataError {
+        UNAVAILABLE,
+        DISCONNECTED,
+        CANCELLED,
+        PRODUCT_UNAVAILABLE,
+        NOTHING_TO_RESTORE,
+        UNKNOWN,
+    }
 }

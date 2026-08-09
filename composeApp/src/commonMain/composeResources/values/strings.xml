@@ -71,6 +71,8 @@
     <string name="widget_invite">Start your 90 days.</string>
     <string name="widget_progress">%1$d of %2$d</string>
     <string name="widget_open">Open Snurko</string>
+    <string name="widget_locked">Unlock to see your grid here.</string>
+    <string name="widget_locked_open">Open Snurko to unlock the widget</string>
 
     <string name="history_title">Back pages</string>
     <string name="history_back">Back</string>
@@ -86,6 +88,19 @@
     <string name="history_date_since">since %1$s</string>
     <string name="history_past_empty">Nothing on the back pages yet — this is the first attempt.</string>
 
+    <string name="history_completion">%1$d% marked</string>
+
+    <string name="history_stats_title">All together</string>
+    <string name="history_stats_best">best attempt</string>
+    <string name="history_stats_streak">longest streak</string>
+    <string name="history_stats_marks">✗ marks</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_locked_title">The back pages are part of the unlock.</string>
+    <string name="history_locked_body">Past attempts, and what they all add up to, sit behind a one-time unlock. The attempt you are on stays here, and so do export and import.</string>
+    <string name="history_locked_action">See what the unlock includes</string>
+
     <string name="history_export">Export notebook</string>
     <string name="history_import">Import notebook</string>
     <string name="history_exported">Notebook written out.</string>
@@ -95,6 +110,39 @@
     <string name="history_import_confirm_body">Importing overwrites everything written here — the attempt you are on and every past one. This cannot be undone.</string>
     <string name="history_import_confirm_replace">Replace it</string>
     <string name="history_import_confirm_cancel">Keep this one</string>
+
+    <string name="unlock_title">The unlock</string>
+    <string name="unlock_back">Back</string>
+    <string name="unlock_back_mark">←</string>
+
+    <string name="unlock_included_title">What it adds</string>
+    <string name="unlock_included_mark">✗</string>
+    <string name="unlock_included_widget">The grid on your home screen</string>
+    <string name="unlock_included_stats">The back pages: every past attempt and what they add up to</string>
+    <string name="unlock_included_themes">Paper themes, as they arrive</string>
+
+    <string name="unlock_forever">One payment, yours forever. No subscription, no ads.</string>
+    <string name="unlock_buy">Unlock for %1$s</string>
+    <string name="unlock_price_loading">Reading the price…</string>
+    <string name="unlock_price_unavailable">The price could not be read right now.</string>
+    <string name="unlock_price_retry">Try again</string>
+    <string name="unlock_restore">Already paid? Restore it.</string>
+    <string name="unlock_pending">The payment is still clearing. The unlock arrives on its own once it does.</string>
+    <string name="unlock_owned">Unlocked. Thank you.</string>
+    <string name="unlock_owned_note">Everything above is yours on any device signed in to this Google account.</string>
+
+    <string name="unlock_free_title">Free, and staying free</string>
+    <string name="unlock_free_challenge">The 90 days and the daily checklist</string>
+    <string name="unlock_free_reminders">Reminders</string>
+    <string name="unlock_free_backup">Notebook export and import</string>
+    <string name="unlock_free_sticker">The day sticker to share</string>
+
+    <string name="unlock_error_unavailable">Google Play billing is not available on this device.</string>
+    <string name="unlock_error_disconnected">Google Play could not be reached. Try again.</string>
+    <string name="unlock_error_cancelled">Nothing was bought.</string>
+    <string name="unlock_error_product_unavailable">The unlock is not on sale right now.</string>
+    <string name="unlock_error_nothing_to_restore">No earlier purchase was found on this Google account.</string>
+    <string name="unlock_error_unknown">That did not work. Try again.</string>
 
     <string name="backup_error_nothing_to_export">There is nothing written down yet to export.</string>
     <string name="backup_error_document_unavailable">That file could not be opened.</string>

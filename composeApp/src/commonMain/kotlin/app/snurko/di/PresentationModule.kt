@@ -1,5 +1,6 @@
 package app.snurko.di
 
+import app.snurko.billing.presentation.UnlockViewModel
 import app.snurko.challenge.presentation.history.HistoryViewModel
 import app.snurko.challenge.presentation.home.ChallengeHomeViewModel
 import app.snurko.challenge.presentation.setup.ChallengeSetupViewModel
@@ -15,4 +16,5 @@ val presentationModule: Module = module {
     viewModelOf(::ChallengeHomeViewModel)
     viewModelOf(::HistoryViewModel)
     viewModelOf(::RemindersViewModel)
+    viewModelOf(::UnlockViewModel)
 }

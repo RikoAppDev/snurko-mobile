@@ -10,6 +10,7 @@ android-targetSdk = "37"
 
 androidx-activity = "1.13.0"
 androidx-core = "1.19.0"
+billing = "9.1.0"
 glance = "1.1.1"
 androidx-lifecycle = "2.11.0"
 androidx-navigation = "2.9.2"
@@ -30,6 +31,9 @@ androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidx
 androidx-lifecycle-viewmodel = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-runtime-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
 androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
+
+billing = { module = "com.android.billingclient:billing", version.ref = "billing" }
+billing-ktx = { module = "com.android.billingclient:billing-ktx", version.ref = "billing" }
 
 glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "glance" }
 
