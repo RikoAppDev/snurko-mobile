@@ -7,6 +7,7 @@ import com.android.billingclient.api.BillingClient
 import com.android.billingclient.api.BillingClientStateListener
 import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.BillingResult
+import com.android.billingclient.api.ConsumeParams
 import com.android.billingclient.api.PendingPurchasesParams
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.Purchase
@@ -14,6 +15,7 @@ import com.android.billingclient.api.PurchasesUpdatedListener
 import com.android.billingclient.api.QueryProductDetailsParams
 import com.android.billingclient.api.QueryPurchasesParams
 import com.android.billingclient.api.acknowledgePurchase
+import com.android.billingclient.api.consumePurchase
 import com.android.billingclient.api.queryProductDetails
 import com.android.billingclient.api.queryPurchasesAsync
 import app.snurko.billing.domain.BillingGateway
@@ -112,6 +114,15 @@ class PlayBillingGateway(
             .build()
         val result = withContext(Dispatchers.IO) { client.acknowledgePurchase(params) }
         return result.asEmptyResult()
+    }
+
+    override suspend fun consume(purchaseToken: String): EmptyResult<DataError.Billing> {
+        connect().let { if (it is Result.Error) return it }
+        val params = ConsumeParams.newBuilder()
+            .setPurchaseToken(purchaseToken)
+            .build()
+        val result = withContext(Dispatchers.IO) { client.consumePurchase(params) }
+        return result.billingResult.asEmptyResult()
     }
 
     override suspend fun launchPurchase(

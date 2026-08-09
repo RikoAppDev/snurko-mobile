@@ -20,6 +20,9 @@ interface BillingGateway {
 
     suspend fun acknowledge(purchaseToken: String): EmptyResult<DataError.Billing>
 
+    /** Hands a purchase back to the store, which both settles it and frees it to be bought again. */
+    suspend fun consume(purchaseToken: String): EmptyResult<DataError.Billing>
+
     /** Opens the store sheet and answers with whatever it produced once it closes. */
     suspend fun launchPurchase(productId: String): Result<List<BillingPurchase>, DataError.Billing>
 }

@@ -9,6 +9,8 @@ import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import app.snurko.billing.presentation.TipJarRoute
+import app.snurko.billing.presentation.billingGraph
 import app.snurko.challenge.presentation.ChallengeHomeRoute
 import app.snurko.challenge.presentation.challengeGraph
 import app.snurko.challenge.presentation.setup.ChallengeSetupRoot
@@ -50,7 +52,9 @@ private fun ChallengeNavHost() {
         challengeGraph(
             navController = navController,
             onOpenReminders = { navController.navigate(RemindersRoute) },
+            onOpenTipJar = { navController.navigate(TipJarRoute) },
         )
         remindersGraph(navController)
+        billingGraph(navController)
     }
 }

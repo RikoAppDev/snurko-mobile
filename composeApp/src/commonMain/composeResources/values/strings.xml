@@ -105,6 +105,28 @@
     <string name="history_import_confirm_replace">Replace it</string>
     <string name="history_import_confirm_cancel">Keep this one</string>
 
+    <string name="history_support">Support Snurko</string>
+
+    <string name="tip_jar_title">Tip jar</string>
+    <string name="tip_jar_back">Back</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko is free and open source. All of it, for everyone, always.</string>
+    <string name="tip_jar_unlocks_nothing">Nothing here unlocks anything. There is nothing to unlock — you already have the whole app.</string>
+    <string name="tip_jar_fees">A tip goes towards the yearly fee the app store charges to keep Snurko listed. That is the only reason this page exists.</string>
+    <string name="tip_jar_amounts_title">If you want to leave something</string>
+    <string name="tip_jar_amount">Tip %1$s</string>
+    <string name="tip_jar_price_loading">Reading the amounts from the store…</string>
+    <string name="tip_jar_price_unavailable">The store did not hand back any amounts.</string>
+    <string name="tip_jar_price_retry">Ask again</string>
+    <string name="tip_jar_thanks">thank you.</string>
+    <string name="tip_jar_thanks_note">That covers a slice of this year\'s store fee. Nothing in the app changed — it was already all yours.</string>
+    <string name="tip_jar_pending">The store is still working on that payment. Nothing else needs doing, and nothing in the app is waiting on it.</string>
+    <string name="tip_jar_error_unavailable">Store payments are not available on this device.</string>
+    <string name="tip_jar_error_disconnected">The store could not be reached.</string>
+    <string name="tip_jar_error_cancelled">That tip was called off. Nothing was charged.</string>
+    <string name="tip_jar_error_product_unavailable">That amount is not available right now.</string>
+    <string name="tip_jar_error_unknown">That did not go through.</string>
+
     <string name="backup_error_nothing_to_export">There is nothing written down yet to export.</string>
     <string name="backup_error_document_unavailable">That file could not be opened.</string>
     <string name="backup_error_malformed">That file is not a Snurko notebook.</string>
