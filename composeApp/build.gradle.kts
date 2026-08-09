@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -69,6 +70,18 @@ dependencies {
     debugImplementation(compose.uiTooling)
 }
 
+val localProperties = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+
+fun signingSecret(key: String): String? =
+    localProperties.getProperty(key) ?: providers.environmentVariable(key).orNull
+
+val keystoreFile = signingSecret("SNURKO_KEYSTORE_PATH")
+    ?.let(::File)
+    ?.takeIf { it.isFile }
+
 android {
     namespace = "app.snurko"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
@@ -78,11 +91,27 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "1.0.0"
+    }
+    signingConfigs {
+        if (keystoreFile != null) {
+            create("release") {
+                storeFile = keystoreFile
+                storePassword = signingSecret("SNURKO_KEYSTORE_PASS")
+                keyAlias = signingSecret("SNURKO_KEY_ALIAS")
+                keyPassword = signingSecret("SNURKO_KEY_PASS")
+            }
+        }
     }
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+            signingConfig = signingConfigs.findByName("release")
         }
     }
     compileOptions {
