@@ -17,12 +17,12 @@ import com.android.billingclient.api.acknowledgePurchase
 import com.android.billingclient.api.queryProductDetails
 import com.android.billingclient.api.queryPurchasesAsync
 import app.snurko.billing.domain.BillingGateway
+import app.snurko.billing.domain.BillingPurchase
 import app.snurko.billing.domain.PurchaseState
-import app.snurko.billing.domain.UNLOCK_PRODUCT_ID
-import app.snurko.billing.domain.UnlockPurchase
 import app.snurko.core.domain.DataError
 import app.snurko.core.domain.EmptyResult
 import app.snurko.core.domain.Result
+import app.snurko.core.domain.map
 import kotlinx.coroutines.CoroutineStart
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -46,14 +46,14 @@ class PlayBillingGateway(
 ) : BillingGateway {
 
     private val purchaseResults =
-        MutableSharedFlow<Result<List<UnlockPurchase>, DataError.Billing>>(extraBufferCapacity = 8)
+        MutableSharedFlow<Result<List<Purchase>, DataError.Billing>>(extraBufferCapacity = 8)
     private val connectionLock = Mutex()
     private var activity: Activity? = null
 
     private val listener = PurchasesUpdatedListener { billingResult, purchases ->
         purchaseResults.tryEmit(
             if (billingResult.isOk()) {
-                Result.Success(purchases.orEmpty().unlockPurchases())
+                Result.Success(purchases.orEmpty())
             } else {
                 Result.Error(billingResult.toBillingError())
             },
@@ -79,25 +79,27 @@ class PlayBillingGateway(
         client.endConnection()
     }
 
-    override fun purchaseUpdates(): Flow<List<UnlockPurchase>> =
-        purchaseResults.mapNotNull { (it as? Result.Success)?.data }
+    override fun purchaseUpdates(productId: String): Flow<List<BillingPurchase>> =
+        purchaseResults.mapNotNull { (it as? Result.Success)?.data?.purchasesOf(productId) }
 
-    override suspend fun unlockPrice(): Result<String, DataError.Billing> =
-        when (val details = unlockProduct()) {
+    override suspend fun price(productId: String): Result<String, DataError.Billing> =
+        when (val details = product(productId)) {
             is Result.Error -> details
-            is Result.Success -> details.data.unlockOffer()?.formattedPrice
+            is Result.Success -> details.data.offer()?.formattedPrice
                 ?.let { Result.Success(it) }
                 ?: Result.Error(DataError.Billing.PRODUCT_UNAVAILABLE)
         }
 
-    override suspend fun queryPurchases(): Result<List<UnlockPurchase>, DataError.Billing> {
+    override suspend fun queryPurchases(
+        productId: String,
+    ): Result<List<BillingPurchase>, DataError.Billing> {
         connect().let { if (it is Result.Error) return it }
         val params = QueryPurchasesParams.newBuilder()
             .setProductType(BillingClient.ProductType.INAPP)
             .build()
         val result = withContext(Dispatchers.IO) { client.queryPurchasesAsync(params) }
         return if (result.billingResult.isOk()) {
-            Result.Success(result.purchasesList.unlockPurchases())
+            Result.Success(result.purchasesList.purchasesOf(productId))
         } else {
             Result.Error(result.billingResult.toBillingError())
         }
@@ -112,14 +114,15 @@ class PlayBillingGateway(
         return result.asEmptyResult()
     }
 
-    override suspend fun launchPurchase(): Result<List<UnlockPurchase>, DataError.Billing> {
+    override suspend fun launchPurchase(
+        productId: String,
+    ): Result<List<BillingPurchase>, DataError.Billing> {
         val host = activity ?: return Result.Error(DataError.Billing.UNAVAILABLE)
-        val details = when (val product = unlockProduct()) {
+        val details = when (val product = product(productId)) {
             is Result.Error -> return product
             is Result.Success -> product.data
         }
-        val offer = details.unlockOffer()
-            ?: return Result.Error(DataError.Billing.PRODUCT_UNAVAILABLE)
+        val offer = details.offer() ?: return Result.Error(DataError.Billing.PRODUCT_UNAVAILABLE)
         val product = BillingFlowParams.ProductDetailsParams.newBuilder()
             .setProductDetails(details)
             .apply { offer.offerToken?.takeIf { it.isNotBlank() }?.let(::setOfferToken) }
@@ -132,12 +135,12 @@ class PlayBillingGateway(
             val answer = async(start = CoroutineStart.UNDISPATCHED) { purchaseResults.first() }
             val launched = client.launchBillingFlow(host, params)
             when {
-                launched.isOk() -> answer.await()
+                launched.isOk() -> answer.await().map { it.purchasesOf(productId) }
 
                 /* Owned already means the store has it — reading it back is the honest answer. */
                 launched.responseCode == BillingClient.BillingResponseCode.ITEM_ALREADY_OWNED -> {
                     answer.cancel()
-                    queryPurchases()
+                    queryPurchases(productId)
                 }
 
                 else -> {
@@ -148,13 +151,13 @@ class PlayBillingGateway(
         }
     }
 
-    private suspend fun unlockProduct(): Result<ProductDetails, DataError.Billing> {
+    private suspend fun product(productId: String): Result<ProductDetails, DataError.Billing> {
         connect().let { if (it is Result.Error) return it }
         val params = QueryProductDetailsParams.newBuilder()
             .setProductList(
                 listOf(
                     QueryProductDetailsParams.Product.newBuilder()
-                        .setProductId(UNLOCK_PRODUCT_ID)
+                        .setProductId(productId)
                         .setProductType(BillingClient.ProductType.INAPP)
                         .build(),
                 ),
@@ -204,13 +207,13 @@ class PlayBillingGateway(
 }
 
 /** A product with a single offer fills the singular field and leaves the list empty. */
-private fun ProductDetails.unlockOffer(): ProductDetails.OneTimePurchaseOfferDetails? =
+private fun ProductDetails.offer(): ProductDetails.OneTimePurchaseOfferDetails? =
     oneTimePurchaseOfferDetailsList?.firstOrNull() ?: oneTimePurchaseOfferDetails
 
-private fun List<Purchase>.unlockPurchases(): List<UnlockPurchase> =
-    filter { UNLOCK_PRODUCT_ID in it.products }.map { it.toUnlockPurchase() }
+private fun List<Purchase>.purchasesOf(productId: String): List<BillingPurchase> =
+    filter { productId in it.products }.map { it.toBillingPurchase() }
 
-private fun Purchase.toUnlockPurchase(): UnlockPurchase = UnlockPurchase(
+private fun Purchase.toBillingPurchase(): BillingPurchase = BillingPurchase(
     token = purchaseToken,
     state = if (purchaseState == Purchase.PurchaseState.PURCHASED) {
         PurchaseState.PURCHASED

@@ -71,9 +71,6 @@ import app.snurko.resources.history_import_confirm_replace
 import app.snurko.resources.history_import_confirm_title
 import app.snurko.resources.history_imported
 import app.snurko.resources.history_in_progress
-import app.snurko.resources.history_locked_action
-import app.snurko.resources.history_locked_body
-import app.snurko.resources.history_locked_title
 import app.snurko.resources.history_missed_separator
 import app.snurko.resources.history_past_empty
 import app.snurko.resources.history_stats_best
@@ -98,7 +95,6 @@ private val PAGE_PADDING = 20.dp
 @Composable
 fun HistoryRoot(
     onNavigateBack: () -> Unit,
-    onOpenUnlock: () -> Unit,
     viewModel: HistoryViewModel = koinViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -127,7 +123,6 @@ fun HistoryRoot(
             state = state,
             onAction = viewModel::onAction,
             onNavigateBack = onNavigateBack,
-            onOpenUnlock = onOpenUnlock,
             modifier = Modifier.padding(innerPadding),
         )
     }
@@ -138,7 +133,6 @@ fun HistoryScreen(
     state: HistoryState,
     onAction: (HistoryAction) -> Unit,
     onNavigateBack: () -> Unit,
-    onOpenUnlock: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(
@@ -165,7 +159,7 @@ fun HistoryScreen(
             items(state.past, key = { it.number }) { row ->
                 AttemptEntry(row = row, isCompletionVisible = true)
             }
-            if (state.isUnlocked && !state.isLoading && state.past.isEmpty()) {
+            if (!state.isLoading && state.past.isEmpty()) {
                 item(key = "past-empty") {
                     Text(
                         text = stringResource(Res.string.history_past_empty),
@@ -173,11 +167,6 @@ fun HistoryScreen(
                         color = SnurkoColors.textSecondary,
                         modifier = Modifier.padding(vertical = 20.dp),
                     )
-                }
-            }
-            if (state.isArchiveLocked) {
-                item(key = "archive-locked") {
-                    LockedArchiveCard(onOpenUnlock = onOpenUnlock)
                 }
             }
             item(key = "backup") {
@@ -314,42 +303,6 @@ private fun StatFigure(value: String, label: String, modifier: Modifier = Modifi
             style = MaterialTheme.typography.bodySmall,
             color = SnurkoColors.textSecondary,
         )
-    }
-}
-
-@Composable
-private fun LockedArchiveCard(onOpenUnlock: () -> Unit) {
-    Column(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(vertical = 18.dp)
-            .border(1.dp, SnurkoColors.line, PANEL_CORNER)
-            .background(SnurkoColors.surface, PANEL_CORNER)
-            .padding(horizontal = 16.dp, vertical = 16.dp),
-    ) {
-        Text(
-            text = stringResource(Res.string.history_locked_title),
-            style = MaterialTheme.typography.titleMedium,
-            color = SnurkoColors.text,
-        )
-        Spacer(Modifier.height(8.dp))
-        Text(
-            text = stringResource(Res.string.history_locked_body),
-            style = MaterialTheme.typography.bodyMedium,
-            color = SnurkoColors.textSecondary,
-        )
-        Box(
-            modifier = Modifier
-                .heightIn(min = 48.dp)
-                .clickable(role = Role.Button, onClick = onOpenUnlock),
-            contentAlignment = Alignment.CenterStart,
-        ) {
-            Text(
-                text = stringResource(Res.string.history_locked_action),
-                style = MaterialTheme.typography.bodyMedium,
-                color = SnurkoColors.accentInk,
-            )
-        }
     }
 }
 
@@ -492,27 +445,9 @@ private fun backupErrorMessages(): Map<DataError.Backup, String> = mapOf(
 
 @Preview
 @Composable
-private fun HistoryUnlockedPreview() {
+private fun HistoryScreenPreview() {
     SnurkoTheme {
-        HistoryScreen(
-            state = previewState,
-            onAction = {},
-            onNavigateBack = {},
-            onOpenUnlock = {},
-        )
-    }
-}
-
-@Preview
-@Composable
-private fun HistoryLockedPreview() {
-    SnurkoTheme {
-        HistoryScreen(
-            state = previewState.copy(isUnlocked = false),
-            onAction = {},
-            onNavigateBack = {},
-            onOpenUnlock = {},
-        )
+        HistoryScreen(state = previewState, onAction = {}, onNavigateBack = {})
     }
 }
 
@@ -524,7 +459,6 @@ private fun HistoryImportConfirmationPreview() {
             state = previewState.copy(isImportConfirmationVisible = true),
             onAction = {},
             onNavigateBack = {},
-            onOpenUnlock = {},
         )
     }
 }
@@ -536,13 +470,11 @@ private fun HistoryFirstAttemptPreview() {
         HistoryScreen(
             state = HistoryState(
                 rows = listOf(previewState.rows.first()),
-                notebookStats = previewStats,
-                isUnlocked = true,
+                stats = previewStats,
                 isLoading = false,
             ),
             onAction = {},
             onNavigateBack = {},
-            onOpenUnlock = {},
         )
     }
 }
@@ -585,7 +517,6 @@ private val previewState = HistoryState(
             completionPercent = 100,
         ),
     ),
-    notebookStats = previewStats,
-    isUnlocked = true,
+    stats = previewStats,
     isLoading = false,
 )

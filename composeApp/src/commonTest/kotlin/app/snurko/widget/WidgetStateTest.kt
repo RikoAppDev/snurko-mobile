@@ -19,25 +19,8 @@ class WidgetStateTest {
 
     @Test
     fun withoutAChallengeTheWidgetHasNothingToShow() {
-        assertThat(widgetState(active = null, today = day(1), isUnlocked = true))
+        assertThat(widgetState(active = null, today = day(1)))
             .isEqualTo(WidgetState.NoChallenge)
-    }
-
-    @Test
-    fun aWidgetOnALockedDeviceShowsNoGridAtAll() {
-        val state = widgetState(
-            active = activeChallenge(checks = completeDaysThrough(3)),
-            today = day(4),
-            isUnlocked = false,
-        )
-
-        assertThat(state).isEqualTo(WidgetState.Locked)
-    }
-
-    @Test
-    fun aLockedDeviceWithoutAChallengeStillShowsTheLockedCard() {
-        assertThat(widgetState(active = null, today = day(1), isUnlocked = false))
-            .isEqualTo(WidgetState.Locked)
     }
 
     @Test
@@ -132,11 +115,7 @@ class WidgetStateTest {
         checks: List<DayCheck> = emptyList(),
         today: LocalDate,
     ): WidgetState.Challenge {
-        val state = widgetState(
-            active = activeChallenge(checks = checks),
-            today = today,
-            isUnlocked = true,
-        )
+        val state = widgetState(active = activeChallenge(checks = checks), today = today)
         assertThat(state).isInstanceOf(WidgetState.Challenge::class)
         return state as WidgetState.Challenge
     }

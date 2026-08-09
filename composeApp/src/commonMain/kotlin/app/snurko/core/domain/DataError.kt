@@ -25,7 +25,6 @@ sealed interface DataError : Error {
         DISCONNECTED,
         CANCELLED,
         PRODUCT_UNAVAILABLE,
-        NOTHING_TO_RESTORE,
         UNKNOWN,
     }
 }

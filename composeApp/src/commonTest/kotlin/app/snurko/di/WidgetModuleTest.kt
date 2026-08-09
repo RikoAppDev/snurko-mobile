@@ -1,7 +1,5 @@
 package app.snurko.di
 
-import app.snurko.billing.domain.EntitlementRepository
-import app.snurko.billing.domain.FakeEntitlementRepository
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
 import app.snurko.widget.WidgetSync
@@ -20,7 +18,6 @@ class WidgetModuleTest {
             modules(
                 module {
                     single<ChallengeRepository> { FakeChallengeRepository() }
-                    single<EntitlementRepository> { FakeEntitlementRepository() }
                     single<WidgetUpdater> { WidgetUpdater { } }
                 },
                 widgetModule,

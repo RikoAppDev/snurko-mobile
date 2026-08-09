@@ -16,7 +16,6 @@ data object HistoryRoute
 fun NavGraphBuilder.challengeGraph(
     navController: NavController,
     onOpenReminders: () -> Unit,
-    onOpenUnlock: () -> Unit,
 ) {
     composable<ChallengeHomeRoute> {
         ChallengeHomeRoot(
@@ -25,9 +24,6 @@ fun NavGraphBuilder.challengeGraph(
         )
     }
     composable<HistoryRoute> {
-        HistoryRoot(
-            onNavigateBack = { navController.popBackStack() },
-            onOpenUnlock = onOpenUnlock,
-        )
+        HistoryRoot(onNavigateBack = { navController.popBackStack() })
     }
 }

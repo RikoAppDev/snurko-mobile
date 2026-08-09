@@ -1,8 +1,5 @@
 package app.snurko.di
 
-import app.snurko.billing.domain.EntitlementRepository
-import app.snurko.billing.domain.FakeEntitlementRepository
-import app.snurko.billing.presentation.UnlockViewModel
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
 import app.snurko.challenge.domain.FakeNotebookBackup
@@ -31,7 +28,6 @@ class PresentationModuleTest {
         modules(
             module {
                 single<ChallengeRepository> { FakeChallengeRepository() }
-                single<EntitlementRepository> { FakeEntitlementRepository() }
                 single<NotebookBackup> { FakeNotebookBackup() }
                 single<ReminderRepository> { FakeReminderRepository() }
                 single<NotificationPermissionGateway> { FakeNotificationPermissionGateway() }
@@ -64,11 +60,6 @@ class PresentationModuleTest {
     @Test
     fun theRemindersViewModelIsResolvable() {
         assertThat(koin.get<RemindersViewModel>()).isNotNull()
-    }
-
-    @Test
-    fun theUnlockViewModelIsResolvable() {
-        assertThat(koin.get<UnlockViewModel>()).isNotNull()
     }
 
     @Test

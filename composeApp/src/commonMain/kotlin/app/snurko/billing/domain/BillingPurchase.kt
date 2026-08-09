@@ -1,13 +1,11 @@
 package app.snurko.billing.domain
 
-const val UNLOCK_PRODUCT_ID = "snurko_unlock"
-
 enum class PurchaseState {
     PURCHASED,
     PENDING,
 }
 
-data class UnlockPurchase(
+data class BillingPurchase(
     val token: String,
     val state: PurchaseState,
     val isAcknowledged: Boolean,
