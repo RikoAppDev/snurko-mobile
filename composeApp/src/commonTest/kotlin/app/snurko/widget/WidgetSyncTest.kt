@@ -1,6 +1,5 @@
 package app.snurko.widget
 
-import app.snurko.billing.domain.FakeEntitlementRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
 import app.snurko.challenge.domain.attemptRecord
 import app.snurko.challenge.domain.completeDaysThrough
@@ -43,15 +42,13 @@ class NextMidnightTest {
 
 class WidgetSyncTest {
 
-    private val entitlements = FakeEntitlementRepository()
-
     @Test
     fun theWidgetIsRedrawnForTheNotebookItStartsWith() = runTest {
         val repository = FakeChallengeRepository()
         repository.setNotebook(notebook())
         val updater = RecordingWidgetUpdater()
 
-        WidgetSync(repository, entitlements, updater).start(scope())
+        WidgetSync(repository, updater).start(scope())
 
         assertThat(updater.updateCount).isEqualTo(1)
     }
@@ -61,7 +58,7 @@ class WidgetSyncTest {
         val repository = FakeChallengeRepository()
         repository.setNotebook(notebook())
         val updater = RecordingWidgetUpdater()
-        WidgetSync(repository, entitlements, updater).start(scope())
+        WidgetSync(repository, updater).start(scope())
 
         repository.setNotebook(notebook(attempts = listOf(attemptRecord(checks = completeDaysThrough(1)))))
 
@@ -73,21 +70,9 @@ class WidgetSyncTest {
         val repository = FakeChallengeRepository()
         val updater = RecordingWidgetUpdater()
 
-        WidgetSync(repository, entitlements, updater).start(scope())
+        WidgetSync(repository, updater).start(scope())
 
         assertThat(updater.updateCount).isEqualTo(1)
-    }
-
-    @Test
-    fun anUnlockRedrawsTheWidgetSoTheGridReplacesTheLockedCard() = runTest {
-        val repository = FakeChallengeRepository()
-        repository.setNotebook(notebook())
-        val updater = RecordingWidgetUpdater()
-        WidgetSync(repository, entitlements, updater).start(scope())
-
-        entitlements.setUnlocked(true)
-
-        assertThat(updater.updateCount).isEqualTo(2)
     }
 
     private fun TestScope.scope() = TestScope(UnconfinedTestDispatcher(testScheduler))

@@ -21,9 +21,6 @@ enum class WidgetCell {
 
 sealed interface WidgetState {
 
-    /** The grid on the home screen is what the unlock buys, so it is the first thing checked. */
-    data object Locked : WidgetState
-
     data object NoChallenge : WidgetState
 
     data class Challenge(
@@ -36,8 +33,7 @@ sealed interface WidgetState {
     ) : WidgetState
 }
 
-fun widgetState(active: ActiveChallenge?, today: LocalDate, isUnlocked: Boolean): WidgetState {
-    if (!isUnlocked) return WidgetState.Locked
+fun widgetState(active: ActiveChallenge?, today: LocalDate): WidgetState {
     if (active == null) return WidgetState.NoChallenge
 
     val totalDays = active.challenge.lengthDays

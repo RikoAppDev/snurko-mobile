@@ -1,7 +1,6 @@
 package app.snurko.challenge.presentation.history
 
 import androidx.lifecycle.viewModelScope
-import app.snurko.billing.domain.EntitlementRepository
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.NotebookBackup
 import app.snurko.challenge.domain.stats
@@ -17,7 +16,6 @@ import kotlinx.coroutines.launch
 
 class HistoryViewModel(
     challengeRepository: ChallengeRepository,
-    entitlementRepository: EntitlementRepository,
     private val notebookBackup: NotebookBackup,
     private val dateProvider: DateProvider,
 ) : MviViewModel<HistoryState, HistoryAction, HistoryEvent>(initialState = HistoryState()) {
@@ -28,13 +26,9 @@ class HistoryViewModel(
             .onEach { notebook ->
                 val rows = notebook.toAttemptRows(dateProvider.today())
                 updateState { state ->
-                    state.copy(rows = rows, notebookStats = notebook.stats(), isLoading = false)
+                    state.copy(rows = rows, stats = notebook.stats(), isLoading = false)
                 }
             }
-            .launchIn(viewModelScope)
-
-        entitlementRepository.observeUnlocked()
-            .onEach { isUnlocked -> updateState { it.copy(isUnlocked = isUnlocked) } }
             .launchIn(viewModelScope)
     }
 

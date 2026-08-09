@@ -1,7 +1,6 @@
 package app.snurko.widget
 
 import android.content.Context
-import android.content.Intent
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
@@ -9,14 +8,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.glance.GlanceId
 import androidx.glance.GlanceModifier
-import androidx.glance.LocalContext
 import androidx.glance.LocalSize
-import androidx.glance.action.Action
 import androidx.glance.action.actionStartActivity
 import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.SizeMode
-import androidx.glance.appwidget.action.actionStartActivity as actionStartActivityIntent
 import androidx.glance.appwidget.appWidgetBackground
 import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.provideContent
@@ -37,9 +33,7 @@ import androidx.glance.text.FontWeight
 import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
-import app.snurko.EXTRA_OPEN_UNLOCK
 import app.snurko.MainActivity
-import app.snurko.billing.domain.EntitlementRepository
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.domain.DateProvider
@@ -47,8 +41,6 @@ import app.snurko.resources.Res
 import app.snurko.resources.home_completed
 import app.snurko.resources.home_day
 import app.snurko.resources.widget_invite
-import app.snurko.resources.widget_locked
-import app.snurko.resources.widget_locked_open
 import app.snurko.resources.widget_open
 import app.snurko.resources.widget_progress
 import kotlinx.coroutines.flow.first
@@ -78,7 +70,6 @@ private data class WidgetLabels(
 class SnurkoWidget : GlanceAppWidget(), KoinComponent {
 
     private val challengeRepository: ChallengeRepository by inject()
-    private val entitlementRepository: EntitlementRepository by inject()
     private val dateProvider: DateProvider by inject()
 
     override val sizeMode = SizeMode.Responsive(setOf(SMALL, MEDIUM, LARGE, EXTRA_LARGE))
@@ -87,7 +78,6 @@ class SnurkoWidget : GlanceAppWidget(), KoinComponent {
         val state = widgetState(
             active = challengeRepository.observeActiveChallenge().first(),
             today = dateProvider.today(),
-            isUnlocked = entitlementRepository.observeUnlocked().first(),
         )
         val labels = labelsFor(state)
 
@@ -95,12 +85,6 @@ class SnurkoWidget : GlanceAppWidget(), KoinComponent {
     }
 
     private suspend fun labelsFor(state: WidgetState): WidgetLabels = when (state) {
-        WidgetState.Locked -> WidgetLabels(
-            headline = getString(Res.string.widget_locked),
-            detail = null,
-            openApp = getString(Res.string.widget_locked_open),
-        )
-
         WidgetState.NoChallenge -> WidgetLabels(
             headline = getString(Res.string.widget_invite),
             detail = null,
@@ -134,7 +118,7 @@ private fun SnurkoWidgetContent(state: WidgetState, labels: WidgetLabels) {
             .appWidgetBackground()
             .background(ColorProvider(SnurkoColors.paper))
             .cornerRadius(WIDGET_CORNER)
-            .clickable(openAppAction(state))
+            .clickable(actionStartActivity<MainActivity>())
             .semantics { contentDescription = labels.openApp }
             .padding(PAGE_PADDING),
         verticalAlignment = if (gridState == null) Alignment.CenterVertically else Alignment.Top,
@@ -145,17 +129,6 @@ private fun SnurkoWidgetContent(state: WidgetState, labels: WidgetLabels) {
             DayGrid(state = gridState, available = size)
         }
     }
-}
-
-/** A locked widget is only ever tapped for one reason, so it lands on the unlock. */
-@Composable
-private fun openAppAction(state: WidgetState): Action = if (state == WidgetState.Locked) {
-    actionStartActivityIntent(
-        Intent(LocalContext.current, MainActivity::class.java)
-            .putExtra(EXTRA_OPEN_UNLOCK, true),
-    )
-} else {
-    actionStartActivity<MainActivity>()
 }
 
 @Composable
