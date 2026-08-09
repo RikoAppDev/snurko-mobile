@@ -8,18 +8,18 @@ import kotlinx.coroutines.flow.Flow
 interface BillingGateway {
 
     /**
-     * Purchases the store hands back as a flow completes. Only ever adds to what is
-     * owned — a cancelled or empty flow says nothing about purchases made elsewhere,
-     * so [queryPurchases] stays the only source that may take an unlock away.
+     * Purchases of [productId] the store hands back as a flow completes. Only ever adds
+     * to what is owned — a cancelled or empty flow says nothing about purchases made
+     * elsewhere, so [queryPurchases] stays the only source that may take one away.
      */
-    fun purchaseUpdates(): Flow<List<UnlockPurchase>>
+    fun purchaseUpdates(productId: String): Flow<List<BillingPurchase>>
 
-    suspend fun unlockPrice(): Result<String, DataError.Billing>
+    suspend fun price(productId: String): Result<String, DataError.Billing>
 
-    suspend fun queryPurchases(): Result<List<UnlockPurchase>, DataError.Billing>
+    suspend fun queryPurchases(productId: String): Result<List<BillingPurchase>, DataError.Billing>
 
     suspend fun acknowledge(purchaseToken: String): EmptyResult<DataError.Billing>
 
     /** Opens the store sheet and answers with whatever it produced once it closes. */
-    suspend fun launchPurchase(): Result<List<UnlockPurchase>, DataError.Billing>
+    suspend fun launchPurchase(productId: String): Result<List<BillingPurchase>, DataError.Billing>
 }
