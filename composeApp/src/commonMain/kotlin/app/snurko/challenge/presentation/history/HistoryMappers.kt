@@ -4,6 +4,7 @@ import app.snurko.challenge.domain.AttemptRecord
 import app.snurko.challenge.domain.AttemptStatus
 import app.snurko.challenge.domain.Challenge
 import app.snurko.challenge.domain.Notebook
+import app.snurko.challenge.domain.completionPercent
 import app.snurko.challenge.domain.dayIndexOn
 import app.snurko.challenge.domain.isDayComplete
 import app.snurko.challenge.domain.uncheckedHabitsOn
@@ -23,6 +24,7 @@ private fun AttemptRecord.toAttemptRowUi(challenge: Challenge, today: LocalDate)
         endDate = attempt.startDate.endOf(outcome, challenge.lengthDays),
         outcome = outcome,
         markedDays = (1..challenge.lengthDays).map { day -> isDayComplete(day, challenge.habits) },
+        completionPercent = completionPercent(challenge),
     )
 }
 
