@@ -36,19 +36,25 @@ final class SnurkoUITests: XCTestCase {
         expect(app.staticTexts["Reminders"], "the reminders title")
         attach(app, named: "09-reminders")
 
-        tap(app.buttons["Set a reminder for Workout"], "the reminder row")
-        expect(app.datePickers.element, "the time picker sheet")
+        tap(button(of: app, labelled: "Set a reminder for Workout"), "the reminder row")
+        expect(app.buttons["Cancel"], "the time picker sheet")
         attach(app, named: "10-time-picker")
 
-        tap(app.buttons["Cancel"], "the picker cancel button")
+        app.buttons["Cancel"].tap()
         XCTAssertTrue(
-            app.datePickers.element.waitForNonExistence(timeout: waitTimeout),
+            app.buttons["Cancel"].waitForNonExistence(timeout: waitTimeout),
             "the time picker sheet stayed up"
         )
 
         swipeBackFromTheStartEdge(of: app)
         expect(app.staticTexts["Today"], "the home page after the back swipe")
         attach(app, named: "11-home-after-back-swipe")
+    }
+
+    /// Compose folds a row's own description together with the text inside it, so the label
+    /// a merged row carries is longer than the description the screen sets.
+    private func button(of app: XCUIApplication, labelled label: String) -> XCUIElement {
+        app.buttons.matching(NSPredicate(format: "label CONTAINS %@", label)).firstMatch
     }
 
     private func habitField(of app: XCUIApplication) -> XCUICoordinate {
