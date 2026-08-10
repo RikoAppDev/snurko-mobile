@@ -23,21 +23,22 @@ final class SnurkoUITests: XCTestCase {
         attach(app, named: "06-setup-keyboard")
 
         tap(app.buttons["Add habit"], "the add-habit button")
-        expect(app.staticTexts["Workout"], "the written habit")
+        expect(app.staticTexts["1 habit"], "the habit count")
+        attach(app, named: "07-setup-with-a-habit")
 
         tap(app.buttons["Start the 90 days"], "the start button")
         tap(app.buttons["Start day 1"], "the confirmation button")
 
         expect(app.staticTexts["Today"], "the today heading")
-        attach(app, named: "07-home-day-one")
+        attach(app, named: "08-home-day-one")
 
         tap(app.buttons["reminders"], "the reminders margin note")
         expect(app.staticTexts["Reminders"], "the reminders title")
-        attach(app, named: "08-reminders")
+        attach(app, named: "09-reminders")
 
         tap(app.buttons["Set a reminder for Workout"], "the reminder row")
         expect(app.datePickers.element, "the time picker sheet")
-        attach(app, named: "09-time-picker")
+        attach(app, named: "10-time-picker")
 
         tap(app.buttons["Cancel"], "the picker cancel button")
         XCTAssertTrue(
@@ -47,7 +48,7 @@ final class SnurkoUITests: XCTestCase {
 
         swipeBackFromTheStartEdge(of: app)
         expect(app.staticTexts["Today"], "the home page after the back swipe")
-        attach(app, named: "10-home-after-back-swipe")
+        attach(app, named: "11-home-after-back-swipe")
     }
 
     private func habitField(of app: XCUIApplication) -> XCUICoordinate {

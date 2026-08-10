@@ -13,6 +13,7 @@ rm -rf "$result" "$attachments"
 
 xcrun simctl uninstall "$udid" "$bundle_id" >/dev/null 2>&1 || true
 
+set +e
 xcodebuild test \
     -project iosApp/iosApp.xcodeproj \
     -scheme iosApp \
@@ -21,11 +22,14 @@ xcodebuild test \
     -derivedDataPath build/ios \
     -resultBundlePath "$result" \
     CODE_SIGNING_ALLOWED=NO
+status=$?
+set -e
 
-xcrun xcresulttool export attachments --path "$result" --output-path "$attachments" || {
+# The screenshots are worth more when the drive fails than when it passes.
+if ! xcrun xcresulttool export attachments --path "$result" --output-path "$attachments"; then
     echo "::warning::could not export the driven screenshots from $result"
-    exit 0
-}
+    exit "$status"
+fi
 
 python3 - "$attachments" "$shots" <<'PY'
 import json
@@ -56,3 +60,4 @@ print("driven screenshots kept:", copied)
 PY
 
 ls -l "$shots"
+exit "$status"
