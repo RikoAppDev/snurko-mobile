@@ -1,6 +1,6 @@
 package app.snurko.challenge.domain
 
-/** What the whole notebook adds up to, counted from the ✗ marks alone. */
+/** What the whole notebook adds up to, counted from the ✓ marks alone. */
 data class NotebookStats(
     val bestCompletionPercent: Int,
     val longestStreak: Int,

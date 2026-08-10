@@ -42,6 +42,7 @@ private val HEADER_GAP = 22.dp
 private val CELL_GAP = 3.dp
 private val CELL_CORNER = RoundedCornerShape(3.dp)
 private val WORDMARK_PADDING = 14.dp
+private val MARK_SIZE = 21.dp
 
 @Composable
 fun DayStickerCard(state: DayStickerState, modifier: Modifier = Modifier) {
@@ -133,7 +134,7 @@ private fun StickerCell(day: Int, cell: GridCellUi, modifier: Modifier = Modifie
         if (isMarked) {
             PencilMark(
                 rotation = markRotationDegrees(day),
-                fontSize = 21.sp,
+                size = MARK_SIZE,
                 color = SnurkoColors.text,
             )
         }

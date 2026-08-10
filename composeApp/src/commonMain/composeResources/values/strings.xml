@@ -31,7 +31,6 @@
     <string name="home_day">Day %1$d</string>
     <string name="home_streak">streak %1$d</string>
     <string name="home_grid">%1$d of %2$d days marked</string>
-    <string name="home_day_mark">×</string>
     <string name="home_today">Today</string>
     <string name="home_completed">%1$d days.</string>
     <string name="home_update_failed">That did not save. Try again.</string>
@@ -91,7 +90,7 @@
     <string name="history_stats_title">All together</string>
     <string name="history_stats_best">best attempt</string>
     <string name="history_stats_streak">longest streak</string>
-    <string name="history_stats_marks">✗ marks</string>
+    <string name="history_stats_marks">✓ marks</string>
     <string name="history_stats_percent">%1$d%</string>
     <string name="history_stats_count">%1$d</string>
 
