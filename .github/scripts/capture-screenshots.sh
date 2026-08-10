@@ -60,8 +60,12 @@ SCHEMA
 }
 
 report_crash() {
+    sleep 3
     echo "::group::Crash reports"
     find "$HOME/Library/Logs/DiagnosticReports" -name "Snurko*" -print -exec cat {} \; 2>/dev/null || true
+    xcrun simctl spawn "$udid" log show --style compact --last 3m \
+        --predicate 'senderImagePath CONTAINS "Snurko" OR processImagePath CONTAINS "Snurko"' \
+        2>/dev/null | tail -80 || true
     echo "::endgroup::"
 }
 
