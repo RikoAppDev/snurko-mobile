@@ -71,7 +71,7 @@ contradicts the other.
 
 ## App-specific vocabulary
 
-Four words the app needs and the landing never had to choose:
+Five words the app needs and the landing never had to choose:
 
 - **notebook** — the whole record: the attempt you are on plus every archived
   one. It carries the export/import strings and the two backup errors. Chosen
@@ -87,6 +87,12 @@ Four words the app needs and the landing never had to choose:
   poking, so lt, mt, be and mk collapse it into the ordinary reminder word.
 - **tip jar** — the donation screen. Rule everywhere: never the word that reads
   *charitable*.
+- **the phone** — what holds a reminder back while notifications are switched
+  off, in `reminders_blocked_body`. The app ships on Android and on iOS from one
+  string file, so the note names the device rather than the platform: German
+  takes the colloquial *Handy*, European Portuguese *telemóvel*, Icelandic
+  *síminn*, Latvian *tālrunis*, Finnish *puhelin*, everywhere else the ordinary
+  everyday word. Only that one noun changed; each sentence keeps its own voice.
 
 ## Deviations from the landing, on purpose
 
@@ -231,6 +237,8 @@ characters and cannot sit in a third of a row.
   bound to the same meaning, and no unsupported format specifier is used;
 - the marks and the bare numeral (`×`, `←`, `—`, `✓`, `%1$d`, `Snurko`) are
   untranslated, and the brand survives in the seven strings that name it;
+- no locale names a platform — no `Android`, `iOS`, `iPhone`, `Apple` or
+  `Google` reaches a screen the app shows on both platforms;
 - no compose-resource value carries a backslash, and every android-resource
   apostrophe carries one;
 - no locale is a partial copy of the English file.
