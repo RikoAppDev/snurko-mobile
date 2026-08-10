@@ -10,7 +10,7 @@ class FakeNotificationPermissionGateway : NotificationPermissionGateway {
     var settingsOpenedCount = 0
         private set
 
-    override fun current(): NotificationPermission = permission
+    override suspend fun current(): NotificationPermission = permission
 
     override suspend fun request(): NotificationPermission {
         requestCount++

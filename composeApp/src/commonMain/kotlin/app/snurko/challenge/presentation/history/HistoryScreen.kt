@@ -41,6 +41,7 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.billing.domain.isTipJarAvailable
 import app.snurko.challenge.domain.NotebookStats
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
@@ -180,8 +181,10 @@ fun HistoryScreen(
                     onImport = { onAction(HistoryAction.ImportClicked) },
                 )
             }
-            item(key = "support") {
-                SupportRow(onClick = onOpenTipJar)
+            if (isTipJarAvailable) {
+                item(key = "support") {
+                    SupportRow(onClick = onOpenTipJar)
+                }
             }
         }
     }

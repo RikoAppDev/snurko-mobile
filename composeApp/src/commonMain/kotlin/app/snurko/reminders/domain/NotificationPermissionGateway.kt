@@ -8,7 +8,7 @@ enum class NotificationPermission {
 /** Asks the platform for permission to post notifications, and points at its settings. */
 interface NotificationPermissionGateway {
 
-    fun current(): NotificationPermission
+    suspend fun current(): NotificationPermission
 
     suspend fun request(): NotificationPermission
 
