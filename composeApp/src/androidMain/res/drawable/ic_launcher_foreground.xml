@@ -15,15 +15,11 @@
         android:pivotY="54"
         android:rotation="-7">
         <path
-            android:pathData="M39,39L69,68.5"
+            android:pathData="M37.95,56.67L49.72,68.98L71.12,40.09"
             android:strokeColor="#3B3A36"
             android:strokeLineCap="round"
+            android:strokeLineJoin="round"
             android:strokeWidth="8.5" />
-        <path
-            android:pathData="M68.5,39.5L39.5,68"
-            android:strokeColor="#3B3A36"
-            android:strokeLineCap="round"
-            android:strokeWidth="8" />
     </group>
 
 </vector>
