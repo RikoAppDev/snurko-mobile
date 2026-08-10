@@ -37,6 +37,8 @@ final class SnurkoUITests: XCTestCase {
         attach(app, named: "09-reminders")
 
         tap(button(of: app, labelled: "Set a reminder for Workout"), "the reminder row")
+        allowNotifications()
+
         expect(app.buttons["Cancel"], "the time picker sheet")
         attach(app, named: "10-time-picker")
 
@@ -49,6 +51,15 @@ final class SnurkoUITests: XCTestCase {
         swipeBackFromTheStartEdge(of: app)
         expect(app.staticTexts["Today"], "the home page after the back swipe")
         attach(app, named: "11-home-after-back-swipe")
+    }
+
+    /// Asking for a reminder time is what first asks iOS for notifications, and the system
+    /// dialog that follows belongs to SpringBoard rather than to the app.
+    private func allowNotifications() {
+        let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+        let allow = springboard.buttons["Allow"]
+        guard allow.waitForExistence(timeout: waitTimeout) else { return }
+        allow.tap()
     }
 
     /// Compose folds a row's own description together with the text inside it, so the label
