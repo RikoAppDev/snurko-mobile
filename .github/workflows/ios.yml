@@ -52,6 +52,9 @@ jobs:
             "${{ steps.simulator.outputs.udid }}" \
             build/ios/Build/Products/Debug-iphonesimulator/Snurko.app
 
+      - name: Drive the app through the setup, the reminders and the back swipe
+        run: bash .github/scripts/drive-app.sh "${{ steps.simulator.outputs.udid }}"
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:

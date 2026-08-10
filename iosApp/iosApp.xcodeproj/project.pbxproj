@@ -10,6 +10,7 @@
 		1B0000000000000000000001 /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000001 /* iOSApp.swift */; };
 		1B0000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000002 /* ContentView.swift */; };
 		1B0000000000000000000003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000003 /* Assets.xcassets */; };
+		1B0000000000000000000004 /* SnurkoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000007 /* SnurkoUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		1A0000000000000000000004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A0000000000000000000005 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		1A0000000000000000000006 /* Snurko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snurko.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0000000000000000000007 /* SnurkoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnurkoUITests.swift; sourceTree = "<group>"; };
+		1A0000000000000000000008 /* iosAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			children = (
 				1C0000000000000000000004 /* Configuration */,
 				1C0000000000000000000002 /* iosApp */,
+				1C0000000000000000000005 /* iosAppUITests */,
 				1C0000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,8 +60,17 @@
 			isa = PBXGroup;
 			children = (
 				1A0000000000000000000006 /* Snurko.app */,
+				1A0000000000000000000008 /* iosAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1C0000000000000000000005 /* iosAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1A0000000000000000000007 /* SnurkoUITests.swift */,
+			);
+			path = iosAppUITests;
 			sourceTree = "<group>";
 		};
 		1C0000000000000000000004 /* Configuration */ = {
@@ -89,7 +102,41 @@
 			productReference = 1A0000000000000000000006 /* Snurko.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1D0000000000000000000003 /* iosAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F0000000000000000000009 /* Build configuration list for PBXNativeTarget "iosAppUITests" */;
+			buildPhases = (
+				1E0000000000000000000005 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B0000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = iosAppUITests;
+			productName = iosAppUITests;
+			productReference = 1A0000000000000000000008 /* iosAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		2A0000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1D0000000000000000000002 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1D0000000000000000000001;
+			remoteInfo = iosApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		2B0000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1D0000000000000000000001 /* iosApp */;
+			targetProxy = 2A0000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXProject section */
 		1D0000000000000000000002 /* Project object */ = {
@@ -101,6 +148,10 @@
 				TargetAttributes = {
 					1D0000000000000000000001 = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					1D0000000000000000000003 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 1D0000000000000000000001;
 					};
 				};
 			};
@@ -118,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				1D0000000000000000000001 /* iosApp */,
+				1D0000000000000000000003 /* iosAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +214,14 @@
 			files = (
 				1B0000000000000000000002 /* ContentView.swift in Sources */,
 				1B0000000000000000000001 /* iOSApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E0000000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B0000000000000000000004 /* SnurkoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +347,42 @@
 			};
 			name = Release;
 		};
+		1F0000000000000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(TEAM_ID)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iosApp;
+			};
+			name = Debug;
+		};
+		1F0000000000000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "$(TEAM_ID)";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(BUNDLE_ID).uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iosApp;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +400,15 @@
 			buildConfigurations = (
 				1F0000000000000000000003 /* Debug */,
 				1F0000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F0000000000000000000009 /* Build configuration list for PBXNativeTarget "iosAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F0000000000000000000007 /* Debug */,
+				1F0000000000000000000008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
