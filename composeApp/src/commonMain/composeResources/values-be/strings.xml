@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Не захавалася. Паспрабуй яшчэ раз.</string>
 
     <string name="reminders_blocked_title">Апавяшчэнні для Snurko выключаны.</string>
-    <string name="reminders_blocked_body">Час тут паставіць можна, але Android прытрымае нагадванне, пакуль апавяшчэнні не дазволены ў сістэмных наладах.</string>
+    <string name="reminders_blocked_body">Час тут паставіць можна, але тэлефон прытрымае нагадванне, пакуль апавяшчэнні не дазволены ў сістэмных наладах.</string>
     <string name="reminders_blocked_settings">Адкрыць налады</string>
 
     <string name="reminder_channel_name">Нагадванні пра звычкі</string>

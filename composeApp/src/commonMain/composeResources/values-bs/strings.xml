@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Čuvanje nije uspjelo. Probaj ponovo.</string>
 
     <string name="reminders_blocked_title">Obavještenja za Snurko su isključena.</string>
-    <string name="reminders_blocked_body">Vrijeme možeš podesiti i ovdje, ali Android zadržava podsjetnik dok obavještenja ne dozvoliš u sistemskim podešavanjima.</string>
+    <string name="reminders_blocked_body">Vrijeme možeš podesiti i ovdje, ali telefon zadržava podsjetnik dok obavještenja ne dozvoliš u sistemskim podešavanjima.</string>
     <string name="reminders_blocked_settings">Otvori podešavanja</string>
 
     <string name="reminder_channel_name">Podsjetnici za navike</string>

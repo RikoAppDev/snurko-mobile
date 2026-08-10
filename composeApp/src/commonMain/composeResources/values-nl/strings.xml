@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Dat is niet opgeslagen. Probeer het nog eens.</string>
 
     <string name="reminders_blocked_title">Meldingen staan uit voor Snurko.</string>
-    <string name="reminders_blocked_body">Je kunt hier wel een tijd instellen, maar Android houdt de herinnering tegen tot meldingen zijn toegestaan in de systeeminstellingen.</string>
+    <string name="reminders_blocked_body">Je kunt hier wel een tijd instellen, maar de telefoon houdt de herinnering tegen tot meldingen zijn toegestaan in de systeeminstellingen.</string>
     <string name="reminders_blocked_settings">Instellingen openen</string>
 
     <string name="reminder_channel_name">Herinneringen voor gewoontes</string>

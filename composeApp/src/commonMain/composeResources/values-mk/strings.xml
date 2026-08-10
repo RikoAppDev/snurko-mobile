@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Не се зачува. Обиди се повторно.</string>
 
     <string name="reminders_blocked_title">Известувањата за Snurko се исклучени.</string>
-    <string name="reminders_blocked_body">Време може да се постави и оттука, но Android го задржува потсетувањето додека не ги дозволиш известувањата во системските поставки.</string>
+    <string name="reminders_blocked_body">Време може да се постави и оттука, но телефонот го задржува потсетувањето додека не ги дозволиш известувањата во системските поставки.</string>
     <string name="reminders_blocked_settings">Отвори ги поставките</string>
 
     <string name="reminder_channel_name">Потсетувања за навики</string>

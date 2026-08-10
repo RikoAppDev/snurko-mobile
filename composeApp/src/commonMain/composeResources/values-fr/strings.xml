@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Ça ne s’est pas enregistré. Réessaie.</string>
 
     <string name="reminders_blocked_title">Les notifications sont coupées pour Snurko.</string>
-    <string name="reminders_blocked_body">Tu peux quand même mettre une heure ici, mais Android retient le rappel tant que les notifications ne sont pas autorisées dans les réglages système.</string>
+    <string name="reminders_blocked_body">Tu peux quand même mettre une heure ici, mais le téléphone retient le rappel tant que les notifications ne sont pas autorisées dans les réglages système.</string>
     <string name="reminders_blocked_settings">Ouvrir les réglages</string>
 
     <string name="reminder_channel_name">Rappels d’habitudes</string>

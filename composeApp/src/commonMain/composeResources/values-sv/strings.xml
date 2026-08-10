@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Det sparades inte. Försök igen.</string>
 
     <string name="reminders_blocked_title">Aviseringar är avstängda för Snurko.</string>
-    <string name="reminders_blocked_body">Du kan ändå sätta en tid här, men Android håller kvar påminnelsen tills aviseringar är tillåtna i systeminställningarna.</string>
+    <string name="reminders_blocked_body">Du kan ändå sätta en tid här, men telefonen håller kvar påminnelsen tills aviseringar är tillåtna i systeminställningarna.</string>
     <string name="reminders_blocked_settings">Öppna inställningar</string>
 
     <string name="reminder_channel_name">Påminnelser om vanor</string>

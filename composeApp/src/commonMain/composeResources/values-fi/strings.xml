@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Tallennus ei onnistunut. Yritä uudelleen.</string>
 
     <string name="reminders_blocked_title">Snurkon ilmoitukset on kytketty pois päältä.</string>
-    <string name="reminders_blocked_body">Ajan voi silti asettaa tässä, mutta Android pidättää muistutuksen, kunnes ilmoitukset sallitaan järjestelmän asetuksissa.</string>
+    <string name="reminders_blocked_body">Ajan voi silti asettaa tässä, mutta puhelin pidättää muistutuksen, kunnes ilmoitukset sallitaan järjestelmän asetuksissa.</string>
     <string name="reminders_blocked_settings">Avaa asetukset</string>
 
     <string name="reminder_channel_name">Tapamuistutukset</string>

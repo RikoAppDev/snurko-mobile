@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Das wurde nicht gespeichert. Versuch es noch mal.</string>
 
     <string name="reminders_blocked_title">Benachrichtigungen sind für Snurko ausgeschaltet.</string>
-    <string name="reminders_blocked_body">Eine Uhrzeit kannst du hier trotzdem setzen, aber Android hält die Erinnerung zurück, bis Benachrichtigungen in den Systemeinstellungen erlaubt sind.</string>
+    <string name="reminders_blocked_body">Eine Uhrzeit kannst du hier trotzdem setzen, aber das Handy hält die Erinnerung zurück, bis Benachrichtigungen in den Systemeinstellungen erlaubt sind.</string>
     <string name="reminders_blocked_settings">Einstellungen öffnen</string>
 
     <string name="reminder_channel_name">Erinnerungen an Gewohnheiten</string>

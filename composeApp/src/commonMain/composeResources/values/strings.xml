@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">That did not save. Try again.</string>
 
     <string name="reminders_blocked_title">Notifications are switched off for Snurko.</string>
-    <string name="reminders_blocked_body">A time can still be set here, but Android holds the reminder back until notifications are allowed in the system settings.</string>
+    <string name="reminders_blocked_body">A time can still be set here, but the phone holds the reminder back until notifications are allowed in the system settings.</string>
     <string name="reminders_blocked_settings">Open system settings</string>
 
     <string name="reminder_channel_name">Habit reminders</string>

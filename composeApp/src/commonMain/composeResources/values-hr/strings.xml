@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Spremanje nije prošlo. Pokušaj ponovno.</string>
 
     <string name="reminders_blocked_title">Obavijesti za Snurko su isključene.</string>
-    <string name="reminders_blocked_body">Vrijeme možeš postaviti i ovdje, ali Android zadržava podsjetnik dok obavijesti ne dopustiš u postavkama sustava.</string>
+    <string name="reminders_blocked_body">Vrijeme možeš postaviti i ovdje, ali telefon zadržava podsjetnik dok obavijesti ne dopustiš u postavkama sustava.</string>
     <string name="reminders_blocked_settings">Otvori postavke sustava</string>
 
     <string name="reminder_channel_name">Podsjetnici za navike</string>

@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">No se ha guardado. Prueba otra vez.</string>
 
     <string name="reminders_blocked_title">Las notificaciones de Snurko están desactivadas.</string>
-    <string name="reminders_blocked_body">Aquí puedes poner una hora igualmente, pero Android retiene el recordatorio hasta que permitas las notificaciones en los ajustes del sistema.</string>
+    <string name="reminders_blocked_body">Aquí puedes poner una hora igualmente, pero el teléfono retiene el recordatorio hasta que permitas las notificaciones en los ajustes del sistema.</string>
     <string name="reminders_blocked_settings">Abrir los ajustes</string>
 
     <string name="reminder_channel_name">Recordatorios de hábitos</string>
