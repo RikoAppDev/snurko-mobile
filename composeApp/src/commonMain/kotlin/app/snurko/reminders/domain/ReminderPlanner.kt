@@ -19,6 +19,7 @@ class ReminderPlanner(
             active = activeChallenge(),
             reminders = reminderRepository.getReminders(),
             now = dateProvider.now(),
+            rechecksAtFireTime = scheduler.rechecksAtFireTime,
         )
         scheduler.applySchedule(schedule)
     }

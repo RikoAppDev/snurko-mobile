@@ -37,7 +37,9 @@ class FakeReminderRepository : ReminderRepository {
     }
 }
 
-class FakeReminderScheduler : ReminderScheduler {
+class FakeReminderScheduler(
+    override var rechecksAtFireTime: Boolean = true,
+) : ReminderScheduler {
 
     val appliedSchedules = mutableListOf<ReminderSchedule>()
 

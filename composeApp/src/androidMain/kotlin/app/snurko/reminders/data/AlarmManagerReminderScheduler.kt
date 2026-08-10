@@ -19,6 +19,8 @@ class AlarmManagerReminderScheduler(
 
     private val alarmManager: AlarmManager = context.getSystemService(AlarmManager::class.java)
 
+    override val rechecksAtFireTime: Boolean = true
+
     override suspend fun applySchedule(schedule: ReminderSchedule) {
         schedule.cancelledHabitIds.forEach { habitId ->
             existingAlarm(habitId)?.let { alarm ->
