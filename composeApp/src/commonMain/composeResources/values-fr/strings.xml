@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Mon défi</string>
+    <string name="challenge_setup_invitation">Écris les habitudes que tu tiendras chaque jour pendant les 90 prochains jours.</string>
+
+    <string name="challenge_setup_habit_name_label">Habitude</string>
+    <string name="challenge_setup_habit_name_placeholder">Lire 10 pages</string>
+    <string name="challenge_setup_fail_condition_label">Ce qui compte comme un échec (facultatif)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Moins de 10 pages</string>
+
+    <string name="challenge_setup_add_habit">Ajouter</string>
+    <string name="challenge_setup_save_habit">Enregistrer</string>
+    <string name="challenge_setup_cancel_edit">Annuler</string>
+    <string name="challenge_setup_hint_name_required">Une habitude a besoin d’un nom avant d’être ajoutée.</string>
+    <string name="challenge_setup_hint_duplicate_name">Cette habitude est déjà dans la liste.</string>
+    <string name="challenge_setup_edit_habit">Modifier %1$s</string>
+    <string name="challenge_setup_remove_habit">Supprimer %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Commencer les 90 jours</string>
+    <string name="challenge_setup_start_failed">Le défi n’a pas démarré. Réessaie.</string>
+
+    <string name="challenge_setup_confirm_title">On commence ?</string>
+    <string name="challenge_setup_confirm_locked">Une fois lancé, ce jeu d’habitudes est verrouillé. Tu ne peux plus en ajouter, en renommer ni en supprimer avant la fin des 90 jours.</string>
+    <string name="challenge_setup_confirm_restart">Le jour où tu ne finis pas toutes tes habitudes, le défi repart au jour 1.</string>
+    <string name="challenge_setup_confirm_start">Commencer</string>
+    <string name="challenge_setup_confirm_cancel">Pas encore</string>
+
+    <string name="challenge_fail_condition_summary">Échec si : %1$s</string>
+
+    <string name="home_day">Jour %1$d</string>
+    <string name="home_streak">série %1$d</string>
+    <string name="home_grid">%1$d jours cochés sur %2$d</string>
+    <string name="home_today">Aujourd’hui</string>
+    <string name="home_completed">%1$d jours.</string>
+    <string name="home_update_failed">Ça ne s’est pas enregistré. Réessaie.</string>
+
+    <string name="home_restart_title">Le jour %1$d n’a pas été bouclé.</string>
+    <string name="home_restart_missed">Pas coché : %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Ce jour-là ne revient pas. Les 90 jours repartent aujourd’hui, au jour 1.</string>
+    <string name="home_restart_acknowledge">Recommencer</string>
+    <string name="home_history_link">les pages du fond</string>
+    <string name="home_reminders_link">rappels</string>
+    <string name="home_share_link">partager</string>
+    <string name="home_share_failed">Le partage n’est pas passé. Réessaie.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Rappels</string>
+    <string name="reminders_back">Retour</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Rien n’est actif tant que tu n’as pas mis d’heure. Chaque habitude reçoit un seul rappel, et seulement un jour où elle n’est pas encore cochée.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Mettre un rappel pour %1$s</string>
+    <string name="reminders_change">Changer le rappel pour %1$s</string>
+    <string name="reminders_switch_off">Couper le rappel pour %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Ça ne s’est pas enregistré. Réessaie.</string>
+
+    <string name="reminders_blocked_title">Les notifications sont coupées pour Snurko.</string>
+    <string name="reminders_blocked_body">Tu peux quand même mettre une heure ici, mais Android retient le rappel tant que les notifications ne sont pas autorisées dans les réglages système.</string>
+    <string name="reminders_blocked_settings">Ouvrir les réglages</string>
+
+    <string name="reminder_channel_name">Rappels d’habitudes</string>
+    <string name="reminder_channel_description">Un seul rappel par habitude, à l’heure que tu choisis.</string>
+    <string name="reminder_notification_text">Jour %1$d — pas encore coché.</string>
+    <string name="reminder_notification_done">Fait</string>
+
+    <string name="widget_invite">Lance tes 90 jours.</string>
+    <string name="widget_progress">%1$d sur %2$d</string>
+    <string name="widget_open">Ouvrir Snurko</string>
+
+    <string name="history_title">Pages du fond</string>
+    <string name="history_back">Retour</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Tentative %1$d</string>
+    <string name="history_in_progress">en cours — jour %1$d</string>
+    <string name="history_failed">échec au jour %1$d</string>
+    <string name="history_failed_missed">échec au jour %1$d — manqué : %2$s</string>
+    <string name="history_completed">terminée</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d/%2$d/%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">depuis le %1$s</string>
+    <string name="history_past_empty">Rien dans les pages du fond pour l’instant — c’est la première tentative.</string>
+
+    <string name="history_completion">%1$d% coché</string>
+
+    <string name="history_stats_title">En tout</string>
+    <string name="history_stats_best">meilleur essai</string>
+    <string name="history_stats_streak">meilleure série</string>
+    <string name="history_stats_marks">✓ coches</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Exporter le carnet</string>
+    <string name="history_import">Importer le carnet</string>
+    <string name="history_exported">Carnet exporté.</string>
+    <string name="history_imported">Le carnet a été remplacé par celui que tu as importé.</string>
+
+    <string name="history_import_confirm_title">Remplacer ce carnet ?</string>
+    <string name="history_import_confirm_body">L’import écrase tout ce qui est écrit ici — la tentative en cours et toutes les précédentes. C’est sans retour.</string>
+    <string name="history_import_confirm_replace">Remplacer</string>
+    <string name="history_import_confirm_cancel">Garder celui-ci</string>
+
+    <string name="history_support">Soutenir Snurko</string>
+
+    <string name="tip_jar_title">Pourboire</string>
+    <string name="tip_jar_back">Retour</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko est gratuit et open source. Tout, pour tout le monde, pour toujours.</string>
+    <string name="tip_jar_unlocks_nothing">Rien ici ne débloque quoi que ce soit. Il n’y a rien à débloquer — tu as déjà l’appli entière.</string>
+    <string name="tip_jar_fees">Un pourboire va aux frais annuels que le store facture pour garder Snurko en ligne. C’est la seule raison d’être de cette page.</string>
+    <string name="tip_jar_amounts_title">Si tu veux laisser quelque chose</string>
+    <string name="tip_jar_amount">Laisser %1$s</string>
+    <string name="tip_jar_price_loading">Lecture des montants dans le store…</string>
+    <string name="tip_jar_price_unavailable">Le store n’a renvoyé aucun montant.</string>
+    <string name="tip_jar_price_retry">Redemander</string>
+    <string name="tip_jar_thanks">merci.</string>
+    <string name="tip_jar_thanks_note">Ça couvre une part des frais du store pour cette année. Rien n’a changé dans l’appli — elle était déjà entièrement à toi.</string>
+    <string name="tip_jar_pending">Le store traite encore ce paiement. Il n’y a rien d’autre à faire, et rien dans l’appli ne l’attend.</string>
+    <string name="tip_jar_error_unavailable">Les paiements du store ne sont pas disponibles sur cet appareil.</string>
+    <string name="tip_jar_error_disconnected">Impossible de joindre le store.</string>
+    <string name="tip_jar_error_cancelled">Le pourboire a été annulé. Rien n’a été débité.</string>
+    <string name="tip_jar_error_product_unavailable">Ce montant n’est pas disponible pour le moment.</string>
+    <string name="tip_jar_error_unknown">Ça n’est pas passé.</string>
+
+    <string name="backup_error_nothing_to_export">Il n’y a encore rien d’écrit à exporter.</string>
+    <string name="backup_error_document_unavailable">Ce fichier n’a pas pu être ouvert.</string>
+    <string name="backup_error_malformed">Ce fichier n’est pas un carnet Snurko.</string>
+    <string name="backup_error_unsupported_version">Ce carnet vient d’une version plus récente de Snurko.</string>
+    <string name="backup_error_unknown">Ça n’a pas marché. Réessaie.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d habitude</item>
+        <item quantity="many">%1$d d’habitudes</item>
+        <item quantity="other">%1$d habitudes</item>
+    </plurals>
+</resources>

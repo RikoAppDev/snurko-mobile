@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Oma haaste</string>
+    <string name="challenge_setup_invitation">Kirjoita tavat, jotka pidät joka päivä seuraavat 90 päivää.</string>
+
+    <string name="challenge_setup_habit_name_label">Tapa</string>
+    <string name="challenge_setup_habit_name_placeholder">Lue 10 sivua</string>
+    <string name="challenge_setup_fail_condition_label">Mikä lasketaan epäonnistumiseksi (valinnainen)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Alle 10 sivua</string>
+
+    <string name="challenge_setup_add_habit">Lisää tapa</string>
+    <string name="challenge_setup_save_habit">Tallenna tapa</string>
+    <string name="challenge_setup_cancel_edit">Peruuta</string>
+    <string name="challenge_setup_hint_name_required">Tapa tarvitsee nimen, ennen kuin voit lisätä sen.</string>
+    <string name="challenge_setup_hint_duplicate_name">Tämä tapa on jo listalla.</string>
+    <string name="challenge_setup_edit_habit">Muokkaa: %1$s</string>
+    <string name="challenge_setup_remove_habit">Poista: %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Aloita 90 päivää</string>
+    <string name="challenge_setup_start_failed">Haastetta ei saatu alkuun. Yritä uudelleen.</string>
+
+    <string name="challenge_setup_confirm_title">Aloitetaanko?</string>
+    <string name="challenge_setup_confirm_locked">Kun aloitat, tämä tapalista lukittuu. Et voi lisätä, nimetä uudelleen tai poistaa tapaa, ennen kuin 90 päivää on takana.</string>
+    <string name="challenge_setup_confirm_restart">Jos jonain päivänä et tee kaikkia tapoja, haaste alkaa taas päivästä 1.</string>
+    <string name="challenge_setup_confirm_start">Aloita päivä 1</string>
+    <string name="challenge_setup_confirm_cancel">Ei vielä</string>
+
+    <string name="challenge_fail_condition_summary">Epäonnistuu, jos: %1$s</string>
+
+    <string name="home_day">Päivä %1$d</string>
+    <string name="home_streak">putki %1$d</string>
+    <string name="home_grid">%1$d/%2$d päivää rastitettu</string>
+    <string name="home_today">Tänään</string>
+    <string name="home_completed">%1$d päivää.</string>
+    <string name="home_update_failed">Tallennus ei onnistunut. Yritä uudelleen.</string>
+
+    <string name="home_restart_title">Päivä %1$d jäi kesken.</string>
+    <string name="home_restart_missed">Rastittamatta: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Sitä päivää ei saa takaisin. 90 päivää alkaa tänään uudelleen päivästä 1.</string>
+    <string name="home_restart_acknowledge">Aloita alusta</string>
+    <string name="home_history_link">takasivut</string>
+    <string name="home_reminders_link">muistutukset</string>
+    <string name="home_share_link">jaa</string>
+    <string name="home_share_failed">Jakaminen ei onnistunut. Yritä uudelleen.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Muistutukset</string>
+    <string name="reminders_back">Takaisin</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Mikään ei ole päällä ennen kuin asetat ajan. Jokainen tapa saa yhden muistutuksen, ja vain päivänä, jolloin se on yhä rastittamatta.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Aseta muistutus: %1$s</string>
+    <string name="reminders_change">Vaihda muistutus: %1$s</string>
+    <string name="reminders_switch_off">Poista muistutus käytöstä: %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Tallennus ei onnistunut. Yritä uudelleen.</string>
+
+    <string name="reminders_blocked_title">Snurkon ilmoitukset on kytketty pois päältä.</string>
+    <string name="reminders_blocked_body">Ajan voi silti asettaa tässä, mutta Android pidättää muistutuksen, kunnes ilmoitukset sallitaan järjestelmän asetuksissa.</string>
+    <string name="reminders_blocked_settings">Avaa asetukset</string>
+
+    <string name="reminder_channel_name">Tapamuistutukset</string>
+    <string name="reminder_channel_description">Yksi muistutus tapaa kohden, asettamaasi aikaan.</string>
+    <string name="reminder_notification_text">Päivä %1$d – ei vielä rastia.</string>
+    <string name="reminder_notification_done">Valmis</string>
+
+    <string name="widget_invite">Aloita 90 päivääsi.</string>
+    <string name="widget_progress">%1$d/%2$d</string>
+    <string name="widget_open">Avaa Snurko</string>
+
+    <string name="history_title">Takasivut</string>
+    <string name="history_back">Takaisin</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Yritys %1$d</string>
+    <string name="history_in_progress">kesken – päivä %1$d</string>
+    <string name="history_failed">katkesi %1$d. päivänä</string>
+    <string name="history_failed_missed">katkesi %1$d. päivänä – jäi tekemättä: %2$s</string>
+    <string name="history_completed">suoritettu</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">%1$s alkaen</string>
+    <string name="history_past_empty">Takasivuilla ei ole vielä mitään – tämä on ensimmäinen yritys.</string>
+
+    <string name="history_completion">%1$d% rastitettu</string>
+
+    <string name="history_stats_title">Yhteensä</string>
+    <string name="history_stats_best">paras yritys</string>
+    <string name="history_stats_streak">pisin putki</string>
+    <string name="history_stats_marks">✓ rastia</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Vie vihko</string>
+    <string name="history_import">Tuo vihko</string>
+    <string name="history_exported">Vihko kirjoitettiin tiedostoon.</string>
+    <string name="history_imported">Vihko korvattiin tuodulla.</string>
+
+    <string name="history_import_confirm_title">Korvataanko tämä vihko?</string>
+    <string name="history_import_confirm_body">Tuonti kirjoittaa yli kaiken tähän kirjoitetun – meneillään olevan yrityksen ja kaikki aiemmat. Tätä ei voi perua.</string>
+    <string name="history_import_confirm_replace">Korvaa</string>
+    <string name="history_import_confirm_cancel">Pidä tämä</string>
+
+    <string name="history_support">Tue Snurkoa</string>
+
+    <string name="tip_jar_title">Tippi</string>
+    <string name="tip_jar_back">Takaisin</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko on ilmainen ja avointa lähdekoodia. Kaikki siitä, kaikille, aina.</string>
+    <string name="tip_jar_unlocks_nothing">Mikään täällä ei avaa mitään. Avattavaa ei ole – koko sovellus on jo sinun.</string>
+    <string name="tip_jar_fees">Tippi menee siihen vuosimaksuun, jonka sovelluskauppa perii Snurkon pitämisestä kaupassa. Vain siksi tämä sivu on olemassa.</string>
+    <string name="tip_jar_amounts_title">Jos haluat jättää jotain</string>
+    <string name="tip_jar_amount">Tippaa %1$s</string>
+    <string name="tip_jar_price_loading">Luetaan summia kaupasta…</string>
+    <string name="tip_jar_price_unavailable">Kauppa ei palauttanut yhtään summaa.</string>
+    <string name="tip_jar_price_retry">Kysy taas</string>
+    <string name="tip_jar_thanks">kiitos.</string>
+    <string name="tip_jar_thanks_note">Se kattaa palan tämän vuoden kauppamaksusta. Sovelluksessa ei muuttunut mitään – se oli jo kokonaan sinun.</string>
+    <string name="tip_jar_pending">Kauppa käsittelee maksua vielä. Muuta ei tarvitse tehdä, eikä sovelluksessa mikään odota sitä.</string>
+    <string name="tip_jar_error_unavailable">Kaupan maksut eivät ole käytettävissä tällä laitteella.</string>
+    <string name="tip_jar_error_disconnected">Kauppaan ei saatu yhteyttä.</string>
+    <string name="tip_jar_error_cancelled">Tippi peruuntui. Mitään ei veloitettu.</string>
+    <string name="tip_jar_error_product_unavailable">Tämä summa ei ole juuri nyt saatavilla.</string>
+    <string name="tip_jar_error_unknown">Se ei mennyt läpi.</string>
+
+    <string name="backup_error_nothing_to_export">Mitään ei ole vielä kirjoitettu ylös, joten vietävää ei ole.</string>
+    <string name="backup_error_document_unavailable">Tiedostoa ei saatu auki.</string>
+    <string name="backup_error_malformed">Tämä tiedosto ei ole Snurkon vihko.</string>
+    <string name="backup_error_unsupported_version">Tämä vihko on Snurkon uudemmasta versiosta.</string>
+    <string name="backup_error_unknown">Se ei onnistunut. Yritä uudelleen.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d tapa</item>
+        <item quantity="other">%1$d tapaa</item>
+    </plurals>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Áskorunin mín</string>
+    <string name="challenge_setup_invitation">Skrifaðu niður venjurnar sem þú ætlar að halda á hverjum degi næstu 90 daga.</string>
+
+    <string name="challenge_setup_habit_name_label">Venja</string>
+    <string name="challenge_setup_habit_name_placeholder">Lesa 10 blaðsíður</string>
+    <string name="challenge_setup_fail_condition_label">Hvað telst fall (valfrjálst)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Færri en 10 blaðsíður</string>
+
+    <string name="challenge_setup_add_habit">Bæta við</string>
+    <string name="challenge_setup_save_habit">Vista</string>
+    <string name="challenge_setup_cancel_edit">Hætta við</string>
+    <string name="challenge_setup_hint_name_required">Venjan þarf nafn áður en þú getur bætt henni við.</string>
+    <string name="challenge_setup_hint_duplicate_name">Þessi venja er þegar á listanum.</string>
+    <string name="challenge_setup_edit_habit">Breyta %1$s</string>
+    <string name="challenge_setup_remove_habit">Fjarlægja %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Byrja 90 dagana</string>
+    <string name="challenge_setup_start_failed">Ekki tókst að hefja áskorunina. Reyndu aftur.</string>
+
+    <string name="challenge_setup_confirm_title">Byrja núna?</string>
+    <string name="challenge_setup_confirm_locked">Þegar þú byrjar læsist listinn. Þú getur ekki bætt við venju, breytt nafni hennar eða fjarlægt hana fyrr en 90 dagarnir eru liðnir.</string>
+    <string name="challenge_setup_confirm_restart">Klárir þú ekki allar venjur einhvern dag byrjar áskorunin aftur á degi 1.</string>
+    <string name="challenge_setup_confirm_start">Byrja dag 1</string>
+    <string name="challenge_setup_confirm_cancel">Ekki strax</string>
+
+    <string name="challenge_fail_condition_summary">Fall ef: %1$s</string>
+
+    <string name="home_day">Dagur %1$d</string>
+    <string name="home_streak">röð %1$d</string>
+    <string name="home_grid">Hakað við %1$d af %2$d dögum</string>
+    <string name="home_today">Í dag</string>
+    <string name="home_completed">%1$d dagar.</string>
+    <string name="home_update_failed">Þetta vistaðist ekki. Reyndu aftur.</string>
+
+    <string name="home_restart_title">Dagur %1$d kláraðist ekki.</string>
+    <string name="home_restart_missed">Ekki hakað við: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Sá dagur kemur ekki aftur. Í dag byrja 90 dagarnir aftur á degi 1.</string>
+    <string name="home_restart_acknowledge">Byrja aftur</string>
+    <string name="home_history_link">baksíðurnar</string>
+    <string name="home_reminders_link">áminningar</string>
+    <string name="home_share_link">deila</string>
+    <string name="home_share_failed">Ekki tókst að deila. Reyndu aftur.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Áminningar</string>
+    <string name="reminders_back">Til baka</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Ekkert er kveikt fyrr en þú velur tíma. Hver venja fær eina áminningu, og aðeins þá daga sem enn er ekki hakað við hana.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Setja áminningu fyrir %1$s</string>
+    <string name="reminders_change">Breyta áminningunni fyrir %1$s</string>
+    <string name="reminders_switch_off">Slökkva á áminningunni fyrir %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Þetta vistaðist ekki. Reyndu aftur.</string>
+
+    <string name="reminders_blocked_title">Slökkt er á tilkynningum fyrir Snurko.</string>
+    <string name="reminders_blocked_body">Þú getur samt valið tíma hér, en Android heldur áminningunni eftir þangað til tilkynningar eru leyfðar í kerfisstillingunum.</string>
+    <string name="reminders_blocked_settings">Opna kerfisstillingar</string>
+
+    <string name="reminder_channel_name">Áminningar um venjur</string>
+    <string name="reminder_channel_description">Ein áminning fyrir hverja venju, á þeim tíma sem þú velur.</string>
+    <string name="reminder_notification_text">Dagur %1$d — enn ekki hakað við.</string>
+    <string name="reminder_notification_done">Búið</string>
+
+    <string name="widget_invite">Byrjaðu 90 dagana.</string>
+    <string name="widget_progress">%1$d af %2$d</string>
+    <string name="widget_open">Opna Snurko</string>
+
+    <string name="history_title">Baksíður</string>
+    <string name="history_back">Til baka</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Tilraun %1$d</string>
+    <string name="history_in_progress">í gangi — dagur %1$d</string>
+    <string name="history_failed">féll á degi %1$d</string>
+    <string name="history_failed_missed">féll á degi %1$d — vantaði: %2$s</string>
+    <string name="history_completed">lokið</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">frá %1$s</string>
+    <string name="history_past_empty">Ekkert komið á baksíðurnar enn — þetta er fyrsta tilraunin.</string>
+
+    <string name="history_completion">%1$d% hakað</string>
+
+    <string name="history_stats_title">Samtals</string>
+    <string name="history_stats_best">besta tilraun</string>
+    <string name="history_stats_streak">lengsta röð</string>
+    <string name="history_stats_marks">✓ hök</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Flytja út stílabók</string>
+    <string name="history_import">Flytja inn stílabók</string>
+    <string name="history_exported">Stílabókin skrifuð út.</string>
+    <string name="history_imported">Innflutta stílabókin kom í staðinn.</string>
+
+    <string name="history_import_confirm_title">Skipta út þessari stílabók?</string>
+    <string name="history_import_confirm_body">Innflutningur skrifar yfir allt sem hér stendur — tilraunina sem þú ert í og allar þær fyrri. Þessu verður ekki snúið við.</string>
+    <string name="history_import_confirm_replace">Skipta út</string>
+    <string name="history_import_confirm_cancel">Halda þessari</string>
+
+    <string name="history_support">Styrkja Snurko</string>
+
+    <string name="tip_jar_title">Framlag</string>
+    <string name="tip_jar_back">Til baka</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko er ókeypis og opinn hugbúnaður. Allt saman, fyrir alla, alltaf.</string>
+    <string name="tip_jar_unlocks_nothing">Ekkert hér aflæsir neinu. Það er ekkert að aflæsa — þú ert þegar með allt forritið.</string>
+    <string name="tip_jar_fees">Framlagið fer upp í árlega gjaldið sem verslunin tekur fyrir að halda Snurko inni. Það er eina ástæðan fyrir því að þessi síða er til.</string>
+    <string name="tip_jar_amounts_title">Viljir þú skilja eitthvað eftir</string>
+    <string name="tip_jar_amount">Gefa %1$s</string>
+    <string name="tip_jar_price_loading">Sæki upphæðirnar úr versluninni…</string>
+    <string name="tip_jar_price_unavailable">Verslunin skilaði engum upphæðum.</string>
+    <string name="tip_jar_price_retry">Reyna aftur</string>
+    <string name="tip_jar_thanks">takk fyrir.</string>
+    <string name="tip_jar_thanks_note">Þetta borgar sneið af árgjaldinu í versluninni. Ekkert breyttist í forritinu — það var þegar allt þitt.</string>
+    <string name="tip_jar_pending">Verslunin er enn að vinna úr greiðslunni. Þú þarft ekki að gera neitt meira og ekkert í forritinu bíður eftir henni.</string>
+    <string name="tip_jar_error_unavailable">Greiðslur í versluninni eru ekki í boði í þessu tæki.</string>
+    <string name="tip_jar_error_disconnected">Náðist ekki í verslunina.</string>
+    <string name="tip_jar_error_cancelled">Hætt var við framlagið. Ekkert var skuldfært.</string>
+    <string name="tip_jar_error_product_unavailable">Þessi upphæð er ekki í boði núna.</string>
+    <string name="tip_jar_error_unknown">Þetta komst ekki í gegn.</string>
+
+    <string name="backup_error_nothing_to_export">Það er ekkert skrifað niður enn til að flytja út.</string>
+    <string name="backup_error_document_unavailable">Ekki tókst að opna skrána.</string>
+    <string name="backup_error_malformed">Þessi skrá er ekki Snurko-stílabók.</string>
+    <string name="backup_error_unsupported_version">Þessi stílabók kemur úr nýrri útgáfu af Snurko.</string>
+    <string name="backup_error_unknown">Þetta gekk ekki. Reyndu aftur.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d venja</item>
+        <item quantity="other">%1$d venjur</item>
+    </plurals>
+</resources>

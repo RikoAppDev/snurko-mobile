@@ -7,6 +7,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.aspectRatio
@@ -196,15 +197,12 @@ private fun FooterMarginNotes(
     onOpenReminders: () -> Unit,
     onOpenHistory: () -> Unit,
 ) {
-    Row(
+    FlowRow(
         modifier = Modifier.fillMaxWidth(),
-        horizontalArrangement = Arrangement.End,
-        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(18.dp, Alignment.End),
     ) {
         MarginNote(text = stringResource(Res.string.home_share_link), onClick = onShare)
-        Spacer(Modifier.width(18.dp))
         MarginNote(text = stringResource(Res.string.home_reminders_link), onClick = onOpenReminders)
-        Spacer(Modifier.width(18.dp))
         MarginNote(text = stringResource(Res.string.home_history_link), onClick = onOpenHistory)
     }
 }

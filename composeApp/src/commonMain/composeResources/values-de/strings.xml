@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Meine Challenge</string>
+    <string name="challenge_setup_invitation">Schreib die Gewohnheiten auf, die du die nächsten 90 Tage jeden Tag hältst.</string>
+
+    <string name="challenge_setup_habit_name_label">Gewohnheit</string>
+    <string name="challenge_setup_habit_name_placeholder">10 Seiten lesen</string>
+    <string name="challenge_setup_fail_condition_label">Was als Scheitern zählt (optional)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Weniger als 10 Seiten</string>
+
+    <string name="challenge_setup_add_habit">Hinzufügen</string>
+    <string name="challenge_setup_save_habit">Speichern</string>
+    <string name="challenge_setup_cancel_edit">Abbrechen</string>
+    <string name="challenge_setup_hint_name_required">Eine Gewohnheit braucht einen Namen, bevor du sie hinzufügen kannst.</string>
+    <string name="challenge_setup_hint_duplicate_name">Diese Gewohnheit steht schon auf der Liste.</string>
+    <string name="challenge_setup_edit_habit">%1$s bearbeiten</string>
+    <string name="challenge_setup_remove_habit">%1$s entfernen</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">90 Tage starten</string>
+    <string name="challenge_setup_start_failed">Die Challenge ließ sich nicht starten. Versuch es noch mal.</string>
+
+    <string name="challenge_setup_confirm_title">Kann es losgehen?</string>
+    <string name="challenge_setup_confirm_locked">Sobald du startest, steht diese Liste fest. Bis die 90 Tage vorbei sind, kannst du keine Gewohnheit hinzufügen, umbenennen oder entfernen.</string>
+    <string name="challenge_setup_confirm_restart">An jedem Tag, an dem du nicht alle Gewohnheiten schaffst, beginnt die Challenge wieder bei Tag 1.</string>
+    <string name="challenge_setup_confirm_start">Tag 1 starten</string>
+    <string name="challenge_setup_confirm_cancel">Noch nicht</string>
+
+    <string name="challenge_fail_condition_summary">Gescheitert, wenn: %1$s</string>
+
+    <string name="home_day">Tag %1$d</string>
+    <string name="home_streak">Serie %1$d</string>
+    <string name="home_grid">%1$d von %2$d Tagen abgehakt</string>
+    <string name="home_today">Heute</string>
+    <string name="home_completed">%1$d Tage.</string>
+    <string name="home_update_failed">Das wurde nicht gespeichert. Versuch es noch mal.</string>
+
+    <string name="home_restart_title">Tag %1$d wurde nicht abgeschlossen.</string>
+    <string name="home_restart_missed">Nicht abgehakt: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Der Tag kommt nicht zurück. Die 90 Tage beginnen heute wieder bei Tag 1.</string>
+    <string name="home_restart_acknowledge">Neu anfangen</string>
+    <string name="home_history_link">hinten im Heft</string>
+    <string name="home_reminders_link">Erinnerungen</string>
+    <string name="home_share_link">teilen</string>
+    <string name="home_share_failed">Das wurde nicht geteilt. Versuch es noch mal.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Erinnerungen</string>
+    <string name="reminders_back">Zurück</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Nichts läuft, bis du eine Uhrzeit setzt. Jede Gewohnheit bekommt einen Anstupser, und nur an einem Tag, der noch nicht abgehakt ist.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Erinnerung für %1$s setzen</string>
+    <string name="reminders_change">Erinnerung für %1$s ändern</string>
+    <string name="reminders_switch_off">Erinnerung für %1$s ausschalten</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Das wurde nicht gespeichert. Versuch es noch mal.</string>
+
+    <string name="reminders_blocked_title">Benachrichtigungen sind für Snurko ausgeschaltet.</string>
+    <string name="reminders_blocked_body">Eine Uhrzeit kannst du hier trotzdem setzen, aber Android hält die Erinnerung zurück, bis Benachrichtigungen in den Systemeinstellungen erlaubt sind.</string>
+    <string name="reminders_blocked_settings">Einstellungen öffnen</string>
+
+    <string name="reminder_channel_name">Erinnerungen an Gewohnheiten</string>
+    <string name="reminder_channel_description">Ein Anstupser pro Gewohnheit, zur eingestellten Uhrzeit.</string>
+    <string name="reminder_notification_text">Tag %1$d — noch nicht abgehakt.</string>
+    <string name="reminder_notification_done">Fertig</string>
+
+    <string name="widget_invite">Starte deine 90 Tage.</string>
+    <string name="widget_progress">%1$d von %2$d</string>
+    <string name="widget_open">Snurko öffnen</string>
+
+    <string name="history_title">Hinten im Heft</string>
+    <string name="history_back">Zurück</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Versuch %1$d</string>
+    <string name="history_in_progress">läuft — Tag %1$d</string>
+    <string name="history_failed">gescheitert an Tag %1$d</string>
+    <string name="history_failed_missed">gescheitert an Tag %1$d — offen: %2$s</string>
+    <string name="history_completed">geschafft</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">seit %1$s</string>
+    <string name="history_past_empty">Hinten im Heft steht noch nichts — das ist der erste Versuch.</string>
+
+    <string name="history_completion">%1$d% abgehakt</string>
+
+    <string name="history_stats_title">Insgesamt</string>
+    <string name="history_stats_best">bester Versuch</string>
+    <string name="history_stats_streak">längste Serie</string>
+    <string name="history_stats_marks">✓ Häkchen</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Heft exportieren</string>
+    <string name="history_import">Heft importieren</string>
+    <string name="history_exported">Das Heft ist exportiert.</string>
+    <string name="history_imported">Das Heft wurde durch das importierte ersetzt.</string>
+
+    <string name="history_import_confirm_title">Dieses Heft ersetzen?</string>
+    <string name="history_import_confirm_body">Der Import überschreibt alles, was hier steht — den laufenden Versuch und jeden früheren. Das lässt sich nicht rückgängig machen.</string>
+    <string name="history_import_confirm_replace">Ersetzen</string>
+    <string name="history_import_confirm_cancel">Behalten</string>
+
+    <string name="history_support">Snurko unterstützen</string>
+
+    <string name="tip_jar_title">Trinkgeld</string>
+    <string name="tip_jar_back">Zurück</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko ist kostenlos und Open Source. Alles davon, für alle, immer.</string>
+    <string name="tip_jar_unlocks_nothing">Nichts hier schaltet etwas frei. Es gibt auch nichts freizuschalten — die ganze App gehört dir schon.</string>
+    <string name="tip_jar_fees">Ein Trinkgeld geht in die jährliche Gebühr, die der App-Store dafür nimmt, dass Snurko dort steht. Nur deshalb gibt es diese Seite.</string>
+    <string name="tip_jar_amounts_title">Falls du etwas dalassen willst</string>
+    <string name="tip_jar_amount">%1$s geben</string>
+    <string name="tip_jar_price_loading">Die Beträge werden aus dem Store gelesen…</string>
+    <string name="tip_jar_price_unavailable">Der Store hat keine Beträge zurückgegeben.</string>
+    <string name="tip_jar_price_retry">Nachfragen</string>
+    <string name="tip_jar_thanks">danke.</string>
+    <string name="tip_jar_thanks_note">Das deckt ein Stück der diesjährigen Store-Gebühr. In der App hat sich nichts geändert — sie gehörte dir schon ganz.</string>
+    <string name="tip_jar_pending">Der Store arbeitet noch an der Zahlung. Du musst nichts weiter tun, und in der App wartet nichts darauf.</string>
+    <string name="tip_jar_error_unavailable">Store-Zahlungen sind auf diesem Gerät nicht verfügbar.</string>
+    <string name="tip_jar_error_disconnected">Der Store war nicht erreichbar.</string>
+    <string name="tip_jar_error_cancelled">Das Trinkgeld wurde abgebrochen. Es wurde nichts abgebucht.</string>
+    <string name="tip_jar_error_product_unavailable">Dieser Betrag ist gerade nicht verfügbar.</string>
+    <string name="tip_jar_error_unknown">Das ist nicht durchgegangen.</string>
+
+    <string name="backup_error_nothing_to_export">Es steht noch nichts da, was sich exportieren ließe.</string>
+    <string name="backup_error_document_unavailable">Die Datei ließ sich nicht öffnen.</string>
+    <string name="backup_error_malformed">Diese Datei ist kein Snurko-Heft.</string>
+    <string name="backup_error_unsupported_version">Dieses Heft kommt aus einer neueren Version von Snurko.</string>
+    <string name="backup_error_unknown">Das hat nicht geklappt. Versuch es noch mal.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d Gewohnheit</item>
+        <item quantity="other">%1$d Gewohnheiten</item>
+    </plurals>
+</resources>

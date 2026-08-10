@@ -118,7 +118,7 @@
     <string name="tip_jar_price_unavailable">The store did not hand back any amounts.</string>
     <string name="tip_jar_price_retry">Ask again</string>
     <string name="tip_jar_thanks">thank you.</string>
-    <string name="tip_jar_thanks_note">That covers a slice of this year\'s store fee. Nothing in the app changed — it was already all yours.</string>
+    <string name="tip_jar_thanks_note">That covers a slice of this year's store fee. Nothing in the app changed — it was already all yours.</string>
     <string name="tip_jar_pending">The store is still working on that payment. Nothing else needs doing, and nothing in the app is waiting on it.</string>
     <string name="tip_jar_error_unavailable">Store payments are not available on this device.</string>
     <string name="tip_jar_error_disconnected">The store could not be reached.</string>

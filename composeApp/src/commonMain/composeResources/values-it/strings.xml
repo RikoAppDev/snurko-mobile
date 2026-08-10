@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">La mia sfida</string>
+    <string name="challenge_setup_invitation">Scrivi le abitudini che terrai ogni giorno per i prossimi 90 giorni.</string>
+
+    <string name="challenge_setup_habit_name_label">Abitudine</string>
+    <string name="challenge_setup_habit_name_placeholder">Leggere 10 pagine</string>
+    <string name="challenge_setup_fail_condition_label">Cosa conta come fallimento (facoltativo)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Meno di 10 pagine</string>
+
+    <string name="challenge_setup_add_habit">Aggiungi</string>
+    <string name="challenge_setup_save_habit">Salva</string>
+    <string name="challenge_setup_cancel_edit">Annulla</string>
+    <string name="challenge_setup_hint_name_required">Prima di aggiungerla, l’abitudine ha bisogno di un nome.</string>
+    <string name="challenge_setup_hint_duplicate_name">Questa abitudine è già nell’elenco.</string>
+    <string name="challenge_setup_edit_habit">Modifica %1$s</string>
+    <string name="challenge_setup_remove_habit">Rimuovi %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Inizia i 90 giorni</string>
+    <string name="challenge_setup_start_failed">La sfida non è partita. Riprova.</string>
+
+    <string name="challenge_setup_confirm_title">Si parte?</string>
+    <string name="challenge_setup_confirm_locked">Una volta partito, questo elenco di abitudini si blocca. Non puoi aggiungerne, rinominarne o toglierne fino alla fine dei 90 giorni.</string>
+    <string name="challenge_setup_confirm_restart">Il giorno in cui non chiudi tutte le abitudini, la sfida riparte dal giorno 1.</string>
+    <string name="challenge_setup_confirm_start">Inizia</string>
+    <string name="challenge_setup_confirm_cancel">Non ancora</string>
+
+    <string name="challenge_fail_condition_summary">Fallisce se: %1$s</string>
+
+    <string name="home_day">Giorno %1$d</string>
+    <string name="home_streak">serie %1$d</string>
+    <string name="home_grid">%1$d giorni spuntati su %2$d</string>
+    <string name="home_today">Oggi</string>
+    <string name="home_completed">%1$d giorni.</string>
+    <string name="home_update_failed">Non si è salvato. Riprova.</string>
+
+    <string name="home_restart_title">Il giorno %1$d non è stato chiuso.</string>
+    <string name="home_restart_missed">Senza spunta: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Quel giorno non torna. I 90 giorni ripartono oggi dal giorno 1.</string>
+    <string name="home_restart_acknowledge">Ricomincia</string>
+    <string name="home_history_link">le pagine in fondo</string>
+    <string name="home_reminders_link">promemoria</string>
+    <string name="home_share_link">condividi</string>
+    <string name="home_share_failed">La condivisione non è andata. Riprova.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Promemoria</string>
+    <string name="reminders_back">Indietro</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Non è attivo niente finché non imposti un orario. Ogni abitudine riceve un solo promemoria, e solo in un giorno in cui non ha ancora la spunta.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Imposta un promemoria per %1$s</string>
+    <string name="reminders_change">Cambia il promemoria per %1$s</string>
+    <string name="reminders_switch_off">Spegni il promemoria per %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Non si è salvato. Riprova.</string>
+
+    <string name="reminders_blocked_title">Le notifiche per Snurko sono spente.</string>
+    <string name="reminders_blocked_body">Un orario lo puoi impostare lo stesso qui, ma Android trattiene il promemoria finché le notifiche non sono permesse nelle impostazioni di sistema.</string>
+    <string name="reminders_blocked_settings">Apri le impostazioni</string>
+
+    <string name="reminder_channel_name">Promemoria delle abitudini</string>
+    <string name="reminder_channel_description">Un solo promemoria per abitudine, all’ora che scegli tu.</string>
+    <string name="reminder_notification_text">Giorno %1$d — ancora senza spunta.</string>
+    <string name="reminder_notification_done">Fatto</string>
+
+    <string name="widget_invite">Inizia i tuoi 90 giorni.</string>
+    <string name="widget_progress">%1$d di %2$d</string>
+    <string name="widget_open">Apri Snurko</string>
+
+    <string name="history_title">Pagine in fondo</string>
+    <string name="history_back">Indietro</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Tentativo %1$d</string>
+    <string name="history_in_progress">in corso — giorno %1$d</string>
+    <string name="history_failed">fallito al giorno %1$d</string>
+    <string name="history_failed_missed">fallito al giorno %1$d — saltate: %2$s</string>
+    <string name="history_completed">completato</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d/%2$d/%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">dal %1$s</string>
+    <string name="history_past_empty">Nelle pagine in fondo non c’è ancora niente — questo è il primo tentativo.</string>
+
+    <string name="history_completion">%1$d% spuntato</string>
+
+    <string name="history_stats_title">In tutto</string>
+    <string name="history_stats_best">miglior prova</string>
+    <string name="history_stats_streak">serie più lunga</string>
+    <string name="history_stats_marks">✓ spunte</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Esporta il quaderno</string>
+    <string name="history_import">Importa il quaderno</string>
+    <string name="history_exported">Quaderno esportato.</string>
+    <string name="history_imported">Il quaderno è stato sostituito con quello importato.</string>
+
+    <string name="history_import_confirm_title">Sostituire questo quaderno?</string>
+    <string name="history_import_confirm_body">L’importazione sovrascrive tutto quello che c’è scritto qui — il tentativo in corso e tutti quelli passati. Non si torna indietro.</string>
+    <string name="history_import_confirm_replace">Sostituisci</string>
+    <string name="history_import_confirm_cancel">Tieni questo</string>
+
+    <string name="history_support">Sostieni Snurko</string>
+
+    <string name="tip_jar_title">Mancia</string>
+    <string name="tip_jar_back">Indietro</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko è gratis e open source. Tutto, per tutti, per sempre.</string>
+    <string name="tip_jar_unlocks_nothing">Qui non c’è niente che sblocchi qualcosa. Non c’è niente da sbloccare — l’app ce l’hai già tutta.</string>
+    <string name="tip_jar_fees">Una mancia va sulla tariffa annuale che lo store chiede per tenere Snurko in elenco. È l’unico motivo per cui questa pagina esiste.</string>
+    <string name="tip_jar_amounts_title">Se vuoi lasciare qualcosa</string>
+    <string name="tip_jar_amount">Lascia %1$s</string>
+    <string name="tip_jar_price_loading">Sto leggendo gli importi dallo store…</string>
+    <string name="tip_jar_price_unavailable">Lo store non ha restituito nessun importo.</string>
+    <string name="tip_jar_price_retry">Richiedi</string>
+    <string name="tip_jar_thanks">grazie.</string>
+    <string name="tip_jar_thanks_note">Copre una fetta della tariffa dello store di quest’anno. Nell’app non è cambiato niente — era già tutta tua.</string>
+    <string name="tip_jar_pending">Lo store sta ancora lavorando su quel pagamento. Non serve fare altro, e nell’app non c’è niente che lo aspetti.</string>
+    <string name="tip_jar_error_unavailable">I pagamenti dello store non sono disponibili su questo dispositivo.</string>
+    <string name="tip_jar_error_disconnected">Non riusciamo a raggiungere lo store.</string>
+    <string name="tip_jar_error_cancelled">La mancia è stata annullata. Non è stato addebitato niente.</string>
+    <string name="tip_jar_error_product_unavailable">Quell’importo adesso non è disponibile.</string>
+    <string name="tip_jar_error_unknown">Non è andata a buon fine.</string>
+
+    <string name="backup_error_nothing_to_export">Non c’è ancora niente di scritto da esportare.</string>
+    <string name="backup_error_document_unavailable">Quel file non si è aperto.</string>
+    <string name="backup_error_malformed">Quel file non è un quaderno Snurko.</string>
+    <string name="backup_error_unsupported_version">Quel quaderno viene da una versione più recente di Snurko.</string>
+    <string name="backup_error_unknown">Non ha funzionato. Riprova.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d abitudine</item>
+        <item quantity="many">%1$d di abitudini</item>
+        <item quantity="other">%1$d abitudini</item>
+    </plurals>
+</resources>

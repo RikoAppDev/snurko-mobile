@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Mans izaicinājums</string>
+    <string name="challenge_setup_invitation">Pieraksti paradumus, ko pildīsi katru dienu nākamās 90 dienas.</string>
+
+    <string name="challenge_setup_habit_name_label">Paradums</string>
+    <string name="challenge_setup_habit_name_placeholder">Izlasīt 10 lappuses</string>
+    <string name="challenge_setup_fail_condition_label">Kas skaitās kā kļūme (nav obligāti)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Mazāk nekā 10 lappuses</string>
+
+    <string name="challenge_setup_add_habit">Pievienot</string>
+    <string name="challenge_setup_save_habit">Saglabāt</string>
+    <string name="challenge_setup_cancel_edit">Atcelt</string>
+    <string name="challenge_setup_hint_name_required">Paradumam vajag nosaukumu, pirms to vari pievienot.</string>
+    <string name="challenge_setup_hint_duplicate_name">Šis paradums jau ir sarakstā.</string>
+    <string name="challenge_setup_edit_habit">Rediģēt %1$s</string>
+    <string name="challenge_setup_remove_habit">Noņemt %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Sākt 90 dienas</string>
+    <string name="challenge_setup_start_failed">Izaicinājumu neizdevās sākt. Mēģini vēlreiz.</string>
+
+    <string name="challenge_setup_confirm_title">Sākam?</string>
+    <string name="challenge_setup_confirm_locked">Tiklīdz sāksi, šis paradumu kopums tiek aizslēgts. Līdz 90 dienu beigām nevarēsi paradumu pievienot, pārsaukt vai noņemt.</string>
+    <string name="challenge_setup_confirm_restart">Ja kādā dienā neizpildi visus paradumus, izaicinājums sākas no pirmās dienas.</string>
+    <string name="challenge_setup_confirm_start">Sākt 1. dienu</string>
+    <string name="challenge_setup_confirm_cancel">Vēl ne</string>
+
+    <string name="challenge_fail_condition_summary">Kļūme, ja: %1$s</string>
+
+    <string name="home_day">%1$d. diena</string>
+    <string name="home_streak">sērija %1$d</string>
+    <string name="home_grid">Atzīmētas dienas: %1$d no %2$d</string>
+    <string name="home_today">Šodien</string>
+    <string name="home_completed">%1$d dienas.</string>
+    <string name="home_update_failed">Saglabāt neizdevās. Mēģini vēlreiz.</string>
+
+    <string name="home_restart_title">%1$d. diena palika nepabeigta.</string>
+    <string name="home_restart_missed">Bez atzīmes: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">To dienu atpakaļ nedabūsi. 90 dienas šodien sākas no jauna — no pirmās dienas.</string>
+    <string name="home_restart_acknowledge">Sākt no jauna</string>
+    <string name="home_history_link">aizmugures lappuses</string>
+    <string name="home_reminders_link">atgādinājumi</string>
+    <string name="home_share_link">kopīgot</string>
+    <string name="home_share_failed">Kopīgot neizdevās. Mēģini vēlreiz.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Atgādinājumi</string>
+    <string name="reminders_back">Atpakaļ</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Nekas nav ieslēgts, kamēr neiestati laiku. Katrs paradums saņem vienu pamudinājumu, un tikai tajā dienā, kad tas vēl nav atzīmēts.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Iestatīt atgādinājumu paradumam %1$s</string>
+    <string name="reminders_change">Mainīt atgādinājumu paradumam %1$s</string>
+    <string name="reminders_switch_off">Izslēgt atgādinājumu paradumam %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Saglabāt neizdevās. Mēģini vēlreiz.</string>
+
+    <string name="reminders_blocked_title">Snurko paziņojumi ir izslēgti.</string>
+    <string name="reminders_blocked_body">Laiku šeit joprojām var iestatīt, bet Android atgādinājumu aiztur, kamēr sistēmas iestatījumos paziņojumi netiek atļauti.</string>
+    <string name="reminders_blocked_settings">Atvērt iestatījumus</string>
+
+    <string name="reminder_channel_name">Paradumu atgādinājumi</string>
+    <string name="reminder_channel_description">Viens pamudinājums katram paradumam, tavā izvēlētajā laikā.</string>
+    <string name="reminder_notification_text">%1$d. diena — vēl nav atzīmēta.</string>
+    <string name="reminder_notification_done">Izdarīts</string>
+
+    <string name="widget_invite">Sāc savas 90 dienas.</string>
+    <string name="widget_progress">%1$d no %2$d</string>
+    <string name="widget_open">Atvērt Snurko</string>
+
+    <string name="history_title">Aizmugures lappuses</string>
+    <string name="history_back">Atpakaļ</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">%1$d. mēģinājums</string>
+    <string name="history_in_progress">notiek — %1$d. diena</string>
+    <string name="history_failed">kļūme %1$d. dienā</string>
+    <string name="history_failed_missed">kļūme %1$d. dienā — bez atzīmes: %2$s</string>
+    <string name="history_completed">pabeigts</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">kopš %1$s</string>
+    <string name="history_past_empty">Aizmugures lappuses vēl ir tukšas — šis ir pirmais mēģinājums.</string>
+
+    <string name="history_completion">%1$d% atzīmēts</string>
+
+    <string name="history_stats_title">Kopā</string>
+    <string name="history_stats_best">labākais</string>
+    <string name="history_stats_streak">garākā sērija</string>
+    <string name="history_stats_marks">✓ atzīmes</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Eksportēt burtnīcu</string>
+    <string name="history_import">Importēt burtnīcu</string>
+    <string name="history_exported">Burtnīca izrakstīta failā.</string>
+    <string name="history_imported">Burtnīca aizstāta ar importēto.</string>
+
+    <string name="history_import_confirm_title">Aizstāt šo burtnīcu?</string>
+    <string name="history_import_confirm_body">Imports pārrakstīs visu, kas šeit ierakstīts — gan pašreizējo mēģinājumu, gan visus iepriekšējos. To atsaukt nevarēs.</string>
+    <string name="history_import_confirm_replace">Aizstāt</string>
+    <string name="history_import_confirm_cancel">Paturēt šo</string>
+
+    <string name="history_support">Atbalsti Snurko</string>
+
+    <string name="tip_jar_title">Ziedojums</string>
+    <string name="tip_jar_back">Atpakaļ</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko ir bez maksas un ar atvērtu pirmkodu. Viss, visiem, vienmēr.</string>
+    <string name="tip_jar_unlocks_nothing">Šeit nekas neko neatslēdz. Nav arī ko atslēgt — visa lietotne tev jau ir.</string>
+    <string name="tip_jar_fees">Ziedojums aiziet uz gada maksu, ko lietotņu veikals ņem par Snurko turēšanu sarakstā. Tikai tāpēc šī lapa vispār pastāv.</string>
+    <string name="tip_jar_amounts_title">Ja gribi kaut ko atstāt</string>
+    <string name="tip_jar_amount">Ziedot %1$s</string>
+    <string name="tip_jar_price_loading">Nolasām summas no veikala…</string>
+    <string name="tip_jar_price_unavailable">Veikals neatdeva nevienu summu.</string>
+    <string name="tip_jar_price_retry">Vēlreiz</string>
+    <string name="tip_jar_thanks">paldies.</string>
+    <string name="tip_jar_thanks_note">Tas nosedz daļu no šī gada veikala maksas. Lietotnē nekas nemainījās — tā jau bija visa tava.</string>
+    <string name="tip_jar_pending">Veikals vēl apstrādā šo maksājumu. Neko vairāk darīt nevajag, un lietotnē nekas uz to negaida.</string>
+    <string name="tip_jar_error_unavailable">Veikala maksājumi šajā ierīcē nav pieejami.</string>
+    <string name="tip_jar_error_disconnected">Veikalu neizdevās sasniegt.</string>
+    <string name="tip_jar_error_cancelled">Ziedojums tika atsaukts. Nekas netika norakstīts.</string>
+    <string name="tip_jar_error_product_unavailable">Šī summa pašlaik nav pieejama.</string>
+    <string name="tip_jar_error_unknown">Tas neizdevās.</string>
+
+    <string name="backup_error_nothing_to_export">Vēl nav nekā pierakstīta, ko eksportēt.</string>
+    <string name="backup_error_document_unavailable">Šo failu neizdevās atvērt.</string>
+    <string name="backup_error_malformed">Šis fails nav Snurko burtnīca.</string>
+    <string name="backup_error_unsupported_version">Šī burtnīca ir no jaunākas Snurko versijas.</string>
+    <string name="backup_error_unknown">Tas nenostrādāja. Mēģini vēlreiz.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="zero">%1$d paradumu</item>
+        <item quantity="one">%1$d paradums</item>
+        <item quantity="other">%1$d paradumi</item>
+    </plurals>
+</resources>

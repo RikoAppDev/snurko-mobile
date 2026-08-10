@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Utfordringen min</string>
+    <string name="challenge_setup_invitation">Skriv ned vanene du skal holde hver dag de neste 90 dagene.</string>
+
+    <string name="challenge_setup_habit_name_label">Vane</string>
+    <string name="challenge_setup_habit_name_placeholder">Les 10 sider</string>
+    <string name="challenge_setup_fail_condition_label">Hva som teller som en bom (valgfritt)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Færre enn 10 sider</string>
+
+    <string name="challenge_setup_add_habit">Legg til</string>
+    <string name="challenge_setup_save_habit">Lagre</string>
+    <string name="challenge_setup_cancel_edit">Avbryt</string>
+    <string name="challenge_setup_hint_name_required">En vane trenger et navn før du kan legge den til.</string>
+    <string name="challenge_setup_hint_duplicate_name">Den vanen står allerede på lista.</string>
+    <string name="challenge_setup_edit_habit">Endre %1$s</string>
+    <string name="challenge_setup_remove_habit">Fjern %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Start de 90 dagene</string>
+    <string name="challenge_setup_start_failed">Utfordringen lot seg ikke starte. Prøv igjen.</string>
+
+    <string name="challenge_setup_confirm_title">Klar til å begynne?</string>
+    <string name="challenge_setup_confirm_locked">Når du først har startet, er settet med vaner låst. Du kan ikke legge til, gi nytt navn til eller fjerne en vane før de 90 dagene er over.</string>
+    <string name="challenge_setup_confirm_restart">Hver dag du ikke får gjort alle vanene, starter utfordringen på dag 1 igjen.</string>
+    <string name="challenge_setup_confirm_start">Start dag 1</string>
+    <string name="challenge_setup_confirm_cancel">Ikke ennå</string>
+
+    <string name="challenge_fail_condition_summary">Bom hvis: %1$s</string>
+
+    <string name="home_day">Dag %1$d</string>
+    <string name="home_streak">rekke %1$d</string>
+    <string name="home_grid">%1$d av %2$d dager haket av</string>
+    <string name="home_today">I dag</string>
+    <string name="home_completed">%1$d dager.</string>
+    <string name="home_update_failed">Det ble ikke lagret. Prøv igjen.</string>
+
+    <string name="home_restart_title">Dag %1$d ble ikke gjort ferdig.</string>
+    <string name="home_restart_missed">Uten hake: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Den dagen kommer ikke tilbake. De 90 dagene begynner på dag 1 igjen i dag.</string>
+    <string name="home_restart_acknowledge">Begynn på nytt</string>
+    <string name="home_history_link">baksidene</string>
+    <string name="home_reminders_link">påminnelser</string>
+    <string name="home_share_link">del</string>
+    <string name="home_share_failed">Det ble ikke delt. Prøv igjen.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Påminnelser</string>
+    <string name="reminders_back">Tilbake</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Ingenting er på før du setter et tidspunkt. Hver vane får ett lite dult, og bare på en dag som fortsatt står uten hake.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Sett en påminnelse for %1$s</string>
+    <string name="reminders_change">Endre påminnelsen for %1$s</string>
+    <string name="reminders_switch_off">Slå av påminnelsen for %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Det ble ikke lagret. Prøv igjen.</string>
+
+    <string name="reminders_blocked_title">Varsler er slått av for Snurko.</string>
+    <string name="reminders_blocked_body">Du kan likevel sette et tidspunkt her, men Android holder påminnelsen tilbake til varsler er tillatt i systeminnstillingene.</string>
+    <string name="reminders_blocked_settings">Åpne innstillinger</string>
+
+    <string name="reminder_channel_name">Påminnelser om vaner</string>
+    <string name="reminder_channel_description">Ett dult per vane, på tidspunktet du setter.</string>
+    <string name="reminder_notification_text">Dag %1$d — ennå uten hake.</string>
+    <string name="reminder_notification_done">Ferdig</string>
+
+    <string name="widget_invite">Start de 90 dagene.</string>
+    <string name="widget_progress">%1$d av %2$d</string>
+    <string name="widget_open">Åpne Snurko</string>
+
+    <string name="history_title">Baksidene</string>
+    <string name="history_back">Tilbake</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Forsøk %1$d</string>
+    <string name="history_in_progress">pågår — dag %1$d</string>
+    <string name="history_failed">bom på dag %1$d</string>
+    <string name="history_failed_missed">bom på dag %1$d — sto igjen: %2$s</string>
+    <string name="history_completed">fullført</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">siden %1$s</string>
+    <string name="history_past_empty">Ingenting på baksidene ennå — dette er det første forsøket.</string>
+
+    <string name="history_completion">%1$d% haket av</string>
+
+    <string name="history_stats_title">Alt i alt</string>
+    <string name="history_stats_best">beste forsøk</string>
+    <string name="history_stats_streak">lengste rekke</string>
+    <string name="history_stats_marks">✓ haker</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Eksporter heftet</string>
+    <string name="history_import">Importer heftet</string>
+    <string name="history_exported">Heftet er eksportert.</string>
+    <string name="history_imported">Heftet er byttet ut med det importerte.</string>
+
+    <string name="history_import_confirm_title">Erstatte dette heftet?</string>
+    <string name="history_import_confirm_body">En import overskriver alt som står her — forsøket du er i gang med og alle de tidligere. Det kan ikke angres.</string>
+    <string name="history_import_confirm_replace">Erstatt</string>
+    <string name="history_import_confirm_cancel">Behold dette</string>
+
+    <string name="history_support">Støtt Snurko</string>
+
+    <string name="tip_jar_title">Støtte</string>
+    <string name="tip_jar_back">Tilbake</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko er gratis og åpen kildekode. Alt sammen, for alle, alltid.</string>
+    <string name="tip_jar_unlocks_nothing">Ingenting her låser opp noe. Det finnes ikke noe å låse opp — du har hele appen fra før.</string>
+    <string name="tip_jar_fees">Støtten går til den årlige avgiften butikken tar for å ha Snurko liggende ute. Det er hele grunnen til at denne siden finnes.</string>
+    <string name="tip_jar_amounts_title">Hvis du vil legge igjen noe</string>
+    <string name="tip_jar_amount">Gi %1$s</string>
+    <string name="tip_jar_price_loading">Beløpene hentes fra butikken…</string>
+    <string name="tip_jar_price_unavailable">Butikken ga ikke tilbake noen beløp.</string>
+    <string name="tip_jar_price_retry">Spør igjen</string>
+    <string name="tip_jar_thanks">takk.</string>
+    <string name="tip_jar_thanks_note">Det dekker en bit av årets butikkavgift. Ingenting i appen er endret — den var din hele veien.</string>
+    <string name="tip_jar_pending">Butikken jobber fortsatt med betalingen. Du trenger ikke gjøre noe mer, og ingenting i appen venter på den.</string>
+    <string name="tip_jar_error_unavailable">Betaling gjennom butikken virker ikke på denne enheten.</string>
+    <string name="tip_jar_error_disconnected">Butikken var ikke å nå.</string>
+    <string name="tip_jar_error_cancelled">Støtten ble avbrutt. Ingenting ble trukket.</string>
+    <string name="tip_jar_error_product_unavailable">Det beløpet går ikke akkurat nå.</string>
+    <string name="tip_jar_error_unknown">Det gikk ikke gjennom.</string>
+
+    <string name="backup_error_nothing_to_export">Det er ikke skrevet ned noe å eksportere ennå.</string>
+    <string name="backup_error_document_unavailable">Fila lot seg ikke åpne.</string>
+    <string name="backup_error_malformed">Den fila er ikke et Snurko-hefte.</string>
+    <string name="backup_error_unsupported_version">Det heftet kommer fra en nyere versjon av Snurko.</string>
+    <string name="backup_error_unknown">Det virket ikke. Prøv igjen.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d vane</item>
+        <item quantity="other">%1$d vaner</item>
+    </plurals>
+</resources>

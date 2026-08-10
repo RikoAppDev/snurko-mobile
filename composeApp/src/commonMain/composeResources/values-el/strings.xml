@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Η πρόκλησή μου</string>
+    <string name="challenge_setup_invitation">Γράψε τις συνήθειες που θα κρατήσεις κάθε μέρα για τις επόμενες 90 μέρες.</string>
+
+    <string name="challenge_setup_habit_name_label">Συνήθεια</string>
+    <string name="challenge_setup_habit_name_placeholder">Διαβάζω 10 σελίδες</string>
+    <string name="challenge_setup_fail_condition_label">Τι μετράει ως αποτυχία (προαιρετικό)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Λιγότερες από 10 σελίδες</string>
+
+    <string name="challenge_setup_add_habit">Προσθήκη</string>
+    <string name="challenge_setup_save_habit">Αποθήκευση</string>
+    <string name="challenge_setup_cancel_edit">Άκυρο</string>
+    <string name="challenge_setup_hint_name_required">Η συνήθεια θέλει όνομα για να μπει στη λίστα.</string>
+    <string name="challenge_setup_hint_duplicate_name">Αυτή η συνήθεια είναι ήδη στη λίστα.</string>
+    <string name="challenge_setup_edit_habit">Επεξεργασία %1$s</string>
+    <string name="challenge_setup_remove_habit">Αφαίρεση %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Ξεκίνα τις 90 μέρες</string>
+    <string name="challenge_setup_start_failed">Η πρόκληση δεν ξεκίνησε. Δοκίμασε ξανά.</string>
+
+    <string name="challenge_setup_confirm_title">Ξεκινάμε;</string>
+    <string name="challenge_setup_confirm_locked">Μόλις ξεκινήσεις, το σετ των συνηθειών κλειδώνει. Δεν μπορείς να προσθέσεις, να μετονομάσεις ή να αφαιρέσεις συνήθεια μέχρι να τελειώσουν οι 90 μέρες.</string>
+    <string name="challenge_setup_confirm_restart">Όποια μέρα δεν κλείσεις όλες τις συνήθειες, η πρόκληση ξεκινά ξανά από τη μέρα 1.</string>
+    <string name="challenge_setup_confirm_start">Ξεκίνα, μέρα 1</string>
+    <string name="challenge_setup_confirm_cancel">Όχι ακόμη</string>
+
+    <string name="challenge_fail_condition_summary">Αποτυχία αν: %1$s</string>
+
+    <string name="home_day">Μέρα %1$d</string>
+    <string name="home_streak">σερί %1$d</string>
+    <string name="home_grid">%1$d από %2$d μέρες σημειωμένες</string>
+    <string name="home_today">Σήμερα</string>
+    <string name="home_completed">%1$d μέρες.</string>
+    <string name="home_update_failed">Δεν αποθηκεύτηκε. Δοκίμασε ξανά.</string>
+
+    <string name="home_restart_title">Η μέρα %1$d δεν έκλεισε.</string>
+    <string name="home_restart_missed">Έμειναν ασημείωτες: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Εκείνη η μέρα δεν γυρίζει πίσω. Οι 90 μέρες ξεκινούν ξανά από τη μέρα 1, σήμερα.</string>
+    <string name="home_restart_acknowledge">Ξεκίνα ξανά</string>
+    <string name="home_history_link">οι πίσω σελίδες</string>
+    <string name="home_reminders_link">υπενθυμίσεις</string>
+    <string name="home_share_link">μοιράσου</string>
+    <string name="home_share_failed">Δεν μοιράστηκε. Δοκίμασε ξανά.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Υπενθυμίσεις</string>
+    <string name="reminders_back">Πίσω</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Τίποτα δεν είναι ενεργό μέχρι να βάλεις ώρα. Κάθε συνήθεια παίρνει ένα σκούντημα, και μόνο τη μέρα που δεν έχει ακόμη σημάδι.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Βάλε υπενθύμιση για %1$s</string>
+    <string name="reminders_change">Άλλαξε την υπενθύμιση για %1$s</string>
+    <string name="reminders_switch_off">Σβήσε την υπενθύμιση για %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Δεν αποθηκεύτηκε. Δοκίμασε ξανά.</string>
+
+    <string name="reminders_blocked_title">Οι ειδοποιήσεις για το Snurko είναι κλειστές.</string>
+    <string name="reminders_blocked_body">Μπορείς να βάλεις ώρα και από εδώ, αλλά το Android κρατάει την υπενθύμιση μέχρι να επιτρέψεις τις ειδοποιήσεις στις ρυθμίσεις του συστήματος.</string>
+    <string name="reminders_blocked_settings">Άνοιξε τις ρυθμίσεις</string>
+
+    <string name="reminder_channel_name">Υπενθυμίσεις συνηθειών</string>
+    <string name="reminder_channel_description">Ένα σκούντημα ανά συνήθεια, την ώρα που ορίζεις εσύ.</string>
+    <string name="reminder_notification_text">Μέρα %1$d — χωρίς σημάδι ακόμη.</string>
+    <string name="reminder_notification_done">Έγινε</string>
+
+    <string name="widget_invite">Ξεκίνα τις 90 μέρες σου.</string>
+    <string name="widget_progress">%1$d από %2$d</string>
+    <string name="widget_open">Άνοιξε Snurko</string>
+
+    <string name="history_title">Πίσω σελίδες</string>
+    <string name="history_back">Πίσω</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Προσπάθεια %1$d</string>
+    <string name="history_in_progress">σε εξέλιξη — μέρα %1$d</string>
+    <string name="history_failed">αποτυχία τη μέρα %1$d</string>
+    <string name="history_failed_missed">αποτυχία τη μέρα %1$d — ασημείωτες: %2$s</string>
+    <string name="history_completed">ολοκληρώθηκε</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d/%2$d/%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">από %1$s</string>
+    <string name="history_past_empty">Τίποτα ακόμη στις πίσω σελίδες — αυτή είναι η πρώτη προσπάθεια.</string>
+
+    <string name="history_completion">%1$d% σημειωμένες</string>
+
+    <string name="history_stats_title">Όλα μαζί</string>
+    <string name="history_stats_best">καλύτερη</string>
+    <string name="history_stats_streak">μέγιστο σερί</string>
+    <string name="history_stats_marks">✓ σημάδια</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Εξαγωγή τετραδίου</string>
+    <string name="history_import">Εισαγωγή τετραδίου</string>
+    <string name="history_exported">Το τετράδιο γράφτηκε σε αρχείο.</string>
+    <string name="history_imported">Το τετράδιο αντικαταστάθηκε με αυτό που έφερες.</string>
+
+    <string name="history_import_confirm_title">Να αντικατασταθεί το τετράδιο;</string>
+    <string name="history_import_confirm_body">Η εισαγωγή σβήνει ό,τι είναι γραμμένο εδώ — και την προσπάθεια που τρέχεις και κάθε παλιά· δεν αναιρείται.</string>
+    <string name="history_import_confirm_replace">Αντικατάσταση</string>
+    <string name="history_import_confirm_cancel">Κράτα αυτό</string>
+
+    <string name="history_support">Στήριξε το Snurko</string>
+
+    <string name="tip_jar_title">Φιλοδώρημα</string>
+    <string name="tip_jar_back">Πίσω</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Το Snurko είναι δωρεάν και ανοιχτού κώδικα. Όλο του, για όλους, πάντα.</string>
+    <string name="tip_jar_unlocks_nothing">Εδώ τίποτα δεν ξεκλειδώνει τίποτα. Δεν υπάρχει τίποτα να ξεκλειδώσεις — έχεις ήδη ολόκληρη την εφαρμογή.</string>
+    <string name="tip_jar_fees">Το φιλοδώρημα πάει στο ετήσιο τέλος που χρεώνει το κατάστημα για να μένει το Snurko εκεί. Μόνο γι' αυτό υπάρχει αυτή η σελίδα.</string>
+    <string name="tip_jar_amounts_title">Αν θες να αφήσεις κάτι</string>
+    <string name="tip_jar_amount">Άσε %1$s</string>
+    <string name="tip_jar_price_loading">Διαβάζουμε τα ποσά από το κατάστημα…</string>
+    <string name="tip_jar_price_unavailable">Το κατάστημα δεν έδωσε ποσά.</string>
+    <string name="tip_jar_price_retry">Ρώτα ξανά</string>
+    <string name="tip_jar_thanks">ευχαριστούμε.</string>
+    <string name="tip_jar_thanks_note">Αυτό καλύπτει ένα κομμάτι από το φετινό τέλος του καταστήματος. Στην εφαρμογή δεν άλλαξε τίποτα — ήταν ήδη όλη δική σου.</string>
+    <string name="tip_jar_pending">Το κατάστημα δουλεύει ακόμη αυτή την πληρωμή. Δεν χρειάζεται να κάνεις κάτι άλλο, και τίποτα στην εφαρμογή δεν την περιμένει.</string>
+    <string name="tip_jar_error_unavailable">Οι πληρωμές του καταστήματος δεν είναι διαθέσιμες σε αυτή τη συσκευή.</string>
+    <string name="tip_jar_error_disconnected">Δεν φτάσαμε στο κατάστημα.</string>
+    <string name="tip_jar_error_cancelled">Αυτό το φιλοδώρημα ακυρώθηκε. Δεν χρεώθηκε τίποτα.</string>
+    <string name="tip_jar_error_product_unavailable">Αυτό το ποσό δεν είναι διαθέσιμο αυτή τη στιγμή.</string>
+    <string name="tip_jar_error_unknown">Δεν πέρασε.</string>
+
+    <string name="backup_error_nothing_to_export">Δεν υπάρχει τίποτα γραμμένο ακόμη για εξαγωγή.</string>
+    <string name="backup_error_document_unavailable">Αυτό το αρχείο δεν άνοιξε.</string>
+    <string name="backup_error_malformed">Αυτό το αρχείο δεν είναι τετράδιο του Snurko.</string>
+    <string name="backup_error_unsupported_version">Αυτό το τετράδιο είναι από νεότερη έκδοση του Snurko.</string>
+    <string name="backup_error_unknown">Δεν έγινε. Δοκίμασε ξανά.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d συνήθεια</item>
+        <item quantity="other">%1$d συνήθειες</item>
+    </plurals>
+</resources>

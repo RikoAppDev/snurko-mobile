@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Мой выклік</string>
+    <string name="challenge_setup_invitation">Запішы звычкі, якія будзеш трымаць кожны дзень наступныя 90 дзён.</string>
+
+    <string name="challenge_setup_habit_name_label">Звычка</string>
+    <string name="challenge_setup_habit_name_placeholder">Прачытаць 10 старонак</string>
+    <string name="challenge_setup_fail_condition_label">Што лічыцца зрывам (неабавязкова)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Менш за 10 старонак</string>
+
+    <string name="challenge_setup_add_habit">Дадаць</string>
+    <string name="challenge_setup_save_habit">Захаваць</string>
+    <string name="challenge_setup_cancel_edit">Скасаваць</string>
+    <string name="challenge_setup_hint_name_required">Звычцы патрэбна назва — без яе не дадаць.</string>
+    <string name="challenge_setup_hint_duplicate_name">Гэтая звычка ўжо ў спісе.</string>
+    <string name="challenge_setup_edit_habit">Змяніць %1$s</string>
+    <string name="challenge_setup_remove_habit">Прыбраць %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Пачаць 90 дзён</string>
+    <string name="challenge_setup_start_failed">Выклік не атрымалася пачаць. Паспрабуй яшчэ раз.</string>
+
+    <string name="challenge_setup_confirm_title">Пачынаем?</string>
+    <string name="challenge_setup_confirm_locked">Як толькі пачнеш, набор звычак замыкаецца. Дадаць, перайменаваць ці прыбраць звычку не выйдзе, пакуль не пройдуць 90 дзён.</string>
+    <string name="challenge_setup_confirm_restart">Калі нейкага дня не зачыніш усе звычкі, выклік пачнецца зноў з першага дня.</string>
+    <string name="challenge_setup_confirm_start">Пачаць дзень 1</string>
+    <string name="challenge_setup_confirm_cancel">Яшчэ не</string>
+
+    <string name="challenge_fail_condition_summary">Зрыў, калі: %1$s</string>
+
+    <string name="home_day">Дзень %1$d</string>
+    <string name="home_streak">серыя %1$d</string>
+    <string name="home_grid">адзначана %1$d з %2$d дзён</string>
+    <string name="home_today">Сёння</string>
+    <string name="home_completed">%1$d дзён.</string>
+    <string name="home_update_failed">Не захавалася. Паспрабуй яшчэ раз.</string>
+
+    <string name="home_restart_title">Дзень %1$d не зачынены.</string>
+    <string name="home_restart_missed">Не адзначана: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Той дзень не вернеш. Сёння 90 дзён пачынаюцца зноў з першага дня.</string>
+    <string name="home_restart_acknowledge">Пачаць зноў</string>
+    <string name="home_history_link">апошнія паласы</string>
+    <string name="home_reminders_link">нагадванні</string>
+    <string name="home_share_link">падзяліцца</string>
+    <string name="home_share_failed">Падзяліцца не выйшла. Паспрабуй яшчэ раз.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Нагадванні</string>
+    <string name="reminders_back">Назад</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Нічога не ўключана, пакуль не паставіш час. Кожная звычка атрымлівае адно нагадванне — і толькі ў той дзень, калі яна яшчэ без знака.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Паставіць нагадванне для %1$s</string>
+    <string name="reminders_change">Змяніць нагадванне для %1$s</string>
+    <string name="reminders_switch_off">Выключыць нагадванне для %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Не захавалася. Паспрабуй яшчэ раз.</string>
+
+    <string name="reminders_blocked_title">Апавяшчэнні для Snurko выключаны.</string>
+    <string name="reminders_blocked_body">Час тут паставіць можна, але Android прытрымае нагадванне, пакуль апавяшчэнні не дазволены ў сістэмных наладах.</string>
+    <string name="reminders_blocked_settings">Адкрыць налады</string>
+
+    <string name="reminder_channel_name">Нагадванні пра звычкі</string>
+    <string name="reminder_channel_description">Адно нагадванне на звычку, у пастаўлены табой час.</string>
+    <string name="reminder_notification_text">Дзень %1$d — яшчэ без знака.</string>
+    <string name="reminder_notification_done">Гатова</string>
+
+    <string name="widget_invite">Пачні свае 90 дзён.</string>
+    <string name="widget_progress">%1$d з %2$d</string>
+    <string name="widget_open">Адкрыць Snurko</string>
+
+    <string name="history_title">Апошнія паласы</string>
+    <string name="history_back">Назад</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Спроба %1$d</string>
+    <string name="history_in_progress">ідзе — дзень %1$d</string>
+    <string name="history_failed">зрыў, дзень %1$d</string>
+    <string name="history_failed_missed">зрыў, дзень %1$d — прапушчана: %2$s</string>
+    <string name="history_completed">пройдзена</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">з %1$s</string>
+    <string name="history_past_empty">На апошніх паласах пакуль пуста — гэта першая спроба.</string>
+
+    <string name="history_completion">%1$d% адзначана</string>
+
+    <string name="history_stats_title">Разам</string>
+    <string name="history_stats_best">лепшая спроба</string>
+    <string name="history_stats_streak">лепшая серыя</string>
+    <string name="history_stats_marks">✓ знакі</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Экспарт сшытка</string>
+    <string name="history_import">Імпарт сшытка</string>
+    <string name="history_exported">Сшытак запісаны ў файл.</string>
+    <string name="history_imported">Сшытак заменены на імпартаваны.</string>
+
+    <string name="history_import_confirm_title">Замяніць гэты сшытак?</string>
+    <string name="history_import_confirm_body">Імпарт перазапіша ўсё, што тут запісана, — і спробу, якую ты зараз праходзіш, і ўсе мінулыя. Гэта не адмяніць.</string>
+    <string name="history_import_confirm_replace">Замяніць</string>
+    <string name="history_import_confirm_cancel">Пакінуць гэты</string>
+
+    <string name="history_support">Падтрымаць Snurko</string>
+
+    <string name="tip_jar_title">Скарбонка</string>
+    <string name="tip_jar_back">Назад</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko бясплатны і з адкрытым кодам. Увесь, для ўсіх, заўсёды.</string>
+    <string name="tip_jar_unlocks_nothing">Тут нішто нічога не адмыкае. Адмыкаць няма чаго — увесь дадатак ужо твой.</string>
+    <string name="tip_jar_fees">Унёсак ідзе на гадавы збор, які крама дадаткаў бярэ за тое, каб Snurko заставаўся ў каталогу. Толькі дзеля гэтага старонка і існуе.</string>
+    <string name="tip_jar_amounts_title">Калі хочаш нешта пакінуць</string>
+    <string name="tip_jar_amount">Пакінуць %1$s</string>
+    <string name="tip_jar_price_loading">Чытаем сумы з крамы…</string>
+    <string name="tip_jar_price_unavailable">Крама не вярнула ніводнай сумы.</string>
+    <string name="tip_jar_price_retry">Паўтарыць</string>
+    <string name="tip_jar_thanks">дзякуй.</string>
+    <string name="tip_jar_thanks_note">Гэта пакрые частку сёлетняга збору крамы. У дадатку нічога не змянілася — ён і так быў увесь твой.</string>
+    <string name="tip_jar_pending">Крама яшчэ апрацоўвае гэты плацёж. Рабіць больш нічога не трэба, і ў дадатку нішто яго не чакае.</string>
+    <string name="tip_jar_error_unavailable">Плацяжы крамы на гэтай прыладзе недаступныя.</string>
+    <string name="tip_jar_error_disconnected">З крамай не атрымалася звязацца.</string>
+    <string name="tip_jar_error_cancelled">Унёсак скасаваны. Нічога не спісана.</string>
+    <string name="tip_jar_error_product_unavailable">Гэтая сума зараз недаступная.</string>
+    <string name="tip_jar_error_unknown">Не прайшло.</string>
+
+    <string name="backup_error_nothing_to_export">Тут яшчэ нічога не запісана, дык экспартаваць няма чаго.</string>
+    <string name="backup_error_document_unavailable">Гэты файл не атрымалася адкрыць.</string>
+    <string name="backup_error_malformed">Гэта не сшытак Snurko.</string>
+    <string name="backup_error_unsupported_version">Гэты сшытак з навейшай версіі Snurko.</string>
+    <string name="backup_error_unknown">Не выйшла. Паспрабуй яшчэ раз.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d звычка</item>
+        <item quantity="few">%1$d звычкі</item>
+        <item quantity="many">%1$d звычак</item>
+        <item quantity="other">%1$d звычкі</item>
+    </plurals>
+</resources>

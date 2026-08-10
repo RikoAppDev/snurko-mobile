@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Moj izazov</string>
+    <string name="challenge_setup_invitation">Zapiši navike koje ćeš držati svaki dan narednih 90 dana.</string>
+
+    <string name="challenge_setup_habit_name_label">Navika</string>
+    <string name="challenge_setup_habit_name_placeholder">Pročitaj 10 strana</string>
+    <string name="challenge_setup_fail_condition_label">Šta se računa kao pad (opcionalno)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Manje od 10 strana</string>
+
+    <string name="challenge_setup_add_habit">Dodaj naviku</string>
+    <string name="challenge_setup_save_habit">Sačuvaj naviku</string>
+    <string name="challenge_setup_cancel_edit">Odustani</string>
+    <string name="challenge_setup_hint_name_required">Navici prvo treba ime, pa je onda dodaj.</string>
+    <string name="challenge_setup_hint_duplicate_name">Ova navika je već na spisku.</string>
+    <string name="challenge_setup_edit_habit">Uredi %1$s</string>
+    <string name="challenge_setup_remove_habit">Ukloni %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Počni 90 dana</string>
+    <string name="challenge_setup_start_failed">Izazov nije mogao da krene. Probaj ponovo.</string>
+
+    <string name="challenge_setup_confirm_title">Spreman da počneš?</string>
+    <string name="challenge_setup_confirm_locked">Kad kreneš, spisak navika se zaključava. Do kraja 90 dana ne možeš dodati, preimenovati ni ukloniti nijednu naviku.</string>
+    <string name="challenge_setup_confirm_restart">Svaki dan kad ne završiš sve navike, izazov se vraća na prvi dan.</string>
+    <string name="challenge_setup_confirm_start">Počni dan 1</string>
+    <string name="challenge_setup_confirm_cancel">Još ne</string>
+
+    <string name="challenge_fail_condition_summary">Pad ako: %1$s</string>
+
+    <string name="home_day">Dan %1$d</string>
+    <string name="home_streak">niz %1$d</string>
+    <string name="home_grid">%1$d od %2$d dana označeno</string>
+    <string name="home_today">Danas</string>
+    <string name="home_completed">%1$d dana.</string>
+    <string name="home_update_failed">Čuvanje nije uspjelo. Probaj ponovo.</string>
+
+    <string name="home_restart_title">Dan %1$d nije završen.</string>
+    <string name="home_restart_missed">Ostalo neoznačeno: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Taj dan se ne vraća. Od danas 90 dana kreće iznova, od prvog dana.</string>
+    <string name="home_restart_acknowledge">Počni iznova</string>
+    <string name="home_history_link">zadnje strane</string>
+    <string name="home_reminders_link">podsjetnici</string>
+    <string name="home_share_link">podijeli</string>
+    <string name="home_share_failed">Dijeljenje nije uspjelo. Probaj ponovo.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Podsjetnici</string>
+    <string name="reminders_back">Nazad</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Ništa nije uključeno dok ne podesiš vrijeme. Svaka navika dobija po jedan podsjetnik, i to samo onog dana kad još nije označena.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Podesi podsjetnik za %1$s</string>
+    <string name="reminders_change">Promijeni podsjetnik za %1$s</string>
+    <string name="reminders_switch_off">Isključi podsjetnik za %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Čuvanje nije uspjelo. Probaj ponovo.</string>
+
+    <string name="reminders_blocked_title">Obavještenja za Snurko su isključena.</string>
+    <string name="reminders_blocked_body">Vrijeme možeš podesiti i ovdje, ali Android zadržava podsjetnik dok obavještenja ne dozvoliš u sistemskim podešavanjima.</string>
+    <string name="reminders_blocked_settings">Otvori podešavanja</string>
+
+    <string name="reminder_channel_name">Podsjetnici za navike</string>
+    <string name="reminder_channel_description">Po jedan podsjetnik za svaku naviku, u vrijeme koje odrediš.</string>
+    <string name="reminder_notification_text">Dan %1$d – još nije označen.</string>
+    <string name="reminder_notification_done">Gotovo</string>
+
+    <string name="widget_invite">Počni svojih 90 dana.</string>
+    <string name="widget_progress">%1$d od %2$d</string>
+    <string name="widget_open">Otvori Snurko</string>
+
+    <string name="history_title">Zadnje strane</string>
+    <string name="history_back">Nazad</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Pokušaj %1$d</string>
+    <string name="history_in_progress">u toku – dan %1$d</string>
+    <string name="history_failed">pao na %1$d. danu</string>
+    <string name="history_failed_missed">pao na %1$d. danu – propušteno: %2$s</string>
+    <string name="history_completed">završen</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">od %1$s</string>
+    <string name="history_past_empty">Na zadnjim stranama još nema ničega – ovo je prvi pokušaj.</string>
+
+    <string name="history_completion">%1$d% označeno</string>
+
+    <string name="history_stats_title">Sve zajedno</string>
+    <string name="history_stats_best">najbolji</string>
+    <string name="history_stats_streak">najduži niz</string>
+    <string name="history_stats_marks">✓ kvačice</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Izvezi bilježnicu</string>
+    <string name="history_import">Uvezi bilježnicu</string>
+    <string name="history_exported">Bilježnica je izvezena.</string>
+    <string name="history_imported">Bilježnica je zamijenjena onom iz uvoza.</string>
+
+    <string name="history_import_confirm_title">Da zamijenim ovu bilježnicu?</string>
+    <string name="history_import_confirm_body">Uvoz briše sve što je ovdje zapisano – pokušaj koji traje i svaki prošli. To ne može da se vrati.</string>
+    <string name="history_import_confirm_replace">Zamijeni</string>
+    <string name="history_import_confirm_cancel">Zadrži ovu</string>
+
+    <string name="history_support">Podrži Snurko</string>
+
+    <string name="tip_jar_title">Napojnica</string>
+    <string name="tip_jar_back">Nazad</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko je besplatan i otvorenog koda. Cijeli, za svakoga, uvijek.</string>
+    <string name="tip_jar_unlocks_nothing">Ovdje ništa ne otključava ništa. Nema šta ni da se otključa – cijelu aplikaciju već imaš.</string>
+    <string name="tip_jar_fees">Napojnica ide na godišnju naknadu koju prodavnica naplaćuje da bi Snurko ostao na spisku. To je jedini razlog zašto ova strana postoji.</string>
+    <string name="tip_jar_amounts_title">Ako želiš nešto da ostaviš</string>
+    <string name="tip_jar_amount">Ostavi %1$s</string>
+    <string name="tip_jar_price_loading">Čitam iznose iz prodavnice…</string>
+    <string name="tip_jar_price_unavailable">Prodavnica nije vratila nijedan iznos.</string>
+    <string name="tip_jar_price_retry">Pitaj ponovo</string>
+    <string name="tip_jar_thanks">hvala ti.</string>
+    <string name="tip_jar_thanks_note">Time je pokriven dio ovogodišnje naknade prodavnice. U aplikaciji se ništa nije promijenilo – cijela je i prije bila tvoja.</string>
+    <string name="tip_jar_pending">Prodavnica još obrađuje tu uplatu. Ništa drugo ne treba da uradiš, a ništa u aplikaciji ne čeka na nju.</string>
+    <string name="tip_jar_error_unavailable">Plaćanja u prodavnici nisu dostupna na ovom uređaju.</string>
+    <string name="tip_jar_error_disconnected">Do prodavnice se nije moglo doći.</string>
+    <string name="tip_jar_error_cancelled">Napojnica je otkazana. Ništa nije naplaćeno.</string>
+    <string name="tip_jar_error_product_unavailable">Taj iznos trenutno nije dostupan.</string>
+    <string name="tip_jar_error_unknown">To nije prošlo.</string>
+
+    <string name="backup_error_nothing_to_export">Još nema ništa zapisano za izvoz.</string>
+    <string name="backup_error_document_unavailable">Ta datoteka nije mogla da se otvori.</string>
+    <string name="backup_error_malformed">Ovo nije Snurkova bilježnica.</string>
+    <string name="backup_error_unsupported_version">Ova bilježnica dolazi iz novije verzije aplikacije Snurko.</string>
+    <string name="backup_error_unknown">Nije uspjelo. Probaj ponovo.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d navika</item>
+        <item quantity="few">%1$d navike</item>
+        <item quantity="other">%1$d navika</item>
+    </plurals>
+</resources>
