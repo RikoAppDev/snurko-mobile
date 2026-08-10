@@ -135,7 +135,7 @@ private fun timePickerSheet(
     controller.sheetPresentationController?.detents =
         listOf(UISheetPresentationControllerDetent.mediumDetent())
 
-    val root = controller.view!!
+    val root = controller.view
     root.backgroundColor = UIColor.systemBackgroundColor
     root.addSubview(toolbar)
     root.addSubview(picker)

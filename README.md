@@ -41,11 +41,13 @@ You need **JDK 21** and the Android SDK.
 ./gradlew test                        # unit tests
 ```
 
+The iOS app needs macOS with Xcode. Open `iosApp/iosApp.xcodeproj` and run it —
+the Xcode build calls Gradle to compile and embed the Kotlin framework.
+
 ## Project structure
 
 Kotlin Multiplatform with Compose Multiplatform UI, one Gradle module
-(`:composeApp`). Android ships first; iOS is next and shares the same
-`commonMain` code.
+(`:composeApp`) targeting Android and iOS from the same `commonMain` code.
 
 - `composeApp/src/commonMain` — the app: `challenge`, `reminders`, `billing` and
   `widget` features, plus `core` (design system, Room database, shared domain)
@@ -53,6 +55,10 @@ Kotlin Multiplatform with Compose Multiplatform UI, one Gradle module
   `presentation`, with MVI ViewModels driving the composables.
 - `composeApp/src/androidMain` — the Android edges: activity, Glance widget,
   alarm-based reminders and day rollover, Play Billing, file export via SAF.
+- `composeApp/src/iosMain` — the iOS edges: the `ComposeUIViewController` entry,
+  local notifications, the document picker for export and import, and the share
+  sheet. There is no widget and no tip jar on iOS yet.
+- `iosApp/` — the Xcode project that hosts the Compose view controller.
 - `composeApp/src/commonTest` and `androidUnitTest` — unit tests (JUnit 5,
   Turbine, AssertK) against fakes; no emulator needed.
 

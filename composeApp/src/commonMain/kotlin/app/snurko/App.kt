@@ -10,6 +10,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import app.snurko.billing.presentation.TipJarRoute
+import app.snurko.billing.domain.isTipJarAvailable
 import app.snurko.billing.presentation.billingGraph
 import app.snurko.challenge.presentation.ChallengeHomeRoute
 import app.snurko.challenge.presentation.challengeGraph
@@ -55,6 +56,8 @@ private fun ChallengeNavHost() {
             onOpenTipJar = { navController.navigate(TipJarRoute) },
         )
         remindersGraph(navController)
-        billingGraph(navController)
+        if (isTipJarAvailable) {
+            billingGraph(navController)
+        }
     }
 }

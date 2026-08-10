@@ -24,4 +24,5 @@ jobs:
       - run: ./gradlew :composeApp:compileKotlinIosSimulatorArm64
       - run: ./gradlew :composeApp:linkDebugFrameworkIosSimulatorArm64
       - run: ./gradlew :composeApp:linkDebugFrameworkIosArm64
+      - run: ./gradlew :composeApp:iosSimulatorArm64Test
       - run: xcodebuild -list -project iosApp/iosApp.xcodeproj

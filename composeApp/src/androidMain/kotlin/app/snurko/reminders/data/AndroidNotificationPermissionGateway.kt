@@ -31,7 +31,7 @@ class AndroidNotificationPermissionGateway(
         pendingRequest = null
     }
 
-    override fun current(): NotificationPermission =
+    override suspend fun current(): NotificationPermission =
         if (NotificationManagerCompat.from(context).areNotificationsEnabled()) {
             NotificationPermission.GRANTED
         } else {

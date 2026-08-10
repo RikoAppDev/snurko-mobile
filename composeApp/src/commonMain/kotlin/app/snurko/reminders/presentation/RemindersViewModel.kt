@@ -45,7 +45,7 @@ class RemindersViewModel(
             RemindersAction.TimePickerDismissed -> updateState { it.copy(timePicker = null) }
             is RemindersAction.ReminderSwitchedOff -> switchOff(action.habitId)
             RemindersAction.SettingsClicked -> permissions.openSettings()
-            RemindersAction.ScreenResumed -> readPermission()
+            RemindersAction.ScreenResumed -> viewModelScope.launch { readPermission() }
         }
     }
 
@@ -85,7 +85,7 @@ class RemindersViewModel(
      * Blocked notifications are only worth explaining once the user has asked for a reminder —
      * either just now, or by leaving one switched on.
      */
-    private fun readPermission() {
+    private suspend fun readPermission() {
         val isBlocked = permissions.current() == NotificationPermission.DENIED
         updateState { state ->
             val isWanted = wasRefused || state.rows.any { it.time != null }
