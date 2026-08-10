@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Moja výzva</string>
+    <string name="challenge_setup_invitation">Napíš si návyky, ktoré budeš držať každý deň nasledujúcich 90 dní.</string>
+
+    <string name="challenge_setup_habit_name_label">Návyk</string>
+    <string name="challenge_setup_habit_name_placeholder">Prečítať 10 strán</string>
+    <string name="challenge_setup_fail_condition_label">Čo sa ráta ako zlyhanie (nepovinné)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Menej ako 10 strán</string>
+
+    <string name="challenge_setup_add_habit">Pridať návyk</string>
+    <string name="challenge_setup_save_habit">Uložiť návyk</string>
+    <string name="challenge_setup_cancel_edit">Zrušiť</string>
+    <string name="challenge_setup_hint_name_required">Návyk musí mať názov, inak sa pridať nedá.</string>
+    <string name="challenge_setup_hint_duplicate_name">Tento návyk už na zozname je.</string>
+    <string name="challenge_setup_edit_habit">Upraviť %1$s</string>
+    <string name="challenge_setup_remove_habit">Odstrániť %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Začať 90 dní</string>
+    <string name="challenge_setup_start_failed">Výzvu sa nepodarilo spustiť. Skús to znova.</string>
+
+    <string name="challenge_setup_confirm_title">Môžeme začať?</string>
+    <string name="challenge_setup_confirm_locked">Keď raz začneš, zostava návykov sa zamkne. Kým 90 dní neuplynie, nemôžeš návyk pridať, premenovať ani odstrániť.</string>
+    <string name="challenge_setup_confirm_restart">Keď v niektorý deň nesplníš všetky návyky, výzva začína znova od prvého dňa.</string>
+    <string name="challenge_setup_confirm_start">Začať deň 1</string>
+    <string name="challenge_setup_confirm_cancel">Ešte nie</string>
+
+    <string name="challenge_fail_condition_summary">Zlyhanie: %1$s</string>
+
+    <string name="home_day">Deň %1$d</string>
+    <string name="home_streak">séria %1$d</string>
+    <string name="home_grid">%1$d z %2$d dní označených</string>
+    <string name="home_today">Dnes</string>
+    <string name="home_completed">%1$d dní.</string>
+    <string name="home_update_failed">Neuložilo sa to. Skús to znova.</string>
+
+    <string name="home_restart_title">Deň %1$d zostal nedokončený.</string>
+    <string name="home_restart_missed">Neodfajknuté: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Ten deň sa už nevráti. Dnes sa 90 dní začína znova od prvého dňa.</string>
+    <string name="home_restart_acknowledge">Začať znova</string>
+    <string name="home_history_link">zadné strany</string>
+    <string name="home_reminders_link">pripomienky</string>
+    <string name="home_share_link">zdieľať</string>
+    <string name="home_share_failed">Zdieľanie sa nepodarilo. Skús to znova.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Pripomienky</string>
+    <string name="reminders_back">Späť</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Kým nenastavíš čas, nič nebeží. Každý návyk dostane jedno pripomenutie, a to len v deň, keď ešte nemá značku.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Nastaviť pripomienku pre %1$s</string>
+    <string name="reminders_change">Zmeniť pripomienku pre %1$s</string>
+    <string name="reminders_switch_off">Vypnúť pripomienku pre %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Neuložilo sa to. Skús to znova.</string>
+
+    <string name="reminders_blocked_title">Notifikácie pre Snurko sú vypnuté.</string>
+    <string name="reminders_blocked_body">Čas si tu nastaviť môžeš, ale Android pripomienku zadrží, kým notifikácie nepovolíš v systémových nastaveniach.</string>
+    <string name="reminders_blocked_settings">Otvoriť nastavenia</string>
+
+    <string name="reminder_channel_name">Pripomienky návykov</string>
+    <string name="reminder_channel_description">Jedno pripomenutie na návyk, v čase, ktorý si nastavíš.</string>
+    <string name="reminder_notification_text">Deň %1$d — zatiaľ bez značky.</string>
+    <string name="reminder_notification_done">Hotovo</string>
+
+    <string name="widget_invite">Začni svojich 90 dní.</string>
+    <string name="widget_progress">%1$d z %2$d</string>
+    <string name="widget_open">Otvoriť Snurko</string>
+
+    <string name="history_title">Zadné strany</string>
+    <string name="history_back">Späť</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Pokus %1$d</string>
+    <string name="history_in_progress">prebieha — deň %1$d</string>
+    <string name="history_failed">zlyhal v %1$d. deň</string>
+    <string name="history_failed_missed">zlyhal v %1$d. deň — chýbalo: %2$s</string>
+    <string name="history_completed">dokončený</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">od %1$s</string>
+    <string name="history_past_empty">Na zadných stranách zatiaľ nič nie je — toto je prvý pokus.</string>
+
+    <string name="history_completion">%1$d% označených</string>
+
+    <string name="history_stats_title">Spolu</string>
+    <string name="history_stats_best">najlepší pokus</string>
+    <string name="history_stats_streak">najdlhšia séria</string>
+    <string name="history_stats_marks">✓ značky</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Exportovať zápisník</string>
+    <string name="history_import">Importovať zápisník</string>
+    <string name="history_exported">Zápisník je zapísaný do súboru.</string>
+    <string name="history_imported">Zápisník je nahradený tým importovaným.</string>
+
+    <string name="history_import_confirm_title">Nahradiť tento zápisník?</string>
+    <string name="history_import_confirm_body">Import prepíše všetko, čo je tu zapísané — pokus, ktorý beží, aj všetky minulé. Vrátiť sa to nedá.</string>
+    <string name="history_import_confirm_replace">Nahradiť</string>
+    <string name="history_import_confirm_cancel">Nechať tento</string>
+
+    <string name="history_support">Podporiť Snurko</string>
+
+    <string name="tip_jar_title">Príspevok</string>
+    <string name="tip_jar_back">Späť</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko je zadarmo a open source. Celé, pre každého, navždy.</string>
+    <string name="tip_jar_unlocks_nothing">Nič z toho nič neodomyká. Nie je čo odomykať — celú appku už máš.</string>
+    <string name="tip_jar_fees">Príspevok ide na ročný poplatok, ktorý si obchod pýta za to, aby Snurko zostalo v ponuke. Iný dôvod táto stránka nemá.</string>
+    <string name="tip_jar_amounts_title">Ak chceš niečo nechať</string>
+    <string name="tip_jar_amount">Prispieť %1$s</string>
+    <string name="tip_jar_price_loading">Načítavam sumy z obchodu…</string>
+    <string name="tip_jar_price_unavailable">Obchod žiadne sumy nevrátil.</string>
+    <string name="tip_jar_price_retry">Skúsiť znova</string>
+    <string name="tip_jar_thanks">ďakujeme.</string>
+    <string name="tip_jar_thanks_note">Pokryje to kúsok tohtoročného poplatku obchodu. V appke sa nič nezmenilo — už predtým bola celá tvoja.</string>
+    <string name="tip_jar_pending">Obchod tú platbu ešte spracúva. Nič ďalšie robiť netreba a v appke na ňu nič nečaká.</string>
+    <string name="tip_jar_error_unavailable">Platby cez obchod na tomto zariadení nie sú dostupné.</string>
+    <string name="tip_jar_error_disconnected">Nepodarilo sa spojiť s obchodom.</string>
+    <string name="tip_jar_error_cancelled">Príspevok bol zrušený. Nič sa neúčtovalo.</string>
+    <string name="tip_jar_error_product_unavailable">Táto suma teraz nie je dostupná.</string>
+    <string name="tip_jar_error_unknown">Neprešlo to.</string>
+
+    <string name="backup_error_nothing_to_export">Zatiaľ nie je zapísané nič, čo by sa dalo exportovať.</string>
+    <string name="backup_error_document_unavailable">Ten súbor sa nepodarilo otvoriť.</string>
+    <string name="backup_error_malformed">Ten súbor nie je zápisník z appky Snurko.</string>
+    <string name="backup_error_unsupported_version">Ten zápisník pochádza z novšej verzie appky Snurko.</string>
+    <string name="backup_error_unknown">Nepodarilo sa to. Skús to znova.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d návyk</item>
+        <item quantity="few">%1$d návyky</item>
+        <item quantity="many">%1$d návyku</item>
+        <item quantity="other">%1$d návykov</item>
+    </plurals>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Sfida ime</string>
+    <string name="challenge_setup_invitation">Shkruaj zakonet që do të mbash çdo ditë për 90 ditët e ardhshme.</string>
+
+    <string name="challenge_setup_habit_name_label">Zakoni</string>
+    <string name="challenge_setup_habit_name_placeholder">Lexoj 10 faqe</string>
+    <string name="challenge_setup_fail_condition_label">Çfarë quhet dështim (opsionale)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Më pak se 10 faqe</string>
+
+    <string name="challenge_setup_add_habit">Shto zakon</string>
+    <string name="challenge_setup_save_habit">Ruaj zakonin</string>
+    <string name="challenge_setup_cancel_edit">Anulo</string>
+    <string name="challenge_setup_hint_name_required">Zakoni do një emër para se ta shtosh.</string>
+    <string name="challenge_setup_hint_duplicate_name">Ky zakon është tashmë në listë.</string>
+    <string name="challenge_setup_edit_habit">Ndrysho %1$s</string>
+    <string name="challenge_setup_remove_habit">Hiq %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Nis 90 ditët</string>
+    <string name="challenge_setup_start_failed">Sfida nuk nisi. Provo sërish.</string>
+
+    <string name="challenge_setup_confirm_title">Gati të nisësh?</string>
+    <string name="challenge_setup_confirm_locked">Sapo të nisësh, grupi i zakoneve kyçet. Nuk mund të shtosh, të riemërtosh apo të heqësh zakon derisa të mbarojnë 90 ditët.</string>
+    <string name="challenge_setup_confirm_restart">Çdo ditë që nuk i mbaron të gjitha zakonet, sfida nis nga dita 1.</string>
+    <string name="challenge_setup_confirm_start">Nis ditën 1</string>
+    <string name="challenge_setup_confirm_cancel">Jo ende</string>
+
+    <string name="challenge_fail_condition_summary">Dështon nëse: %1$s</string>
+
+    <string name="home_day">Dita %1$d</string>
+    <string name="home_streak">seri %1$d</string>
+    <string name="home_grid">%1$d nga %2$d ditë të shënuara</string>
+    <string name="home_today">Sot</string>
+    <string name="home_completed">%1$d ditë.</string>
+    <string name="home_update_failed">Nuk u ruajt. Provo sërish.</string>
+
+    <string name="home_restart_title">Dita %1$d nuk u mbyll.</string>
+    <string name="home_restart_missed">Mbetën pa shenjë: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Ajo ditë nuk kthehet. Sot 90 ditët nisin nga dita 1.</string>
+    <string name="home_restart_acknowledge">Nis nga e para</string>
+    <string name="home_history_link">faqet e fundit</string>
+    <string name="home_reminders_link">kujtesat</string>
+    <string name="home_share_link">ndaje</string>
+    <string name="home_share_failed">Nuk u nda. Provo sërish.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Kujtesat</string>
+    <string name="reminders_back">Prapa</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Asgjë nuk është aktive derisa të caktosh një orë. Çdo zakon merr një kujtesë të butë, dhe vetëm në një ditë që është ende pa shenjë.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Cakto një kujtesë për %1$s</string>
+    <string name="reminders_change">Ndrysho kujtesën për %1$s</string>
+    <string name="reminders_switch_off">Fike kujtesën për %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Nuk u ruajt. Provo sërish.</string>
+
+    <string name="reminders_blocked_title">Njoftimet për Snurko janë të fikura.</string>
+    <string name="reminders_blocked_body">Ora mund të caktohet edhe nga këtu, por Android e mban kujtesën derisa njoftimet të lejohen te cilësimet e sistemit.</string>
+    <string name="reminders_blocked_settings">Hap cilësimet</string>
+
+    <string name="reminder_channel_name">Kujtesa zakonesh</string>
+    <string name="reminder_channel_description">Një kujtesë e butë për çdo zakon, në orën që cakton ti.</string>
+    <string name="reminder_notification_text">Dita %1$d — ende pa shenjë.</string>
+    <string name="reminder_notification_done">U bë</string>
+
+    <string name="widget_invite">Nis 90 ditët e tua.</string>
+    <string name="widget_progress">%1$d nga %2$d</string>
+    <string name="widget_open">Hap Snurko</string>
+
+    <string name="history_title">Faqet e fundit</string>
+    <string name="history_back">Prapa</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Përpjekja %1$d</string>
+    <string name="history_in_progress">në vazhdim — dita %1$d</string>
+    <string name="history_failed">dështoi ditën %1$d</string>
+    <string name="history_failed_missed">dështoi ditën %1$d — mbetën: %2$s</string>
+    <string name="history_completed">përfunduar</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">që nga %1$s</string>
+    <string name="history_past_empty">Ende asgjë te faqet e fundit — kjo është përpjekja e parë.</string>
+
+    <string name="history_completion">%1$d% të shënuara</string>
+
+    <string name="history_stats_title">Gjithsej</string>
+    <string name="history_stats_best">më e mira</string>
+    <string name="history_stats_streak">seria më e gjatë</string>
+    <string name="history_stats_marks">✓ shenja</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Eksporto fletoren</string>
+    <string name="history_import">Importo fletore</string>
+    <string name="history_exported">Fletorja u shkrua në skedar.</string>
+    <string name="history_imported">Fletorja u zëvendësua me atë që solle.</string>
+
+    <string name="history_import_confirm_title">Të zëvendësohet kjo fletore?</string>
+    <string name="history_import_confirm_body">Importimi mbishkruan gjithçka të shkruar këtu — edhe përpjekjen ku je, edhe çdo të kaluar. Kjo nuk kthehet mbrapa.</string>
+    <string name="history_import_confirm_replace">Zëvendësoje</string>
+    <string name="history_import_confirm_cancel">Mbaje këtë</string>
+
+    <string name="history_support">Mbështet Snurko</string>
+
+    <string name="tip_jar_title">Bakshishi</string>
+    <string name="tip_jar_back">Prapa</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko është falas dhe me kod të hapur. I gjithi, për të gjithë, gjithmonë.</string>
+    <string name="tip_jar_unlocks_nothing">Këtu asgjë nuk zhbllokon asgjë. Nuk ka çfarë të zhbllokohet — aplikacionin e ke të tërin që tani.</string>
+    <string name="tip_jar_fees">Bakshishi shkon për tarifën vjetore që merr dyqani për ta mbajtur Snurko në listë. Vetëm për këtë ekziston kjo faqe.</string>
+    <string name="tip_jar_amounts_title">Nëse do të lësh diçka</string>
+    <string name="tip_jar_amount">Lër %1$s</string>
+    <string name="tip_jar_price_loading">Po lexojmë shumat nga dyqani…</string>
+    <string name="tip_jar_price_unavailable">Dyqani nuk ktheu asnjë shumë.</string>
+    <string name="tip_jar_price_retry">Pyet sërish</string>
+    <string name="tip_jar_thanks">faleminderit.</string>
+    <string name="tip_jar_thanks_note">Kjo mbulon një copë nga tarifa e këtij viti e dyqanit. Në aplikacion nuk ndryshoi asgjë — ishte që në fillim krejt i yti.</string>
+    <string name="tip_jar_pending">Dyqani po e punon ende atë pagesë. Nuk ke çfarë të bësh tjetër, dhe asgjë në aplikacion nuk e pret.</string>
+    <string name="tip_jar_error_unavailable">Pagesat e dyqanit nuk ofrohen në këtë pajisje.</string>
+    <string name="tip_jar_error_disconnected">Nuk arritëm te dyqani.</string>
+    <string name="tip_jar_error_cancelled">Ai bakshish u anulua. Nuk u tarifua asgjë.</string>
+    <string name="tip_jar_error_product_unavailable">Kjo shumë nuk ofrohet për momentin.</string>
+    <string name="tip_jar_error_unknown">Nuk kaloi.</string>
+
+    <string name="backup_error_nothing_to_export">Ende nuk ka asgjë të shkruar për eksport.</string>
+    <string name="backup_error_document_unavailable">Ai skedar nuk u hap dot.</string>
+    <string name="backup_error_malformed">Ai skedar nuk është fletore e Snurko.</string>
+    <string name="backup_error_unsupported_version">Ajo fletore vjen nga një version më i ri i Snurko.</string>
+    <string name="backup_error_unknown">Nuk funksionoi. Provo sërish.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d zakon</item>
+        <item quantity="other">%1$d zakone</item>
+    </plurals>
+</resources>

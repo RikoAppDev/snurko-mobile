@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">El meu repte</string>
+    <string name="challenge_setup_invitation">Escriu els hàbits que compliràs cada dia durant els pròxims 90 dies.</string>
+
+    <string name="challenge_setup_habit_name_label">Hàbit</string>
+    <string name="challenge_setup_habit_name_placeholder">Llegir 10 pàgines</string>
+    <string name="challenge_setup_fail_condition_label">Què compta com a fallar (opcional)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Menys de 10 pàgines</string>
+
+    <string name="challenge_setup_add_habit">Afegeix</string>
+    <string name="challenge_setup_save_habit">Desa</string>
+    <string name="challenge_setup_cancel_edit">Cancel·la</string>
+    <string name="challenge_setup_hint_name_required">Un hàbit necessita un nom abans de poder-lo afegir.</string>
+    <string name="challenge_setup_hint_duplicate_name">Aquest hàbit ja és a la llista.</string>
+    <string name="challenge_setup_edit_habit">Edita %1$s</string>
+    <string name="challenge_setup_remove_habit">Elimina %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Comença els 90 dies</string>
+    <string name="challenge_setup_start_failed">El repte no ha pogut començar. Torna-ho a provar.</string>
+
+    <string name="challenge_setup_confirm_title">Comencem?</string>
+    <string name="challenge_setup_confirm_locked">Quan comencis, aquesta llista d'hàbits queda tancada. No en podràs afegir, canviar el nom ni treure cap fins que s'acabin els 90 dies.</string>
+    <string name="challenge_setup_confirm_restart">El dia que no acabis tots els hàbits, el repte torna a començar pel dia 1.</string>
+    <string name="challenge_setup_confirm_start">Comença</string>
+    <string name="challenge_setup_confirm_cancel">Ara no</string>
+
+    <string name="challenge_fail_condition_summary">Falla si: %1$s</string>
+
+    <string name="home_day">Dia %1$d</string>
+    <string name="home_streak">ratxa %1$d</string>
+    <string name="home_grid">%1$d dies marcats de %2$d</string>
+    <string name="home_today">Avui</string>
+    <string name="home_completed">%1$d dies.</string>
+    <string name="home_update_failed">No s'ha desat. Torna-ho a provar.</string>
+
+    <string name="home_restart_title">El dia %1$d no es va tancar.</string>
+    <string name="home_restart_missed">Sense marcar: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Aquell dia no torna. Els 90 dies tornen a començar avui, pel dia 1.</string>
+    <string name="home_restart_acknowledge">Torna a començar</string>
+    <string name="home_history_link">les pàgines del final</string>
+    <string name="home_reminders_link">recordatoris</string>
+    <string name="home_share_link">compartir</string>
+    <string name="home_share_failed">No s'ha pogut compartir. Torna-ho a provar.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Recordatoris</string>
+    <string name="reminders_back">Enrere</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">No hi ha res actiu fins que no hi posis una hora. Cada hàbit rep un sol recordatori, i només un dia en què encara no estigui marcat.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Posa un recordatori per a %1$s</string>
+    <string name="reminders_change">Canvia el recordatori de %1$s</string>
+    <string name="reminders_switch_off">Desactiva el recordatori de %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">No s'ha desat. Torna-ho a provar.</string>
+
+    <string name="reminders_blocked_title">Les notificacions del Snurko estan desactivades.</string>
+    <string name="reminders_blocked_body">Aquí hi pots posar una hora igualment, però l'Android es guarda el recordatori fins que les notificacions estiguin permeses a la configuració del sistema.</string>
+    <string name="reminders_blocked_settings">Obre la configuració</string>
+
+    <string name="reminder_channel_name">Recordatoris d'hàbits</string>
+    <string name="reminder_channel_description">Un sol recordatori per hàbit, a l'hora que triïs.</string>
+    <string name="reminder_notification_text">Dia %1$d — encara sense marcar.</string>
+    <string name="reminder_notification_done">Fet</string>
+
+    <string name="widget_invite">Comença els teus 90 dies.</string>
+    <string name="widget_progress">%1$d de %2$d</string>
+    <string name="widget_open">Obre el Snurko</string>
+
+    <string name="history_title">Pàgines del final</string>
+    <string name="history_back">Enrere</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Intent %1$d</string>
+    <string name="history_in_progress">en curs — dia %1$d</string>
+    <string name="history_failed">fallat el dia %1$d</string>
+    <string name="history_failed_missed">fallat el dia %1$d — sense fer: %2$s</string>
+    <string name="history_completed">completat</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d/%2$d/%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">des del %1$s</string>
+    <string name="history_past_empty">Encara no hi ha res a les pàgines del final — aquest és el primer intent.</string>
+
+    <string name="history_completion">%1$d% marcat</string>
+
+    <string name="history_stats_title">En total</string>
+    <string name="history_stats_best">millor intent</string>
+    <string name="history_stats_streak">millor ratxa</string>
+    <string name="history_stats_marks">✓ marques</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Exporta el quadern</string>
+    <string name="history_import">Importa el quadern</string>
+    <string name="history_exported">Quadern exportat.</string>
+    <string name="history_imported">El quadern s'ha substituït pel que has importat.</string>
+
+    <string name="history_import_confirm_title">Vols substituir aquest quadern?</string>
+    <string name="history_import_confirm_body">Importar sobreescriu tot el que hi ha escrit aquí — l'intent en curs i tots els anteriors. No es pot desfer.</string>
+    <string name="history_import_confirm_replace">Substitueix</string>
+    <string name="history_import_confirm_cancel">Deixa aquest</string>
+
+    <string name="history_support">Ajuda el Snurko</string>
+
+    <string name="tip_jar_title">Propina</string>
+    <string name="tip_jar_back">Enrere</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">El Snurko és gratuït i de codi obert. Tot, per a tothom, sempre.</string>
+    <string name="tip_jar_unlocks_nothing">Aquí no hi ha res que desbloquegi res. No hi ha res a desbloquejar — l'app ja la tens sencera.</string>
+    <string name="tip_jar_fees">Una propina va a la quota anual que la botiga cobra per mantenir el Snurko al catàleg. És l'única raó per la qual existeix aquesta pàgina.</string>
+    <string name="tip_jar_amounts_title">Si vols deixar alguna cosa</string>
+    <string name="tip_jar_amount">Deixa %1$s</string>
+    <string name="tip_jar_price_loading">S'estan llegint els imports de la botiga…</string>
+    <string name="tip_jar_price_unavailable">La botiga no ha retornat cap import.</string>
+    <string name="tip_jar_price_retry">Demana-ho</string>
+    <string name="tip_jar_thanks">gràcies.</string>
+    <string name="tip_jar_thanks_note">Això cobreix un tros de la quota d'aquest any de la botiga. A l'app no ha canviat res — ja era tota teva.</string>
+    <string name="tip_jar_pending">La botiga encara està amb aquest pagament. No cal fer res més, i a l'app no hi ha res esperant-lo.</string>
+    <string name="tip_jar_error_unavailable">Els pagaments de la botiga no estan disponibles en aquest dispositiu.</string>
+    <string name="tip_jar_error_disconnected">No hem pogut arribar a la botiga.</string>
+    <string name="tip_jar_error_cancelled">La propina s'ha cancel·lat. No s'ha cobrat res.</string>
+    <string name="tip_jar_error_product_unavailable">Aquest import ara mateix no està disponible.</string>
+    <string name="tip_jar_error_unknown">No s'ha completat.</string>
+
+    <string name="backup_error_nothing_to_export">Encara no hi ha res escrit per exportar.</string>
+    <string name="backup_error_document_unavailable">Aquest fitxer no s'ha pogut obrir.</string>
+    <string name="backup_error_malformed">Aquest fitxer no és un quadern del Snurko.</string>
+    <string name="backup_error_unsupported_version">Aquest quadern ve d'una versió més nova del Snurko.</string>
+    <string name="backup_error_unknown">No ha funcionat. Torna-ho a provar.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d hàbit</item>
+        <item quantity="many">%1$d d'hàbits</item>
+        <item quantity="other">%1$d hàbits</item>
+    </plurals>
+</resources>

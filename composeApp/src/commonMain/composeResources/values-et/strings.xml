@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Minu väljakutse</string>
+    <string name="challenge_setup_invitation">Kirjuta üles harjumused, mida pead iga päev järgmised 90 päeva.</string>
+
+    <string name="challenge_setup_habit_name_label">Harjumus</string>
+    <string name="challenge_setup_habit_name_placeholder">Loe 10 lehekülge</string>
+    <string name="challenge_setup_fail_condition_label">Mis läheb läbikukkumise arvele (valikuline)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Vähem kui 10 lehekülge</string>
+
+    <string name="challenge_setup_add_habit">Lisa</string>
+    <string name="challenge_setup_save_habit">Salvesta</string>
+    <string name="challenge_setup_cancel_edit">Loobu</string>
+    <string name="challenge_setup_hint_name_required">Harjumusel peab olema nimi, enne kui saad selle lisada.</string>
+    <string name="challenge_setup_hint_duplicate_name">See harjumus on juba nimekirjas.</string>
+    <string name="challenge_setup_edit_habit">Muuda: %1$s</string>
+    <string name="challenge_setup_remove_habit">Eemalda: %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Alusta 90 päeva</string>
+    <string name="challenge_setup_start_failed">Väljakutset ei õnnestunud alustada. Proovi uuesti.</string>
+
+    <string name="challenge_setup_confirm_title">Kas alustame?</string>
+    <string name="challenge_setup_confirm_locked">Kui alustad, lukustub see harjumuste nimekiri. Sa ei saa harjumust lisada, ümber nimetada ega eemaldada enne, kui 90 päeva on läbi.</string>
+    <string name="challenge_setup_confirm_restart">Kui mõnel päeval jäävad harjumused tegemata, algab väljakutse uuesti esimesest päevast.</string>
+    <string name="challenge_setup_confirm_start">Alusta päevast 1</string>
+    <string name="challenge_setup_confirm_cancel">Veel mitte</string>
+
+    <string name="challenge_fail_condition_summary">Kukub läbi, kui: %1$s</string>
+
+    <string name="home_day">Päev %1$d</string>
+    <string name="home_streak">seeria %1$d</string>
+    <string name="home_grid">%1$d / %2$d päeva märgitud</string>
+    <string name="home_today">Täna</string>
+    <string name="home_completed">%1$d päeva.</string>
+    <string name="home_update_failed">See ei salvestunud. Proovi uuesti.</string>
+
+    <string name="home_restart_title">%1$d. päev jäi pooleli.</string>
+    <string name="home_restart_missed">Märkimata jäi: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Seda päeva tagasi ei saa. 90 päeva algab täna uuesti esimesest päevast.</string>
+    <string name="home_restart_acknowledge">Alusta uuesti</string>
+    <string name="home_history_link">tagumised leheküljed</string>
+    <string name="home_reminders_link">meeldetuletused</string>
+    <string name="home_share_link">jaga</string>
+    <string name="home_share_failed">Jagamine ei õnnestunud. Proovi uuesti.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Meeldetuletused</string>
+    <string name="reminders_back">Tagasi</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Miski ei ole sees enne, kui määrad aja. Iga harjumus saab ühe meeldetuletuse ja ainult päeval, mil see on veel märkimata.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Määra meeldetuletus: %1$s</string>
+    <string name="reminders_change">Muuda meeldetuletust: %1$s</string>
+    <string name="reminders_switch_off">Lülita meeldetuletus välja: %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">See ei salvestunud. Proovi uuesti.</string>
+
+    <string name="reminders_blocked_title">Snurko teated on välja lülitatud.</string>
+    <string name="reminders_blocked_body">Aja saab siin ikka määrata, aga Android hoiab meeldetuletuse kinni, kuni teated on süsteemi seadetes lubatud.</string>
+    <string name="reminders_blocked_settings">Ava süsteemi seaded</string>
+
+    <string name="reminder_channel_name">Harjumuste meeldetuletused</string>
+    <string name="reminder_channel_description">Üks meeldetuletus harjumuse kohta, sinu määratud ajal.</string>
+    <string name="reminder_notification_text">%1$d. päev – veel märkimata.</string>
+    <string name="reminder_notification_done">Tehtud</string>
+
+    <string name="widget_invite">Alusta oma 90 päeva.</string>
+    <string name="widget_progress">%1$d / %2$d</string>
+    <string name="widget_open">Ava Snurko</string>
+
+    <string name="history_title">Tagumised leheküljed</string>
+    <string name="history_back">Tagasi</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Katse %1$d</string>
+    <string name="history_in_progress">pooleli – %1$d. päev</string>
+    <string name="history_failed">kukkus läbi %1$d. päeval</string>
+    <string name="history_failed_missed">kukkus läbi %1$d. päeval – tegemata: %2$s</string>
+    <string name="history_completed">läbitud</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">alates %1$s</string>
+    <string name="history_past_empty">Tagumistel lehekülgedel pole veel midagi – see on esimene katse.</string>
+
+    <string name="history_completion">%1$d% märgitud</string>
+
+    <string name="history_stats_title">Kokku</string>
+    <string name="history_stats_best">parim katse</string>
+    <string name="history_stats_streak">pikim seeria</string>
+    <string name="history_stats_marks">✓ linnukest</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Ekspordi vihik</string>
+    <string name="history_import">Impordi vihik</string>
+    <string name="history_exported">Vihik kirjutati välja.</string>
+    <string name="history_imported">Vihik asendati imporditud omaga.</string>
+
+    <string name="history_import_confirm_title">Kas asendada see vihik?</string>
+    <string name="history_import_confirm_body">Import kirjutab üle kõik, mis siia kirja on pandud – käimasoleva katse ja kõik varasemad. Seda tagasi ei võta.</string>
+    <string name="history_import_confirm_replace">Asenda</string>
+    <string name="history_import_confirm_cancel">Jäta see alles</string>
+
+    <string name="history_support">Toeta Snurkot</string>
+
+    <string name="tip_jar_title">Jootraha</string>
+    <string name="tip_jar_back">Tagasi</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko on tasuta ja avatud lähtekoodiga. Kõik sellest, kõigile, alati.</string>
+    <string name="tip_jar_unlocks_nothing">Miski siin ei ava midagi. Avada polegi midagi – kogu rakendus on juba sinu.</string>
+    <string name="tip_jar_fees">Jootraha läheb aastatasu katteks, mida rakenduspood Snurko hoidmise eest võtab. Ainult sellepärast see leht olemas on.</string>
+    <string name="tip_jar_amounts_title">Kui tahad midagi jätta</string>
+    <string name="tip_jar_amount">Anna %1$s</string>
+    <string name="tip_jar_price_loading">Loen summasid poest…</string>
+    <string name="tip_jar_price_unavailable">Pood ei andnud ühtegi summat.</string>
+    <string name="tip_jar_price_retry">Küsi uuesti</string>
+    <string name="tip_jar_thanks">aitäh.</string>
+    <string name="tip_jar_thanks_note">See katab tükikese selle aasta poetasust. Rakenduses ei muutunud midagi – see oli juba niigi kogu sinu oma.</string>
+    <string name="tip_jar_pending">Pood tegeleb selle maksega veel. Muud teha pole vaja ja rakenduses ei oota selle taga midagi.</string>
+    <string name="tip_jar_error_unavailable">Poe maksed pole selles seadmes saadaval.</string>
+    <string name="tip_jar_error_disconnected">Poega ei saanud ühendust.</string>
+    <string name="tip_jar_error_cancelled">Jootraha jäi andmata. Midagi ei võetud.</string>
+    <string name="tip_jar_error_product_unavailable">See summa ei ole praegu saadaval.</string>
+    <string name="tip_jar_error_unknown">See ei läinud läbi.</string>
+
+    <string name="backup_error_nothing_to_export">Siia pole veel midagi kirja pandud, mida eksportida.</string>
+    <string name="backup_error_document_unavailable">Seda faili ei õnnestunud avada.</string>
+    <string name="backup_error_malformed">See fail ei ole Snurko vihik.</string>
+    <string name="backup_error_unsupported_version">See vihik pärineb Snurko uuemast versioonist.</string>
+    <string name="backup_error_unknown">See ei õnnestunud. Proovi uuesti.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d harjumus</item>
+        <item quantity="other">%1$d harjumust</item>
+    </plurals>
+</resources>

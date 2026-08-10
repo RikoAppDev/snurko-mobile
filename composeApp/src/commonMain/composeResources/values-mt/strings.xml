@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Is-sfida tiegħi</string>
+    <string name="challenge_setup_invitation">Ikteb id-drawwiet li se żżomm kuljum għal 90 jum.</string>
+
+    <string name="challenge_setup_habit_name_label">Drawwa</string>
+    <string name="challenge_setup_habit_name_placeholder">Aqra 10 paġni</string>
+    <string name="challenge_setup_fail_condition_label">X'jgħodd bħala falliment (mhux obbligatorju)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Inqas minn 10 paġni</string>
+
+    <string name="challenge_setup_add_habit">Żid</string>
+    <string name="challenge_setup_save_habit">Issejvja</string>
+    <string name="challenge_setup_cancel_edit">Ikkanċella</string>
+    <string name="challenge_setup_hint_name_required">Drawwa għandha bżonn isem qabel ma żżidha.</string>
+    <string name="challenge_setup_hint_duplicate_name">Din id-drawwa diġà qiegħda fil-lista.</string>
+    <string name="challenge_setup_edit_habit">Editja %1$s</string>
+    <string name="challenge_setup_remove_habit">Neħħi %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Ibda 90 jum</string>
+    <string name="challenge_setup_start_failed">Is-sfida ma setgħetx tibda. Erġa' pprova.</string>
+
+    <string name="challenge_setup_confirm_title">Nibdew?</string>
+    <string name="challenge_setup_confirm_locked">Malli tibda, din il-lista ta' drawwiet tissakkar. Ma tistax iżżid, tibdel l-isem jew tneħħi drawwa sakemm jgħaddu 90 jum.</string>
+    <string name="challenge_setup_confirm_restart">Kull jum li ma tlestix id-drawwiet kollha, is-sfida terġa' tibda mill-ewwel jum.</string>
+    <string name="challenge_setup_confirm_start">Ibda jum 1</string>
+    <string name="challenge_setup_confirm_cancel">Mhux issa</string>
+
+    <string name="challenge_fail_condition_summary">Ifalli jekk: %1$s</string>
+
+    <string name="home_day">Jum %1$d</string>
+    <string name="home_streak">serje %1$d</string>
+    <string name="home_grid">Immarkati: %1$d minn %2$d jum</string>
+    <string name="home_today">Illum</string>
+    <string name="home_completed">%1$d jum.</string>
+    <string name="home_update_failed">Dan ma ġiex issejvjat. Erġa' pprova.</string>
+
+    <string name="home_restart_title">Jum %1$d ma tlestiex.</string>
+    <string name="home_restart_missed">Bla marka: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Dak il-jum ma jerġax lura. Illum is-sfida ta' 90 jum terġa' tibda mill-ewwel jum.</string>
+    <string name="home_restart_acknowledge">Ibda mill-ġdid</string>
+    <string name="home_history_link">il-paġni ta' wara</string>
+    <string name="home_reminders_link">tfakkiriet</string>
+    <string name="home_share_link">aqsam</string>
+    <string name="home_share_failed">Dan ma nqasamx. Erġa' pprova.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Tfakkiriet</string>
+    <string name="reminders_back">Lura</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Xejn ma jitħaddem qabel ma tagħżel ħin. Kull drawwa tieħu tfakkira waħda, u biss f'jum li għadu mhux immarkat.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Issettja tfakkira għal %1$s</string>
+    <string name="reminders_change">Ibdel it-tfakkira ta' %1$s</string>
+    <string name="reminders_switch_off">Itfi t-tfakkira ta' %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Dan ma ġiex issejvjat. Erġa' pprova.</string>
+
+    <string name="reminders_blocked_title">In-notifiki ta' Snurko huma mitfija.</string>
+    <string name="reminders_blocked_body">Xorta tista' tagħżel ħin hawn, imma Android iżomm it-tfakkira lura sakemm in-notifiki jitħallew fis-settings tas-sistema.</string>
+    <string name="reminders_blocked_settings">Iftaħ is-settings</string>
+
+    <string name="reminder_channel_name">Tfakkiriet tad-drawwiet</string>
+    <string name="reminder_channel_description">Tfakkira waħda għal kull drawwa, fil-ħin li tagħżel int.</string>
+    <string name="reminder_notification_text">Jum %1$d — għadu mhux immarkat.</string>
+    <string name="reminder_notification_done">Lest</string>
+
+    <string name="widget_invite">Ibda s-sfida ta' 90 jum.</string>
+    <string name="widget_progress">%1$d minn %2$d</string>
+    <string name="widget_open">Iftaħ Snurko</string>
+
+    <string name="history_title">Il-paġni ta' wara</string>
+    <string name="history_back">Lura</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Tentattiv %1$d</string>
+    <string name="history_in_progress">għaddej — jum %1$d</string>
+    <string name="history_failed">falla f'jum %1$d</string>
+    <string name="history_failed_missed">falla f'jum %1$d — bla marka: %2$s</string>
+    <string name="history_completed">komplut</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d/%2$d/%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">minn %1$s</string>
+    <string name="history_past_empty">Għad m'hemm xejn fil-paġni ta' wara — dan huwa l-ewwel tentattiv.</string>
+
+    <string name="history_completion">%1$d% immarkat</string>
+
+    <string name="history_stats_title">Kollox flimkien</string>
+    <string name="history_stats_best">l-aħjar</string>
+    <string name="history_stats_streak">l-itwal serje</string>
+    <string name="history_stats_marks">✓ marki</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Esporta l-kwadernu</string>
+    <string name="history_import">Importa l-kwadernu</string>
+    <string name="history_exported">Il-kwadernu nkiteb f'fajl.</string>
+    <string name="history_imported">Il-kwadernu nbidel b'dak li importajt.</string>
+
+    <string name="history_import_confirm_title">Tibdel dan il-kwadernu?</string>
+    <string name="history_import_confirm_body">L-importazzjoni tikteb fuq kull ma hemm miktub hawn — it-tentattiv ta' issa u kull wieħed ta' qabel. Dan ma jistax jitreġġa' lura.</string>
+    <string name="history_import_confirm_replace">Ibdlu</string>
+    <string name="history_import_confirm_cancel">Żomm dan</string>
+
+    <string name="history_support">Għin lil Snurko</string>
+
+    <string name="tip_jar_title">Għotja</string>
+    <string name="tip_jar_back">Lura</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko huwa b'xejn u open source. Kollu, għal kulħadd, dejjem.</string>
+    <string name="tip_jar_unlocks_nothing">Hawn xejn ma jiftaħ xejn. M'hemm xejn x'tiftaħ — l-app kollha diġà tiegħek.</string>
+    <string name="tip_jar_fees">Għotja tmur għall-ħlas annwali li jitlob il-ħanut tal-apps biex Snurko jibqa' fil-lista. Din il-paġna teżisti għal dik ir-raġuni biss.</string>
+    <string name="tip_jar_amounts_title">Jekk trid tħalli xi ħaġa</string>
+    <string name="tip_jar_amount">Agħti %1$s</string>
+    <string name="tip_jar_price_loading">Qed naqraw l-ammonti mill-ħanut…</string>
+    <string name="tip_jar_price_unavailable">Il-ħanut ma tana l-ebda ammont.</string>
+    <string name="tip_jar_price_retry">Erġa' staqsi</string>
+    <string name="tip_jar_thanks">grazzi.</string>
+    <string name="tip_jar_thanks_note">Dan ikopri biċċa mill-ħlas tal-ħanut ta' din is-sena. Fl-app ma nbidel xejn — kollox kien diġà tiegħek.</string>
+    <string name="tip_jar_pending">Il-ħanut għadu qed jaħdem fuq dak il-ħlas. M'hemmx bżonn tagħmel xejn aktar, u fl-app xejn mhu qed jistennieh.</string>
+    <string name="tip_jar_error_unavailable">Il-ħlasijiet mill-ħanut mhumiex disponibbli fuq dan l-apparat.</string>
+    <string name="tip_jar_error_disconnected">Ma stajniex naslu għall-ħanut.</string>
+    <string name="tip_jar_error_cancelled">Dik l-għotja twaqqfet. Ma tħallas xejn.</string>
+    <string name="tip_jar_error_product_unavailable">Dak l-ammont mhuwiex disponibbli bħalissa.</string>
+    <string name="tip_jar_error_unknown">Dan ma għaddiex.</string>
+
+    <string name="backup_error_nothing_to_export">Għad m'hemm xejn miktub x'tesporta.</string>
+    <string name="backup_error_document_unavailable">Dak il-fajl ma setax jinfetaħ.</string>
+    <string name="backup_error_malformed">Dak il-fajl mhuwiex kwadernu ta' Snurko.</string>
+    <string name="backup_error_unsupported_version">Dak il-kwadernu ġej minn verżjoni aktar ġdida ta' Snurko.</string>
+    <string name="backup_error_unknown">Dan ma ħadimx. Erġa' pprova.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d drawwa</item>
+        <item quantity="two">%1$d drawwiet</item>
+        <item quantity="few">%1$d drawwiet</item>
+        <item quantity="many">%1$d drawwa</item>
+        <item quantity="other">%1$d drawwa</item>
+    </plurals>
+</resources>

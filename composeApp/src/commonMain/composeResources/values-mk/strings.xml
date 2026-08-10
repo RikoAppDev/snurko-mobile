@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Мојот предизвик</string>
+    <string name="challenge_setup_invitation">Напиши ги навиките што ќе ги држиш секој ден следните 90 дена.</string>
+
+    <string name="challenge_setup_habit_name_label">Навика</string>
+    <string name="challenge_setup_habit_name_placeholder">Читам 10 страници</string>
+    <string name="challenge_setup_fail_condition_label">Што се смета за неуспех (по избор)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Помалку од 10 страници</string>
+
+    <string name="challenge_setup_add_habit">Додај навика</string>
+    <string name="challenge_setup_save_habit">Зачувај навика</string>
+    <string name="challenge_setup_cancel_edit">Откажи</string>
+    <string name="challenge_setup_hint_name_required">Навиката треба да има име за да ја додадеш.</string>
+    <string name="challenge_setup_hint_duplicate_name">Оваа навика е веќе на списокот.</string>
+    <string name="challenge_setup_edit_habit">Измени %1$s</string>
+    <string name="challenge_setup_remove_habit">Отстрани %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Почни ги 90-те дена</string>
+    <string name="challenge_setup_start_failed">Предизвикот не можеше да почне. Обиди се повторно.</string>
+
+    <string name="challenge_setup_confirm_title">Почнуваме?</string>
+    <string name="challenge_setup_confirm_locked">Штом ќе почнеш, списокот навики се заклучува. Не можеш да додаваш, преименуваш или бришеш навика додека не поминат 90-те дена.</string>
+    <string name="challenge_setup_confirm_restart">Секој ден кога нема да ги завршиш сите навики, предизвикот почнува пак од ден 1.</string>
+    <string name="challenge_setup_confirm_start">Почни ден 1</string>
+    <string name="challenge_setup_confirm_cancel">Уште не</string>
+
+    <string name="challenge_fail_condition_summary">Неуспех ако: %1$s</string>
+
+    <string name="home_day">Ден %1$d</string>
+    <string name="home_streak">низа %1$d</string>
+    <string name="home_grid">%1$d од %2$d дена со квачка</string>
+    <string name="home_today">Денес</string>
+    <string name="home_completed">%1$d дена.</string>
+    <string name="home_update_failed">Не се зачува. Обиди се повторно.</string>
+
+    <string name="home_restart_title">Ден %1$d не беше завршен.</string>
+    <string name="home_restart_missed">Останаа без квачка: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Тој ден не се враќа. Денес 90-те дена почнуваат пак од ден 1.</string>
+    <string name="home_restart_acknowledge">Почни пак</string>
+    <string name="home_history_link">задните страници</string>
+    <string name="home_reminders_link">потсетувања</string>
+    <string name="home_share_link">сподели</string>
+    <string name="home_share_failed">Не се сподели. Обиди се повторно.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Потсетувања</string>
+    <string name="reminders_back">Назад</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Ништо не е вклучено додека не поставиш време. Секоја навика добива по едно тивко потсетување, и тоа само во ден кога сè уште нема квачка.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Постави потсетување за %1$s</string>
+    <string name="reminders_change">Смени го потсетувањето за %1$s</string>
+    <string name="reminders_switch_off">Исклучи го потсетувањето за %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Не се зачува. Обиди се повторно.</string>
+
+    <string name="reminders_blocked_title">Известувањата за Snurko се исклучени.</string>
+    <string name="reminders_blocked_body">Време може да се постави и оттука, но Android го задржува потсетувањето додека не ги дозволиш известувањата во системските поставки.</string>
+    <string name="reminders_blocked_settings">Отвори ги поставките</string>
+
+    <string name="reminder_channel_name">Потсетувања за навики</string>
+    <string name="reminder_channel_description">По едно тивко потсетување за секоја навика, во времето што ќе го поставиш.</string>
+    <string name="reminder_notification_text">Ден %1$d — сè уште без квачка.</string>
+    <string name="reminder_notification_done">Готово</string>
+
+    <string name="widget_invite">Почни ги своите 90 дена.</string>
+    <string name="widget_progress">%1$d од %2$d</string>
+    <string name="widget_open">Отвори Snurko</string>
+
+    <string name="history_title">Задни страници</string>
+    <string name="history_back">Назад</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Обид %1$d</string>
+    <string name="history_in_progress">во тек — ден %1$d</string>
+    <string name="history_failed">неуспех на ден %1$d</string>
+    <string name="history_failed_missed">неуспех на ден %1$d — пропуштено: %2$s</string>
+    <string name="history_completed">завршено</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">од %1$s</string>
+    <string name="history_past_empty">Сè уште нема ништо на задните страници — ова е првиот обид.</string>
+
+    <string name="history_completion">%1$d% со квачка</string>
+
+    <string name="history_stats_title">Сè заедно</string>
+    <string name="history_stats_best">најдобар обид</string>
+    <string name="history_stats_streak">најдолга низа</string>
+    <string name="history_stats_marks">✓ квачки</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Извези тетратка</string>
+    <string name="history_import">Увези тетратка</string>
+    <string name="history_exported">Тетратката е извезена.</string>
+    <string name="history_imported">Тетратката е заменета со увезената.</string>
+
+    <string name="history_import_confirm_title">Да се замени оваа тетратка?</string>
+    <string name="history_import_confirm_body">Увезувањето препишува сè што е запишано тука — и обидот на кој си сега, и сите претходни. Ова не се враќа назад.</string>
+    <string name="history_import_confirm_replace">Замени ја</string>
+    <string name="history_import_confirm_cancel">Остави ја оваа</string>
+
+    <string name="history_support">Поддржи го Snurko</string>
+
+    <string name="tip_jar_title">Бакшиш</string>
+    <string name="tip_jar_back">Назад</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko е бесплатно и со отворен код. Сè од него, за сите, секогаш.</string>
+    <string name="tip_jar_unlocks_nothing">Тука ништо не отклучува ништо. Нема што да се отклучи — целата апликација е веќе твоја.</string>
+    <string name="tip_jar_fees">Бакшишот оди за годишната такса што ја наплаќа продавницата за да стои Snurko во неа. Само поради тоа постои оваа страница.</string>
+    <string name="tip_jar_amounts_title">Ако сакаш да оставиш нешто</string>
+    <string name="tip_jar_amount">Бакшиш %1$s</string>
+    <string name="tip_jar_price_loading">Ги читаме износите од продавницата…</string>
+    <string name="tip_jar_price_unavailable">Продавницата не врати никакви износи.</string>
+    <string name="tip_jar_price_retry">Прашај пак</string>
+    <string name="tip_jar_thanks">благодариме.</string>
+    <string name="tip_jar_thanks_note">Ова покрива дел од годинашната такса на продавницата. Во апликацијата ништо не се смени — и онака цела беше твоја.</string>
+    <string name="tip_jar_pending">Продавницата сè уште работи на тоа плаќање. Нема што друго да правиш и ништо во апликацијата не го чека.</string>
+    <string name="tip_jar_error_unavailable">Плаќањата преку продавницата не се достапни на овој уред.</string>
+    <string name="tip_jar_error_disconnected">Не можевме да стигнеме до продавницата.</string>
+    <string name="tip_jar_error_cancelled">Тој бакшиш беше откажан. Ништо не е наплатено.</string>
+    <string name="tip_jar_error_product_unavailable">Тој износ не е достапен во моментов.</string>
+    <string name="tip_jar_error_unknown">Плаќањето не помина.</string>
+
+    <string name="backup_error_nothing_to_export">Сè уште нема ништо запишано за извезување.</string>
+    <string name="backup_error_document_unavailable">Таа датотека не можеше да се отвори.</string>
+    <string name="backup_error_malformed">Таа датотека не е тетратка на Snurko.</string>
+    <string name="backup_error_unsupported_version">Таа тетратка е од понова верзија на Snurko.</string>
+    <string name="backup_error_unknown">Не успеа. Обиди се повторно.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d навика</item>
+        <item quantity="other">%1$d навики</item>
+    </plurals>
+</resources>

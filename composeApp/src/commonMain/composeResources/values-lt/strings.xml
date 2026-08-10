@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Mano iššūkis</string>
+    <string name="challenge_setup_invitation">Susirašyk įpročius, kurių laikysiesi kasdien visas 90 dienų.</string>
+
+    <string name="challenge_setup_habit_name_label">Įprotis</string>
+    <string name="challenge_setup_habit_name_placeholder">Perskaityti 10 puslapių</string>
+    <string name="challenge_setup_fail_condition_label">Kas laikoma nesėkme (nebūtina)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Mažiau nei 10 puslapių</string>
+
+    <string name="challenge_setup_add_habit">Pridėti</string>
+    <string name="challenge_setup_save_habit">Išsaugoti</string>
+    <string name="challenge_setup_cancel_edit">Atšaukti</string>
+    <string name="challenge_setup_hint_name_required">Įpročiui reikia pavadinimo, kad galėtum jį pridėti.</string>
+    <string name="challenge_setup_hint_duplicate_name">Šis įprotis jau yra sąraše.</string>
+    <string name="challenge_setup_edit_habit">Redaguoti %1$s</string>
+    <string name="challenge_setup_remove_habit">Pašalinti %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Pradėti 90 dienų</string>
+    <string name="challenge_setup_start_failed">Iššūkio pradėti nepavyko. Bandyk dar kartą.</string>
+
+    <string name="challenge_setup_confirm_title">Pradedam?</string>
+    <string name="challenge_setup_confirm_locked">Kai pradėsi, šis įpročių rinkinys užsirakins. Pridėti, pervadinti ar pašalinti įpročio nebegalėsi, kol nepraeis 90 dienų.</string>
+    <string name="challenge_setup_confirm_restart">Jei kurią dieną neatliksi visų įpročių, iššūkis prasideda nuo pirmos dienos.</string>
+    <string name="challenge_setup_confirm_start">Pradėti 1 dieną</string>
+    <string name="challenge_setup_confirm_cancel">Dar ne</string>
+
+    <string name="challenge_fail_condition_summary">Nesėkmė, jei: %1$s</string>
+
+    <string name="home_day">%1$d diena</string>
+    <string name="home_streak">serija %1$d</string>
+    <string name="home_grid">Pažymėta dienų: %1$d iš %2$d</string>
+    <string name="home_today">Šiandien</string>
+    <string name="home_completed">%1$d dienų.</string>
+    <string name="home_update_failed">Išsaugoti nepavyko. Bandyk dar kartą.</string>
+
+    <string name="home_restart_title">%1$d diena liko neužbaigta.</string>
+    <string name="home_restart_missed">Nepažymėta: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Tos dienos nebesugrąžinsi. 90 dienų šiandien prasideda iš naujo — nuo pirmos dienos.</string>
+    <string name="home_restart_acknowledge">Pradėti iš naujo</string>
+    <string name="home_history_link">paskutiniai puslapiai</string>
+    <string name="home_reminders_link">priminimai</string>
+    <string name="home_share_link">dalintis</string>
+    <string name="home_share_failed">Pasidalinti nepavyko. Bandyk dar kartą.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Priminimai</string>
+    <string name="reminders_back">Atgal</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Kol nenustatai laiko, niekas neveikia. Kiekvienas įprotis gauna po vieną priminimą, ir tik tą dieną, kai dar nepažymėtas.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Nustatyti priminimą įpročiui %1$s</string>
+    <string name="reminders_change">Pakeisti priminimą įpročiui %1$s</string>
+    <string name="reminders_switch_off">Išjungti priminimą įpročiui %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Išsaugoti nepavyko. Bandyk dar kartą.</string>
+
+    <string name="reminders_blocked_title">Snurko pranešimai išjungti.</string>
+    <string name="reminders_blocked_body">Laiką čia nustatyti gali, bet Android priminimą sulaiko, kol sistemos nustatymuose pranešimai nebus leidžiami.</string>
+    <string name="reminders_blocked_settings">Atverti nustatymus</string>
+
+    <string name="reminder_channel_name">Įpročių priminimai</string>
+    <string name="reminder_channel_description">Po vieną priminimą kiekvienam įpročiui, tavo nustatytu laiku.</string>
+    <string name="reminder_notification_text">%1$d diena — dar nepažymėta.</string>
+    <string name="reminder_notification_done">Atlikta</string>
+
+    <string name="widget_invite">Pradėk savo 90 dienų.</string>
+    <string name="widget_progress">%1$d iš %2$d</string>
+    <string name="widget_open">Atverti Snurko</string>
+
+    <string name="history_title">Paskutiniai puslapiai</string>
+    <string name="history_back">Atgal</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Bandymas %1$d</string>
+    <string name="history_in_progress">vyksta — %1$d diena</string>
+    <string name="history_failed">nesėkmė %1$d dieną</string>
+    <string name="history_failed_missed">nesėkmė %1$d dieną — nepažymėta: %2$s</string>
+    <string name="history_completed">užbaigtas</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%3$d-%2$d-%1$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">nuo %1$s</string>
+    <string name="history_past_empty">Paskutiniai puslapiai dar tušti — tai pirmas bandymas.</string>
+
+    <string name="history_completion">%1$d% pažymėta</string>
+
+    <string name="history_stats_title">Iš viso</string>
+    <string name="history_stats_best">geriausias</string>
+    <string name="history_stats_streak">ilgiausia serija</string>
+    <string name="history_stats_marks">✓ varnelės</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Eksportuoti sąsiuvinį</string>
+    <string name="history_import">Importuoti sąsiuvinį</string>
+    <string name="history_exported">Sąsiuvinis įrašytas į failą.</string>
+    <string name="history_imported">Sąsiuvinis pakeistas importuotuoju.</string>
+
+    <string name="history_import_confirm_title">Pakeisti šį sąsiuvinį?</string>
+    <string name="history_import_confirm_body">Importas perrašys viską, kas čia surašyta — ir dabartinį bandymą, ir visus buvusius. To atšaukti nebegalėsi.</string>
+    <string name="history_import_confirm_replace">Pakeisti</string>
+    <string name="history_import_confirm_cancel">Palikti šį</string>
+
+    <string name="history_support">Paremk Snurko</string>
+
+    <string name="tip_jar_title">Parama</string>
+    <string name="tip_jar_back">Atgal</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko yra nemokama ir atvirojo kodo. Visa, visiems, visada.</string>
+    <string name="tip_jar_unlocks_nothing">Čia niekas nieko neatrakina. Nėra ko atrakinti — visa programėlė jau tavo.</string>
+    <string name="tip_jar_fees">Parama eina metiniam mokesčiui, kurį programėlių parduotuvė ima už tai, kad Snurko liktų sąraše. Tik dėl to šis puslapis ir yra.</string>
+    <string name="tip_jar_amounts_title">Jei nori ką nors palikti</string>
+    <string name="tip_jar_amount">Paremti %1$s</string>
+    <string name="tip_jar_price_loading">Skaitome sumas iš parduotuvės…</string>
+    <string name="tip_jar_price_unavailable">Parduotuvė negrąžino nė vienos sumos.</string>
+    <string name="tip_jar_price_retry">Dar kartą</string>
+    <string name="tip_jar_thanks">ačiū.</string>
+    <string name="tip_jar_thanks_note">Tai padengia dalį šių metų parduotuvės mokesčio. Programėlėje niekas nepasikeitė — ji ir taip buvo visa tavo.</string>
+    <string name="tip_jar_pending">Parduotuvė dar tvarko tą mokėjimą. Daugiau nieko daryti nereikia, ir programėlėje niekas jo nelaukia.</string>
+    <string name="tip_jar_error_unavailable">Parduotuvės mokėjimai šiame įrenginyje neveikia.</string>
+    <string name="tip_jar_error_disconnected">Nepavyko pasiekti parduotuvės.</string>
+    <string name="tip_jar_error_cancelled">Ta parama atšaukta. Nieko nenuskaityta.</string>
+    <string name="tip_jar_error_product_unavailable">Šios sumos dabar nėra.</string>
+    <string name="tip_jar_error_unknown">Nepavyko.</string>
+
+    <string name="backup_error_nothing_to_export">Dar nieko nesurašyta, ką būtų galima eksportuoti.</string>
+    <string name="backup_error_document_unavailable">Šio failo atverti nepavyko.</string>
+    <string name="backup_error_malformed">Šis failas nėra Snurko sąsiuvinis.</string>
+    <string name="backup_error_unsupported_version">Šis sąsiuvinis iš naujesnės Snurko versijos.</string>
+    <string name="backup_error_unknown">Nepavyko. Bandyk dar kartą.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d įprotis</item>
+        <item quantity="few">%1$d įpročiai</item>
+        <item quantity="many">%1$d įpročio</item>
+        <item quantity="other">%1$d įpročių</item>
+    </plurals>
+</resources>

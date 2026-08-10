@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Mijn challenge</string>
+    <string name="challenge_setup_invitation">Schrijf de gewoontes op die je de komende 90 dagen elke dag volhoudt.</string>
+
+    <string name="challenge_setup_habit_name_label">Gewoonte</string>
+    <string name="challenge_setup_habit_name_placeholder">10 bladzijden lezen</string>
+    <string name="challenge_setup_fail_condition_label">Wat telt als falen (optioneel)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Minder dan 10 bladzijden</string>
+
+    <string name="challenge_setup_add_habit">Toevoegen</string>
+    <string name="challenge_setup_save_habit">Opslaan</string>
+    <string name="challenge_setup_cancel_edit">Annuleren</string>
+    <string name="challenge_setup_hint_name_required">Een gewoonte heeft een naam nodig voor je hem kunt toevoegen.</string>
+    <string name="challenge_setup_hint_duplicate_name">Deze gewoonte staat al op de lijst.</string>
+    <string name="challenge_setup_edit_habit">%1$s bewerken</string>
+    <string name="challenge_setup_remove_habit">%1$s verwijderen</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Begin de 90 dagen</string>
+    <string name="challenge_setup_start_failed">De challenge kon niet beginnen. Probeer het nog eens.</string>
+
+    <string name="challenge_setup_confirm_title">Klaar om te beginnen?</string>
+    <string name="challenge_setup_confirm_locked">Zodra je begint ligt deze lijst vast. Tot de 90 dagen om zijn kun je geen gewoonte toevoegen, hernoemen of verwijderen.</string>
+    <string name="challenge_setup_confirm_restart">Elke dag dat je niet alle gewoontes afmaakt, begint de challenge weer bij dag 1.</string>
+    <string name="challenge_setup_confirm_start">Begin dag 1</string>
+    <string name="challenge_setup_confirm_cancel">Nog niet</string>
+
+    <string name="challenge_fail_condition_summary">Mislukt als: %1$s</string>
+
+    <string name="home_day">Dag %1$d</string>
+    <string name="home_streak">reeks %1$d</string>
+    <string name="home_grid">%1$d van %2$d dagen afgevinkt</string>
+    <string name="home_today">Vandaag</string>
+    <string name="home_completed">%1$d dagen.</string>
+    <string name="home_update_failed">Dat is niet opgeslagen. Probeer het nog eens.</string>
+
+    <string name="home_restart_title">Dag %1$d is niet afgemaakt.</string>
+    <string name="home_restart_missed">Niet afgevinkt: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Die dag komt niet terug. De 90 dagen beginnen vandaag weer bij dag 1.</string>
+    <string name="home_restart_acknowledge">Opnieuw beginnen</string>
+    <string name="home_history_link">de achterpagina's</string>
+    <string name="home_reminders_link">herinneringen</string>
+    <string name="home_share_link">delen</string>
+    <string name="home_share_failed">Dat is niet gedeeld. Probeer het nog eens.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Herinneringen</string>
+    <string name="reminders_back">Terug</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Er staat niets aan tot je een tijd instelt. Elke gewoonte krijgt één zetje, en alleen op een dag die nog niet is afgevinkt.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Zet een herinnering voor %1$s</string>
+    <string name="reminders_change">Wijzig de herinnering voor %1$s</string>
+    <string name="reminders_switch_off">Zet de herinnering voor %1$s uit</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Dat is niet opgeslagen. Probeer het nog eens.</string>
+
+    <string name="reminders_blocked_title">Meldingen staan uit voor Snurko.</string>
+    <string name="reminders_blocked_body">Je kunt hier wel een tijd instellen, maar Android houdt de herinnering tegen tot meldingen zijn toegestaan in de systeeminstellingen.</string>
+    <string name="reminders_blocked_settings">Instellingen openen</string>
+
+    <string name="reminder_channel_name">Herinneringen voor gewoontes</string>
+    <string name="reminder_channel_description">Eén zetje per gewoonte, op de tijd die jij instelt.</string>
+    <string name="reminder_notification_text">Dag %1$d — nog niet afgevinkt.</string>
+    <string name="reminder_notification_done">Klaar</string>
+
+    <string name="widget_invite">Begin je 90 dagen.</string>
+    <string name="widget_progress">%1$d van %2$d</string>
+    <string name="widget_open">Snurko openen</string>
+
+    <string name="history_title">Achterpagina's</string>
+    <string name="history_back">Terug</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Poging %1$d</string>
+    <string name="history_in_progress">bezig — dag %1$d</string>
+    <string name="history_failed">mislukt op dag %1$d</string>
+    <string name="history_failed_missed">mislukt op dag %1$d — open: %2$s</string>
+    <string name="history_completed">gehaald</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d-%2$d-%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">sinds %1$s</string>
+    <string name="history_past_empty">Nog niets op de achterpagina's — dit is de eerste poging.</string>
+
+    <string name="history_completion">%1$d% afgevinkt</string>
+
+    <string name="history_stats_title">In totaal</string>
+    <string name="history_stats_best">beste poging</string>
+    <string name="history_stats_streak">langste reeks</string>
+    <string name="history_stats_marks">✓ vinkjes</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Schrift exporteren</string>
+    <string name="history_import">Schrift importeren</string>
+    <string name="history_exported">Het schrift is weggeschreven.</string>
+    <string name="history_imported">Het schrift is vervangen door het geïmporteerde.</string>
+
+    <string name="history_import_confirm_title">Dit schrift vervangen?</string>
+    <string name="history_import_confirm_body">Importeren overschrijft alles wat hier staat — de poging waar je in zit en elke poging daarvoor. Dit kun je niet terugdraaien.</string>
+    <string name="history_import_confirm_replace">Vervangen</string>
+    <string name="history_import_confirm_cancel">Deze houden</string>
+
+    <string name="history_support">Steun Snurko</string>
+
+    <string name="tip_jar_title">Fooienpot</string>
+    <string name="tip_jar_back">Terug</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko is gratis en open source. Alles ervan, voor iedereen, altijd.</string>
+    <string name="tip_jar_unlocks_nothing">Hier ontgrendelt niets iets. Er valt ook niets te ontgrendelen — je hebt de hele app al.</string>
+    <string name="tip_jar_fees">Een fooi gaat naar de jaarlijkse kosten die de appstore rekent om Snurko in de winkel te houden. Alleen daarom bestaat deze pagina.</string>
+    <string name="tip_jar_amounts_title">Als je iets wilt achterlaten</string>
+    <string name="tip_jar_amount">%1$s geven</string>
+    <string name="tip_jar_price_loading">De bedragen worden uit de store gelezen…</string>
+    <string name="tip_jar_price_unavailable">De store gaf geen bedragen terug.</string>
+    <string name="tip_jar_price_retry">Opnieuw</string>
+    <string name="tip_jar_thanks">dank je.</string>
+    <string name="tip_jar_thanks_note">Dat dekt een stukje van de storekosten van dit jaar. In de app is niets veranderd — die was al helemaal van jou.</string>
+    <string name="tip_jar_pending">De store is nog met die betaling bezig. Verder hoef je niets te doen, en in de app wacht er niets op.</string>
+    <string name="tip_jar_error_unavailable">Betalingen via de store werken niet op dit toestel.</string>
+    <string name="tip_jar_error_disconnected">De store was niet bereikbaar.</string>
+    <string name="tip_jar_error_cancelled">Die fooi is afgebroken. Er is niets afgeschreven.</string>
+    <string name="tip_jar_error_product_unavailable">Dat bedrag is nu niet beschikbaar.</string>
+    <string name="tip_jar_error_unknown">Dat is niet gelukt.</string>
+
+    <string name="backup_error_nothing_to_export">Er staat nog niets opgeschreven om te exporteren.</string>
+    <string name="backup_error_document_unavailable">Dat bestand kon niet worden geopend.</string>
+    <string name="backup_error_malformed">Dat bestand is geen Snurko-schrift.</string>
+    <string name="backup_error_unsupported_version">Dat schrift komt uit een nieuwere versie van Snurko.</string>
+    <string name="backup_error_unknown">Dat lukte niet. Probeer het nog eens.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d gewoonte</item>
+        <item quantity="other">%1$d gewoontes</item>
+    </plurals>
+</resources>

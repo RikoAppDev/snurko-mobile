@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="challenge_setup_title">Moje wyzwanie</string>
+    <string name="challenge_setup_invitation">Wypisz nawyki, które będziesz robić codziennie przez najbliższe 90 dni.</string>
+
+    <string name="challenge_setup_habit_name_label">Nawyk</string>
+    <string name="challenge_setup_habit_name_placeholder">Przeczytać 10 stron</string>
+    <string name="challenge_setup_fail_condition_label">Co liczy się jako wpadka (opcjonalnie)</string>
+    <string name="challenge_setup_fail_condition_placeholder">Mniej niż 10 stron</string>
+
+    <string name="challenge_setup_add_habit">Dodaj nawyk</string>
+    <string name="challenge_setup_save_habit">Zapisz nawyk</string>
+    <string name="challenge_setup_cancel_edit">Anuluj</string>
+    <string name="challenge_setup_hint_name_required">Nawyk musi mieć nazwę, inaczej nie da się go dodać.</string>
+    <string name="challenge_setup_hint_duplicate_name">Ten nawyk już jest na liście.</string>
+    <string name="challenge_setup_edit_habit">Edytuj %1$s</string>
+    <string name="challenge_setup_remove_habit">Usuń %1$s</string>
+    <string name="challenge_setup_remove_mark">×</string>
+
+    <string name="challenge_setup_start">Zacznij 90 dni</string>
+    <string name="challenge_setup_start_failed">Nie udało się zacząć wyzwania. Spróbuj jeszcze raz.</string>
+
+    <string name="challenge_setup_confirm_title">Zaczynamy?</string>
+    <string name="challenge_setup_confirm_locked">Jak zaczniesz, zestaw nawyków się blokuje. Do końca 90 dni nie dodasz, nie zmienisz nazwy ani nie usuniesz żadnego nawyku.</string>
+    <string name="challenge_setup_confirm_restart">Jeśli któregoś dnia nie zrobisz wszystkich nawyków, wyzwanie zaczyna się od nowa, od pierwszego dnia.</string>
+    <string name="challenge_setup_confirm_start">Zacznij dzień 1</string>
+    <string name="challenge_setup_confirm_cancel">Jeszcze nie</string>
+
+    <string name="challenge_fail_condition_summary">Wpadka: %1$s</string>
+
+    <string name="home_day">Dzień %1$d</string>
+    <string name="home_streak">seria %1$d</string>
+    <string name="home_grid">%1$d z %2$d dni odhaczonych</string>
+    <string name="home_today">Dziś</string>
+    <string name="home_completed">%1$d dni.</string>
+    <string name="home_update_failed">Nie zapisało się. Spróbuj jeszcze raz.</string>
+
+    <string name="home_restart_title">Dzień %1$d nie został zamknięty.</string>
+    <string name="home_restart_missed">Nieodhaczone: %1$s</string>
+    <string name="home_restart_separator">, </string>
+    <string name="home_restart_explanation">Tamten dzień już nie wróci. Dziś te 90 dni zaczyna się od nowa, od pierwszego dnia.</string>
+    <string name="home_restart_acknowledge">Zacznij od nowa</string>
+    <string name="home_history_link">ostatnie strony</string>
+    <string name="home_reminders_link">przypomnienia</string>
+    <string name="home_share_link">udostępnij</string>
+    <string name="home_share_failed">Nie udało się udostępnić. Spróbuj jeszcze raz.</string>
+
+    <string name="sticker_wordmark">Snurko</string>
+
+    <string name="reminders_title">Przypomnienia</string>
+    <string name="reminders_back">Wróć</string>
+    <string name="reminders_back_mark">←</string>
+    <string name="reminders_intro">Dopóki nie ustawisz godziny, nic nie działa. Każdy nawyk dostaje jedno przypomnienie, i to tylko w dniu, w którym wciąż nie ma znaku.</string>
+    <string name="reminders_off">—</string>
+    <string name="reminders_set">Ustaw przypomnienie dla %1$s</string>
+    <string name="reminders_change">Zmień przypomnienie dla %1$s</string>
+    <string name="reminders_switch_off">Wyłącz przypomnienie dla %1$s</string>
+    <string name="reminders_switch_off_mark">×</string>
+    <string name="reminders_update_failed">Nie zapisało się. Spróbuj jeszcze raz.</string>
+
+    <string name="reminders_blocked_title">Powiadomienia dla Snurko są wyłączone.</string>
+    <string name="reminders_blocked_body">Godzinę możesz tu ustawić, ale Android wstrzyma przypomnienie, dopóki nie zezwolisz na powiadomienia w ustawieniach systemu.</string>
+    <string name="reminders_blocked_settings">Otwórz ustawienia</string>
+
+    <string name="reminder_channel_name">Przypomnienia o nawykach</string>
+    <string name="reminder_channel_description">Jedno przypomnienie na nawyk, o ustawionej przez ciebie godzinie.</string>
+    <string name="reminder_notification_text">Dzień %1$d — wciąż bez znaku.</string>
+    <string name="reminder_notification_done">Gotowe</string>
+
+    <string name="widget_invite">Zacznij swoje 90 dni.</string>
+    <string name="widget_progress">%1$d z %2$d</string>
+    <string name="widget_open">Otwórz Snurko</string>
+
+    <string name="history_title">Ostatnie strony</string>
+    <string name="history_back">Wróć</string>
+    <string name="history_back_mark">←</string>
+    <string name="history_attempt">Podejście %1$d</string>
+    <string name="history_in_progress">trwa — dzień %1$d</string>
+    <string name="history_failed">wpadka w %1$d. dniu</string>
+    <string name="history_failed_missed">wpadka w %1$d. dniu — zabrakło: %2$s</string>
+    <string name="history_completed">ukończone</string>
+    <string name="history_missed_separator">, </string>
+    <string name="history_date">%1$d.%2$d.%3$d</string>
+    <string name="history_date_range">%1$s – %2$s</string>
+    <string name="history_date_since">od %1$s</string>
+    <string name="history_past_empty">Na ostatnich stronach jeszcze nic nie ma — to pierwsze podejście.</string>
+
+    <string name="history_completion">%1$d% odhaczonych</string>
+
+    <string name="history_stats_title">Razem</string>
+    <string name="history_stats_best">rekord</string>
+    <string name="history_stats_streak">najdłuższa seria</string>
+    <string name="history_stats_marks">✓ znaki</string>
+    <string name="history_stats_percent">%1$d%</string>
+    <string name="history_stats_count">%1$d</string>
+
+    <string name="history_export">Eksportuj zeszyt</string>
+    <string name="history_import">Importuj zeszyt</string>
+    <string name="history_exported">Zeszyt zapisany do pliku.</string>
+    <string name="history_imported">Zeszyt zastąpiony tym z importu.</string>
+
+    <string name="history_import_confirm_title">Zastąpić ten zeszyt?</string>
+    <string name="history_import_confirm_body">Import nadpisze wszystko, co tu jest zapisane — podejście, które trwa, i wszystkie wcześniejsze. Tego nie da się cofnąć.</string>
+    <string name="history_import_confirm_replace">Zastąp</string>
+    <string name="history_import_confirm_cancel">Zostaw ten</string>
+
+    <string name="history_support">Wesprzyj Snurko</string>
+
+    <string name="tip_jar_title">Napiwek</string>
+    <string name="tip_jar_back">Wróć</string>
+    <string name="tip_jar_back_mark">←</string>
+    <string name="tip_jar_free">Snurko jest za darmo i open source. Całe, dla każdego, na zawsze.</string>
+    <string name="tip_jar_unlocks_nothing">Nic z tego niczego nie odblokowuje. Nie ma czego odblokowywać — całą apkę już masz.</string>
+    <string name="tip_jar_fees">Napiwek idzie na roczną opłatę, którą sklep liczy sobie za to, żeby Snurko było w ofercie. Tylko po to jest ta strona.</string>
+    <string name="tip_jar_amounts_title">Jeśli chcesz coś zostawić</string>
+    <string name="tip_jar_amount">Zostaw %1$s</string>
+    <string name="tip_jar_price_loading">Wczytuję kwoty ze sklepu…</string>
+    <string name="tip_jar_price_unavailable">Sklep nie podał żadnych kwot.</string>
+    <string name="tip_jar_price_retry">Jeszcze raz</string>
+    <string name="tip_jar_thanks">dziękujemy.</string>
+    <string name="tip_jar_thanks_note">To pokrywa kawałek tegorocznej opłaty sklepu. W apce nic się nie zmieniło — i tak była w całości twoja.</string>
+    <string name="tip_jar_pending">Sklep wciąż przetwarza tę płatność. Nic więcej nie trzeba robić i nic w apce na to nie czeka.</string>
+    <string name="tip_jar_error_unavailable">Płatności w sklepie nie są dostępne na tym urządzeniu.</string>
+    <string name="tip_jar_error_disconnected">Nie udało się połączyć ze sklepem.</string>
+    <string name="tip_jar_error_cancelled">Napiwek został odwołany. Nic nie zostało pobrane.</string>
+    <string name="tip_jar_error_product_unavailable">Ta kwota jest teraz niedostępna.</string>
+    <string name="tip_jar_error_unknown">Nie przeszło.</string>
+
+    <string name="backup_error_nothing_to_export">Nie ma jeszcze nic zapisanego do eksportu.</string>
+    <string name="backup_error_document_unavailable">Nie udało się otworzyć tego pliku.</string>
+    <string name="backup_error_malformed">Ten plik to nie jest zeszyt Snurko.</string>
+    <string name="backup_error_unsupported_version">Ten zeszyt pochodzi z nowszej wersji Snurko.</string>
+    <string name="backup_error_unknown">Nie udało się. Spróbuj jeszcze raz.</string>
+
+    <plurals name="challenge_habit_count">
+        <item quantity="one">%1$d nawyk</item>
+        <item quantity="few">%1$d nawyki</item>
+        <item quantity="many">%1$d nawyków</item>
+        <item quantity="other">%1$d nawyku</item>
+    </plurals>
+</resources>
