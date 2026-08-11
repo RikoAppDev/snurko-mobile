@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">A mentés nem sikerült. Próbáld újra.</string>
 
     <string name="reminders_blocked_title">A Snurko értesítései ki vannak kapcsolva.</string>
-    <string name="reminders_blocked_body">Időpontot itt is beállíthatsz, de az Android visszatartja az emlékeztetőt, amíg a rendszerbeállításokban nem engedélyezed az értesítéseket.</string>
+    <string name="reminders_blocked_body">Időpontot itt is beállíthatsz, de a telefon visszatartja az emlékeztetőt, amíg a rendszerbeállításokban nem engedélyezed az értesítéseket.</string>
     <string name="reminders_blocked_settings">Beállítások megnyitása</string>
 
     <string name="reminder_channel_name">Szokásemlékeztetők</string>

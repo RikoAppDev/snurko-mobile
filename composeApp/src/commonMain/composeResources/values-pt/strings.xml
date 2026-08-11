@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Não ficou guardado. Tenta outra vez.</string>
 
     <string name="reminders_blocked_title">As notificações do Snurko estão desligadas.</string>
-    <string name="reminders_blocked_body">Podes na mesma pôr uma hora aqui, mas o Android segura o lembrete até as notificações serem permitidas nas definições do sistema.</string>
+    <string name="reminders_blocked_body">Podes na mesma pôr uma hora aqui, mas o telemóvel segura o lembrete até as notificações serem permitidas nas definições do sistema.</string>
     <string name="reminders_blocked_settings">Abrir as definições</string>
 
     <string name="reminder_channel_name">Lembretes de hábitos</string>

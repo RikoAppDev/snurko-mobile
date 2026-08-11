@@ -64,56 +64,56 @@ class ShouldRemindTest {
     fun anUncheckedHabitOnAnActiveDayIsWorthReminding() {
         val challenge = activeChallenge(checks = listOf(partialDay(3)))
 
-        assertThat(challenge.shouldRemind(habitId = READ_ID, today = day(3))).isTrue()
+        assertThat(challenge.shouldRemind(habitId = READ_ID, date = day(3))).isTrue()
     }
 
     @Test
     fun anAlreadyCheckedHabitIsNotWorthReminding() {
         val challenge = activeChallenge(checks = listOf(partialDay(3)))
 
-        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, today = day(3))).isFalse()
+        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, date = day(3))).isFalse()
     }
 
     @Test
     fun aHabitCheckedOnAnotherDayIsStillWorthRemindingToday() {
         val challenge = activeChallenge(checks = listOf(completeDay(2)))
 
-        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, today = day(3))).isTrue()
+        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, date = day(3))).isTrue()
     }
 
     @Test
     fun nothingIsWorthRemindingAfterTheLastDay() {
         val challenge = activeChallenge()
 
-        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, today = day(91))).isFalse()
+        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, date = day(91))).isFalse()
     }
 
     @Test
     fun nothingIsWorthRemindingBeforeTheAttemptStarted() {
         val challenge = activeChallenge()
 
-        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, today = day(0))).isFalse()
+        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, date = day(0))).isFalse()
     }
 
     @Test
     fun aCompletedAttemptRemindsOfNothing() {
         val challenge = activeChallenge().let { it.copy(attempt = it.attempt.copy(status = AttemptStatus.COMPLETED)) }
 
-        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, today = day(3))).isFalse()
+        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, date = day(3))).isFalse()
     }
 
     @Test
     fun aFailedAttemptRemindsOfNothing() {
         val challenge = activeChallenge().let { it.copy(attempt = it.attempt.copy(status = AttemptStatus.FAILED)) }
 
-        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, today = day(3))).isFalse()
+        assertThat(challenge.shouldRemind(habitId = WORKOUT_ID, date = day(3))).isFalse()
     }
 
     @Test
     fun aHabitThatIsNotOnTheListIsNeverWorthReminding() {
         val challenge = activeChallenge()
 
-        assertThat(challenge.shouldRemind(habitId = 404L, today = day(3))).isFalse()
+        assertThat(challenge.shouldRemind(habitId = 404L, date = day(3))).isFalse()
     }
 }
 
@@ -236,6 +236,47 @@ class ReminderScheduleTest {
 
         assertThat(schedule.scheduled.map { it.habitId }).containsExactlyInAnyOrder(WORKOUT_ID, READ_ID)
         assertThat(schedule.cancelledHabitIds).containsExactly(404L)
+    }
+
+    @Test
+    fun aCheckedHabitLosesItsReminderWhereNothingRechecksAtFireTime() {
+        val schedule = reminderSchedule(
+            active = activeChallenge(checks = listOf(completeDay(3))),
+            reminders = listOf(Reminder(WORKOUT_ID, evening)),
+            now = day(3).atTime(8, 0),
+            rechecksAtFireTime = false,
+        )
+
+        assertThat(schedule.scheduled).isEmpty()
+        assertThat(schedule.cancelledHabitIds).containsExactly(WORKOUT_ID)
+    }
+
+    @Test
+    fun anUncheckedHabitKeepsItsReminderWhereNothingRechecksAtFireTime() {
+        val schedule = reminderSchedule(
+            active = activeChallenge(checks = listOf(partialDay(3))),
+            reminders = listOf(Reminder(READ_ID, evening)),
+            now = day(3).atTime(8, 0),
+            rechecksAtFireTime = false,
+        )
+
+        assertThat(schedule.scheduled).containsExactly(
+            ScheduledReminder(habitId = READ_ID, fireAt = day(3).atTime(21, 0)),
+        )
+    }
+
+    @Test
+    fun aHabitCheckedTodayKeepsTomorrowsReminderWhereNothingRechecksAtFireTime() {
+        val schedule = reminderSchedule(
+            active = activeChallenge(checks = listOf(completeDay(3))),
+            reminders = listOf(Reminder(WORKOUT_ID, morning)),
+            now = day(3).atTime(8, 0),
+            rechecksAtFireTime = false,
+        )
+
+        assertThat(schedule.scheduled).containsExactly(
+            ScheduledReminder(habitId = WORKOUT_ID, fireAt = day(4).atTime(7, 30)),
+        )
     }
 
     @Test

@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Det ble ikke lagret. Prøv igjen.</string>
 
     <string name="reminders_blocked_title">Varsler er slått av for Snurko.</string>
-    <string name="reminders_blocked_body">Du kan likevel sette et tidspunkt her, men Android holder påminnelsen tilbake til varsler er tillatt i systeminnstillingene.</string>
+    <string name="reminders_blocked_body">Du kan likevel sette et tidspunkt her, men telefonen holder påminnelsen tilbake til varsler er tillatt i systeminnstillingene.</string>
     <string name="reminders_blocked_settings">Åpne innstillinger</string>
 
     <string name="reminder_channel_name">Påminnelser om vaner</string>

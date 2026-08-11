@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Nu s-a salvat. Mai încearcă o dată.</string>
 
     <string name="reminders_blocked_title">Notificările pentru Snurko sunt oprite.</string>
-    <string name="reminders_blocked_body">Poți pune o oră și așa, dar Android ține mementoul pe loc până când notificările sunt permise în setările sistemului.</string>
+    <string name="reminders_blocked_body">Poți pune o oră și așa, dar telefonul ține mementoul pe loc până când notificările sunt permise în setările sistemului.</string>
     <string name="reminders_blocked_settings">Deschide setările</string>
 
     <string name="reminder_channel_name">Mementouri pentru obiceiuri</string>

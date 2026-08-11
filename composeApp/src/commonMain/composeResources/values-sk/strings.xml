@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Neuložilo sa to. Skús to znova.</string>
 
     <string name="reminders_blocked_title">Notifikácie pre Snurko sú vypnuté.</string>
-    <string name="reminders_blocked_body">Čas si tu nastaviť môžeš, ale Android pripomienku zadrží, kým notifikácie nepovolíš v systémových nastaveniach.</string>
+    <string name="reminders_blocked_body">Čas si tu nastaviť môžeš, ale telefón pripomienku zadrží, kým notifikácie nepovolíš v systémových nastaveniach.</string>
     <string name="reminders_blocked_settings">Otvoriť nastavenia</string>
 
     <string name="reminder_channel_name">Pripomienky návykov</string>

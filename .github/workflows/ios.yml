@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [main]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   framework:
     runs-on: macos-latest
@@ -26,3 +30,41 @@ jobs:
       - run: ./gradlew :composeApp:linkDebugFrameworkIosArm64
       - run: ./gradlew :composeApp:iosSimulatorArm64Test
       - run: xcodebuild -list -project iosApp/iosApp.xcodeproj
+
+      - name: Boot a simulator
+        id: simulator
+        run: bash .github/scripts/boot-simulator.sh
+
+      - name: Build the app for the simulator
+        run: |
+          xcodebuild \
+            -project iosApp/iosApp.xcodeproj \
+            -scheme iosApp \
+            -configuration Debug \
+            -destination "id=${{ steps.simulator.outputs.udid }}" \
+            -derivedDataPath build/ios \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Run the app and take screenshots
+        run: |
+          bash .github/scripts/capture-screenshots.sh \
+            "${{ steps.simulator.outputs.udid }}" \
+            build/ios/Build/Products/Debug-iphonesimulator/Snurko.app
+
+      - name: Drive the app through the setup, the reminders and the back swipe
+        run: bash .github/scripts/drive-app.sh "${{ steps.simulator.outputs.udid }}"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: ios-screenshots
+          path: build/screenshots
+          if-no-files-found: warn
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: ios-crash-reports
+          path: ~/Library/Logs/DiagnosticReports
+          if-no-files-found: ignore

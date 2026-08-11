@@ -28,6 +28,8 @@ class UserNotificationReminderScheduler(
 
     private val center = UNUserNotificationCenter.currentNotificationCenter()
 
+    override val rechecksAtFireTime: Boolean = false
+
     override suspend fun applySchedule(schedule: ReminderSchedule) {
         val cancelled = schedule.cancelledHabitIds.map(::reminderIdentifier)
         if (cancelled.isNotEmpty()) {

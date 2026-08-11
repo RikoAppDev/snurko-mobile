@@ -17,14 +17,19 @@ import app.snurko.challenge.presentation.challengeGraph
 import app.snurko.challenge.presentation.setup.ChallengeSetupRoot
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.presentation.OnResume
 import app.snurko.presentation.AppUiState
 import app.snurko.presentation.AppViewModel
+import app.snurko.reminders.domain.ReminderSync
 import app.snurko.reminders.presentation.RemindersRoute
 import app.snurko.reminders.presentation.remindersGraph
+import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
 
 @Composable
-fun App() {
+fun App(reminderSync: ReminderSync = koinInject()) {
+    OnResume { reminderSync.onForeground() }
+
     SnurkoTheme {
         AppRoot()
     }

@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Išsaugoti nepavyko. Bandyk dar kartą.</string>
 
     <string name="reminders_blocked_title">Snurko pranešimai išjungti.</string>
-    <string name="reminders_blocked_body">Laiką čia nustatyti gali, bet Android priminimą sulaiko, kol sistemos nustatymuose pranešimai nebus leidžiami.</string>
+    <string name="reminders_blocked_body">Laiką čia nustatyti gali, bet telefonas priminimą sulaiko, kol sistemos nustatymuose pranešimai nebus leidžiami.</string>
     <string name="reminders_blocked_settings">Atverti nustatymus</string>
 
     <string name="reminder_channel_name">Įpročių priminimai</string>

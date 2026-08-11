@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Þetta vistaðist ekki. Reyndu aftur.</string>
 
     <string name="reminders_blocked_title">Slökkt er á tilkynningum fyrir Snurko.</string>
-    <string name="reminders_blocked_body">Þú getur samt valið tíma hér, en Android heldur áminningunni eftir þangað til tilkynningar eru leyfðar í kerfisstillingunum.</string>
+    <string name="reminders_blocked_body">Þú getur samt valið tíma hér, en síminn heldur áminningunni eftir þangað til tilkynningar eru leyfðar í kerfisstillingunum.</string>
     <string name="reminders_blocked_settings">Opna kerfisstillingar</string>
 
     <string name="reminder_channel_name">Áminningar um venjur</string>

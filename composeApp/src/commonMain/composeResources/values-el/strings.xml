@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Δεν αποθηκεύτηκε. Δοκίμασε ξανά.</string>
 
     <string name="reminders_blocked_title">Οι ειδοποιήσεις για το Snurko είναι κλειστές.</string>
-    <string name="reminders_blocked_body">Μπορείς να βάλεις ώρα και από εδώ, αλλά το Android κρατάει την υπενθύμιση μέχρι να επιτρέψεις τις ειδοποιήσεις στις ρυθμίσεις του συστήματος.</string>
+    <string name="reminders_blocked_body">Μπορείς να βάλεις ώρα και από εδώ, αλλά το τηλέφωνο κρατάει την υπενθύμιση μέχρι να επιτρέψεις τις ειδοποιήσεις στις ρυθμίσεις του συστήματος.</string>
     <string name="reminders_blocked_settings">Άνοιξε τις ρυθμίσεις</string>
 
     <string name="reminder_channel_name">Υπενθυμίσεις συνηθειών</string>

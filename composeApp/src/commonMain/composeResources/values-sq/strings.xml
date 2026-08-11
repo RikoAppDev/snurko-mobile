@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Nuk u ruajt. Provo sërish.</string>
 
     <string name="reminders_blocked_title">Njoftimet për Snurko janë të fikura.</string>
-    <string name="reminders_blocked_body">Ora mund të caktohet edhe nga këtu, por Android e mban kujtesën derisa njoftimet të lejohen te cilësimet e sistemit.</string>
+    <string name="reminders_blocked_body">Ora mund të caktohet edhe nga këtu, por telefoni e mban kujtesën derisa njoftimet të lejohen te cilësimet e sistemit.</string>
     <string name="reminders_blocked_settings">Hap cilësimet</string>
 
     <string name="reminder_channel_name">Kujtesa zakonesh</string>

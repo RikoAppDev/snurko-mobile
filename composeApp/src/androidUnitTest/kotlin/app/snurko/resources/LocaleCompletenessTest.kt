@@ -64,6 +64,8 @@ private val VERBATIM_KEYS = setOf(
     "history_stats_count",
 )
 
+private val PLATFORM_NAMES = listOf("Android", "iOS", "iPhone", "Apple", "Google")
+
 private val BRAND_KEYS = setOf(
     "history_support",
     "tip_jar_free",
@@ -210,6 +212,18 @@ class LocaleCompletenessTest {
                 assertTrue(strings.values.getValue(key).contains("Snurko"), "[$locale] $key lost Snurko")
             }
         }
+    }
+
+    /** The app runs on more than one platform, so no screen may name one of them. */
+    @Test
+    fun `no locale names a platform`() {
+        val offenders = (mapOf("en" to base) + locales.mapValues { checkNotNull(it.value) })
+            .flatMap { (locale, strings) ->
+                strings.values.entries
+                    .filter { entry -> PLATFORM_NAMES.any { entry.value.contains(it) } }
+                    .map { "[$locale] ${it.key}: ${it.value}" }
+            }
+        assertEquals(emptyList(), offenders, "values naming a single platform")
     }
 
     @Test

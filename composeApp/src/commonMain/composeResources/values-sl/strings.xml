@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Shranjevanje ni uspelo. Poskusi znova.</string>
 
     <string name="reminders_blocked_title">Obvestila za Snurko so izklopljena.</string>
-    <string name="reminders_blocked_body">Uro lahko nastaviš tudi tukaj, a Android opomnik zadrži, dokler obvestil ne dovoliš v sistemskih nastavitvah.</string>
+    <string name="reminders_blocked_body">Uro lahko nastaviš tudi tukaj, a telefon opomnik zadrži, dokler obvestil ne dovoliš v sistemskih nastavitvah.</string>
     <string name="reminders_blocked_settings">Odpri sistemske nastavitve</string>
 
     <string name="reminder_channel_name">Opomniki za navade</string>

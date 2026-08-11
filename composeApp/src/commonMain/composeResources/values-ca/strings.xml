@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">No s'ha desat. Torna-ho a provar.</string>
 
     <string name="reminders_blocked_title">Les notificacions del Snurko estan desactivades.</string>
-    <string name="reminders_blocked_body">Aquí hi pots posar una hora igualment, però l'Android es guarda el recordatori fins que les notificacions estiguin permeses a la configuració del sistema.</string>
+    <string name="reminders_blocked_body">Aquí hi pots posar una hora igualment, però el telèfon es guarda el recordatori fins que les notificacions estiguin permeses a la configuració del sistema.</string>
     <string name="reminders_blocked_settings">Obre la configuració</string>
 
     <string name="reminder_channel_name">Recordatoris d'hàbits</string>

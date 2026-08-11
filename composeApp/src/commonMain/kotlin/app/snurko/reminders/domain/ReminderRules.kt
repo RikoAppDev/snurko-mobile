@@ -19,17 +19,18 @@ fun nextFireAt(time: LocalTime, now: LocalDateTime): LocalDateTime {
 fun ActiveChallenge.remindsOn(date: LocalDate): Boolean =
     attempt.status == AttemptStatus.ACTIVE && dayIndexOn(date) in 1..challenge.lengthDays
 
-/** Re-checked when the alarm lands, not only when it is set. */
-fun ActiveChallenge.shouldRemind(habitId: Long, today: LocalDate): Boolean {
-    if (!remindsOn(today)) return false
+/** Answers for a single date, so it works both when the alarm is set and when it lands. */
+fun ActiveChallenge.shouldRemind(habitId: Long, date: LocalDate): Boolean {
+    if (!remindsOn(date)) return false
     if (challenge.habits.none { it.id == habitId }) return false
-    return habitId !in checkedHabitIdsOn(dayIndexOn(today))
+    return habitId !in checkedHabitIdsOn(dayIndexOn(date))
 }
 
 fun reminderSchedule(
     active: ActiveChallenge?,
     reminders: List<Reminder>,
     now: LocalDateTime,
+    rechecksAtFireTime: Boolean = true,
 ): ReminderSchedule {
     val habitIds = active?.challenge?.habits.orEmpty().mapTo(mutableSetOf()) { it.id }
     val scheduled = mutableListOf<ScheduledReminder>()
@@ -37,7 +38,11 @@ fun reminderSchedule(
 
     for (reminder in reminders) {
         val fireAt = nextFireAt(reminder.time, now)
-        val keeps = active != null && reminder.habitId in habitIds && active.remindsOn(fireAt.date)
+        val keeps = when {
+            active == null -> false
+            rechecksAtFireTime -> reminder.habitId in habitIds && active.remindsOn(fireAt.date)
+            else -> active.shouldRemind(reminder.habitId, fireAt.date)
+        }
         if (keeps) {
             scheduled += ScheduledReminder(habitId = reminder.habitId, fireAt = fireAt)
         } else {

@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">Не се запази. Опитай пак.</string>
 
     <string name="reminders_blocked_title">Известията за Snurko са изключени.</string>
-    <string name="reminders_blocked_body">Час може да се зададе и оттук, но Android задържа напомнянето, докато не разрешиш известията в системните настройки.</string>
+    <string name="reminders_blocked_body">Час може да се зададе и оттук, но телефонът задържа напомнянето, докато не разрешиш известията в системните настройки.</string>
     <string name="reminders_blocked_settings">Отвори настройките</string>
 
     <string name="reminder_channel_name">Напомняния за навици</string>

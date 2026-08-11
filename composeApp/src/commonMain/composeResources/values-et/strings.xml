@@ -59,7 +59,7 @@
     <string name="reminders_update_failed">See ei salvestunud. Proovi uuesti.</string>
 
     <string name="reminders_blocked_title">Snurko teated on välja lülitatud.</string>
-    <string name="reminders_blocked_body">Aja saab siin ikka määrata, aga Android hoiab meeldetuletuse kinni, kuni teated on süsteemi seadetes lubatud.</string>
+    <string name="reminders_blocked_body">Aja saab siin ikka määrata, aga telefon hoiab meeldetuletuse kinni, kuni teated on süsteemi seadetes lubatud.</string>
     <string name="reminders_blocked_settings">Ava süsteemi seaded</string>
 
     <string name="reminder_channel_name">Harjumuste meeldetuletused</string>

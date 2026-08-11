@@ -71,6 +71,30 @@ class ReminderPlannerTest {
     }
 
     @Test
+    fun aSchedulerThatRechecksAtFireTimeStillGetsAnAlreadyCheckedHabit() = runTest {
+        challengeRepository.setActiveChallenge(activeChallenge(checks = listOf(completeDay(3))))
+        reminderRepository.setReminders(listOf(Reminder(WORKOUT_ID, LocalTime(21, 0))))
+
+        planner(now = day(3).atTime(8, 0)).rescheduleAll()
+
+        assertThat(scheduler.lastSchedule.scheduled).isEqualTo(
+            listOf(ScheduledReminder(habitId = WORKOUT_ID, fireAt = day(3).atTime(21, 0))),
+        )
+    }
+
+    @Test
+    fun aSchedulerThatCannotRecheckAtFireTimeLosesAnAlreadyCheckedHabit() = runTest {
+        scheduler.rechecksAtFireTime = false
+        challengeRepository.setActiveChallenge(activeChallenge(checks = listOf(completeDay(3))))
+        reminderRepository.setReminders(listOf(Reminder(WORKOUT_ID, LocalTime(21, 0))))
+
+        planner(now = day(3).atTime(8, 0)).rescheduleAll()
+
+        assertThat(scheduler.lastSchedule.scheduled).isEmpty()
+        assertThat(scheduler.lastSchedule.cancelledHabitIds).containsExactly(WORKOUT_ID)
+    }
+
+    @Test
     fun aFiringReminderCarriesTheHabitNameTheAttemptAndTheDay() = runTest {
         challengeRepository.setActiveChallenge(activeChallenge(checks = listOf(partialDay(3))))
 
