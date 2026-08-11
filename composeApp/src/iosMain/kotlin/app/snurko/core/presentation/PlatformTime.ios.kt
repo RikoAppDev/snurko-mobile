@@ -19,6 +19,7 @@ import platform.Foundation.NSDateFormatterNoStyle
 import platform.Foundation.NSDateFormatterShortStyle
 import platform.UIKit.NSLayoutConstraint
 import platform.UIKit.UIAction
+import platform.UIKit.UILayoutGuide
 import platform.UIKit.UIAdaptivePresentationControllerDelegateProtocol
 import platform.UIKit.UIBarButtonItem
 import platform.UIKit.UIBarButtonSystemItem
@@ -139,15 +140,24 @@ private fun timePickerSheet(
     root.backgroundColor = UIColor.systemBackgroundColor
     root.addSubview(toolbar)
     root.addSubview(picker)
+
+    // The wheels keep their own height and sit in the middle of what the toolbar leaves;
+    // stretched to fill it, they drop to the bottom of the sheet with a hole above them.
+    val wheelArea = UILayoutGuide()
+    root.addLayoutGuide(wheelArea)
+
     NSLayoutConstraint.activateConstraints(
         listOf(
             toolbar.leadingAnchor.constraintEqualToAnchor(root.leadingAnchor),
             toolbar.trailingAnchor.constraintEqualToAnchor(root.trailingAnchor),
             toolbar.topAnchor.constraintEqualToAnchor(root.safeAreaLayoutGuide.topAnchor),
+            wheelArea.topAnchor.constraintEqualToAnchor(toolbar.bottomAnchor),
+            wheelArea.bottomAnchor.constraintEqualToAnchor(root.safeAreaLayoutGuide.bottomAnchor),
             picker.leadingAnchor.constraintEqualToAnchor(root.leadingAnchor),
             picker.trailingAnchor.constraintEqualToAnchor(root.trailingAnchor),
-            picker.topAnchor.constraintEqualToAnchor(toolbar.bottomAnchor),
-            picker.bottomAnchor.constraintEqualToAnchor(root.safeAreaLayoutGuide.bottomAnchor),
+            picker.centerYAnchor.constraintEqualToAnchor(wheelArea.centerYAnchor),
+            picker.topAnchor.constraintGreaterThanOrEqualToAnchor(wheelArea.topAnchor),
+            picker.bottomAnchor.constraintLessThanOrEqualToAnchor(wheelArea.bottomAnchor),
         ),
     )
     return controller
