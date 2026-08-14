@@ -9,6 +9,7 @@ import app.snurko.challenge.presentation.home.GridCellUi
 import assertk.assertThat
 import assertk.assertions.containsExactly
 import assertk.assertions.hasSize
+import assertk.assertions.isEmpty
 import assertk.assertions.isEqualTo
 import assertk.assertions.isFalse
 import assertk.assertions.isTrue
@@ -71,6 +72,30 @@ class DayStickerStateTest {
         assertThat(sticker.dayIndex).isEqualTo(90)
         assertThat(sticker.streak).isEqualTo(90)
         assertThat(sticker.cells.all { it == GridCellUi.COMPLETE }).isTrue()
+    }
+
+    @Test
+    fun theStickerListsTodaysHabitsWithTheirHonestState() {
+        val sticker = activeChallenge(checks = listOf(partialDay(1))).toDayStickerState(day(1))
+
+        assertThat(sticker.habits).containsExactly(
+            StickerHabitUi(name = "Workout", isChecked = true),
+            StickerHabitUi(name = "Read", isChecked = false),
+        )
+    }
+
+    @Test
+    fun everyHabitIsTickedOnADayThatIsFullyMarked() {
+        val sticker = activeChallenge(checks = completeDaysThrough(1)).toDayStickerState(day(1))
+
+        assertThat(sticker.habits.map { it.isChecked }).containsExactly(true, true)
+    }
+
+    @Test
+    fun aFinishedChallengeSharesTheGridWithoutAHabitList() {
+        val sticker = activeChallenge(checks = completeDaysThrough(90)).toDayStickerState(day(94))
+
+        assertThat(sticker.habits).isEmpty()
     }
 
     @Test
