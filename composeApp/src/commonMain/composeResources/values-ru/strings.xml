@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Напоминания</string>
     <string name="reminders_back">Назад</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ничего не включено, пока не поставишь время. Каждая привычка получает одно напоминание — и только в тот день, когда она ещё без отметки.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Поставить напоминание для %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Последние полосы</string>
     <string name="history_back">Назад</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Попытка %1$d</string>
     <string name="history_in_progress">идёт — день %1$d</string>
     <string name="history_failed">срыв, день %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Копилка</string>
     <string name="tip_jar_back">Назад</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko бесплатное и с открытым кодом. Всё целиком, для всех, всегда.</string>
     <string name="tip_jar_unlocks_nothing">Здесь ничто ничего не открывает. Открывать нечего — всё приложение уже твоё.</string>
     <string name="tip_jar_fees">Взнос идёт на годовой сбор, который магазин приложений берёт за то, чтобы Snurko оставалось в каталоге. Только ради этого страница и существует.</string>

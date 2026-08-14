@@ -56,6 +56,7 @@ import app.snurko.challenge.presentation.sticker.DayStickerRenderer
 import app.snurko.challenge.presentation.sticker.DayStickerSharer
 import app.snurko.challenge.presentation.sticker.DayStickerState
 import app.snurko.challenge.presentation.sticker.stickerFileName
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.domain.onFailure
@@ -212,8 +213,9 @@ private fun MarginNote(text: String, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .heightIn(min = 48.dp)
+            .clip(QuietTapShape)
             .clickable(role = Role.Button, onClick = onClick)
-            .padding(horizontal = 6.dp),
+            .padding(horizontal = 8.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
@@ -395,12 +397,13 @@ private fun HabitCheckRow(habit: HabitRowUi, onToggle: (Long) -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .heightIn(min = 56.dp)
+            .clip(QuietTapShape)
             .toggleable(
                 value = habit.isChecked,
                 role = Role.Checkbox,
                 onValueChange = { onToggle(habit.id) },
             )
-            .padding(vertical = 8.dp),
+            .padding(horizontal = 6.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         CheckMarkBox(isChecked = habit.isChecked, markSeed = habit.id.toInt())

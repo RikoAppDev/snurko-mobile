@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Напомняния</string>
     <string name="reminders_back">Назад</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Нищо не е включено, докато не зададеш час. Всеки навик получава по едно подсещане и само в ден, в който още няма отметка.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Задай напомняне за %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Задни страници</string>
     <string name="history_back">Назад</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Опит %1$d</string>
     <string name="history_in_progress">в ход — ден %1$d</string>
     <string name="history_failed">провал на ден %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Бакшиш</string>
     <string name="tip_jar_back">Назад</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko е безплатно и с отворен код. Цялото, за всички, винаги.</string>
     <string name="tip_jar_unlocks_nothing">Тук нищо не отключва нищо. Няма какво да се отключва — цялото приложение вече е твое.</string>
     <string name="tip_jar_fees">Бакшишът отива за годишната такса, която магазинът взима, за да стои Snurko в него. Само затова съществува тази страница.</string>

@@ -28,6 +28,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
@@ -36,6 +37,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.snurko.billing.domain.TipProduct
+import app.snurko.core.designsystem.BackChevronButton
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.domain.DataError
@@ -43,7 +46,6 @@ import app.snurko.resources.Res
 import app.snurko.resources.tip_jar_amount
 import app.snurko.resources.tip_jar_amounts_title
 import app.snurko.resources.tip_jar_back
-import app.snurko.resources.tip_jar_back_mark
 import app.snurko.resources.tip_jar_error_cancelled
 import app.snurko.resources.tip_jar_error_disconnected
 import app.snurko.resources.tip_jar_error_product_unavailable
@@ -108,28 +110,16 @@ fun TipJarScreen(
 
 @Composable
 private fun TipJarHeader(onNavigateBack: () -> Unit) {
-    val backDescription = stringResource(Res.string.tip_jar_back)
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = PAGE_PADDING - 8.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clickable(role = Role.Button, onClick = onNavigateBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(Res.string.tip_jar_back_mark),
-                style = MaterialTheme.typography.titleLarge,
-                color = SnurkoColors.text,
-                modifier = Modifier.clearAndSetSemantics { },
-            )
-        }
+        BackChevronButton(
+            contentDescription = stringResource(Res.string.tip_jar_back),
+            onClick = onNavigateBack,
+        )
         Text(
             text = stringResource(Res.string.tip_jar_title),
             style = MaterialTheme.typography.displaySmall,
@@ -294,7 +284,9 @@ private fun QuietLink(text: String, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .heightIn(min = 48.dp)
-            .clickable(role = Role.Button, onClick = onClick),
+            .clip(QuietTapShape)
+            .clickable(role = Role.Button, onClick = onClick)
+            .padding(horizontal = 6.dp),
         contentAlignment = Alignment.CenterStart,
     ) {
         Text(

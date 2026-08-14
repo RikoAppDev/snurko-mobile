@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Herinneringen</string>
     <string name="reminders_back">Terug</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Er staat niets aan tot je een tijd instelt. Elke gewoonte krijgt één zetje, en alleen op een dag die nog niet is afgevinkt.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Zet een herinnering voor %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Achterpagina's</string>
     <string name="history_back">Terug</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Poging %1$d</string>
     <string name="history_in_progress">bezig — dag %1$d</string>
     <string name="history_failed">mislukt op dag %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Fooienpot</string>
     <string name="tip_jar_back">Terug</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko is gratis en open source. Alles ervan, voor iedereen, altijd.</string>
     <string name="tip_jar_unlocks_nothing">Hier ontgrendelt niets iets. Er valt ook niets te ontgrendelen — je hebt de hele app al.</string>
     <string name="tip_jar_fees">Een fooi gaat naar de jaarlijkse kosten die de appstore rekent om Snurko in de winkel te houden. Alleen daarom bestaat deze pagina.</string>

@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Нагадванні</string>
     <string name="reminders_back">Назад</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Нічога не ўключана, пакуль не паставіш час. Кожная звычка атрымлівае адно нагадванне — і толькі ў той дзень, калі яна яшчэ без знака.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Паставіць нагадванне для %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Апошнія паласы</string>
     <string name="history_back">Назад</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Спроба %1$d</string>
     <string name="history_in_progress">ідзе — дзень %1$d</string>
     <string name="history_failed">зрыў, дзень %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Скарбонка</string>
     <string name="tip_jar_back">Назад</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko бясплатны і з адкрытым кодам. Увесь, для ўсіх, заўсёды.</string>
     <string name="tip_jar_unlocks_nothing">Тут нішто нічога не адмыкае. Адмыкаць няма чаго — увесь дадатак ужо твой.</string>
     <string name="tip_jar_fees">Унёсак ідзе на гадавы збор, які крама дадаткаў бярэ за тое, каб Snurko заставаўся ў каталогу. Толькі дзеля гэтага старонка і існуе.</string>

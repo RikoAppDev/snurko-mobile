@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Muistutukset</string>
     <string name="reminders_back">Takaisin</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Mikään ei ole päällä ennen kuin asetat ajan. Jokainen tapa saa yhden muistutuksen, ja vain päivänä, jolloin se on yhä rastittamatta.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Aseta muistutus: %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Takasivut</string>
     <string name="history_back">Takaisin</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Yritys %1$d</string>
     <string name="history_in_progress">kesken – päivä %1$d</string>
     <string name="history_failed">katkesi %1$d. päivänä</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Tippi</string>
     <string name="tip_jar_back">Takaisin</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko on ilmainen ja avointa lähdekoodia. Kaikki siitä, kaikille, aina.</string>
     <string name="tip_jar_unlocks_nothing">Mikään täällä ei avaa mitään. Avattavaa ei ole – koko sovellus on jo sinun.</string>
     <string name="tip_jar_fees">Tippi menee siihen vuosimaksuun, jonka sovelluskauppa perii Snurkon pitämisestä kaupassa. Vain siksi tämä sivu on olemassa.</string>

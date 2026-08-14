@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Reminders</string>
     <string name="reminders_back">Back</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Nothing is on until you set a time. Each habit gets one nudge, and only on a day it is still unmarked.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Set a reminder for %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Back pages</string>
     <string name="history_back">Back</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Attempt %1$d</string>
     <string name="history_in_progress">in progress — day %1$d</string>
     <string name="history_failed">failed day %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Tip jar</string>
     <string name="tip_jar_back">Back</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko is free and open source. All of it, for everyone, always.</string>
     <string name="tip_jar_unlocks_nothing">Nothing here unlocks anything. There is nothing to unlock — you already have the whole app.</string>
     <string name="tip_jar_fees">A tip goes towards the yearly fee the app store charges to keep Snurko listed. That is the only reason this page exists.</string>

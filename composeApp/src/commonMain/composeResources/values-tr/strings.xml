@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Hatırlatmalar</string>
     <string name="reminders_back">Geri</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Bir saat belirlemeden hiçbir şey açılmaz. Her alışkanlığa tek bir dürtme gider, o da yalnızca gün hâlâ işaretsizse.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Hatırlatma kur: %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Arka sayfalar</string>
     <string name="history_back">Geri</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">%1$d. deneme</string>
     <string name="history_in_progress">sürüyor — %1$d. gün</string>
     <string name="history_failed">%1$d. günde başarısız</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Bahşiş</string>
     <string name="tip_jar_back">Geri</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko ücretsiz ve açık kaynak. Tamamı, herkese, hep.</string>
     <string name="tip_jar_unlocks_nothing">Buradaki hiçbir şey bir kilidi açmaz. Açılacak bir şey de yok — uygulamanın tamamı zaten sende.</string>
     <string name="tip_jar_fees">Bahşiş, Snurko'nun mağazada listede kalması için ödenen yıllık ücrete gider. Bu sayfanın tek varlık sebebi bu.</string>

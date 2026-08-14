@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Emlékeztetők</string>
     <string name="reminders_back">Vissza</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Semmi nincs bekapcsolva, amíg nem állítasz be időpontot. Minden szokás egy emlékeztetőt kap, és csak olyan napon, amikor még nincs bejelölve.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Emlékeztető beállítása: %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Hátsó oldalak</string>
     <string name="history_back">Vissza</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">%1$d. próbálkozás</string>
     <string name="history_in_progress">folyamatban – %1$d. nap</string>
     <string name="history_failed">bukás – %1$d. nap</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Borravaló</string>
     <string name="tip_jar_back">Vissza</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">A Snurko ingyenes és nyílt forráskódú. Az egész, mindenkinek, mindig.</string>
     <string name="tip_jar_unlocks_nothing">Itt semmi nem old fel semmit. Nincs is mit feloldani – a teljes app már a tiéd.</string>
     <string name="tip_jar_fees">A borravaló abba az éves díjba megy, amit az áruház a Snurko fenntartásáért kér. Csak ezért van ez az oldal.</string>

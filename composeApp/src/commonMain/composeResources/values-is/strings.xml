@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Áminningar</string>
     <string name="reminders_back">Til baka</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ekkert er kveikt fyrr en þú velur tíma. Hver venja fær eina áminningu, og aðeins þá daga sem enn er ekki hakað við hana.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Setja áminningu fyrir %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Baksíður</string>
     <string name="history_back">Til baka</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Tilraun %1$d</string>
     <string name="history_in_progress">í gangi — dagur %1$d</string>
     <string name="history_failed">féll á degi %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Framlag</string>
     <string name="tip_jar_back">Til baka</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko er ókeypis og opinn hugbúnaður. Allt saman, fyrir alla, alltaf.</string>
     <string name="tip_jar_unlocks_nothing">Ekkert hér aflæsir neinu. Það er ekkert að aflæsa — þú ert þegar með allt forritið.</string>
     <string name="tip_jar_fees">Framlagið fer upp í árlega gjaldið sem verslunin tekur fyrir að halda Snurko inni. Það er eina ástæðan fyrir því að þessi síða er til.</string>

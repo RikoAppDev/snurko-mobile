@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Recordatoris</string>
     <string name="reminders_back">Enrere</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">No hi ha res actiu fins que no hi posis una hora. Cada hàbit rep un sol recordatori, i només un dia en què encara no estigui marcat.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Posa un recordatori per a %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Pàgines del final</string>
     <string name="history_back">Enrere</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Intent %1$d</string>
     <string name="history_in_progress">en curs — dia %1$d</string>
     <string name="history_failed">fallat el dia %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Propina</string>
     <string name="tip_jar_back">Enrere</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">El Snurko és gratuït i de codi obert. Tot, per a tothom, sempre.</string>
     <string name="tip_jar_unlocks_nothing">Aquí no hi ha res que desbloquegi res. No hi ha res a desbloquejar — l'app ja la tens sencera.</string>
     <string name="tip_jar_fees">Una propina va a la quota anual que la botiga cobra per mantenir el Snurko al catàleg. És l'única raó per la qual existeix aquesta pàgina.</string>

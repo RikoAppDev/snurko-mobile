@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Erinnerungen</string>
     <string name="reminders_back">Zurück</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Nichts läuft, bis du eine Uhrzeit setzt. Jede Gewohnheit bekommt einen Anstupser, und nur an einem Tag, der noch nicht abgehakt ist.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Erinnerung für %1$s setzen</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Hinten im Heft</string>
     <string name="history_back">Zurück</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Versuch %1$d</string>
     <string name="history_in_progress">läuft — Tag %1$d</string>
     <string name="history_failed">gescheitert an Tag %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Trinkgeld</string>
     <string name="tip_jar_back">Zurück</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko ist kostenlos und Open Source. Alles davon, für alle, immer.</string>
     <string name="tip_jar_unlocks_nothing">Nichts hier schaltet etwas frei. Es gibt auch nichts freizuschalten — die ganze App gehört dir schon.</string>
     <string name="tip_jar_fees">Ein Trinkgeld geht in die jährliche Gebühr, die der App-Store dafür nimmt, dass Snurko dort steht. Nur deshalb gibt es diese Seite.</string>

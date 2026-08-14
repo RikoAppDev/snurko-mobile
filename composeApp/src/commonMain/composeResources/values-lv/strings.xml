@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Atgādinājumi</string>
     <string name="reminders_back">Atpakaļ</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Nekas nav ieslēgts, kamēr neiestati laiku. Katrs paradums saņem vienu pamudinājumu, un tikai tajā dienā, kad tas vēl nav atzīmēts.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Iestatīt atgādinājumu paradumam %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Aizmugures lappuses</string>
     <string name="history_back">Atpakaļ</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">%1$d. mēģinājums</string>
     <string name="history_in_progress">notiek — %1$d. diena</string>
     <string name="history_failed">kļūme %1$d. dienā</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Ziedojums</string>
     <string name="tip_jar_back">Atpakaļ</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko ir bez maksas un ar atvērtu pirmkodu. Viss, visiem, vienmēr.</string>
     <string name="tip_jar_unlocks_nothing">Šeit nekas neko neatslēdz. Nav arī ko atslēgt — visa lietotne tev jau ir.</string>
     <string name="tip_jar_fees">Ziedojums aiziet uz gada maksu, ko lietotņu veikals ņem par Snurko turēšanu sarakstā. Tikai tāpēc šī lapa vispār pastāv.</string>

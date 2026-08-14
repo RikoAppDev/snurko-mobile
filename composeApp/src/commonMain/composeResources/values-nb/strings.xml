@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Påminnelser</string>
     <string name="reminders_back">Tilbake</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ingenting er på før du setter et tidspunkt. Hver vane får ett lite dult, og bare på en dag som fortsatt står uten hake.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Sett en påminnelse for %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Baksidene</string>
     <string name="history_back">Tilbake</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Forsøk %1$d</string>
     <string name="history_in_progress">pågår — dag %1$d</string>
     <string name="history_failed">bom på dag %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Støtte</string>
     <string name="tip_jar_back">Tilbake</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko er gratis og åpen kildekode. Alt sammen, for alle, alltid.</string>
     <string name="tip_jar_unlocks_nothing">Ingenting her låser opp noe. Det finnes ikke noe å låse opp — du har hele appen fra før.</string>
     <string name="tip_jar_fees">Støtten går til den årlige avgiften butikken tar for å ha Snurko liggende ute. Det er hele grunnen til at denne siden finnes.</string>

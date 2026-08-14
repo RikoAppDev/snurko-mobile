@@ -57,8 +57,6 @@ private val PLURAL_CATEGORIES = mapOf(
 private val VERBATIM_KEYS = setOf(
     "challenge_setup_remove_mark",
     "reminders_switch_off_mark",
-    "reminders_back_mark",
-    "history_back_mark",
     "reminders_off",
     "sticker_wordmark",
     "history_stats_count",

@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Υπενθυμίσεις</string>
     <string name="reminders_back">Πίσω</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Τίποτα δεν είναι ενεργό μέχρι να βάλεις ώρα. Κάθε συνήθεια παίρνει ένα σκούντημα, και μόνο τη μέρα που δεν έχει ακόμη σημάδι.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Βάλε υπενθύμιση για %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Πίσω σελίδες</string>
     <string name="history_back">Πίσω</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Προσπάθεια %1$d</string>
     <string name="history_in_progress">σε εξέλιξη — μέρα %1$d</string>
     <string name="history_failed">αποτυχία τη μέρα %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Φιλοδώρημα</string>
     <string name="tip_jar_back">Πίσω</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Το Snurko είναι δωρεάν και ανοιχτού κώδικα. Όλο του, για όλους, πάντα.</string>
     <string name="tip_jar_unlocks_nothing">Εδώ τίποτα δεν ξεκλειδώνει τίποτα. Δεν υπάρχει τίποτα να ξεκλειδώσεις — έχεις ήδη ολόκληρη την εφαρμογή.</string>
     <string name="tip_jar_fees">Το φιλοδώρημα πάει στο ετήσιο τέλος που χρεώνει το κατάστημα για να μένει το Snurko εκεί. Μόνο γι' αυτό υπάρχει αυτή η σελίδα.</string>

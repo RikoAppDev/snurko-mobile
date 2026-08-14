@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Lembretes</string>
     <string name="reminders_back">Voltar</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Não há nada ligado até pores uma hora. Cada hábito recebe um lembrete, e só num dia em que ainda esteja por marcar.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Pôr um lembrete para %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Páginas do fim</string>
     <string name="history_back">Voltar</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Tentativa %1$d</string>
     <string name="history_in_progress">a decorrer — dia %1$d</string>
     <string name="history_failed">falhou no dia %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Gorjeta</string>
     <string name="tip_jar_back">Voltar</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">O Snurko é gratuito e open source. Tudo, para toda a gente, sempre.</string>
     <string name="tip_jar_unlocks_nothing">Aqui não há nada que desbloqueie seja o que for. Não há nada para desbloquear — já tens a app inteira.</string>
     <string name="tip_jar_fees">Uma gorjeta vai para a taxa anual que a loja cobra para manter o Snurko na lista. É a única razão para esta página existir.</string>

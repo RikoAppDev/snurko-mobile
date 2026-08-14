@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Podsjetnici</string>
     <string name="reminders_back">Nazad</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ništa nije uključeno dok ne podesiš vrijeme. Svaka navika dobija po jedan podsjetnik, i to samo onog dana kad još nije označena.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Podesi podsjetnik za %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Zadnje strane</string>
     <string name="history_back">Nazad</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Pokušaj %1$d</string>
     <string name="history_in_progress">u toku – dan %1$d</string>
     <string name="history_failed">pao na %1$d. danu</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Napojnica</string>
     <string name="tip_jar_back">Nazad</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko je besplatan i otvorenog koda. Cijeli, za svakoga, uvijek.</string>
     <string name="tip_jar_unlocks_nothing">Ovdje ništa ne otključava ništa. Nema šta ni da se otključa – cijelu aplikaciju već imaš.</string>
     <string name="tip_jar_fees">Napojnica ide na godišnju naknadu koju prodavnica naplaćuje da bi Snurko ostao na spisku. To je jedini razlog zašto ova strana postoji.</string>

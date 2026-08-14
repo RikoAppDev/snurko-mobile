@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Tfakkiriet</string>
     <string name="reminders_back">Lura</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Xejn ma jitħaddem qabel ma tagħżel ħin. Kull drawwa tieħu tfakkira waħda, u biss f'jum li għadu mhux immarkat.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Issettja tfakkira għal %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Il-paġni ta' wara</string>
     <string name="history_back">Lura</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Tentattiv %1$d</string>
     <string name="history_in_progress">għaddej — jum %1$d</string>
     <string name="history_failed">falla f'jum %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Għotja</string>
     <string name="tip_jar_back">Lura</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko huwa b'xejn u open source. Kollu, għal kulħadd, dejjem.</string>
     <string name="tip_jar_unlocks_nothing">Hawn xejn ma jiftaħ xejn. M'hemm xejn x'tiftaħ — l-app kollha diġà tiegħek.</string>
     <string name="tip_jar_fees">Għotja tmur għall-ħlas annwali li jitlob il-ħanut tal-apps biex Snurko jibqa' fil-lista. Din il-paġna teżisti għal dik ir-raġuni biss.</string>

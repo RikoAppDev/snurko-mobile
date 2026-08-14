@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Promemoria</string>
     <string name="reminders_back">Indietro</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Non è attivo niente finché non imposti un orario. Ogni abitudine riceve un solo promemoria, e solo in un giorno in cui non ha ancora la spunta.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Imposta un promemoria per %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Pagine in fondo</string>
     <string name="history_back">Indietro</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Tentativo %1$d</string>
     <string name="history_in_progress">in corso — giorno %1$d</string>
     <string name="history_failed">fallito al giorno %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Mancia</string>
     <string name="tip_jar_back">Indietro</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko è gratis e open source. Tutto, per tutti, per sempre.</string>
     <string name="tip_jar_unlocks_nothing">Qui non c’è niente che sblocchi qualcosa. Non c’è niente da sbloccare — l’app ce l’hai già tutta.</string>
     <string name="tip_jar_fees">Una mancia va sulla tariffa annuale che lo store chiede per tenere Snurko in elenco. È l’unico motivo per cui questa pagina esiste.</string>

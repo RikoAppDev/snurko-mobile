@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Připomínky</string>
     <string name="reminders_back">Zpět</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Dokud nenastavíš čas, nic neběží. Každý návyk dostane jedno připomenutí, a to jen v den, kdy ještě nemá značku.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Nastavit připomínku pro %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Zadní strany</string>
     <string name="history_back">Zpět</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Pokus %1$d</string>
     <string name="history_in_progress">probíhá — den %1$d</string>
     <string name="history_failed">selhal %1$d. den</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Příspěvek</string>
     <string name="tip_jar_back">Zpět</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko je zdarma a open source. Celé, pro každého, napořád.</string>
     <string name="tip_jar_unlocks_nothing">Nic z toho nic neodemyká. Není co odemykat — celou apku už máš.</string>
     <string name="tip_jar_fees">Příspěvek jde na roční poplatek, který si obchod účtuje za to, aby Snurko zůstalo v nabídce. Jiný důvod tahle stránka nemá.</string>

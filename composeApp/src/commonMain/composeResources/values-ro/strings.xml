@@ -49,7 +49,6 @@
 
     <string name="reminders_title">Mementouri</string>
     <string name="reminders_back">Înapoi</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Nu e nimic pornit până nu pui o oră. Fiecare obicei primește un singur memento, și doar într-o zi în care încă nu e bifat.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Pune un memento pentru %1$s</string>
@@ -73,7 +72,6 @@
 
     <string name="history_title">Paginile din spate</string>
     <string name="history_back">Înapoi</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Încercarea %1$d</string>
     <string name="history_in_progress">în curs — ziua %1$d</string>
     <string name="history_failed">ratată în ziua %1$d</string>
@@ -108,7 +106,6 @@
 
     <string name="tip_jar_title">Bacșiș</string>
     <string name="tip_jar_back">Înapoi</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko e gratuit și open source. Tot, pentru toată lumea, mereu.</string>
     <string name="tip_jar_unlocks_nothing">Nimic de aici nu deblochează nimic. Nici nu are ce să deblocheze — aplicația o ai deja întreagă.</string>
     <string name="tip_jar_fees">Un bacșiș se duce în taxa anuală pe care o cere magazinul ca să țină Snurko pe listă. Ăsta e singurul motiv pentru care există pagina asta.</string>

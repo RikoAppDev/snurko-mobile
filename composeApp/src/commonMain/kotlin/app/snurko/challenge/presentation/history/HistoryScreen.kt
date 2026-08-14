@@ -43,6 +43,8 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.snurko.billing.domain.isTipJarAvailable
 import app.snurko.challenge.domain.NotebookStats
+import app.snurko.core.designsystem.BackChevronButton
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.domain.DataError
@@ -55,7 +57,6 @@ import app.snurko.resources.backup_error_unknown
 import app.snurko.resources.backup_error_unsupported_version
 import app.snurko.resources.history_attempt
 import app.snurko.resources.history_back
-import app.snurko.resources.history_back_mark
 import app.snurko.resources.history_completed
 import app.snurko.resources.history_completion
 import app.snurko.resources.history_date
@@ -199,28 +200,16 @@ fun HistoryScreen(
 
 @Composable
 private fun HistoryHeader(onNavigateBack: () -> Unit) {
-    val backDescription = stringResource(Res.string.history_back)
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = PAGE_PADDING - 8.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clickable(role = Role.Button, onClick = onNavigateBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(Res.string.history_back_mark),
-                style = MaterialTheme.typography.titleLarge,
-                color = SnurkoColors.text,
-                modifier = Modifier.clearAndSetSemantics { },
-            )
-        }
+        BackChevronButton(
+            contentDescription = stringResource(Res.string.history_back),
+            onClick = onNavigateBack,
+        )
         Text(
             text = stringResource(Res.string.history_title),
             style = MaterialTheme.typography.displaySmall,
@@ -401,8 +390,9 @@ private fun QuietRow(label: String, onClick: () -> Unit, isEnabled: Boolean = tr
         modifier = Modifier
             .fillMaxWidth()
             .heightIn(min = 56.dp)
+            .clip(QuietTapShape)
             .clickable(enabled = isEnabled, role = Role.Button, onClick = onClick)
-            .padding(vertical = 8.dp),
+            .padding(horizontal = 6.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(
