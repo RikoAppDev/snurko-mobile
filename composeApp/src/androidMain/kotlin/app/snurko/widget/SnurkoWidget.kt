@@ -1,6 +1,7 @@
 package app.snurko.widget
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -14,10 +15,10 @@ import androidx.glance.Image
 import androidx.glance.ImageProvider
 import androidx.glance.LocalContext
 import androidx.glance.LocalSize
-import androidx.glance.action.actionStartActivity
 import androidx.glance.action.clickable
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.SizeMode
+import androidx.glance.appwidget.action.actionStartActivity
 import androidx.glance.appwidget.appWidgetBackground
 import androidx.glance.appwidget.cornerRadius
 import androidx.glance.appwidget.provideContent
@@ -113,9 +114,22 @@ class SnurkoWidget : GlanceAppWidget(), KoinComponent {
     }
 }
 
+/**
+ * Reuses the task the launcher would resume instead of stacking a second copy of the
+ * activity, so one back press leaves the app.
+ */
+private fun openAppIntent(context: Context) = Intent(context, MainActivity::class.java).apply {
+    action = Intent.ACTION_MAIN
+    addCategory(Intent.CATEGORY_LAUNCHER)
+    flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+        Intent.FLAG_ACTIVITY_CLEAR_TOP or
+        Intent.FLAG_ACTIVITY_SINGLE_TOP
+}
+
 @Composable
 private fun SnurkoWidgetContent(state: WidgetState, labels: WidgetLabels) {
     val size = LocalSize.current
+    val context = LocalContext.current
     val gridState = (state as? WidgetState.Challenge)?.takeIf { size.height >= GRID_MIN_HEIGHT }
 
     Column(
@@ -124,7 +138,7 @@ private fun SnurkoWidgetContent(state: WidgetState, labels: WidgetLabels) {
             .appWidgetBackground()
             .background(ColorProvider(SnurkoColors.paper))
             .cornerRadius(WIDGET_CORNER)
-            .clickable(actionStartActivity<MainActivity>())
+            .clickable(actionStartActivity(openAppIntent(context)))
             .semantics { contentDescription = labels.openApp }
             .padding(PAGE_PADDING),
         verticalAlignment = if (gridState == null) Alignment.CenterVertically else Alignment.Top,
