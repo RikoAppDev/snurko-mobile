@@ -42,7 +42,7 @@ private const val GRID_COLUMNS = 10
 private const val GRID_ROWS = 9
 
 private val CARD_PADDING = 26.dp
-private val HEADER_HEIGHT = 64.dp
+private val HEADER_HEIGHT = 76.dp
 private val HEADER_GAP = 10.dp
 private val LIST_GAP = 14.dp
 private val WORDMARK_RESERVE = 20.dp
