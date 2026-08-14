@@ -3,7 +3,9 @@ package app.snurko.di
 import androidx.room3.Room
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
 import app.snurko.challenge.data.RoomChallengeRepository
+import app.snurko.challenge.data.RoomSetupDraftRepository
 import app.snurko.challenge.domain.ChallengeRepository
+import app.snurko.challenge.domain.SetupDraftRepository
 import app.snurko.core.database.SnurkoDatabase
 import assertk.assertThat
 import assertk.assertions.isInstanceOf
@@ -40,5 +42,18 @@ class ChallengeDataModuleTest {
         }.koin
 
         assertThat(koin.get<ChallengeRepository>()).isInstanceOf(RoomChallengeRepository::class)
+    }
+
+    @Test
+    fun setupDraftRepositoryIsResolvedFromTheDatabaseAndChallengeModules() {
+        val koin = koinApplication {
+            modules(
+                module { single { database } },
+                databaseModule,
+                challengeDataModule,
+            )
+        }.koin
+
+        assertThat(koin.get<SetupDraftRepository>()).isInstanceOf(RoomSetupDraftRepository::class)
     }
 }

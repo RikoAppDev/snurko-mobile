@@ -6,7 +6,9 @@ import app.snurko.billing.presentation.TipJarViewModel
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.FakeChallengeRepository
 import app.snurko.challenge.domain.FakeNotebookBackup
+import app.snurko.challenge.domain.FakeSetupDraftRepository
 import app.snurko.challenge.domain.NotebookBackup
+import app.snurko.challenge.domain.SetupDraftRepository
 import app.snurko.challenge.presentation.history.HistoryViewModel
 import app.snurko.challenge.presentation.home.ChallengeHomeViewModel
 import app.snurko.challenge.presentation.setup.ChallengeSetupViewModel
@@ -35,6 +37,7 @@ class PresentationModuleTest {
                 single<ReminderRepository> { FakeReminderRepository() }
                 single<NotificationPermissionGateway> { FakeNotificationPermissionGateway() }
                 single<BillingGateway> { FakeBillingGateway() }
+                single<SetupDraftRepository> { FakeSetupDraftRepository() }
             },
             coreModule,
             presentationModule,
