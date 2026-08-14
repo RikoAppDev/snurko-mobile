@@ -67,7 +67,10 @@ class ChallengeSetupViewModel(
             }
         }
 
-        updateState { it.copy(habits = habits).withClearedInput() }
+        updateState {
+            it.copy(habits = habits, habitNameFocusRequest = it.habitNameFocusRequest + 1)
+                .withClearedInput()
+        }
         persistDraft(habits)
     }
 

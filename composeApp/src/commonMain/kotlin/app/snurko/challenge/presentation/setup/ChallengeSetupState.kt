@@ -23,6 +23,8 @@ data class ChallengeSetupState(
     val editedHabitId: Long? = null,
     val isConfirmingStart: Boolean = false,
     val isStarting: Boolean = false,
+    /** Bumped every time the habit name field should take the caret back. */
+    val habitNameFocusRequest: Int = 0,
 ) : UiState {
 
     val habitName: String get() = habitNameInput.trim()

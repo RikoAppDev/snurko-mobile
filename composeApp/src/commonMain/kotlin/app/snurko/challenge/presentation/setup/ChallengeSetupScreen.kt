@@ -34,12 +34,15 @@ import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
@@ -246,6 +249,14 @@ private fun HabitInput(
     state: ChallengeSetupState,
     onAction: (ChallengeSetupAction) -> Unit,
 ) {
+    val habitNameFocus = remember { FocusRequester() }
+
+    LaunchedEffect(state.habitNameFocusRequest) {
+        if (state.habitNameFocusRequest > 0) {
+            habitNameFocus.requestFocus()
+        }
+    }
+
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -259,6 +270,7 @@ private fun HabitInput(
             label = stringResource(Res.string.challenge_setup_habit_name_label),
             placeholder = stringResource(Res.string.challenge_setup_habit_name_placeholder),
             imeAction = ImeAction.Next,
+            focusRequester = habitNameFocus,
         )
         PaperTextField(
             value = state.failConditionInput,
@@ -323,11 +335,14 @@ private fun PaperTextField(
     placeholder: String,
     imeAction: ImeAction,
     onImeAction: () -> Unit = {},
+    focusRequester: FocusRequester? = null,
 ) {
     OutlinedTextField(
         value = value,
         onValueChange = onValueChange,
-        modifier = Modifier.fillMaxWidth(),
+        modifier = Modifier
+            .fillMaxWidth()
+            .then(focusRequester?.let { Modifier.focusRequester(it) } ?: Modifier),
         label = { Text(label) },
         placeholder = { Text(placeholder) },
         singleLine = true,

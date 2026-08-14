@@ -330,6 +330,38 @@ class ChallengeSetupViewModelTest {
     }
 
     @Test
+    fun addingAHabitAsksForTheCaretBackInTheNameField() {
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(0)
+
+        addHabit("Read")
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(1)
+
+        addHabit("Workout")
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(2)
+    }
+
+    @Test
+    fun savingAnEditAlsoAsksForTheCaretBackInTheNameField() {
+        addHabit("Read")
+        val id = viewModel.state.value.habits.single().id
+
+        viewModel.onAction(ChallengeSetupAction.HabitEditRequested(id))
+        viewModel.onAction(ChallengeSetupAction.HabitNameChanged("Read a book"))
+        viewModel.onAction(ChallengeSetupAction.HabitSubmitted)
+
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(2)
+    }
+
+    @Test
+    fun aRejectedHabitLeavesTheCaretWhereItIs() {
+        viewModel.onAction(ChallengeSetupAction.HabitNameChanged("   "))
+
+        viewModel.onAction(ChallengeSetupAction.HabitSubmitted)
+
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(0)
+    }
+
+    @Test
     fun everyAddedHabitIsWrittenToTheDraft() {
         addHabit("Workout", "less than 30 minutes")
         addHabit("Read")
