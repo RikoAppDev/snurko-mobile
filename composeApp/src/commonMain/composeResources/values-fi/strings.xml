@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Kirjoita tavat, jotka pidät joka päivä seuraavat 90 päivää.</string>
 
     <string name="challenge_setup_habit_name_label">Tapa</string>
-    <string name="challenge_setup_habit_name_placeholder">Lue 10 sivua</string>
     <string name="challenge_setup_fail_condition_label">Mikä lasketaan epäonnistumiseksi (valinnainen)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Alle 10 sivua</string>
+
+    <string name="challenge_setup_example_habit_1">Lue 10 sivua</string>
+    <string name="challenge_setup_example_rule_1">Alle 10 sivua</string>
+    <string name="challenge_setup_example_habit_2">Kävele puoli tuntia</string>
+    <string name="challenge_setup_example_rule_2">Alle puoli tuntia jalan</string>
+    <string name="challenge_setup_example_habit_3">Kylmä suihku – jos käyt suihkussa</string>
+    <string name="challenge_setup_example_rule_3">Hana käännetty lämpimälle</string>
+    <string name="challenge_setup_example_habit_4">Ei puhelinta ennen aamiaista</string>
+    <string name="challenge_setup_example_rule_4">Puhelin auki ennen ensimmäistä palaa</string>
+    <string name="challenge_setup_example_habit_5">Kymmenen punnerrusta</string>
+    <string name="challenge_setup_example_rule_5">Yhdeksän tai vähemmän</string>
+    <string name="challenge_setup_example_habit_6">Sängyssä ennen yhtätoista</string>
+    <string name="challenge_setup_example_rule_6">Valot vielä päällä keskiyöllä</string>
+
+    <string name="challenge_setup_tip">Tapa voi olla ehdollinen – kerro, milloin se pätee ja mikä sen rikkoo.</string>
+    <string name="challenge_setup_rules_link">Näin kirjoitat kestävät säännöt</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lisää tapa</string>
     <string name="challenge_setup_save_habit">Tallenna tapa</string>

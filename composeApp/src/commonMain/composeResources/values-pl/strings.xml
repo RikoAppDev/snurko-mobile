@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Wypisz nawyki, które będziesz robić codziennie przez najbliższe 90 dni.</string>
 
     <string name="challenge_setup_habit_name_label">Nawyk</string>
-    <string name="challenge_setup_habit_name_placeholder">Przeczytać 10 stron</string>
     <string name="challenge_setup_fail_condition_label">Co liczy się jako wpadka (opcjonalnie)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Mniej niż 10 stron</string>
+
+    <string name="challenge_setup_example_habit_1">Przeczytać 10 stron</string>
+    <string name="challenge_setup_example_rule_1">Mniej niż 10 stron</string>
+    <string name="challenge_setup_example_habit_2">Przejść się pół godziny</string>
+    <string name="challenge_setup_example_rule_2">Mniej niż pół godziny pieszo</string>
+    <string name="challenge_setup_example_habit_3">Zimny prysznic — jeśli się myjesz</string>
+    <string name="challenge_setup_example_rule_3">Kran przekręcony na ciepłą wodę</string>
+    <string name="challenge_setup_example_habit_4">Żadnego telefonu przed śniadaniem</string>
+    <string name="challenge_setup_example_rule_4">Odblokować go przed pierwszym kęsem</string>
+    <string name="challenge_setup_example_habit_5">Dziesięć pompek</string>
+    <string name="challenge_setup_example_rule_5">Dziewięć albo mniej</string>
+    <string name="challenge_setup_example_habit_6">Położyć się do jedenastej</string>
+    <string name="challenge_setup_example_rule_6">O północy wciąż się świeci</string>
+
+    <string name="challenge_setup_tip">Nawyk może mieć warunek — napisz, kiedy obowiązuje i co go przekreśla.</string>
+    <string name="challenge_setup_rules_link">Jak pisać zasady, które wytrzymają</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Dodaj nawyk</string>
     <string name="challenge_setup_save_habit">Zapisz nawyk</string>

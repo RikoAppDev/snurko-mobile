@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Skriv de vaner ned, du vil holde hver dag de næste 90 dage.</string>
 
     <string name="challenge_setup_habit_name_label">Vane</string>
-    <string name="challenge_setup_habit_name_placeholder">Læs 10 sider</string>
     <string name="challenge_setup_fail_condition_label">Hvad tæller som at misse (valgfrit)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Færre end 10 sider</string>
+
+    <string name="challenge_setup_example_habit_1">Læs 10 sider</string>
+    <string name="challenge_setup_example_rule_1">Færre end 10 sider</string>
+    <string name="challenge_setup_example_habit_2">Gå en halv time</string>
+    <string name="challenge_setup_example_rule_2">Mindre end en halv time til fods</string>
+    <string name="challenge_setup_example_habit_3">Kold bruser — hvis du bader</string>
+    <string name="challenge_setup_example_rule_3">Hanen drejet over mod det varme</string>
+    <string name="challenge_setup_example_habit_4">Ingen telefon før morgenmaden</string>
+    <string name="challenge_setup_example_rule_4">Låst op før første mundfuld</string>
+    <string name="challenge_setup_example_habit_5">Ti armstrækninger</string>
+    <string name="challenge_setup_example_rule_5">Ni eller færre</string>
+    <string name="challenge_setup_example_habit_6">I seng inden elleve</string>
+    <string name="challenge_setup_example_rule_6">Lyset stadig tændt ved midnat</string>
+
+    <string name="challenge_setup_tip">En vane må gerne have en betingelse — skriv hvornår den gælder, og hvad der bryder den.</string>
+    <string name="challenge_setup_rules_link">Skriv regler, der holder</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Tilføj</string>
     <string name="challenge_setup_save_habit">Gem</string>

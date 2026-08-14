@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Запиши привычки, которые будешь держать каждый день следующие 90 дней.</string>
 
     <string name="challenge_setup_habit_name_label">Привычка</string>
-    <string name="challenge_setup_habit_name_placeholder">Прочитать 10 страниц</string>
     <string name="challenge_setup_fail_condition_label">Что считается срывом (необязательно)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Меньше 10 страниц</string>
+
+    <string name="challenge_setup_example_habit_1">Прочитать 10 страниц</string>
+    <string name="challenge_setup_example_rule_1">Меньше 10 страниц</string>
+    <string name="challenge_setup_example_habit_2">Пройтись полчаса</string>
+    <string name="challenge_setup_example_rule_2">Меньше получаса пешком</string>
+    <string name="challenge_setup_example_habit_3">Холодный душ — если моешься</string>
+    <string name="challenge_setup_example_rule_3">Кран повёрнут на горячую воду</string>
+    <string name="challenge_setup_example_habit_4">Никакого телефона до завтрака</string>
+    <string name="challenge_setup_example_rule_4">Разблокировать его до первого куска</string>
+    <string name="challenge_setup_example_habit_5">Десять отжиманий</string>
+    <string name="challenge_setup_example_rule_5">Девять или меньше</string>
+    <string name="challenge_setup_example_habit_6">Лечь до одиннадцати</string>
+    <string name="challenge_setup_example_rule_6">В полночь свет ещё горит</string>
+
+    <string name="challenge_setup_tip">У привычки может быть условие — напиши, когда она действует и что её срывает.</string>
+    <string name="challenge_setup_rules_link">Как писать правила, которые выдержат</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Добавить</string>
     <string name="challenge_setup_save_habit">Сохранить</string>

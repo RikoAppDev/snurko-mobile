@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Skrifaðu niður venjurnar sem þú ætlar að halda á hverjum degi næstu 90 daga.</string>
 
     <string name="challenge_setup_habit_name_label">Venja</string>
-    <string name="challenge_setup_habit_name_placeholder">Lesa 10 blaðsíður</string>
     <string name="challenge_setup_fail_condition_label">Hvað telst fall (valfrjálst)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Færri en 10 blaðsíður</string>
+
+    <string name="challenge_setup_example_habit_1">Lesa 10 blaðsíður</string>
+    <string name="challenge_setup_example_rule_1">Færri en 10 blaðsíður</string>
+    <string name="challenge_setup_example_habit_2">Ganga í hálftíma</string>
+    <string name="challenge_setup_example_rule_2">Minna en hálftími gangandi</string>
+    <string name="challenge_setup_example_habit_3">Köld sturta — ef þú ferð í sturtu</string>
+    <string name="challenge_setup_example_rule_3">Kraninn skrúfaður yfir á heitt</string>
+    <string name="challenge_setup_example_habit_4">Enginn sími fyrir morgunmat</string>
+    <string name="challenge_setup_example_rule_4">Síminn aflæstur fyrir fyrsta bitann</string>
+    <string name="challenge_setup_example_habit_5">Tíu armbeygjur</string>
+    <string name="challenge_setup_example_rule_5">Níu eða færri</string>
+    <string name="challenge_setup_example_habit_6">Í rúmið fyrir ellefu</string>
+    <string name="challenge_setup_example_rule_6">Ljósið enn kveikt á miðnætti</string>
+
+    <string name="challenge_setup_tip">Venja getur verið skilyrt — segðu hvenær hún á við og hvað fellir hana.</string>
+    <string name="challenge_setup_rules_link">Að skrifa reglur sem halda</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Bæta við</string>
     <string name="challenge_setup_save_habit">Vista</string>

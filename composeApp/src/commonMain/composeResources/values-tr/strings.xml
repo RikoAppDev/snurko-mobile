@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Önümüzdeki 90 gün boyunca her gün sürdüreceğin alışkanlıkları yaz.</string>
 
     <string name="challenge_setup_habit_name_label">Alışkanlık</string>
-    <string name="challenge_setup_habit_name_placeholder">10 sayfa oku</string>
     <string name="challenge_setup_fail_condition_label">Neye başarısızlık denir (isteğe bağlı)</string>
-    <string name="challenge_setup_fail_condition_placeholder">10 sayfadan az</string>
+
+    <string name="challenge_setup_example_habit_1">10 sayfa oku</string>
+    <string name="challenge_setup_example_rule_1">10 sayfadan az</string>
+    <string name="challenge_setup_example_habit_2">Yarım saat yürü</string>
+    <string name="challenge_setup_example_rule_2">Yarım saatten az yürüyüş</string>
+    <string name="challenge_setup_example_habit_3">Soğuk duş — duş alıyorsan</string>
+    <string name="challenge_setup_example_rule_3">Musluk sıcağa çevrildi</string>
+    <string name="challenge_setup_example_habit_4">Kahvaltıdan önce telefon yok</string>
+    <string name="challenge_setup_example_rule_4">İlk lokmadan önce kilidi açmak</string>
+    <string name="challenge_setup_example_habit_5">On şınav</string>
+    <string name="challenge_setup_example_rule_5">Dokuz veya daha az</string>
+    <string name="challenge_setup_example_habit_6">On bire kadar yatakta</string>
+    <string name="challenge_setup_example_rule_6">Gece yarısı ışık hâlâ açık</string>
+
+    <string name="challenge_setup_tip">Bir alışkanlık koşullu olabilir — ne zaman geçerli olduğunu ve onu neyin bozduğunu yaz.</string>
+    <string name="challenge_setup_rules_link">Tutan kurallar nasıl yazılır</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Ekle</string>
     <string name="challenge_setup_save_habit">Kaydet</string>

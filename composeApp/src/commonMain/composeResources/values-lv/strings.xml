@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Pieraksti paradumus, ko pildīsi katru dienu nākamās 90 dienas.</string>
 
     <string name="challenge_setup_habit_name_label">Paradums</string>
-    <string name="challenge_setup_habit_name_placeholder">Izlasīt 10 lappuses</string>
     <string name="challenge_setup_fail_condition_label">Kas skaitās kā kļūme (nav obligāti)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Mazāk nekā 10 lappuses</string>
+
+    <string name="challenge_setup_example_habit_1">Izlasīt 10 lappuses</string>
+    <string name="challenge_setup_example_rule_1">Mazāk nekā 10 lappuses</string>
+    <string name="challenge_setup_example_habit_2">Pastaigāt pusstundu</string>
+    <string name="challenge_setup_example_rule_2">Mazāk nekā pusstunda kājām</string>
+    <string name="challenge_setup_example_habit_3">Auksta duša — ja eju dušā</string>
+    <string name="challenge_setup_example_rule_3">Krāns pagriezts uz silto pusi</string>
+    <string name="challenge_setup_example_habit_4">Bez telefona pirms brokastīm</string>
+    <string name="challenge_setup_example_rule_4">Atbloķēts pirms pirmā kumosa</string>
+    <string name="challenge_setup_example_habit_5">Desmit atspiešanās</string>
+    <string name="challenge_setup_example_rule_5">Deviņas vai mazāk</string>
+    <string name="challenge_setup_example_habit_6">Gultā līdz vienpadsmitiem</string>
+    <string name="challenge_setup_example_rule_6">Pusnaktī gaisma vēl deg</string>
+
+    <string name="challenge_setup_tip">Paradums var būt nosacīts — pasaki, kad tas ir spēkā un kas to lauž.</string>
+    <string name="challenge_setup_rules_link">Kā rakstīt noteikumus, kas iztur</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Pievienot</string>
     <string name="challenge_setup_save_habit">Saglabāt</string>

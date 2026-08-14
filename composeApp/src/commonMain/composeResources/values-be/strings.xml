@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Запішы звычкі, якія будзеш трымаць кожны дзень наступныя 90 дзён.</string>
 
     <string name="challenge_setup_habit_name_label">Звычка</string>
-    <string name="challenge_setup_habit_name_placeholder">Прачытаць 10 старонак</string>
     <string name="challenge_setup_fail_condition_label">Што лічыцца зрывам (неабавязкова)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Менш за 10 старонак</string>
+
+    <string name="challenge_setup_example_habit_1">Прачытаць 10 старонак</string>
+    <string name="challenge_setup_example_rule_1">Менш за 10 старонак</string>
+    <string name="challenge_setup_example_habit_2">Прайсціся паўгадзіны</string>
+    <string name="challenge_setup_example_rule_2">Менш за паўгадзіны пехатой</string>
+    <string name="challenge_setup_example_habit_3">Халодны душ — калі мыешся</string>
+    <string name="challenge_setup_example_rule_3">Кран павернуты на гарачую ваду</string>
+    <string name="challenge_setup_example_habit_4">Ніякага тэлефона да сняданку</string>
+    <string name="challenge_setup_example_rule_4">Разблакаваць яго да першага кавалка</string>
+    <string name="challenge_setup_example_habit_5">Дзесяць адцісканняў</string>
+    <string name="challenge_setup_example_rule_5">Дзевяць або менш</string>
+    <string name="challenge_setup_example_habit_6">Легчы да адзінаццатай</string>
+    <string name="challenge_setup_example_rule_6">Апоўначы яшчэ гарыць святло</string>
+
+    <string name="challenge_setup_tip">Звычка можа мець умову — напішы, калі яна дзейнічае і што яе зрывае.</string>
+    <string name="challenge_setup_rules_link">Як пісаць правілы, якія вытрымаюць</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Дадаць</string>
     <string name="challenge_setup_save_habit">Захаваць</string>

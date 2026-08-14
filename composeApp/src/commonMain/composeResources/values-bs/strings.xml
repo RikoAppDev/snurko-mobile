@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Zapiši navike koje ćeš držati svaki dan narednih 90 dana.</string>
 
     <string name="challenge_setup_habit_name_label">Navika</string>
-    <string name="challenge_setup_habit_name_placeholder">Pročitaj 10 strana</string>
     <string name="challenge_setup_fail_condition_label">Šta se računa kao pad (opcionalno)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Manje od 10 strana</string>
+
+    <string name="challenge_setup_example_habit_1">Pročitaj 10 strana</string>
+    <string name="challenge_setup_example_rule_1">Manje od 10 strana</string>
+    <string name="challenge_setup_example_habit_2">Hodaj pola sata</string>
+    <string name="challenge_setup_example_rule_2">Manje od pola sata hoda</string>
+    <string name="challenge_setup_example_habit_3">Hladan tuš – ako se tuširaš</string>
+    <string name="challenge_setup_example_rule_3">Slavina okrenuta na toplu stranu</string>
+    <string name="challenge_setup_example_habit_4">Bez telefona do doručka</string>
+    <string name="challenge_setup_example_rule_4">Telefon otključan prije prvog zalogaja</string>
+    <string name="challenge_setup_example_habit_5">Deset sklekova</string>
+    <string name="challenge_setup_example_rule_5">Devet ili manje</string>
+    <string name="challenge_setup_example_habit_6">U krevetu do jedanaest</string>
+    <string name="challenge_setup_example_rule_6">Svjetlo još gori u ponoć</string>
+
+    <string name="challenge_setup_tip">Navika može biti uslovna – reci kad važi i šta je ruši.</string>
+    <string name="challenge_setup_rules_link">Kako se pišu pravila koja drže</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Dodaj naviku</string>
     <string name="challenge_setup_save_habit">Sačuvaj naviku</string>

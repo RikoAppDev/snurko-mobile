@@ -44,6 +44,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
@@ -52,6 +53,7 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
 import app.snurko.core.presentation.ObserveAsEvents
@@ -66,18 +68,31 @@ import app.snurko.resources.challenge_setup_confirm_restart
 import app.snurko.resources.challenge_setup_confirm_start
 import app.snurko.resources.challenge_setup_confirm_title
 import app.snurko.resources.challenge_setup_edit_habit
+import app.snurko.resources.challenge_setup_example_habit_1
+import app.snurko.resources.challenge_setup_example_habit_2
+import app.snurko.resources.challenge_setup_example_habit_3
+import app.snurko.resources.challenge_setup_example_habit_4
+import app.snurko.resources.challenge_setup_example_habit_5
+import app.snurko.resources.challenge_setup_example_habit_6
+import app.snurko.resources.challenge_setup_example_rule_1
+import app.snurko.resources.challenge_setup_example_rule_2
+import app.snurko.resources.challenge_setup_example_rule_3
+import app.snurko.resources.challenge_setup_example_rule_4
+import app.snurko.resources.challenge_setup_example_rule_5
+import app.snurko.resources.challenge_setup_example_rule_6
 import app.snurko.resources.challenge_setup_fail_condition_label
-import app.snurko.resources.challenge_setup_fail_condition_placeholder
 import app.snurko.resources.challenge_setup_habit_name_label
-import app.snurko.resources.challenge_setup_habit_name_placeholder
 import app.snurko.resources.challenge_setup_hint_duplicate_name
 import app.snurko.resources.challenge_setup_hint_name_required
 import app.snurko.resources.challenge_setup_invitation
 import app.snurko.resources.challenge_setup_remove_habit
 import app.snurko.resources.challenge_setup_remove_mark
+import app.snurko.resources.challenge_setup_rules_link
+import app.snurko.resources.challenge_setup_rules_url
 import app.snurko.resources.challenge_setup_save_habit
 import app.snurko.resources.challenge_setup_start
 import app.snurko.resources.challenge_setup_start_failed
+import app.snurko.resources.challenge_setup_tip
 import app.snurko.resources.challenge_setup_title
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.pluralStringResource
@@ -264,11 +279,13 @@ private fun HabitInput(
             .padding(top = 16.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
+        val example = state.exampleIndex.mod(SETUP_EXAMPLE_COUNT)
+
         PaperTextField(
             value = state.habitNameInput,
             onValueChange = { onAction(ChallengeSetupAction.HabitNameChanged(it)) },
             label = stringResource(Res.string.challenge_setup_habit_name_label),
-            placeholder = stringResource(Res.string.challenge_setup_habit_name_placeholder),
+            placeholder = stringResource(exampleHabits[example]),
             imeAction = ImeAction.Next,
             focusRequester = habitNameFocus,
         )
@@ -276,7 +293,7 @@ private fun HabitInput(
             value = state.failConditionInput,
             onValueChange = { onAction(ChallengeSetupAction.FailConditionChanged(it)) },
             label = stringResource(Res.string.challenge_setup_fail_condition_label),
-            placeholder = stringResource(Res.string.challenge_setup_fail_condition_placeholder),
+            placeholder = stringResource(exampleRules[example]),
             imeAction = ImeAction.Done,
             onImeAction = { onAction(ChallengeSetupAction.HabitSubmitted) },
         )
@@ -324,8 +341,56 @@ private fun HabitInput(
                 )
             }
         }
+
+        SetupGuidance()
     }
 }
+
+@Composable
+private fun SetupGuidance() {
+    val uriHandler = LocalUriHandler.current
+    val rulesUrl = stringResource(Res.string.challenge_setup_rules_url)
+
+    Column(modifier = Modifier.fillMaxWidth()) {
+        Text(
+            text = stringResource(Res.string.challenge_setup_tip),
+            style = MaterialTheme.typography.bodySmall,
+            color = SnurkoColors.textMuted,
+        )
+        Box(
+            modifier = Modifier
+                .heightIn(min = 48.dp)
+                .clip(QuietTapShape)
+                .clickable(role = Role.Button) { uriHandler.openUri(rulesUrl) }
+                .padding(horizontal = 6.dp),
+            contentAlignment = Alignment.CenterStart,
+        ) {
+            Text(
+                text = stringResource(Res.string.challenge_setup_rules_link),
+                style = MaterialTheme.typography.bodyMedium,
+                color = SnurkoColors.accentInk,
+            )
+        }
+    }
+}
+
+private val exampleHabits = listOf(
+    Res.string.challenge_setup_example_habit_1,
+    Res.string.challenge_setup_example_habit_2,
+    Res.string.challenge_setup_example_habit_3,
+    Res.string.challenge_setup_example_habit_4,
+    Res.string.challenge_setup_example_habit_5,
+    Res.string.challenge_setup_example_habit_6,
+)
+
+private val exampleRules = listOf(
+    Res.string.challenge_setup_example_rule_1,
+    Res.string.challenge_setup_example_rule_2,
+    Res.string.challenge_setup_example_rule_3,
+    Res.string.challenge_setup_example_rule_4,
+    Res.string.challenge_setup_example_rule_5,
+    Res.string.challenge_setup_example_rule_6,
+)
 
 @Composable
 private fun PaperTextField(

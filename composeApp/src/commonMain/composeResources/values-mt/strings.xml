@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Ikteb id-drawwiet li se żżomm kuljum għal 90 jum.</string>
 
     <string name="challenge_setup_habit_name_label">Drawwa</string>
-    <string name="challenge_setup_habit_name_placeholder">Aqra 10 paġni</string>
     <string name="challenge_setup_fail_condition_label">X'jgħodd bħala falliment (mhux obbligatorju)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Inqas minn 10 paġni</string>
+
+    <string name="challenge_setup_example_habit_1">Aqra 10 paġni</string>
+    <string name="challenge_setup_example_rule_1">Inqas minn 10 paġni</string>
+    <string name="challenge_setup_example_habit_2">Imxi nofs siegħa</string>
+    <string name="challenge_setup_example_rule_2">Inqas minn nofs siegħa mixi</string>
+    <string name="challenge_setup_example_habit_3">Doċċa kiesħa — jekk tinħasel</string>
+    <string name="challenge_setup_example_rule_3">Il-vit imdawwar lejn is-sħun</string>
+    <string name="challenge_setup_example_habit_4">Mingħajr telefon qabel il-kolazzjon</string>
+    <string name="challenge_setup_example_rule_4">Miftuħ qabel l-ewwel gidma</string>
+    <string name="challenge_setup_example_habit_5">Għaxar push-ups</string>
+    <string name="challenge_setup_example_rule_5">Disgħa jew inqas</string>
+    <string name="challenge_setup_example_habit_6">Fis-sodda sal-ħdax</string>
+    <string name="challenge_setup_example_rule_6">Id-dawl għadu mixgħul f'nofsillejl</string>
+
+    <string name="challenge_setup_tip">Drawwa tista' tkun kundizzjonali — għid meta tgħodd u x'jiksirha.</string>
+    <string name="challenge_setup_rules_link">Kif tikteb regoli li jżommu</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Żid</string>
     <string name="challenge_setup_save_habit">Issejvja</string>

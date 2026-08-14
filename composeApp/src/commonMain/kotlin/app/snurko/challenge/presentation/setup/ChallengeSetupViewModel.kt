@@ -68,8 +68,11 @@ class ChallengeSetupViewModel(
         }
 
         updateState {
-            it.copy(habits = habits, habitNameFocusRequest = it.habitNameFocusRequest + 1)
-                .withClearedInput()
+            it.copy(
+                habits = habits,
+                habitNameFocusRequest = it.habitNameFocusRequest + 1,
+                exampleIndex = (it.exampleIndex + 1) % SETUP_EXAMPLE_COUNT,
+            ).withClearedInput()
         }
         persistDraft(habits)
     }
@@ -131,7 +134,11 @@ class ChallengeSetupViewModel(
             )
         }
         updateState { current ->
-            if (current.habits.isEmpty()) current.copy(habits = drafts) else current
+            if (current.habits.isEmpty()) {
+                current.copy(habits = drafts, exampleIndex = drafts.size % SETUP_EXAMPLE_COUNT)
+            } else {
+                current
+            }
         }
     }
 

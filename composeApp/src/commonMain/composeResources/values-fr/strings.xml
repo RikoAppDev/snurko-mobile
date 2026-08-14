@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Écris les habitudes que tu tiendras chaque jour pendant les 90 prochains jours.</string>
 
     <string name="challenge_setup_habit_name_label">Habitude</string>
-    <string name="challenge_setup_habit_name_placeholder">Lire 10 pages</string>
     <string name="challenge_setup_fail_condition_label">Ce qui compte comme un échec (facultatif)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Moins de 10 pages</string>
+
+    <string name="challenge_setup_example_habit_1">Lire 10 pages</string>
+    <string name="challenge_setup_example_rule_1">Moins de 10 pages</string>
+    <string name="challenge_setup_example_habit_2">Marcher une demi-heure</string>
+    <string name="challenge_setup_example_rule_2">Moins d’une demi-heure à pied</string>
+    <string name="challenge_setup_example_habit_3">Douche froide — si tu te douches</string>
+    <string name="challenge_setup_example_rule_3">Robinet tourné du côté chaud</string>
+    <string name="challenge_setup_example_habit_4">Pas de téléphone avant le petit-déjeuner</string>
+    <string name="challenge_setup_example_rule_4">Le déverrouiller avant la première bouchée</string>
+    <string name="challenge_setup_example_habit_5">Dix pompes</string>
+    <string name="challenge_setup_example_rule_5">Neuf ou moins</string>
+    <string name="challenge_setup_example_habit_6">Au lit avant onze heures</string>
+    <string name="challenge_setup_example_rule_6">Lumière encore allumée à minuit</string>
+
+    <string name="challenge_setup_tip">Une habitude peut être conditionnelle — dis quand elle s’applique, et ce qui la casse.</string>
+    <string name="challenge_setup_rules_link">Écrire des règles qui tiennent</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Ajouter</string>
     <string name="challenge_setup_save_habit">Enregistrer</string>

@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Skriv ner de vanor du tänker hålla varje dag de närmaste 90 dagarna.</string>
 
     <string name="challenge_setup_habit_name_label">Vana</string>
-    <string name="challenge_setup_habit_name_placeholder">Läs 10 sidor</string>
     <string name="challenge_setup_fail_condition_label">Vad som räknas som missat (valfritt)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Färre än 10 sidor</string>
+
+    <string name="challenge_setup_example_habit_1">Läs 10 sidor</string>
+    <string name="challenge_setup_example_rule_1">Färre än 10 sidor</string>
+    <string name="challenge_setup_example_habit_2">Gå en halvtimme</string>
+    <string name="challenge_setup_example_rule_2">Mindre än en halvtimme till fots</string>
+    <string name="challenge_setup_example_habit_3">Kall dusch — om du duschar</string>
+    <string name="challenge_setup_example_rule_3">Kranen vriden åt det varma hållet</string>
+    <string name="challenge_setup_example_habit_4">Ingen telefon före frukost</string>
+    <string name="challenge_setup_example_rule_4">Upplåst före första tuggan</string>
+    <string name="challenge_setup_example_habit_5">Tio armhävningar</string>
+    <string name="challenge_setup_example_rule_5">Nio eller färre</string>
+    <string name="challenge_setup_example_habit_6">I säng före elva</string>
+    <string name="challenge_setup_example_rule_6">Lampan fortfarande tänd vid midnatt</string>
+
+    <string name="challenge_setup_tip">En vana får ha ett villkor — säg när den gäller, och vad som bryter den.</string>
+    <string name="challenge_setup_rules_link">Skriv regler som håller</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lägg till</string>
     <string name="challenge_setup_save_habit">Spara</string>

@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Napíš si návyky, ktoré budeš držať každý deň nasledujúcich 90 dní.</string>
 
     <string name="challenge_setup_habit_name_label">Návyk</string>
-    <string name="challenge_setup_habit_name_placeholder">Prečítať 10 strán</string>
     <string name="challenge_setup_fail_condition_label">Čo sa ráta ako zlyhanie (nepovinné)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Menej ako 10 strán</string>
+
+    <string name="challenge_setup_example_habit_1">Prečítať 10 strán</string>
+    <string name="challenge_setup_example_rule_1">Menej ako 10 strán</string>
+    <string name="challenge_setup_example_habit_2">Prejsť sa pol hodiny</string>
+    <string name="challenge_setup_example_rule_2">Menej ako pol hodiny pešo</string>
+    <string name="challenge_setup_example_habit_3">Studená sprcha — ak sa sprchuješ</string>
+    <string name="challenge_setup_example_rule_3">Kohútik otočený na teplú vodu</string>
+    <string name="challenge_setup_example_habit_4">Žiadny telefón pred raňajkami</string>
+    <string name="challenge_setup_example_rule_4">Odomknúť ho pred prvým sústom</string>
+    <string name="challenge_setup_example_habit_5">Desať klikov</string>
+    <string name="challenge_setup_example_rule_5">Deväť alebo menej</string>
+    <string name="challenge_setup_example_habit_6">Ľahnúť si do jedenástej</string>
+    <string name="challenge_setup_example_rule_6">O polnoci sa ešte svieti</string>
+
+    <string name="challenge_setup_tip">Návyk môže mať podmienku — napíš, kedy platí a čo ho zruší.</string>
+    <string name="challenge_setup_rules_link">Ako písať pravidlá, ktoré vydržia</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/sk/articles/pravidla-restartu-90-dnovej-vyzvy</string>
 
     <string name="challenge_setup_add_habit">Pridať návyk</string>
     <string name="challenge_setup_save_habit">Uložiť návyk</string>

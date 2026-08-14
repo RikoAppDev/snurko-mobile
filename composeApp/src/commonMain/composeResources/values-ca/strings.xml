@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Escriu els hàbits que compliràs cada dia durant els pròxims 90 dies.</string>
 
     <string name="challenge_setup_habit_name_label">Hàbit</string>
-    <string name="challenge_setup_habit_name_placeholder">Llegir 10 pàgines</string>
     <string name="challenge_setup_fail_condition_label">Què compta com a fallar (opcional)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Menys de 10 pàgines</string>
+
+    <string name="challenge_setup_example_habit_1">Llegir 10 pàgines</string>
+    <string name="challenge_setup_example_rule_1">Menys de 10 pàgines</string>
+    <string name="challenge_setup_example_habit_2">Caminar mitja hora</string>
+    <string name="challenge_setup_example_rule_2">Menys de mitja hora a peu</string>
+    <string name="challenge_setup_example_habit_3">Dutxa freda — si et dutxes</string>
+    <string name="challenge_setup_example_rule_3">Aixeta girada cap al costat calent</string>
+    <string name="challenge_setup_example_habit_4">Sense telèfon abans d'esmorzar</string>
+    <string name="challenge_setup_example_rule_4">Desbloquejar-lo abans de la primera mossegada</string>
+    <string name="challenge_setup_example_habit_5">Deu flexions</string>
+    <string name="challenge_setup_example_rule_5">Nou o menys</string>
+    <string name="challenge_setup_example_habit_6">Al llit abans de les onze</string>
+    <string name="challenge_setup_example_rule_6">El llum encara encès a mitjanit</string>
+
+    <string name="challenge_setup_tip">Un hàbit pot tenir una condició — digues quan val i què el trenca.</string>
+    <string name="challenge_setup_rules_link">Com escriure regles que aguantin</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Afegeix</string>
     <string name="challenge_setup_save_habit">Desa</string>

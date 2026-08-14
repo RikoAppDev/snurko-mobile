@@ -3,6 +3,9 @@ package app.snurko.challenge.presentation.setup
 import androidx.compose.runtime.Stable
 import app.snurko.core.presentation.UiState
 
+/** How many habit-and-rule example pairs the setup fields rotate through. */
+const val SETUP_EXAMPLE_COUNT = 6
+
 data class HabitDraftUi(
     val id: Long,
     val name: String,
@@ -25,6 +28,8 @@ data class ChallengeSetupState(
     val isStarting: Boolean = false,
     /** Bumped every time the habit name field should take the caret back. */
     val habitNameFocusRequest: Int = 0,
+    /** Which pair of the example pool the two fields hint with. */
+    val exampleIndex: Int = 0,
 ) : UiState {
 
     val habitName: String get() = habitNameInput.trim()

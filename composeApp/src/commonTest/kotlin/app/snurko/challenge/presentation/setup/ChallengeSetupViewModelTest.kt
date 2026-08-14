@@ -362,6 +362,49 @@ class ChallengeSetupViewModelTest {
     }
 
     @Test
+    fun theExamplePairMovesOnWithEveryAddedHabit() {
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(0)
+
+        addHabit("Read")
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(1)
+
+        addHabit("Workout")
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(2)
+    }
+
+    @Test
+    fun theExamplePairWrapsAroundTheWholePool() {
+        repeat(SETUP_EXAMPLE_COUNT) { index -> addHabit("Habit $index") }
+
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(0)
+    }
+
+    @Test
+    fun aRejectedHabitLeavesTheExamplePairAlone() {
+        viewModel.onAction(ChallengeSetupAction.HabitNameChanged("   "))
+
+        viewModel.onAction(ChallengeSetupAction.HabitSubmitted)
+
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(0)
+    }
+
+    @Test
+    fun aRestoredDraftPicksUpTheExamplePairWhereItLeftOff() {
+        draftRepository.stored = listOf(
+            Habit(name = "Workout", failCondition = null),
+            Habit(name = "Read", failCondition = null),
+        )
+
+        val restored = ChallengeSetupViewModel(
+            challengeRepository = repository,
+            setupDraftRepository = draftRepository,
+            dateProvider = { today.atTime(9, 0) },
+        )
+
+        assertThat(restored.state.value.exampleIndex).isEqualTo(2)
+    }
+
+    @Test
     fun everyAddedHabitIsWrittenToTheDraft() {
         addHabit("Workout", "less than 30 minutes")
         addHabit("Read")

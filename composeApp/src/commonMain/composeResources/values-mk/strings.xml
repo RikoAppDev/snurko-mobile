@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Напиши ги навиките што ќе ги држиш секој ден следните 90 дена.</string>
 
     <string name="challenge_setup_habit_name_label">Навика</string>
-    <string name="challenge_setup_habit_name_placeholder">Читам 10 страници</string>
     <string name="challenge_setup_fail_condition_label">Што се смета за неуспех (по избор)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Помалку од 10 страници</string>
+
+    <string name="challenge_setup_example_habit_1">Читам 10 страници</string>
+    <string name="challenge_setup_example_rule_1">Помалку од 10 страници</string>
+    <string name="challenge_setup_example_habit_2">Одам половина час</string>
+    <string name="challenge_setup_example_rule_2">Помалку од половина час пешки</string>
+    <string name="challenge_setup_example_habit_3">Ладен туш — ако се туширам</string>
+    <string name="challenge_setup_example_rule_3">Славината е свртена кон топлото</string>
+    <string name="challenge_setup_example_habit_4">Без телефон пред појадок</string>
+    <string name="challenge_setup_example_rule_4">Отклучување пред првиот залак</string>
+    <string name="challenge_setup_example_habit_5">Десет склекови</string>
+    <string name="challenge_setup_example_rule_5">Девет или помалку</string>
+    <string name="challenge_setup_example_habit_6">Во кревет до единаесет</string>
+    <string name="challenge_setup_example_rule_6">Светлото сè уште свети на полноќ</string>
+
+    <string name="challenge_setup_tip">Навиката може да биде условна — кажи кога важи и што ја руши.</string>
+    <string name="challenge_setup_rules_link">Како да напишеш правила што држат</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Додај навика</string>
     <string name="challenge_setup_save_habit">Зачувај навика</string>

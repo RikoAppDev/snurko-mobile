@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Γράψε τις συνήθειες που θα κρατήσεις κάθε μέρα για τις επόμενες 90 μέρες.</string>
 
     <string name="challenge_setup_habit_name_label">Συνήθεια</string>
-    <string name="challenge_setup_habit_name_placeholder">Διαβάζω 10 σελίδες</string>
     <string name="challenge_setup_fail_condition_label">Τι μετράει ως αποτυχία (προαιρετικό)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Λιγότερες από 10 σελίδες</string>
+
+    <string name="challenge_setup_example_habit_1">Διαβάζω 10 σελίδες</string>
+    <string name="challenge_setup_example_rule_1">Λιγότερες από 10 σελίδες</string>
+    <string name="challenge_setup_example_habit_2">Περπατάω μισή ώρα</string>
+    <string name="challenge_setup_example_rule_2">Λιγότερο από μισή ώρα με τα πόδια</string>
+    <string name="challenge_setup_example_habit_3">Κρύο ντους — αν κάνω ντους</string>
+    <string name="challenge_setup_example_rule_3">Η βρύση γυρισμένη στο ζεστό</string>
+    <string name="challenge_setup_example_habit_4">Χωρίς κινητό πριν το πρωινό</string>
+    <string name="challenge_setup_example_rule_4">Ξεκλείδωμα πριν την πρώτη μπουκιά</string>
+    <string name="challenge_setup_example_habit_5">Δέκα κάμψεις</string>
+    <string name="challenge_setup_example_rule_5">Εννιά ή λιγότερες</string>
+    <string name="challenge_setup_example_habit_6">Στο κρεβάτι μέχρι τις έντεκα</string>
+    <string name="challenge_setup_example_rule_6">Φώτα ακόμη αναμμένα τα μεσάνυχτα</string>
+
+    <string name="challenge_setup_tip">Μια συνήθεια μπορεί να έχει όρους — πες πότε ισχύει και τι τη σπάει.</string>
+    <string name="challenge_setup_rules_link">Πώς γράφεις κανόνες που κρατάνε</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Προσθήκη</string>
     <string name="challenge_setup_save_habit">Αποθήκευση</string>

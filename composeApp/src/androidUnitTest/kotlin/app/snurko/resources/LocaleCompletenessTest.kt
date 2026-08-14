@@ -62,6 +62,9 @@ private val VERBATIM_KEYS = setOf(
     "history_stats_count",
 )
 
+/** Keys a locale may legitimately share with English, so they never count as untranslated. */
+private val SHARED_WITH_ENGLISH_KEYS = VERBATIM_KEYS + "challenge_setup_rules_url"
+
 private val PLATFORM_NAMES = listOf("Android", "iOS", "iPhone", "Apple", "Google")
 
 private val BRAND_KEYS = setOf(
@@ -229,7 +232,7 @@ class LocaleCompletenessTest {
         val suspect = mutableListOf<String>()
         forEachLocale { locale, strings ->
             val shared = strings.values.count { (key, text) ->
-                key !in VERBATIM_KEYS && text == base.values[key]
+                key !in SHARED_WITH_ENGLISH_KEYS && text == base.values[key]
             }
             if (shared > 25) suspect += "$locale ($shared strings identical to English)"
         }

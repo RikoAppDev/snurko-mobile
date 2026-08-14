@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Írd le a szokásokat, amelyeket a következő 90 napon át minden nap tartasz.</string>
 
     <string name="challenge_setup_habit_name_label">Szokás</string>
-    <string name="challenge_setup_habit_name_placeholder">10 oldal olvasás</string>
     <string name="challenge_setup_fail_condition_label">Mi számít bukásnak (nem kötelező)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Kevesebb mint 10 oldal</string>
+
+    <string name="challenge_setup_example_habit_1">10 oldal olvasás</string>
+    <string name="challenge_setup_example_rule_1">Kevesebb mint 10 oldal</string>
+    <string name="challenge_setup_example_habit_2">Fél óra séta</string>
+    <string name="challenge_setup_example_rule_2">Kevesebb mint fél óra séta</string>
+    <string name="challenge_setup_example_habit_3">Hideg zuhany – ha zuhanyzom</string>
+    <string name="challenge_setup_example_rule_3">A csap a meleg felé fordítva</string>
+    <string name="challenge_setup_example_habit_4">Reggeli előtt nincs telefon</string>
+    <string name="challenge_setup_example_rule_4">Feloldás az első falat előtt</string>
+    <string name="challenge_setup_example_habit_5">Tíz fekvőtámasz</string>
+    <string name="challenge_setup_example_rule_5">Kilenc vagy kevesebb</string>
+    <string name="challenge_setup_example_habit_6">Tizenegyre ágyban</string>
+    <string name="challenge_setup_example_rule_6">Éjfélkor még ég a lámpa</string>
+
+    <string name="challenge_setup_tip">A szokás lehet feltételes – mondd meg, mikor érvényes, és mi töri meg.</string>
+    <string name="challenge_setup_rules_link">Hogyan írj tartós szabályokat</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Hozzáadás</string>
     <string name="challenge_setup_save_habit">Mentés</string>

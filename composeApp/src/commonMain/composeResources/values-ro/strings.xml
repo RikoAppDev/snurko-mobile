@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Scrie obiceiurile pe care le vei ține în fiecare zi în următoarele 90 de zile.</string>
 
     <string name="challenge_setup_habit_name_label">Obicei</string>
-    <string name="challenge_setup_habit_name_placeholder">Citesc 10 pagini</string>
     <string name="challenge_setup_fail_condition_label">Ce înseamnă că ai ratat (opțional)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Mai puțin de 10 pagini</string>
+
+    <string name="challenge_setup_example_habit_1">Citesc 10 pagini</string>
+    <string name="challenge_setup_example_rule_1">Mai puțin de 10 pagini</string>
+    <string name="challenge_setup_example_habit_2">Merg o jumătate de oră</string>
+    <string name="challenge_setup_example_rule_2">Mai puțin de jumătate de oră pe jos</string>
+    <string name="challenge_setup_example_habit_3">Duș rece — dacă fac duș</string>
+    <string name="challenge_setup_example_rule_3">Robinetul dat pe cald</string>
+    <string name="challenge_setup_example_habit_4">Fără telefon înainte de micul dejun</string>
+    <string name="challenge_setup_example_rule_4">Îl deblochez înainte de prima îmbucătură</string>
+    <string name="challenge_setup_example_habit_5">Zece flotări</string>
+    <string name="challenge_setup_example_rule_5">Nouă sau mai puține</string>
+    <string name="challenge_setup_example_habit_6">În pat până la unsprezece</string>
+    <string name="challenge_setup_example_rule_6">Lumina încă aprinsă la miezul nopții</string>
+
+    <string name="challenge_setup_tip">Un obicei poate avea o condiție — spune când se aplică și ce îl strică.</string>
+    <string name="challenge_setup_rules_link">Cum să scrii reguli care țin</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Adaugă</string>
     <string name="challenge_setup_save_habit">Salvează</string>

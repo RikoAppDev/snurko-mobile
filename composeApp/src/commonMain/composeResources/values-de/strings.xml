@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Schreib die Gewohnheiten auf, die du die nächsten 90 Tage jeden Tag hältst.</string>
 
     <string name="challenge_setup_habit_name_label">Gewohnheit</string>
-    <string name="challenge_setup_habit_name_placeholder">10 Seiten lesen</string>
     <string name="challenge_setup_fail_condition_label">Was als Scheitern zählt (optional)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Weniger als 10 Seiten</string>
+
+    <string name="challenge_setup_example_habit_1">10 Seiten lesen</string>
+    <string name="challenge_setup_example_rule_1">Weniger als 10 Seiten</string>
+    <string name="challenge_setup_example_habit_2">Eine halbe Stunde spazieren gehen</string>
+    <string name="challenge_setup_example_rule_2">Weniger als eine halbe Stunde zu Fuß</string>
+    <string name="challenge_setup_example_habit_3">Kalt duschen — falls du duschst</string>
+    <string name="challenge_setup_example_rule_3">Den Hahn auf die warme Seite gedreht</string>
+    <string name="challenge_setup_example_habit_4">Kein Handy vor dem Frühstück</string>
+    <string name="challenge_setup_example_rule_4">Vor dem ersten Bissen entsperrt</string>
+    <string name="challenge_setup_example_habit_5">Zehn Liegestütze</string>
+    <string name="challenge_setup_example_rule_5">Neun oder weniger</string>
+    <string name="challenge_setup_example_habit_6">Um elf im Bett</string>
+    <string name="challenge_setup_example_rule_6">Um Mitternacht noch Licht an</string>
+
+    <string name="challenge_setup_tip">Eine Gewohnheit darf eine Bedingung haben — sag dazu, wann sie gilt und woran sie scheitert.</string>
+    <string name="challenge_setup_rules_link">Regeln schreiben, die halten</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Hinzufügen</string>
     <string name="challenge_setup_save_habit">Speichern</string>

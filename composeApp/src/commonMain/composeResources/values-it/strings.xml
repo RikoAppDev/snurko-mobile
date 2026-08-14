@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Scrivi le abitudini che terrai ogni giorno per i prossimi 90 giorni.</string>
 
     <string name="challenge_setup_habit_name_label">Abitudine</string>
-    <string name="challenge_setup_habit_name_placeholder">Leggere 10 pagine</string>
     <string name="challenge_setup_fail_condition_label">Cosa conta come fallimento (facoltativo)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Meno di 10 pagine</string>
+
+    <string name="challenge_setup_example_habit_1">Leggere 10 pagine</string>
+    <string name="challenge_setup_example_rule_1">Meno di 10 pagine</string>
+    <string name="challenge_setup_example_habit_2">Camminare mezz’ora</string>
+    <string name="challenge_setup_example_rule_2">Meno di mezz’ora a piedi</string>
+    <string name="challenge_setup_example_habit_3">Doccia fredda — se fai la doccia</string>
+    <string name="challenge_setup_example_rule_3">Rubinetto girato sul caldo</string>
+    <string name="challenge_setup_example_habit_4">Niente telefono prima di colazione</string>
+    <string name="challenge_setup_example_rule_4">Sbloccarlo prima del primo boccone</string>
+    <string name="challenge_setup_example_habit_5">Dieci flessioni</string>
+    <string name="challenge_setup_example_rule_5">Nove o meno</string>
+    <string name="challenge_setup_example_habit_6">A letto entro le undici</string>
+    <string name="challenge_setup_example_rule_6">Luce ancora accesa a mezzanotte</string>
+
+    <string name="challenge_setup_tip">Un’abitudine può avere una condizione — scrivi quando vale e cosa la fa saltare.</string>
+    <string name="challenge_setup_rules_link">Come scrivere regole che reggono</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Aggiungi</string>
     <string name="challenge_setup_save_habit">Salva</string>
