@@ -56,7 +56,7 @@ import org.koin.core.component.inject
 
 private val SMALL = DpSize(120.dp, 60.dp)
 private val MEDIUM = DpSize(180.dp, 110.dp)
-private val LARGE = DpSize(250.dp, 220.dp)
+private val LARGE = DpSize(250.dp, 180.dp)
 private val EXTRA_LARGE = DpSize(320.dp, 340.dp)
 
 private val GRID_MIN_HEIGHT = 160.dp
