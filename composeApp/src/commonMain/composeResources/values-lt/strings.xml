@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Susirašyk įpročius, kurių laikysiesi kasdien visas 90 dienų.</string>
 
     <string name="challenge_setup_habit_name_label">Įprotis</string>
-    <string name="challenge_setup_habit_name_placeholder">Perskaityti 10 puslapių</string>
     <string name="challenge_setup_fail_condition_label">Kas laikoma nesėkme (nebūtina)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Mažiau nei 10 puslapių</string>
+
+    <string name="challenge_setup_example_habit_1">Perskaityti 10 puslapių</string>
+    <string name="challenge_setup_example_rule_1">Mažiau nei 10 puslapių</string>
+    <string name="challenge_setup_example_habit_2">Pasivaikščioti pusvalandį</string>
+    <string name="challenge_setup_example_rule_2">Mažiau nei pusvalandis pėsčiomis</string>
+    <string name="challenge_setup_example_habit_3">Šaltas dušas — jei prausiuosi</string>
+    <string name="challenge_setup_example_rule_3">Čiaupas pasuktas į karštą pusę</string>
+    <string name="challenge_setup_example_habit_4">Be telefono iki pusryčių</string>
+    <string name="challenge_setup_example_rule_4">Atrakintas prieš pirmą kąsnį</string>
+    <string name="challenge_setup_example_habit_5">Dešimt atsispaudimų</string>
+    <string name="challenge_setup_example_rule_5">Devyni ar mažiau</string>
+    <string name="challenge_setup_example_habit_6">Lovoje iki vienuoliktos</string>
+    <string name="challenge_setup_example_rule_6">Vidurnaktį šviesa dar dega</string>
+
+    <string name="challenge_setup_tip">Įprotis gali būti sąlyginis — pasakyk, kada jis galioja ir kas jį sulaužo.</string>
+    <string name="challenge_setup_rules_link">Kaip rašyti tvirtas taisykles</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Pridėti</string>
     <string name="challenge_setup_save_habit">Išsaugoti</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Priminimai</string>
     <string name="reminders_back">Atgal</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Kol nenustatai laiko, niekas neveikia. Kiekvienas įprotis gauna po vieną priminimą, ir tik tą dieną, kai dar nepažymėtas.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Nustatyti priminimą įpročiui %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Paskutiniai puslapiai</string>
     <string name="history_back">Atgal</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Bandymas %1$d</string>
     <string name="history_in_progress">vyksta — %1$d diena</string>
     <string name="history_failed">nesėkmė %1$d dieną</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Parama</string>
     <string name="tip_jar_back">Atgal</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko yra nemokama ir atvirojo kodo. Visa, visiems, visada.</string>
     <string name="tip_jar_unlocks_nothing">Čia niekas nieko neatrakina. Nėra ko atrakinti — visa programėlė jau tavo.</string>
     <string name="tip_jar_fees">Parama eina metiniam mokesčiui, kurį programėlių parduotuvė ima už tai, kad Snurko liktų sąraše. Tik dėl to šis puslapis ir yra.</string>

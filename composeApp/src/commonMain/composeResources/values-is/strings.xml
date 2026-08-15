@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Skrifaðu niður venjurnar sem þú ætlar að halda á hverjum degi næstu 90 daga.</string>
 
     <string name="challenge_setup_habit_name_label">Venja</string>
-    <string name="challenge_setup_habit_name_placeholder">Lesa 10 blaðsíður</string>
     <string name="challenge_setup_fail_condition_label">Hvað telst fall (valfrjálst)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Færri en 10 blaðsíður</string>
+
+    <string name="challenge_setup_example_habit_1">Lesa 10 blaðsíður</string>
+    <string name="challenge_setup_example_rule_1">Færri en 10 blaðsíður</string>
+    <string name="challenge_setup_example_habit_2">Ganga í hálftíma</string>
+    <string name="challenge_setup_example_rule_2">Minna en hálftími gangandi</string>
+    <string name="challenge_setup_example_habit_3">Köld sturta — ef þú ferð í sturtu</string>
+    <string name="challenge_setup_example_rule_3">Kraninn skrúfaður yfir á heitt</string>
+    <string name="challenge_setup_example_habit_4">Enginn sími fyrir morgunmat</string>
+    <string name="challenge_setup_example_rule_4">Síminn aflæstur fyrir fyrsta bitann</string>
+    <string name="challenge_setup_example_habit_5">Tíu armbeygjur</string>
+    <string name="challenge_setup_example_rule_5">Níu eða færri</string>
+    <string name="challenge_setup_example_habit_6">Í rúmið fyrir ellefu</string>
+    <string name="challenge_setup_example_rule_6">Ljósið enn kveikt á miðnætti</string>
+
+    <string name="challenge_setup_tip">Venja getur verið skilyrt — segðu hvenær hún á við og hvað fellir hana.</string>
+    <string name="challenge_setup_rules_link">Að skrifa reglur sem halda</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Bæta við</string>
     <string name="challenge_setup_save_habit">Vista</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Áminningar</string>
     <string name="reminders_back">Til baka</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ekkert er kveikt fyrr en þú velur tíma. Hver venja fær eina áminningu, og aðeins þá daga sem enn er ekki hakað við hana.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Setja áminningu fyrir %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Baksíður</string>
     <string name="history_back">Til baka</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Tilraun %1$d</string>
     <string name="history_in_progress">í gangi — dagur %1$d</string>
     <string name="history_failed">féll á degi %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Framlag</string>
     <string name="tip_jar_back">Til baka</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko er ókeypis og opinn hugbúnaður. Allt saman, fyrir alla, alltaf.</string>
     <string name="tip_jar_unlocks_nothing">Ekkert hér aflæsir neinu. Það er ekkert að aflæsa — þú ert þegar með allt forritið.</string>
     <string name="tip_jar_fees">Framlagið fer upp í árlega gjaldið sem verslunin tekur fyrir að halda Snurko inni. Það er eina ástæðan fyrir því að þessi síða er til.</string>

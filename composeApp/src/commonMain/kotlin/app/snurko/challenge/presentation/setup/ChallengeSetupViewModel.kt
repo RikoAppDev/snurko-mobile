@@ -4,6 +4,7 @@ import androidx.lifecycle.viewModelScope
 import app.snurko.challenge.domain.ChallengeRepository
 import app.snurko.challenge.domain.DEFAULT_CHALLENGE_NAME
 import app.snurko.challenge.domain.Habit
+import app.snurko.challenge.domain.SetupDraftRepository
 import app.snurko.core.domain.DateProvider
 import app.snurko.core.domain.onFailure
 import app.snurko.core.domain.onSuccess
@@ -12,12 +13,17 @@ import kotlinx.coroutines.launch
 
 class ChallengeSetupViewModel(
     private val challengeRepository: ChallengeRepository,
+    private val setupDraftRepository: SetupDraftRepository,
     private val dateProvider: DateProvider,
 ) : MviViewModel<ChallengeSetupState, ChallengeSetupAction, ChallengeSetupEvent>(
     initialState = ChallengeSetupState(),
 ) {
 
     private var nextDraftId = 1L
+
+    init {
+        viewModelScope.launch { restoreDraft() }
+    }
 
     override fun onAction(action: ChallengeSetupAction) {
         when (action) {
@@ -61,7 +67,14 @@ class ChallengeSetupViewModel(
             }
         }
 
-        updateState { it.copy(habits = habits).withClearedInput() }
+        updateState {
+            it.copy(
+                habits = habits,
+                habitNameFocusRequest = it.habitNameFocusRequest + 1,
+                exampleIndex = (it.exampleIndex + 1) % SETUP_EXAMPLE_COUNT,
+            ).withClearedInput()
+        }
+        persistDraft(habits)
     }
 
     private fun editHabit(id: Long) {
@@ -81,6 +94,7 @@ class ChallengeSetupViewModel(
             val without = current.copy(habits = habits)
             if (current.editedHabitId == id) without.withClearedInput() else without
         }
+        persistDraft(state.value.habits)
     }
 
     private fun startChallenge() {
@@ -97,11 +111,42 @@ class ChallengeSetupViewModel(
                     Habit(name = it.name, failCondition = it.failCondition)
                 },
             )
-                .onSuccess { sendEvent(ChallengeSetupEvent.ChallengeStarted) }
+                .onSuccess {
+                    setupDraftRepository.clear()
+                    sendEvent(ChallengeSetupEvent.ChallengeStarted)
+                }
                 .onFailure {
                     updateState { state -> state.copy(isStarting = false) }
                     sendEvent(ChallengeSetupEvent.StartFailed)
                 }
+        }
+    }
+
+    private suspend fun restoreDraft() {
+        val restored = setupDraftRepository.load()
+        if (restored.isEmpty()) return
+
+        val drafts = restored.map { habit ->
+            HabitDraftUi(
+                id = nextDraftId++,
+                name = habit.name,
+                failCondition = habit.failCondition,
+            )
+        }
+        updateState { current ->
+            if (current.habits.isEmpty()) {
+                current.copy(habits = drafts, exampleIndex = drafts.size % SETUP_EXAMPLE_COUNT)
+            } else {
+                current
+            }
+        }
+    }
+
+    private fun persistDraft(habits: List<HabitDraftUi>) {
+        viewModelScope.launch {
+            setupDraftRepository.save(
+                habits.map { Habit(name = it.name, failCondition = it.failCondition) },
+            )
         }
     }
 

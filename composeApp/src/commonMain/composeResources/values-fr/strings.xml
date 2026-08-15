@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Écris les habitudes que tu tiendras chaque jour pendant les 90 prochains jours.</string>
 
     <string name="challenge_setup_habit_name_label">Habitude</string>
-    <string name="challenge_setup_habit_name_placeholder">Lire 10 pages</string>
     <string name="challenge_setup_fail_condition_label">Ce qui compte comme un échec (facultatif)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Moins de 10 pages</string>
+
+    <string name="challenge_setup_example_habit_1">Lire 10 pages</string>
+    <string name="challenge_setup_example_rule_1">Moins de 10 pages</string>
+    <string name="challenge_setup_example_habit_2">Marcher une demi-heure</string>
+    <string name="challenge_setup_example_rule_2">Moins d’une demi-heure à pied</string>
+    <string name="challenge_setup_example_habit_3">Douche froide — si tu te douches</string>
+    <string name="challenge_setup_example_rule_3">Robinet tourné du côté chaud</string>
+    <string name="challenge_setup_example_habit_4">Pas de téléphone avant le petit-déjeuner</string>
+    <string name="challenge_setup_example_rule_4">Le déverrouiller avant la première bouchée</string>
+    <string name="challenge_setup_example_habit_5">Dix pompes</string>
+    <string name="challenge_setup_example_rule_5">Neuf ou moins</string>
+    <string name="challenge_setup_example_habit_6">Au lit avant onze heures</string>
+    <string name="challenge_setup_example_rule_6">Lumière encore allumée à minuit</string>
+
+    <string name="challenge_setup_tip">Une habitude peut être conditionnelle — dis quand elle s’applique, et ce qui la casse.</string>
+    <string name="challenge_setup_rules_link">Écrire des règles qui tiennent</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Ajouter</string>
     <string name="challenge_setup_save_habit">Enregistrer</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Rappels</string>
     <string name="reminders_back">Retour</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Rien n’est actif tant que tu n’as pas mis d’heure. Chaque habitude reçoit un seul rappel, et seulement un jour où elle n’est pas encore cochée.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Mettre un rappel pour %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Pages du fond</string>
     <string name="history_back">Retour</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Tentative %1$d</string>
     <string name="history_in_progress">en cours — jour %1$d</string>
     <string name="history_failed">échec au jour %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Pourboire</string>
     <string name="tip_jar_back">Retour</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko est gratuit et open source. Tout, pour tout le monde, pour toujours.</string>
     <string name="tip_jar_unlocks_nothing">Rien ici ne débloque quoi que ce soit. Il n’y a rien à débloquer — tu as déjà l’appli entière.</string>
     <string name="tip_jar_fees">Un pourboire va aux frais annuels que le store facture pour garder Snurko en ligne. C’est la seule raison d’être de cette page.</string>

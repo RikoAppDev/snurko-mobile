@@ -17,11 +17,13 @@ const val SNURKO_DATABASE_NAME = "snurko.db"
         AttemptEntity::class,
         DayCheckEntity::class,
         ReminderEntity::class,
+        SetupDraftEntity::class,
     ],
-    version = 3,
+    version = 4,
     autoMigrations = [
         AutoMigration(from = 1, to = 2),
         AutoMigration(from = 2, to = 3, spec = SnurkoDatabase.DropEntitlements::class),
+        AutoMigration(from = 3, to = 4),
     ],
 )
 @ConstructedBy(SnurkoDatabaseConstructor::class)
@@ -30,6 +32,7 @@ abstract class SnurkoDatabase : RoomDatabase() {
     abstract fun attemptDao(): AttemptDao
     abstract fun dayCheckDao(): DayCheckDao
     abstract fun reminderDao(): ReminderDao
+    abstract fun setupDraftDao(): SetupDraftDao
 
     @DeleteTable(tableName = "entitlements")
     class DropEntitlements : AutoMigrationSpec

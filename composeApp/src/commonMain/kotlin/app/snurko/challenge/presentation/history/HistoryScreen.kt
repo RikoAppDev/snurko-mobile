@@ -9,12 +9,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -43,8 +46,12 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.snurko.billing.domain.isTipJarAvailable
 import app.snurko.challenge.domain.NotebookStats
+import app.snurko.core.designsystem.BackChevronButton
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.designsystem.navigationBarInset
+import app.snurko.core.designsystem.snurkoContentInsets
 import app.snurko.core.domain.DataError
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.resources.Res
@@ -55,7 +62,6 @@ import app.snurko.resources.backup_error_unknown
 import app.snurko.resources.backup_error_unsupported_version
 import app.snurko.resources.history_attempt
 import app.snurko.resources.history_back
-import app.snurko.resources.history_back_mark
 import app.snurko.resources.history_completed
 import app.snurko.resources.history_completion
 import app.snurko.resources.history_date
@@ -120,7 +126,13 @@ fun HistoryRoot(
 
     Scaffold(
         containerColor = SnurkoColors.paper,
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        contentWindowInsets = snurkoContentInsets,
+        snackbarHost = {
+            SnackbarHost(
+                snackbarHostState,
+                modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars),
+            )
+        },
     ) { innerPadding ->
         HistoryScreen(
             state = state,
@@ -149,7 +161,12 @@ fun HistoryScreen(
 
         LazyColumn(
             modifier = Modifier.fillMaxWidth(),
-            contentPadding = PaddingValues(horizontal = PAGE_PADDING, vertical = 8.dp),
+            contentPadding = PaddingValues(
+                start = PAGE_PADDING,
+                end = PAGE_PADDING,
+                top = 8.dp,
+                bottom = 8.dp + navigationBarInset(),
+            ),
         ) {
             state.current?.let { current ->
                 item(key = "current-${current.number}") {
@@ -199,28 +216,16 @@ fun HistoryScreen(
 
 @Composable
 private fun HistoryHeader(onNavigateBack: () -> Unit) {
-    val backDescription = stringResource(Res.string.history_back)
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = PAGE_PADDING - 8.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clickable(role = Role.Button, onClick = onNavigateBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(Res.string.history_back_mark),
-                style = MaterialTheme.typography.titleLarge,
-                color = SnurkoColors.text,
-                modifier = Modifier.clearAndSetSemantics { },
-            )
-        }
+        BackChevronButton(
+            contentDescription = stringResource(Res.string.history_back),
+            onClick = onNavigateBack,
+        )
         Text(
             text = stringResource(Res.string.history_title),
             style = MaterialTheme.typography.displaySmall,
@@ -401,8 +406,9 @@ private fun QuietRow(label: String, onClick: () -> Unit, isEnabled: Boolean = tr
         modifier = Modifier
             .fillMaxWidth()
             .heightIn(min = 56.dp)
+            .clip(QuietTapShape)
             .clickable(enabled = isEnabled, role = Role.Button, onClick = onClick)
-            .padding(vertical = 8.dp),
+            .padding(horizontal = 6.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Text(

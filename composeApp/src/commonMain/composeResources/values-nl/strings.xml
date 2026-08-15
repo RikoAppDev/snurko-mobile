@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Schrijf de gewoontes op die je de komende 90 dagen elke dag volhoudt.</string>
 
     <string name="challenge_setup_habit_name_label">Gewoonte</string>
-    <string name="challenge_setup_habit_name_placeholder">10 bladzijden lezen</string>
     <string name="challenge_setup_fail_condition_label">Wat telt als falen (optioneel)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Minder dan 10 bladzijden</string>
+
+    <string name="challenge_setup_example_habit_1">10 bladzijden lezen</string>
+    <string name="challenge_setup_example_rule_1">Minder dan 10 bladzijden</string>
+    <string name="challenge_setup_example_habit_2">Een half uur wandelen</string>
+    <string name="challenge_setup_example_rule_2">Minder dan een half uur te voet</string>
+    <string name="challenge_setup_example_habit_3">Koud douchen — als je doucht</string>
+    <string name="challenge_setup_example_rule_3">De kraan naar warm gedraaid</string>
+    <string name="challenge_setup_example_habit_4">Geen telefoon voor het ontbijt</string>
+    <string name="challenge_setup_example_rule_4">Ontgrendeld voor de eerste hap</string>
+    <string name="challenge_setup_example_habit_5">Tien push-ups</string>
+    <string name="challenge_setup_example_rule_5">Negen of minder</string>
+    <string name="challenge_setup_example_habit_6">Om elf uur in bed</string>
+    <string name="challenge_setup_example_rule_6">Om middernacht nog licht aan</string>
+
+    <string name="challenge_setup_tip">Een gewoonte mag een voorwaarde hebben — zeg erbij wanneer hij geldt en wat hem laat mislukken.</string>
+    <string name="challenge_setup_rules_link">Regels schrijven die standhouden</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Toevoegen</string>
     <string name="challenge_setup_save_habit">Opslaan</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Herinneringen</string>
     <string name="reminders_back">Terug</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Er staat niets aan tot je een tijd instelt. Elke gewoonte krijgt één zetje, en alleen op een dag die nog niet is afgevinkt.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Zet een herinnering voor %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Achterpagina's</string>
     <string name="history_back">Terug</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Poging %1$d</string>
     <string name="history_in_progress">bezig — dag %1$d</string>
     <string name="history_failed">mislukt op dag %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Fooienpot</string>
     <string name="tip_jar_back">Terug</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko is gratis en open source. Alles ervan, voor iedereen, altijd.</string>
     <string name="tip_jar_unlocks_nothing">Hier ontgrendelt niets iets. Er valt ook niets te ontgrendelen — je hebt de hele app al.</string>
     <string name="tip_jar_fees">Een fooi gaat naar de jaarlijkse kosten die de appstore rekent om Snurko in de winkel te houden. Alleen daarom bestaat deze pagina.</string>

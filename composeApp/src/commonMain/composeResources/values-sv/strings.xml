@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Skriv ner de vanor du tänker hålla varje dag de närmaste 90 dagarna.</string>
 
     <string name="challenge_setup_habit_name_label">Vana</string>
-    <string name="challenge_setup_habit_name_placeholder">Läs 10 sidor</string>
     <string name="challenge_setup_fail_condition_label">Vad som räknas som missat (valfritt)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Färre än 10 sidor</string>
+
+    <string name="challenge_setup_example_habit_1">Läs 10 sidor</string>
+    <string name="challenge_setup_example_rule_1">Färre än 10 sidor</string>
+    <string name="challenge_setup_example_habit_2">Gå en halvtimme</string>
+    <string name="challenge_setup_example_rule_2">Mindre än en halvtimme till fots</string>
+    <string name="challenge_setup_example_habit_3">Kall dusch — om du duschar</string>
+    <string name="challenge_setup_example_rule_3">Kranen vriden åt det varma hållet</string>
+    <string name="challenge_setup_example_habit_4">Ingen telefon före frukost</string>
+    <string name="challenge_setup_example_rule_4">Upplåst före första tuggan</string>
+    <string name="challenge_setup_example_habit_5">Tio armhävningar</string>
+    <string name="challenge_setup_example_rule_5">Nio eller färre</string>
+    <string name="challenge_setup_example_habit_6">I säng före elva</string>
+    <string name="challenge_setup_example_rule_6">Lampan fortfarande tänd vid midnatt</string>
+
+    <string name="challenge_setup_tip">En vana får ha ett villkor — säg när den gäller, och vad som bryter den.</string>
+    <string name="challenge_setup_rules_link">Skriv regler som håller</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lägg till</string>
     <string name="challenge_setup_save_habit">Spara</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Påminnelser</string>
     <string name="reminders_back">Tillbaka</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ingenting är på förrän du sätter en tid. Varje vana får en knuff, och bara en dag den fortfarande är obockad.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Sätt en påminnelse för %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Baksidorna</string>
     <string name="history_back">Tillbaka</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Försök %1$d</string>
     <string name="history_in_progress">pågår — dag %1$d</string>
     <string name="history_failed">missade dag %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Dricks</string>
     <string name="tip_jar_back">Tillbaka</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko är gratis och öppen källkod. Allt, för alla, alltid.</string>
     <string name="tip_jar_unlocks_nothing">Ingenting här låser upp något. Det finns inget att låsa upp — du har redan hela appen.</string>
     <string name="tip_jar_fees">En slant går till den årliga avgift butiken tar för att ha kvar Snurko i hyllan. Det är enda skälet till att den här sidan finns.</string>

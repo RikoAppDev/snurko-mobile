@@ -2,19 +2,22 @@ package app.snurko.reminders.presentation
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
@@ -37,15 +40,18 @@ import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import app.snurko.core.designsystem.BackChevronButton
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.designsystem.navigationBarInset
+import app.snurko.core.designsystem.snurkoContentInsets
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.core.presentation.OnResume
 import app.snurko.core.presentation.PlatformTimePicker
 import app.snurko.core.presentation.formattedTime
 import app.snurko.resources.Res
 import app.snurko.resources.reminders_back
-import app.snurko.resources.reminders_back_mark
 import app.snurko.resources.reminders_blocked_body
 import app.snurko.resources.reminders_blocked_settings
 import app.snurko.resources.reminders_blocked_title
@@ -87,7 +93,13 @@ fun RemindersRoot(
 
     Scaffold(
         containerColor = SnurkoColors.paper,
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        contentWindowInsets = snurkoContentInsets,
+        snackbarHost = {
+            SnackbarHost(
+                snackbarHostState,
+                modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars),
+            )
+        },
     ) { innerPadding ->
         RemindersScreen(
             state = state,
@@ -113,32 +125,35 @@ fun RemindersScreen(
     ) {
         RemindersHeader(onNavigateBack = onNavigateBack)
 
-        Column(modifier = Modifier.padding(horizontal = PAGE_PADDING)) {
-            Text(
-                text = stringResource(Res.string.reminders_intro),
-                style = MaterialTheme.typography.bodyMedium,
-                color = SnurkoColors.textSecondary,
-                modifier = Modifier.padding(bottom = 20.dp),
+        Text(
+            text = stringResource(Res.string.reminders_intro),
+            style = MaterialTheme.typography.bodyMedium,
+            color = SnurkoColors.textSecondary,
+            modifier = Modifier
+                .padding(horizontal = PAGE_PADDING)
+                .padding(bottom = 20.dp),
+        )
+
+        if (state.isNotificationPermissionDenied) {
+            BlockedNotice(
+                onOpenSettings = { onAction(RemindersAction.SettingsClicked) },
+                modifier = Modifier.padding(horizontal = PAGE_PADDING),
             )
-
-            if (state.isNotificationPermissionDenied) {
-                BlockedNotice(onOpenSettings = { onAction(RemindersAction.SettingsClicked) })
-                Spacer(Modifier.height(20.dp))
-            }
-
-            state.rows.forEach { row ->
-                HorizontalDivider(color = SnurkoColors.line)
-                ReminderRow(
-                    row = row,
-                    onClick = { onAction(RemindersAction.RowClicked(row.habitId)) },
-                    onSwitchOff = { onAction(RemindersAction.ReminderSwitchedOff(row.habitId)) },
-                )
-            }
-            if (state.rows.isNotEmpty()) {
-                HorizontalDivider(color = SnurkoColors.line)
-            }
-            Spacer(Modifier.height(32.dp))
+            Spacer(Modifier.height(20.dp))
         }
+
+        state.rows.forEach { row ->
+            HorizontalDivider(color = SnurkoColors.line)
+            ReminderRow(
+                row = row,
+                onClick = { onAction(RemindersAction.RowClicked(row.habitId)) },
+                onSwitchOff = { onAction(RemindersAction.ReminderSwitchedOff(row.habitId)) },
+            )
+        }
+        if (state.rows.isNotEmpty()) {
+            HorizontalDivider(color = SnurkoColors.line)
+        }
+        Spacer(Modifier.height(32.dp + navigationBarInset()))
     }
 
     state.timePicker?.let { picker ->
@@ -152,28 +167,16 @@ fun RemindersScreen(
 
 @Composable
 private fun RemindersHeader(onNavigateBack: () -> Unit) {
-    val backDescription = stringResource(Res.string.reminders_back)
-
     Row(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = PAGE_PADDING - 8.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Box(
-            modifier = Modifier
-                .size(48.dp)
-                .clickable(role = Role.Button, onClick = onNavigateBack)
-                .semantics { contentDescription = backDescription },
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(
-                text = stringResource(Res.string.reminders_back_mark),
-                style = MaterialTheme.typography.titleLarge,
-                color = SnurkoColors.text,
-                modifier = Modifier.clearAndSetSemantics { },
-            )
-        }
+        BackChevronButton(
+            contentDescription = stringResource(Res.string.reminders_back),
+            onClick = onNavigateBack,
+        )
         Text(
             text = stringResource(Res.string.reminders_title),
             style = MaterialTheme.typography.displaySmall,
@@ -184,9 +187,9 @@ private fun RemindersHeader(onNavigateBack: () -> Unit) {
 }
 
 @Composable
-private fun BlockedNotice(onOpenSettings: () -> Unit) {
+private fun BlockedNotice(onOpenSettings: () -> Unit, modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxWidth()
             .clip(NOTE_CORNER)
             .background(SnurkoColors.surface)
@@ -207,7 +210,9 @@ private fun BlockedNotice(onOpenSettings: () -> Unit) {
             modifier = Modifier
                 .padding(top = 4.dp)
                 .heightIn(min = 48.dp)
-                .clickable(role = Role.Button, onClick = onOpenSettings),
+                .clip(QuietTapShape)
+                .clickable(role = Role.Button, onClick = onOpenSettings)
+                .padding(horizontal = 6.dp),
             contentAlignment = Alignment.CenterStart,
         ) {
             Text(
@@ -233,34 +238,32 @@ private fun ReminderRow(
     val switchOffDescription = stringResource(Res.string.reminders_switch_off, row.name)
 
     Row(
-        modifier = Modifier.fillMaxWidth().heightIn(min = 56.dp),
+        modifier = Modifier
+            .fillMaxWidth()
+            .heightIn(min = 56.dp)
+            .clickable(role = Role.Button, onClick = onClick)
+            .semantics { contentDescription = rowDescription }
+            .padding(start = PAGE_PADDING, end = PAGE_PADDING - 8.dp)
+            .padding(vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Row(
-            modifier = Modifier
-                .weight(1f)
-                .heightIn(min = 56.dp)
-                .clickable(role = Role.Button, onClick = onClick)
-                .semantics { contentDescription = rowDescription }
-                .padding(vertical = 8.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.SpaceBetween,
-        ) {
-            Text(
-                text = row.name,
-                style = MaterialTheme.typography.bodyLarge,
-                color = SnurkoColors.text,
-            )
-            Text(
-                text = row.time?.let { formattedTime(it) } ?: stringResource(Res.string.reminders_off),
-                style = MaterialTheme.typography.bodyLarge,
-                color = if (row.time == null) SnurkoColors.textSecondary else SnurkoColors.accentInk,
-            )
-        }
+        Text(
+            text = row.name,
+            style = MaterialTheme.typography.bodyLarge,
+            color = SnurkoColors.text,
+            modifier = Modifier.weight(1f),
+        )
+        Spacer(Modifier.width(12.dp))
+        Text(
+            text = row.time?.let { formattedTime(it) } ?: stringResource(Res.string.reminders_off),
+            style = MaterialTheme.typography.bodyLarge,
+            color = if (row.time == null) SnurkoColors.textSecondary else SnurkoColors.accentInk,
+        )
         if (row.time != null) {
             Box(
                 modifier = Modifier
                     .size(48.dp)
+                    .clip(CircleShape)
                     .clickable(role = Role.Button, onClick = onSwitchOff)
                     .semantics { contentDescription = switchOffDescription },
                 contentAlignment = Alignment.Center,

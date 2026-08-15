@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Write the habits you will keep every day for the next 90 days.</string>
 
     <string name="challenge_setup_habit_name_label">Habit</string>
-    <string name="challenge_setup_habit_name_placeholder">Read 10 pages</string>
     <string name="challenge_setup_fail_condition_label">What counts as failing (optional)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Fewer than 10 pages</string>
+
+    <string name="challenge_setup_example_habit_1">Read 10 pages</string>
+    <string name="challenge_setup_example_rule_1">Fewer than 10 pages</string>
+    <string name="challenge_setup_example_habit_2">Walk for half an hour</string>
+    <string name="challenge_setup_example_rule_2">Less than half an hour on foot</string>
+    <string name="challenge_setup_example_habit_3">Cold shower — if showering</string>
+    <string name="challenge_setup_example_rule_3">Tap turned to the hot side</string>
+    <string name="challenge_setup_example_habit_4">No phone before breakfast</string>
+    <string name="challenge_setup_example_rule_4">Unlocking it before the first bite</string>
+    <string name="challenge_setup_example_habit_5">Ten push-ups</string>
+    <string name="challenge_setup_example_rule_5">Nine or fewer</string>
+    <string name="challenge_setup_example_habit_6">In bed by eleven</string>
+    <string name="challenge_setup_example_rule_6">Lights still on at midnight</string>
+
+    <string name="challenge_setup_tip">A habit can be conditional — say when it applies, and what breaks it.</string>
+    <string name="challenge_setup_rules_link">How to write rules that hold</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Add habit</string>
     <string name="challenge_setup_save_habit">Save habit</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Reminders</string>
     <string name="reminders_back">Back</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Nothing is on until you set a time. Each habit gets one nudge, and only on a day it is still unmarked.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Set a reminder for %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Back pages</string>
     <string name="history_back">Back</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Attempt %1$d</string>
     <string name="history_in_progress">in progress — day %1$d</string>
     <string name="history_failed">failed day %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Tip jar</string>
     <string name="tip_jar_back">Back</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko is free and open source. All of it, for everyone, always.</string>
     <string name="tip_jar_unlocks_nothing">Nothing here unlocks anything. There is nothing to unlock — you already have the whole app.</string>
     <string name="tip_jar_fees">A tip goes towards the yearly fee the app store charges to keep Snurko listed. That is the only reason this page exists.</string>

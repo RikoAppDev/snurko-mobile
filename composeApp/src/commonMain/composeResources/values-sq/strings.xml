@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Shkruaj zakonet që do të mbash çdo ditë për 90 ditët e ardhshme.</string>
 
     <string name="challenge_setup_habit_name_label">Zakoni</string>
-    <string name="challenge_setup_habit_name_placeholder">Lexoj 10 faqe</string>
     <string name="challenge_setup_fail_condition_label">Çfarë quhet dështim (opsionale)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Më pak se 10 faqe</string>
+
+    <string name="challenge_setup_example_habit_1">Lexoj 10 faqe</string>
+    <string name="challenge_setup_example_rule_1">Më pak se 10 faqe</string>
+    <string name="challenge_setup_example_habit_2">Eci gjysmë ore</string>
+    <string name="challenge_setup_example_rule_2">Më pak se gjysmë ore në këmbë</string>
+    <string name="challenge_setup_example_habit_3">Dush i ftohtë — nëse bëj dush</string>
+    <string name="challenge_setup_example_rule_3">Rubineti i kthyer nga ana e ngrohtë</string>
+    <string name="challenge_setup_example_habit_4">Pa telefon para mëngjesit</string>
+    <string name="challenge_setup_example_rule_4">E shkyç para kafshatës së parë</string>
+    <string name="challenge_setup_example_habit_5">Dhjetë fleksione</string>
+    <string name="challenge_setup_example_rule_5">Nëntë ose më pak</string>
+    <string name="challenge_setup_example_habit_6">Në shtrat para njëmbëdhjetës</string>
+    <string name="challenge_setup_example_rule_6">Dritat ende ndezur në mesnatë</string>
+
+    <string name="challenge_setup_tip">Zakoni mund të jetë me kusht — thuaj kur vlen dhe çfarë e prish.</string>
+    <string name="challenge_setup_rules_link">Si të shkruash rregulla që mbajnë</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Shto zakon</string>
     <string name="challenge_setup_save_habit">Ruaj zakonin</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Kujtesat</string>
     <string name="reminders_back">Prapa</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Asgjë nuk është aktive derisa të caktosh një orë. Çdo zakon merr një kujtesë të butë, dhe vetëm në një ditë që është ende pa shenjë.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Cakto një kujtesë për %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Faqet e fundit</string>
     <string name="history_back">Prapa</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Përpjekja %1$d</string>
     <string name="history_in_progress">në vazhdim — dita %1$d</string>
     <string name="history_failed">dështoi ditën %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Bakshishi</string>
     <string name="tip_jar_back">Prapa</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko është falas dhe me kod të hapur. I gjithi, për të gjithë, gjithmonë.</string>
     <string name="tip_jar_unlocks_nothing">Këtu asgjë nuk zhbllokon asgjë. Nuk ka çfarë të zhbllokohet — aplikacionin e ke të tërin që tani.</string>
     <string name="tip_jar_fees">Bakshishi shkon për tarifën vjetore që merr dyqani për ta mbajtur Snurko në listë. Vetëm për këtë ekziston kjo faqe.</string>

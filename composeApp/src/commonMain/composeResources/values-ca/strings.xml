@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Escriu els hàbits que compliràs cada dia durant els pròxims 90 dies.</string>
 
     <string name="challenge_setup_habit_name_label">Hàbit</string>
-    <string name="challenge_setup_habit_name_placeholder">Llegir 10 pàgines</string>
     <string name="challenge_setup_fail_condition_label">Què compta com a fallar (opcional)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Menys de 10 pàgines</string>
+
+    <string name="challenge_setup_example_habit_1">Llegir 10 pàgines</string>
+    <string name="challenge_setup_example_rule_1">Menys de 10 pàgines</string>
+    <string name="challenge_setup_example_habit_2">Caminar mitja hora</string>
+    <string name="challenge_setup_example_rule_2">Menys de mitja hora a peu</string>
+    <string name="challenge_setup_example_habit_3">Dutxa freda — si et dutxes</string>
+    <string name="challenge_setup_example_rule_3">Aixeta girada cap al costat calent</string>
+    <string name="challenge_setup_example_habit_4">Sense telèfon abans d'esmorzar</string>
+    <string name="challenge_setup_example_rule_4">Desbloquejar-lo abans de la primera mossegada</string>
+    <string name="challenge_setup_example_habit_5">Deu flexions</string>
+    <string name="challenge_setup_example_rule_5">Nou o menys</string>
+    <string name="challenge_setup_example_habit_6">Al llit abans de les onze</string>
+    <string name="challenge_setup_example_rule_6">El llum encara encès a mitjanit</string>
+
+    <string name="challenge_setup_tip">Un hàbit pot tenir una condició — digues quan val i què el trenca.</string>
+    <string name="challenge_setup_rules_link">Com escriure regles que aguantin</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Afegeix</string>
     <string name="challenge_setup_save_habit">Desa</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Recordatoris</string>
     <string name="reminders_back">Enrere</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">No hi ha res actiu fins que no hi posis una hora. Cada hàbit rep un sol recordatori, i només un dia en què encara no estigui marcat.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Posa un recordatori per a %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Pàgines del final</string>
     <string name="history_back">Enrere</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Intent %1$d</string>
     <string name="history_in_progress">en curs — dia %1$d</string>
     <string name="history_failed">fallat el dia %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Propina</string>
     <string name="tip_jar_back">Enrere</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">El Snurko és gratuït i de codi obert. Tot, per a tothom, sempre.</string>
     <string name="tip_jar_unlocks_nothing">Aquí no hi ha res que desbloquegi res. No hi ha res a desbloquejar — l'app ja la tens sencera.</string>
     <string name="tip_jar_fees">Una propina va a la quota anual que la botiga cobra per mantenir el Snurko al catàleg. És l'única raó per la qual existeix aquesta pàgina.</string>

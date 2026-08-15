@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Запиши привычки, которые будешь держать каждый день следующие 90 дней.</string>
 
     <string name="challenge_setup_habit_name_label">Привычка</string>
-    <string name="challenge_setup_habit_name_placeholder">Прочитать 10 страниц</string>
     <string name="challenge_setup_fail_condition_label">Что считается срывом (необязательно)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Меньше 10 страниц</string>
+
+    <string name="challenge_setup_example_habit_1">Прочитать 10 страниц</string>
+    <string name="challenge_setup_example_rule_1">Меньше 10 страниц</string>
+    <string name="challenge_setup_example_habit_2">Пройтись полчаса</string>
+    <string name="challenge_setup_example_rule_2">Меньше получаса пешком</string>
+    <string name="challenge_setup_example_habit_3">Холодный душ — если моешься</string>
+    <string name="challenge_setup_example_rule_3">Кран повёрнут на горячую воду</string>
+    <string name="challenge_setup_example_habit_4">Никакого телефона до завтрака</string>
+    <string name="challenge_setup_example_rule_4">Разблокировать его до первого куска</string>
+    <string name="challenge_setup_example_habit_5">Десять отжиманий</string>
+    <string name="challenge_setup_example_rule_5">Девять или меньше</string>
+    <string name="challenge_setup_example_habit_6">Лечь до одиннадцати</string>
+    <string name="challenge_setup_example_rule_6">В полночь свет ещё горит</string>
+
+    <string name="challenge_setup_tip">У привычки может быть условие — напиши, когда она действует и что её срывает.</string>
+    <string name="challenge_setup_rules_link">Как писать правила, которые выдержат</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Добавить</string>
     <string name="challenge_setup_save_habit">Сохранить</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Напоминания</string>
     <string name="reminders_back">Назад</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ничего не включено, пока не поставишь время. Каждая привычка получает одно напоминание — и только в тот день, когда она ещё без отметки.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Поставить напоминание для %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Последние полосы</string>
     <string name="history_back">Назад</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Попытка %1$d</string>
     <string name="history_in_progress">идёт — день %1$d</string>
     <string name="history_failed">срыв, день %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Копилка</string>
     <string name="tip_jar_back">Назад</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko бесплатное и с открытым кодом. Всё целиком, для всех, всегда.</string>
     <string name="tip_jar_unlocks_nothing">Здесь ничто ничего не открывает. Открывать нечего — всё приложение уже твоё.</string>
     <string name="tip_jar_fees">Взнос идёт на годовой сбор, который магазин приложений берёт за то, чтобы Snurko оставалось в каталоге. Только ради этого страница и существует.</string>

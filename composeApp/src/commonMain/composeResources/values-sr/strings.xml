@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Запиши навике које ћеш да држиш сваки дан наредних 90 дана.</string>
 
     <string name="challenge_setup_habit_name_label">Навика</string>
-    <string name="challenge_setup_habit_name_placeholder">Прочитај 10 страна</string>
     <string name="challenge_setup_fail_condition_label">Шта се рачуна као пад (опционо)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Мање од 10 страна</string>
+
+    <string name="challenge_setup_example_habit_1">Прочитај 10 страна</string>
+    <string name="challenge_setup_example_rule_1">Мање од 10 страна</string>
+    <string name="challenge_setup_example_habit_2">Ходај пола сата</string>
+    <string name="challenge_setup_example_rule_2">Мање од пола сата хода</string>
+    <string name="challenge_setup_example_habit_3">Хладан туш – ако се тушираш</string>
+    <string name="challenge_setup_example_rule_3">Славина окренута на топло</string>
+    <string name="challenge_setup_example_habit_4">Без телефона до доручка</string>
+    <string name="challenge_setup_example_rule_4">Телефон откључан пре првог залогаја</string>
+    <string name="challenge_setup_example_habit_5">Десет склекова</string>
+    <string name="challenge_setup_example_rule_5">Девет или мање</string>
+    <string name="challenge_setup_example_habit_6">У кревету до једанаест</string>
+    <string name="challenge_setup_example_rule_6">У поноћ светло још гори</string>
+
+    <string name="challenge_setup_tip">Навика може да буде условна – реци кад важи и шта је руши.</string>
+    <string name="challenge_setup_rules_link">Како да напишеш правила која држе</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Додај навику</string>
     <string name="challenge_setup_save_habit">Сачувај навику</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Подсетници</string>
     <string name="reminders_back">Назад</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Ништа није укључено док не подесиш време. Свака навика добија по један подсетник, и то само оног дана кад још није означена.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Подеси подсетник за %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Задње стране</string>
     <string name="history_back">Назад</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">%1$d. покушај</string>
     <string name="history_in_progress">у току – %1$d. дан</string>
     <string name="history_failed">пао на %1$d. дану</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Напојница</string>
     <string name="tip_jar_back">Назад</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko је бесплатан и отвореног кода. Цео, за свакога, увек.</string>
     <string name="tip_jar_unlocks_nothing">Овде ништа не откључава ништа. Нема шта ни да се откључа – целу апликацију већ имаш.</string>
     <string name="tip_jar_fees">Напојница иде на годишњу накнаду коју продавница наплаћује да би Snurko остао на списку. То је једини разлог зашто ова страна постоји.</string>

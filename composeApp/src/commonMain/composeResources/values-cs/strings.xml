@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Napiš si návyky, které budeš držet každý den následujících 90 dní.</string>
 
     <string name="challenge_setup_habit_name_label">Návyk</string>
-    <string name="challenge_setup_habit_name_placeholder">Přečíst 10 stran</string>
     <string name="challenge_setup_fail_condition_label">Co se počítá jako selhání (nepovinné)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Méně než 10 stran</string>
+
+    <string name="challenge_setup_example_habit_1">Přečíst 10 stran</string>
+    <string name="challenge_setup_example_rule_1">Méně než 10 stran</string>
+    <string name="challenge_setup_example_habit_2">Projít se půl hodiny</string>
+    <string name="challenge_setup_example_rule_2">Méně než půl hodiny pěšky</string>
+    <string name="challenge_setup_example_habit_3">Studená sprcha — když se sprchuješ</string>
+    <string name="challenge_setup_example_rule_3">Kohoutek otočený na teplou vodu</string>
+    <string name="challenge_setup_example_habit_4">Žádný telefon před snídaní</string>
+    <string name="challenge_setup_example_rule_4">Odemknout ho před prvním soustem</string>
+    <string name="challenge_setup_example_habit_5">Deset kliků</string>
+    <string name="challenge_setup_example_rule_5">Devět nebo méně</string>
+    <string name="challenge_setup_example_habit_6">Lehnout si do jedenácti</string>
+    <string name="challenge_setup_example_rule_6">O půlnoci se ještě svítí</string>
+
+    <string name="challenge_setup_tip">Návyk může mít podmínku — napiš, kdy platí a co ho zruší.</string>
+    <string name="challenge_setup_rules_link">Jak psát pravidla, která vydrží</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Přidat návyk</string>
     <string name="challenge_setup_save_habit">Uložit návyk</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Připomínky</string>
     <string name="reminders_back">Zpět</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Dokud nenastavíš čas, nic neběží. Každý návyk dostane jedno připomenutí, a to jen v den, kdy ještě nemá značku.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Nastavit připomínku pro %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Zadní strany</string>
     <string name="history_back">Zpět</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Pokus %1$d</string>
     <string name="history_in_progress">probíhá — den %1$d</string>
     <string name="history_failed">selhal %1$d. den</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Příspěvek</string>
     <string name="tip_jar_back">Zpět</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko je zdarma a open source. Celé, pro každého, napořád.</string>
     <string name="tip_jar_unlocks_nothing">Nic z toho nic neodemyká. Není co odemykat — celou apku už máš.</string>
     <string name="tip_jar_fees">Příspěvek jde na roční poplatek, který si obchod účtuje za to, aby Snurko zůstalo v nabídce. Jiný důvod tahle stránka nemá.</string>

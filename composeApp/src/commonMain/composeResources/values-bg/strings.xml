@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Напиши навиците, които ще спазваш всеки ден през следващите 90 дни.</string>
 
     <string name="challenge_setup_habit_name_label">Навик</string>
-    <string name="challenge_setup_habit_name_placeholder">Чета 10 страници</string>
     <string name="challenge_setup_fail_condition_label">Какво се брои за провал (по избор)</string>
-    <string name="challenge_setup_fail_condition_placeholder">По-малко от 10 страници</string>
+
+    <string name="challenge_setup_example_habit_1">Чета 10 страници</string>
+    <string name="challenge_setup_example_rule_1">По-малко от 10 страници</string>
+    <string name="challenge_setup_example_habit_2">Ходя половин час</string>
+    <string name="challenge_setup_example_rule_2">По-малко от половин час пеша</string>
+    <string name="challenge_setup_example_habit_3">Студен душ — ако се къпя</string>
+    <string name="challenge_setup_example_rule_3">Кранът е завъртян към топлото</string>
+    <string name="challenge_setup_example_habit_4">Без телефон преди закуска</string>
+    <string name="challenge_setup_example_rule_4">Отключване преди първата хапка</string>
+    <string name="challenge_setup_example_habit_5">Десет лицеви опори</string>
+    <string name="challenge_setup_example_rule_5">Девет или по-малко</string>
+    <string name="challenge_setup_example_habit_6">В леглото до единайсет</string>
+    <string name="challenge_setup_example_rule_6">Лампата още свети в полунощ</string>
+
+    <string name="challenge_setup_tip">Навикът може да е условен — кажи кога важи и какво го проваля.</string>
+    <string name="challenge_setup_rules_link">Как се пишат правила, които издържат</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Добави навик</string>
     <string name="challenge_setup_save_habit">Запази навика</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Напомняния</string>
     <string name="reminders_back">Назад</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Нищо не е включено, докато не зададеш час. Всеки навик получава по едно подсещане и само в ден, в който още няма отметка.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Задай напомняне за %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Задни страници</string>
     <string name="history_back">Назад</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Опит %1$d</string>
     <string name="history_in_progress">в ход — ден %1$d</string>
     <string name="history_failed">провал на ден %1$d</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Бакшиш</string>
     <string name="tip_jar_back">Назад</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko е безплатно и с отворен код. Цялото, за всички, винаги.</string>
     <string name="tip_jar_unlocks_nothing">Тук нищо не отключва нищо. Няма какво да се отключва — цялото приложение вече е твое.</string>
     <string name="tip_jar_fees">Бакшишът отива за годишната такса, която магазинът взима, за да стои Snurko в него. Само затова съществува тази страница.</string>

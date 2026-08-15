@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Wypisz nawyki, które będziesz robić codziennie przez najbliższe 90 dni.</string>
 
     <string name="challenge_setup_habit_name_label">Nawyk</string>
-    <string name="challenge_setup_habit_name_placeholder">Przeczytać 10 stron</string>
     <string name="challenge_setup_fail_condition_label">Co liczy się jako wpadka (opcjonalnie)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Mniej niż 10 stron</string>
+
+    <string name="challenge_setup_example_habit_1">Przeczytać 10 stron</string>
+    <string name="challenge_setup_example_rule_1">Mniej niż 10 stron</string>
+    <string name="challenge_setup_example_habit_2">Przejść się pół godziny</string>
+    <string name="challenge_setup_example_rule_2">Mniej niż pół godziny pieszo</string>
+    <string name="challenge_setup_example_habit_3">Zimny prysznic — jeśli się myjesz</string>
+    <string name="challenge_setup_example_rule_3">Kran przekręcony na ciepłą wodę</string>
+    <string name="challenge_setup_example_habit_4">Żadnego telefonu przed śniadaniem</string>
+    <string name="challenge_setup_example_rule_4">Odblokować go przed pierwszym kęsem</string>
+    <string name="challenge_setup_example_habit_5">Dziesięć pompek</string>
+    <string name="challenge_setup_example_rule_5">Dziewięć albo mniej</string>
+    <string name="challenge_setup_example_habit_6">Położyć się do jedenastej</string>
+    <string name="challenge_setup_example_rule_6">O północy wciąż się świeci</string>
+
+    <string name="challenge_setup_tip">Nawyk może mieć warunek — napisz, kiedy obowiązuje i co go przekreśla.</string>
+    <string name="challenge_setup_rules_link">Jak pisać zasady, które wytrzymają</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Dodaj nawyk</string>
     <string name="challenge_setup_save_habit">Zapisz nawyk</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Przypomnienia</string>
     <string name="reminders_back">Wróć</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Dopóki nie ustawisz godziny, nic nie działa. Każdy nawyk dostaje jedno przypomnienie, i to tylko w dniu, w którym wciąż nie ma znaku.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Ustaw przypomnienie dla %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Ostatnie strony</string>
     <string name="history_back">Wróć</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Podejście %1$d</string>
     <string name="history_in_progress">trwa — dzień %1$d</string>
     <string name="history_failed">wpadka w %1$d. dniu</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Napiwek</string>
     <string name="tip_jar_back">Wróć</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko jest za darmo i open source. Całe, dla każdego, na zawsze.</string>
     <string name="tip_jar_unlocks_nothing">Nic z tego niczego nie odblokowuje. Nie ma czego odblokowywać — całą apkę już masz.</string>
     <string name="tip_jar_fees">Napiwek idzie na roczną opłatę, którą sklep liczy sobie za to, żeby Snurko było w ofercie. Tylko po to jest ta strona.</string>

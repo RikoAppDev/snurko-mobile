@@ -3,6 +3,7 @@ package app.snurko.challenge.presentation.setup
 import app.cash.turbine.test
 import app.snurko.challenge.domain.DEFAULT_CHALLENGE_NAME
 import app.snurko.challenge.domain.FakeChallengeRepository
+import app.snurko.challenge.domain.FakeSetupDraftRepository
 import app.snurko.challenge.domain.Habit
 import app.snurko.core.domain.DataError
 import app.snurko.core.domain.Result
@@ -30,14 +31,17 @@ class ChallengeSetupViewModelTest {
     private val today = LocalDate(2026, 3, 1)
 
     private lateinit var repository: FakeChallengeRepository
+    private lateinit var draftRepository: FakeSetupDraftRepository
     private lateinit var viewModel: ChallengeSetupViewModel
 
     @BeforeTest
     fun setUp() {
         Dispatchers.setMain(UnconfinedTestDispatcher())
         repository = FakeChallengeRepository()
+        draftRepository = FakeSetupDraftRepository()
         viewModel = ChallengeSetupViewModel(
             challengeRepository = repository,
+            setupDraftRepository = draftRepository,
             dateProvider = { today.atTime(9, 0) },
         )
     }
@@ -323,6 +327,145 @@ class ChallengeSetupViewModelTest {
         assertThat(state.isStarting).isFalse()
         assertThat(state.canStart).isTrue()
         assertThat(state.habits).hasSize(1)
+    }
+
+    @Test
+    fun addingAHabitAsksForTheCaretBackInTheNameField() {
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(0)
+
+        addHabit("Read")
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(1)
+
+        addHabit("Workout")
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(2)
+    }
+
+    @Test
+    fun savingAnEditAlsoAsksForTheCaretBackInTheNameField() {
+        addHabit("Read")
+        val id = viewModel.state.value.habits.single().id
+
+        viewModel.onAction(ChallengeSetupAction.HabitEditRequested(id))
+        viewModel.onAction(ChallengeSetupAction.HabitNameChanged("Read a book"))
+        viewModel.onAction(ChallengeSetupAction.HabitSubmitted)
+
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(2)
+    }
+
+    @Test
+    fun aRejectedHabitLeavesTheCaretWhereItIs() {
+        viewModel.onAction(ChallengeSetupAction.HabitNameChanged("   "))
+
+        viewModel.onAction(ChallengeSetupAction.HabitSubmitted)
+
+        assertThat(viewModel.state.value.habitNameFocusRequest).isEqualTo(0)
+    }
+
+    @Test
+    fun theExamplePairMovesOnWithEveryAddedHabit() {
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(0)
+
+        addHabit("Read")
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(1)
+
+        addHabit("Workout")
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(2)
+    }
+
+    @Test
+    fun theExamplePairWrapsAroundTheWholePool() {
+        repeat(SETUP_EXAMPLE_COUNT) { index -> addHabit("Habit $index") }
+
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(0)
+    }
+
+    @Test
+    fun aRejectedHabitLeavesTheExamplePairAlone() {
+        viewModel.onAction(ChallengeSetupAction.HabitNameChanged("   "))
+
+        viewModel.onAction(ChallengeSetupAction.HabitSubmitted)
+
+        assertThat(viewModel.state.value.exampleIndex).isEqualTo(0)
+    }
+
+    @Test
+    fun aRestoredDraftPicksUpTheExamplePairWhereItLeftOff() {
+        draftRepository.stored = listOf(
+            Habit(name = "Workout", failCondition = null),
+            Habit(name = "Read", failCondition = null),
+        )
+
+        val restored = ChallengeSetupViewModel(
+            challengeRepository = repository,
+            setupDraftRepository = draftRepository,
+            dateProvider = { today.atTime(9, 0) },
+        )
+
+        assertThat(restored.state.value.exampleIndex).isEqualTo(2)
+    }
+
+    @Test
+    fun everyAddedHabitIsWrittenToTheDraft() {
+        addHabit("Workout", "less than 30 minutes")
+        addHabit("Read")
+
+        assertThat(draftRepository.stored).containsExactly(
+            Habit(name = "Workout", failCondition = "less than 30 minutes"),
+            Habit(name = "Read", failCondition = null),
+        )
+    }
+
+    @Test
+    fun removingAHabitAlsoRemovesItFromTheDraft() {
+        addHabit("Workout")
+        addHabit("Read")
+
+        viewModel.onAction(ChallengeSetupAction.HabitRemoved(viewModel.state.value.habits[0].id))
+
+        assertThat(draftRepository.stored).containsExactly(Habit(name = "Read", failCondition = null))
+    }
+
+    @Test
+    fun aStoredDraftIsRestoredIntoAFreshScreen() {
+        draftRepository.stored = listOf(
+            Habit(name = "Workout", failCondition = "less than 30 minutes"),
+            Habit(name = "Read", failCondition = null),
+        )
+
+        val restored = ChallengeSetupViewModel(
+            challengeRepository = repository,
+            setupDraftRepository = draftRepository,
+            dateProvider = { today.atTime(9, 0) },
+        )
+
+        val habits = restored.state.value.habits
+        assertThat(habits.map { it.name }).containsExactly("Workout", "Read")
+        assertThat(habits[0].failCondition).isEqualTo("less than 30 minutes")
+        assertThat(habits[1].failCondition).isNull()
+        assertThat(habits.map { it.id }.toSet()).hasSize(2)
+    }
+
+    @Test
+    fun startingTheChallengeClearsTheDraft() {
+        addHabit("Read")
+        viewModel.onAction(ChallengeSetupAction.StartRequested)
+
+        viewModel.onAction(ChallengeSetupAction.StartConfirmed)
+
+        assertThat(draftRepository.clearCount).isEqualTo(1)
+        assertThat(draftRepository.stored).isEmpty()
+    }
+
+    @Test
+    fun aFailedStartKeepsTheDraft() {
+        repository.createResult = Result.Error(DataError.Local.DISK_FULL)
+        addHabit("Read")
+        viewModel.onAction(ChallengeSetupAction.StartRequested)
+
+        viewModel.onAction(ChallengeSetupAction.StartConfirmed)
+
+        assertThat(draftRepository.clearCount).isEqualTo(0)
+        assertThat(draftRepository.stored).containsExactly(Habit(name = "Read", failCondition = null))
     }
 
     private fun addHabit(name: String, failCondition: String? = null) {

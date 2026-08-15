@@ -1,10 +1,13 @@
 package app.snurko
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.view.WindowCompat
 import app.snurko.billing.data.PlayBillingGateway
 import app.snurko.challenge.data.SafNotebookDocumentGateway
 import app.snurko.challenge.domain.NOTEBOOK_MIME_TYPE
@@ -30,8 +33,12 @@ class MainActivity : ComponentActivity() {
     ) { isGranted -> notificationPermissions.onPermissionResult(isGranted) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.light(Color.TRANSPARENT, Color.TRANSPARENT),
+        )
         super.onCreate(savedInstanceState)
+        forceDarkSystemBarIcons()
         documentGateway.attach(
             SafNotebookDocumentGateway.Launchers(
                 createDocument = createDocument,
@@ -42,6 +49,19 @@ class MainActivity : ComponentActivity() {
         billingGateway.attach(this)
         setContent {
             App()
+        }
+    }
+
+    override fun onWindowFocusChanged(hasFocus: Boolean) {
+        super.onWindowFocusChanged(hasFocus)
+        if (hasFocus) forceDarkSystemBarIcons()
+    }
+
+    /** The app is paper in every system theme, so the bars keep their dark icons even in night mode. */
+    private fun forceDarkSystemBarIcons() {
+        WindowCompat.getInsetsController(window, window.decorView).apply {
+            isAppearanceLightStatusBars = true
+            isAppearanceLightNavigationBars = true
         }
     }
 

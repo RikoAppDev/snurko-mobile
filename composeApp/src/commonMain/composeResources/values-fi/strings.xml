@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Kirjoita tavat, jotka pidät joka päivä seuraavat 90 päivää.</string>
 
     <string name="challenge_setup_habit_name_label">Tapa</string>
-    <string name="challenge_setup_habit_name_placeholder">Lue 10 sivua</string>
     <string name="challenge_setup_fail_condition_label">Mikä lasketaan epäonnistumiseksi (valinnainen)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Alle 10 sivua</string>
+
+    <string name="challenge_setup_example_habit_1">Lue 10 sivua</string>
+    <string name="challenge_setup_example_rule_1">Alle 10 sivua</string>
+    <string name="challenge_setup_example_habit_2">Kävele puoli tuntia</string>
+    <string name="challenge_setup_example_rule_2">Alle puoli tuntia jalan</string>
+    <string name="challenge_setup_example_habit_3">Kylmä suihku – jos käyt suihkussa</string>
+    <string name="challenge_setup_example_rule_3">Hana käännetty lämpimälle</string>
+    <string name="challenge_setup_example_habit_4">Ei puhelinta ennen aamiaista</string>
+    <string name="challenge_setup_example_rule_4">Puhelin auki ennen ensimmäistä palaa</string>
+    <string name="challenge_setup_example_habit_5">Kymmenen punnerrusta</string>
+    <string name="challenge_setup_example_rule_5">Yhdeksän tai vähemmän</string>
+    <string name="challenge_setup_example_habit_6">Sängyssä ennen yhtätoista</string>
+    <string name="challenge_setup_example_rule_6">Valot vielä päällä keskiyöllä</string>
+
+    <string name="challenge_setup_tip">Tapa voi olla ehdollinen – kerro, milloin se pätee ja mikä sen rikkoo.</string>
+    <string name="challenge_setup_rules_link">Näin kirjoitat kestävät säännöt</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lisää tapa</string>
     <string name="challenge_setup_save_habit">Tallenna tapa</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Muistutukset</string>
     <string name="reminders_back">Takaisin</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Mikään ei ole päällä ennen kuin asetat ajan. Jokainen tapa saa yhden muistutuksen, ja vain päivänä, jolloin se on yhä rastittamatta.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Aseta muistutus: %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Takasivut</string>
     <string name="history_back">Takaisin</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Yritys %1$d</string>
     <string name="history_in_progress">kesken – päivä %1$d</string>
     <string name="history_failed">katkesi %1$d. päivänä</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Tippi</string>
     <string name="tip_jar_back">Takaisin</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko on ilmainen ja avointa lähdekoodia. Kaikki siitä, kaikille, aina.</string>
     <string name="tip_jar_unlocks_nothing">Mikään täällä ei avaa mitään. Avattavaa ei ole – koko sovellus on jo sinun.</string>
     <string name="tip_jar_fees">Tippi menee siihen vuosimaksuun, jonka sovelluskauppa perii Snurkon pitämisestä kaupassa. Vain siksi tämä sivu on olemassa.</string>

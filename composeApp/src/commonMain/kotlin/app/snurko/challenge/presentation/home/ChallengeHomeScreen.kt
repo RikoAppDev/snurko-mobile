@@ -10,14 +10,17 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.selection.toggleable
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -56,8 +59,11 @@ import app.snurko.challenge.presentation.sticker.DayStickerRenderer
 import app.snurko.challenge.presentation.sticker.DayStickerSharer
 import app.snurko.challenge.presentation.sticker.DayStickerState
 import app.snurko.challenge.presentation.sticker.stickerFileName
+import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.designsystem.navigationBarInset
+import app.snurko.core.designsystem.snurkoContentInsets
 import app.snurko.core.domain.onFailure
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.core.presentation.OnResume
@@ -120,7 +126,13 @@ fun ChallengeHomeRoot(
 
     Scaffold(
         containerColor = SnurkoColors.paper,
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        contentWindowInsets = snurkoContentInsets,
+        snackbarHost = {
+            SnackbarHost(
+                snackbarHostState,
+                modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars),
+            )
+        },
     ) { innerPadding ->
         Box(modifier = Modifier.padding(innerPadding)) {
             ChallengeHomeScreen(
@@ -166,7 +178,7 @@ fun ChallengeHomeScreen(
             .background(SnurkoColors.paper)
             .verticalScroll(rememberScrollState())
             .padding(horizontal = PAGE_PADDING)
-            .padding(top = 24.dp, bottom = 32.dp),
+            .padding(top = 24.dp, bottom = 32.dp + navigationBarInset()),
     ) {
         if (state.isLoading) return@Column
 
@@ -212,8 +224,9 @@ private fun MarginNote(text: String, onClick: () -> Unit) {
     Box(
         modifier = Modifier
             .heightIn(min = 48.dp)
+            .clip(QuietTapShape)
             .clickable(role = Role.Button, onClick = onClick)
-            .padding(horizontal = 6.dp),
+            .padding(horizontal = 8.dp),
         contentAlignment = Alignment.Center,
     ) {
         Text(
@@ -234,7 +247,8 @@ private fun RestartMoment(
         modifier = modifier
             .fillMaxSize()
             .background(SnurkoColors.paper)
-            .padding(horizontal = 28.dp, vertical = 32.dp),
+            .padding(horizontal = 28.dp)
+            .padding(top = 32.dp, bottom = 32.dp + navigationBarInset()),
         verticalArrangement = Arrangement.Center,
     ) {
         Text(
@@ -395,12 +409,13 @@ private fun HabitCheckRow(habit: HabitRowUi, onToggle: (Long) -> Unit) {
         modifier = Modifier
             .fillMaxWidth()
             .heightIn(min = 56.dp)
+            .clip(QuietTapShape)
             .toggleable(
                 value = habit.isChecked,
                 role = Role.Checkbox,
                 onValueChange = { onToggle(habit.id) },
             )
-            .padding(vertical = 8.dp),
+            .padding(horizontal = 6.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         CheckMarkBox(isChecked = habit.isChecked, markSeed = habit.id.toInt())

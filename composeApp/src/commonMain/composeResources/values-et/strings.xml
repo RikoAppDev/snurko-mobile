@@ -4,9 +4,24 @@
     <string name="challenge_setup_invitation">Kirjuta üles harjumused, mida pead iga päev järgmised 90 päeva.</string>
 
     <string name="challenge_setup_habit_name_label">Harjumus</string>
-    <string name="challenge_setup_habit_name_placeholder">Loe 10 lehekülge</string>
     <string name="challenge_setup_fail_condition_label">Mis läheb läbikukkumise arvele (valikuline)</string>
-    <string name="challenge_setup_fail_condition_placeholder">Vähem kui 10 lehekülge</string>
+
+    <string name="challenge_setup_example_habit_1">Loe 10 lehekülge</string>
+    <string name="challenge_setup_example_rule_1">Vähem kui 10 lehekülge</string>
+    <string name="challenge_setup_example_habit_2">Jaluta pool tundi</string>
+    <string name="challenge_setup_example_rule_2">Vähem kui pool tundi jalgsi</string>
+    <string name="challenge_setup_example_habit_3">Külm dušš – kui dušši võtad</string>
+    <string name="challenge_setup_example_rule_3">Kraan keeratud sooja peale</string>
+    <string name="challenge_setup_example_habit_4">Telefonita enne hommikusööki</string>
+    <string name="challenge_setup_example_rule_4">Telefon lahti enne esimest suutäit</string>
+    <string name="challenge_setup_example_habit_5">Kümme kätekõverdust</string>
+    <string name="challenge_setup_example_rule_5">Üheksa või vähem</string>
+    <string name="challenge_setup_example_habit_6">Voodis enne kella ühtteist</string>
+    <string name="challenge_setup_example_rule_6">Keskööl põleb tuli veel</string>
+
+    <string name="challenge_setup_tip">Harjumus võib olla tingimuslik – ütle, millal see kehtib ja mis selle katkestab.</string>
+    <string name="challenge_setup_rules_link">Kuidas kirjutada püsivaid reegleid</string>
+    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lisa</string>
     <string name="challenge_setup_save_habit">Salvesta</string>
@@ -49,7 +64,6 @@
 
     <string name="reminders_title">Meeldetuletused</string>
     <string name="reminders_back">Tagasi</string>
-    <string name="reminders_back_mark">←</string>
     <string name="reminders_intro">Miski ei ole sees enne, kui määrad aja. Iga harjumus saab ühe meeldetuletuse ja ainult päeval, mil see on veel märkimata.</string>
     <string name="reminders_off">—</string>
     <string name="reminders_set">Määra meeldetuletus: %1$s</string>
@@ -73,7 +87,6 @@
 
     <string name="history_title">Tagumised leheküljed</string>
     <string name="history_back">Tagasi</string>
-    <string name="history_back_mark">←</string>
     <string name="history_attempt">Katse %1$d</string>
     <string name="history_in_progress">pooleli – %1$d. päev</string>
     <string name="history_failed">kukkus läbi %1$d. päeval</string>
@@ -108,7 +121,6 @@
 
     <string name="tip_jar_title">Jootraha</string>
     <string name="tip_jar_back">Tagasi</string>
-    <string name="tip_jar_back_mark">←</string>
     <string name="tip_jar_free">Snurko on tasuta ja avatud lähtekoodiga. Kõik sellest, kõigile, alati.</string>
     <string name="tip_jar_unlocks_nothing">Miski siin ei ava midagi. Avada polegi midagi – kogu rakendus on juba sinu.</string>
     <string name="tip_jar_fees">Jootraha läheb aastatasu katteks, mida rakenduspood Snurko hoidmise eest võtab. Ainult sellepärast see leht olemas on.</string>
