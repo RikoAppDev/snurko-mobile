@@ -8,13 +8,16 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
@@ -56,6 +59,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.designsystem.navigationBarInset
+import app.snurko.core.designsystem.snurkoContentInsets
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.resources.Res
 import app.snurko.resources.challenge_fail_condition_summary
@@ -120,7 +125,13 @@ fun ChallengeSetupRoot(
 
     Scaffold(
         containerColor = SnurkoColors.paper,
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        contentWindowInsets = snurkoContentInsets,
+        snackbarHost = {
+            SnackbarHost(
+                snackbarHostState,
+                modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars),
+            )
+        },
     ) { innerPadding ->
         ChallengeSetupScreen(
             state = state,
@@ -439,7 +450,7 @@ private fun StartBar(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = 24.dp)
-            .padding(top = 16.dp, bottom = 24.dp),
+            .padding(top = 16.dp, bottom = 24.dp + navigationBarInset()),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(10.dp),
     ) {

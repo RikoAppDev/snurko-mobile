@@ -6,13 +6,16 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
+import androidx.compose.foundation.layout.navigationBars
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -41,6 +44,8 @@ import app.snurko.core.designsystem.BackChevronButton
 import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.designsystem.navigationBarInset
+import app.snurko.core.designsystem.snurkoContentInsets
 import app.snurko.core.presentation.ObserveAsEvents
 import app.snurko.core.presentation.OnResume
 import app.snurko.core.presentation.PlatformTimePicker
@@ -88,7 +93,13 @@ fun RemindersRoot(
 
     Scaffold(
         containerColor = SnurkoColors.paper,
-        snackbarHost = { SnackbarHost(snackbarHostState) },
+        contentWindowInsets = snurkoContentInsets,
+        snackbarHost = {
+            SnackbarHost(
+                snackbarHostState,
+                modifier = Modifier.windowInsetsPadding(WindowInsets.navigationBars),
+            )
+        },
     ) { innerPadding ->
         RemindersScreen(
             state = state,
@@ -142,7 +153,7 @@ fun RemindersScreen(
         if (state.rows.isNotEmpty()) {
             HorizontalDivider(color = SnurkoColors.line)
         }
-        Spacer(Modifier.height(32.dp))
+        Spacer(Modifier.height(32.dp + navigationBarInset()))
     }
 
     state.timePicker?.let { picker ->

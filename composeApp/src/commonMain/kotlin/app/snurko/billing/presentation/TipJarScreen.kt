@@ -30,7 +30,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,6 +40,8 @@ import app.snurko.core.designsystem.BackChevronButton
 import app.snurko.core.designsystem.QuietTapShape
 import app.snurko.core.designsystem.SnurkoColors
 import app.snurko.core.designsystem.SnurkoTheme
+import app.snurko.core.designsystem.navigationBarInset
+import app.snurko.core.designsystem.snurkoContentInsets
 import app.snurko.core.domain.DataError
 import app.snurko.resources.Res
 import app.snurko.resources.tip_jar_amount
@@ -76,7 +77,10 @@ fun TipJarRoot(
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
 
-    Scaffold(containerColor = SnurkoColors.paper) { innerPadding ->
+    Scaffold(
+        containerColor = SnurkoColors.paper,
+        contentWindowInsets = snurkoContentInsets,
+    ) { innerPadding ->
         TipJarScreen(
             state = state,
             onAction = viewModel::onAction,
@@ -103,7 +107,7 @@ fun TipJarScreen(
 
         Column(modifier = Modifier.fillMaxWidth().padding(horizontal = PAGE_PADDING)) {
             TipJarCard(state = state, onAction = onAction)
-            Spacer(Modifier.height(32.dp))
+            Spacer(Modifier.height(32.dp + navigationBarInset()))
         }
     }
 }
