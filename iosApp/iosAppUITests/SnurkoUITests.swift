@@ -69,7 +69,7 @@ final class SnurkoUITests: XCTestCase {
     }
 
     private func habitField(of app: XCUIApplication) -> XCUICoordinate {
-        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.63))
+        app.coordinate(withNormalizedOffset: CGVector(dx: 0.5, dy: 0.53))
     }
 
     private func swipeBackFromTheStartEdge(of app: XCUIApplication) {
