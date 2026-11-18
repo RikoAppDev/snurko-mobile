@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">Paradums var būt nosacīts — pasaki, kad tas ir spēkā un kas to lauž.</string>
     <string name="challenge_setup_rules_link">Kā rakstīt noteikumus, kas iztur</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Pievienot</string>
     <string name="challenge_setup_save_habit">Saglabāt</string>

@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">Navika može biti uslovna – reci kad važi i šta je ruši.</string>
     <string name="challenge_setup_rules_link">Kako se pišu pravila koja drže</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Dodaj naviku</string>
     <string name="challenge_setup_save_habit">Sačuvaj naviku</string>

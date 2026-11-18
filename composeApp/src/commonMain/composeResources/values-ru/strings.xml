@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">У привычки может быть условие — напиши, когда она действует и что её срывает.</string>
     <string name="challenge_setup_rules_link">Как писать правила, которые выдержат</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Добавить</string>
     <string name="challenge_setup_save_habit">Сохранить</string>

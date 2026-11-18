@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">Harjumus võib olla tingimuslik – ütle, millal see kehtib ja mis selle katkestab.</string>
     <string name="challenge_setup_rules_link">Kuidas kirjutada püsivaid reegleid</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lisa</string>
     <string name="challenge_setup_save_habit">Salvesta</string>

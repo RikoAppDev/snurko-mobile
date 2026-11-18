@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">Tapa voi olla ehdollinen – kerro, milloin se pätee ja mikä sen rikkoo.</string>
     <string name="challenge_setup_rules_link">Näin kirjoitat kestävät säännöt</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Lisää tapa</string>
     <string name="challenge_setup_save_habit">Tallenna tapa</string>
