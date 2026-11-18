@@ -7,10 +7,12 @@ import app.snurko.challenge.domain.completeDaysThrough
 import app.snurko.challenge.domain.day
 import app.snurko.challenge.domain.partialDay
 import assertk.assertThat
+import assertk.assertions.containsExactly
 import assertk.assertions.hasSize
 import assertk.assertions.isEqualTo
 import assertk.assertions.isFalse
 import assertk.assertions.isInstanceOf
+import assertk.assertions.isNull
 import assertk.assertions.isTrue
 import kotlinx.datetime.LocalDate
 import kotlin.test.Test
@@ -109,6 +111,36 @@ class WidgetStateTest {
         val state = challengeState(checks = listOf(completeDay(2)), today = day(3))
 
         assertThat(state.checkedHabits).isEqualTo(0)
+    }
+
+    @Test
+    fun theWidgetListsTodaysTasksInTheNotebookOrderWithTheirMarks() {
+        val state = challengeState(checks = completeDaysThrough(2) + partialDay(3), today = day(3))
+
+        assertThat(state.habits).containsExactly(
+            WidgetHabit(name = "Workout", checked = true),
+            WidgetHabit(name = "Read", checked = false),
+        )
+    }
+
+    @Test
+    fun anOngoingAttemptHasNotFailed() {
+        assertThat(challengeState(checks = completeDaysThrough(2), today = day(3)).failedOnDay).isNull()
+    }
+
+    @Test
+    fun aMissedDayInThePastShowsTheAttemptAsFailedOnThatDay() {
+        val state = challengeState(checks = completeDaysThrough(1), today = day(16))
+
+        assertThat(state.failedOnDay).isEqualTo(2)
+    }
+
+    @Test
+    fun aFailedAttemptDoesNotPretendToBeOnALaterDay() {
+        val state = challengeState(today = day(16))
+
+        assertThat(state.failedOnDay).isEqualTo(1)
+        assertThat(state.cells[0]).isEqualTo(WidgetCell.MISSED)
     }
 
     private fun challengeState(
