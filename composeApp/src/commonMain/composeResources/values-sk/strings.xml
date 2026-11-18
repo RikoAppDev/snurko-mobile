@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">Návyk môže mať podmienku — napíš, kedy platí a čo ho zruší.</string>
     <string name="challenge_setup_rules_link">Ako písať pravidlá, ktoré vydržia</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/sk/articles/pravidla-restartu-90-dnovej-vyzvy</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/sk/articles/pravidla-restartu-90-dnovej-vyzvy</string>
 
     <string name="challenge_setup_add_habit">Pridať návyk</string>
     <string name="challenge_setup_save_habit">Uložiť návyk</string>

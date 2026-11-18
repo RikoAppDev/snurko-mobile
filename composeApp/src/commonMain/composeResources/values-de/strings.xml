@@ -21,7 +21,7 @@
 
     <string name="challenge_setup_tip">Eine Gewohnheit darf eine Bedingung haben — sag dazu, wann sie gilt und woran sie scheitert.</string>
     <string name="challenge_setup_rules_link">Regeln schreiben, die halten</string>
-    <string name="challenge_setup_rules_url">https://snurko-landing.vercel.app/articles/90-day-challenge-restart-rules</string>
+    <string name="challenge_setup_rules_url">https://snurko.rikoapp.dev/articles/90-day-challenge-restart-rules</string>
 
     <string name="challenge_setup_add_habit">Hinzufügen</string>
     <string name="challenge_setup_save_habit">Speichern</string>
