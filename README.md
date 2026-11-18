@@ -85,5 +85,4 @@ the SIL Open Font License — see [`licenses/Caveat-OFL.txt`](licenses/Caveat-OF
 
 ## Links
 
-- Website: [snurko-landing.vercel.app](https://snurko-landing.vercel.app)
-- Landing page source: [RikoAppDev/snurko-landing](https://github.com/RikoAppDev/snurko-landing)
+- Website: [snurko.rikoapp.dev](https://snurko.rikoapp.dev)
